@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>הזדמנויות תעסוקתי — ההזדמנות שלי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --cat:#1A56A0;
+  --cat-dk:#0F3873;
+  --cat-light:rgba(26,86,160,.08);
+  --cat-border:rgba(26,86,160,.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;color:#0F172A;background:#F2F7FD;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── NAVBAR ── */
+#navbar{
+  position:fixed;top:0;right:0;left:0;z-index:1000;
+  height:64px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(15,23,42,.07);
+  display:flex;align-items:center;
+}
+.nav-inner{
+  width:100%;display:flex;align-items:center;
+  justify-content:space-between;gap:12px;padding:0 24px;
+}
+.nav-logo{font-size:1.2rem;font-weight:900;color:var(--cat)}
+.nav-cats{display:flex;align-items:center;gap:4px}
+.nav-cat{
+  padding:7px 14px;border-radius:8px;font-size:.88rem;font-weight:600;
+  color:#64748B;transition:all .2s;
+}
+.nav-cat:hover{color:var(--cat);background:rgba(26,86,160,.06)}
+.nav-cat.here{color:var(--cat);background:rgba(26,86,160,.1);font-weight:700}
+.nav-btn{
+  padding:8px 20px;border-radius:50px;background:var(--cat);
+  color:#fff;font-size:.88rem;font-weight:700;
+  transition:opacity .2s;flex-shrink:0;
+}
+.nav-btn:hover{opacity:.85}
+@media(max-width:640px){.nav-cats{display:none}}
+
+/* ── PAGE HEADER ── */
+.page-hdr{
+  background:linear-gradient(135deg,var(--cat-dk) 0%,var(--cat) 100%);
+  padding:88px 0 52px;
+  position:relative;overflow:hidden;
+}
+.page-hdr::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 40%,rgba(255,255,255,.07),transparent 60%);
+  pointer-events:none;
+}
+.page-hdr::after{
+  content:'';position:absolute;bottom:-60px;right:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(255,255,255,.04);
+}
+.page-hdr .container{position:relative;z-index:1}
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:rgba(255,255,255,.65);font-size:.88rem;font-weight:600;
+  margin-bottom:20px;transition:color .2s;
+}
+.back-link:hover{color:#fff}
+.hdr-emoji{font-size:2.8rem;display:block;margin-bottom:12px}
+.hdr-title{font-size:clamp(2rem,5vw,2.8rem);font-weight:900;color:#fff;margin-bottom:10px}
+.hdr-sub{
+  font-size:1rem;color:rgba(255,255,255,.75);
+  max-width:560px;line-height:1.7;
+}
+
+/* ── MAIN CONTENT ── */
+.content{padding:48px 0 80px}
+
+/* ── SUBCATEGORY SECTION ── */
+.subcat-section{margin-bottom:60px}
+.subcat-section:last-child{margin-bottom:0}
+.subcat-header{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:24px;
+  padding-bottom:16px;
+  border-bottom:2px solid var(--cat-border);
+}
+.subcat-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--cat);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;flex-shrink:0;
+}
+.subcat-info{}
+.subcat-title{
+  font-size:1.35rem;font-weight:800;color:#0F172A;margin-bottom:2px;
+}
+.subcat-count{font-size:.85rem;color:#64748B;font-weight:500}
+
+/* ── CARDS GRID ── */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+@media(max-width:960px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards-grid{grid-template-columns:1fr}}
+
+/* ── CARD ── */
+.card{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 2px 12px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  border:1px solid rgba(15,23,42,.06);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 48px rgba(15,23,42,.13);
+}
+
+/* image area */
+.card-img-wrap{
+  height:200px;overflow:hidden;flex-shrink:0;
+  background:linear-gradient(135deg,var(--cat-dk),var(--cat));
+  position:relative;
+}
+.card-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .35s ease;
+}
+.card:hover .card-img{transform:scale(1.05)}
+.card-no-img{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:3.5rem;
+}
+
+/* card body */
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.card-badge{
+  display:inline-flex;align-items:center;
+  padding:4px 12px;border-radius:50px;
+  font-size:.75rem;font-weight:700;
+  background:var(--cat-light);border:1px solid var(--cat-border);
+  color:var(--cat);margin-bottom:10px;align-self:flex-start;
+}
+.card-title{
+  font-size:1.05rem;font-weight:800;
+  margin-bottom:8px;line-height:1.3;color:#0F172A;
+}
+.card-desc{
+  font-size:.875rem;color:#64748B;
+  line-height:1.65;flex:1;margin-bottom:14px;
+}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.card-tag{
+  padding:3px 10px;border-radius:50px;
+  font-size:.72rem;font-weight:600;
+  background:#F2F7FD;color:#64748B;
+  border:1px solid rgba(15,23,42,.07);
+}
+.card-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--cat);font-size:.875rem;font-weight:700;
+  padding:9px 18px;border-radius:50px;
+  border:2px solid var(--cat);
+  transition:all .2s;align-self:flex-start;margin-top:auto;
+}
+.card-link:hover{background:var(--cat);color:#fff}
+
+/* ── FOOTER ── */
+footer{
+  background:#0F172A;color:rgba(255,255,255,.55);
+  text-align:center;padding:28px 24px;font-size:.85rem;
+}
+footer a{color:rgba(255,255,255,.75);font-weight:600}
+
+/* ── TABS ── */
+.tabs-bar{
+  background:#fff;
+  border-bottom:2px solid rgba(15,23,42,.07);
+  position:sticky;top:64px;z-index:900;
+}
+.tabs-inner{
+  display:flex;align-items:center;gap:4px;
+  padding:0 24px;overflow-x:auto;
+  scrollbar-width:none;
+}
+.tabs-inner::-webkit-scrollbar{display:none}
+.tab-btn{
+  padding:14px 20px;
+  font-size:.88rem;font-weight:600;color:#64748B;
+  border-bottom:3px solid transparent;
+  white-space:nowrap;transition:all .2s;
+  background:none;border-top:none;border-right:none;border-left:none;
+  cursor:pointer;font-family:inherit;
+}
+.tab-btn:hover{color:var(--cat)}
+.tab-btn.active{color:var(--cat);border-bottom-color:var(--cat);font-weight:700}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.fade-up{animation:fadeUp .3s ease forwards}
+</style>
+</head>
+<body>
+
+<!-- ══ AUTH OVERLAY ══ -->
+<style>
+#authTopBar{position:fixed;top:0;right:0;left:0;z-index:100000;height:52px;background:rgba(10,22,40,.98);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-family:'Heebo',sans-serif}
+#authTopBar .atb-logo{font-size:1.1rem;font-weight:900;color:#fff}
+#authTopBar .atb-back{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.65);font-size:.88rem;font-weight:600;text-decoration:none;transition:color .2s}
+#authTopBar .atb-back:hover{color:#fff}
+#authOverlay{position:fixed;inset:0;z-index:99999;background:rgba(10,22,40,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:72px 20px 20px;font-family:'Heebo',sans-serif;overflow-y:auto}
+.auth-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:440px;width:100%;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.5);margin:auto}
+.auth-logo{font-size:1.2rem;font-weight:900;color:#1A56A0;margin-bottom:10px}
+.auth-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(26,86,160,.09);border:1px solid rgba(26,86,160,.2);color:#1A56A0;font-size:.78rem;font-weight:700;padding:5px 14px;border-radius:50px;margin-bottom:20px}
+.auth-title{font-size:1.5rem;font-weight:900;color:#0F172A;margin-bottom:8px;line-height:1.3}
+.auth-sub{font-size:.88rem;color:#64748B;margin-bottom:24px;line-height:1.65}
+.auth-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:1rem;font-family:'Heebo',sans-serif;margin-bottom:12px;text-align:right;transition:border-color .2s;outline:none;display:block;box-sizing:border-box}
+.auth-field:focus{border-color:#1A56A0;box-shadow:0 0 0 3px rgba(26,86,160,.1)}
+.auth-field.auth-err{border-color:#EF4444}
+.auth-btn{width:100%;padding:14px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:4px;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.auth-btn:hover{opacity:.9}
+.auth-btn:disabled{opacity:.55;cursor:default}
+.auth-errmsg{color:#EF4444;font-size:.85rem;margin-top:10px;display:none;line-height:1.5}
+.auth-divider{margin-top:20px;padding-top:18px;border-top:1px solid #F1F5F9;font-size:.85rem;color:#94A3B8}
+.auth-switch{background:none;border:none;color:#1A56A0;font-weight:700;font-size:.85rem;font-family:'Heebo',sans-serif;cursor:pointer;padding:0;text-decoration:underline}
+.auth-back{background:none;border:none;color:#64748B;font-size:.82rem;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:14px;display:flex;align-items:center;gap:4px}
+.auth-back:hover{color:#1A56A0}
+.auth-success-ic{font-size:3rem;margin-bottom:12px}
+.auth-success-title{font-size:1.3rem;font-weight:900;margin-bottom:8px}
+.auth-success-sub{color:#64748B;font-size:.88rem;margin-bottom:20px;line-height:1.6}
+.auth-cal-btn{display:inline-block;padding:13px 28px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:'Heebo',sans-serif}
+@keyframes authSpin{to{transform:rotate(360deg)}}
+.auth-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:authSpin .75s linear infinite;display:none;flex-shrink:0}
+</style>
+<div id="authTopBar">
+  <a href="hahazdamnut.html" class="atb-back">→ חזרה לדף הבית</a>
+  <span class="atb-logo">ההזדמנות שלי</span>
+</div>
+<div id="authOverlay">
+  <div class="auth-card">
+    <div class="auth-logo">ההזדמנות שלי</div>
+
+    <!-- VIEW 1: LOGIN -->
+    <div id="authViewLogin">
+      <div class="auth-badge">🔒 אזור מנויים</div>
+      <h2 class="auth-title">כניסה לתכנים האישיים</h2>
+      <p class="auth-sub">תכנים אלו מיועדים לרשומים בלבד.<br/>הזן את <strong>השם והטלפון</strong> שהשארת בטופס ההרשמה.</p>
+      <input type="text" id="authName" class="auth-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="authPhone" class="auth-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <button id="authBtn" class="auth-btn" onclick="doAuthLogin()">
+        <span id="authBtnTxt">כניסה לתכנים</span>
+        <div class="auth-spin" id="authSpin"></div>
+      </button>
+      <div class="auth-errmsg" id="authErr">הפרטים לא נמצאו במערכת.<br/>ודא שהשם והטלפון זהים לפרטים שהשארת בטופס.</div>
+      <div class="auth-divider">עדיין לא נרשמת? <button class="auth-switch" onclick="authShowReg()">לחץ כאן לטופס ייעוץ חינם ←</button></div>
+    </div>
+
+    <!-- VIEW 2: REGISTRATION FORM -->
+    <div id="authViewReg" style="display:none">
+      <div class="auth-badge">🎯 שיחת ייעוץ</div>
+      <h2 class="auth-title">שיחת ייעוץ ללא עלות</h2>
+      <p class="auth-sub">השאר פרטים ונחזור אליך בהקדם לתיאום שיחה</p>
+      <input type="text" id="regName" class="auth-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="regPhone" class="auth-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <textarea id="regNotes" class="auth-field" rows="3" placeholder="ספר לנו קצת על עצמך ומה אתה מחפש..." style="resize:none;margin-bottom:16px"></textarea>
+      <button id="regBtn" class="auth-btn" onclick="doAuthReg()">
+        <span id="regBtnTxt">שלח פרטים וקבע פגישה</span>
+        <div class="auth-spin" id="regSpin"></div>
+      </button>
+      <div class="auth-errmsg" id="regErr">אנא מלא שם מלא ומספר טלפון תקין.</div>
+      <div style="text-align:center"><button class="auth-back" onclick="authShowLogin()">→ חזור לכניסה</button></div>
+    </div>
+
+    <!-- VIEW 3: SUCCESS AFTER REGISTRATION -->
+    <div id="authViewSuccess" style="display:none">
+      <div class="auth-success-ic">🎉</div>
+      <h3 class="auth-success-title">תודה! קיבלנו את הפרטים</h3>
+      <p class="auth-success-sub">ניצור איתך קשר בהקדם לתיאום השיחה.</p>
+      <p style="font-size:.85rem;color:#64748B;margin-bottom:16px">נכנס לתכנים תוך שניות...</p>
+      <a href="https://calendly.com/giladunna/30min" target="_blank" class="auth-cal-btn">לתיאום מועד פגישה ←</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var SHEETS_URL='https://script.google.com/macros/s/AKfycbxLwDpP0-Rhy5dhxjSemgIaWBvK5uyqntFQw3tqZCE2Wg4xZFcV0NTkLQIWUnCYiI-CDQ/exec';
+  if(sessionStorage.getItem('hahizd_auth')==='1'){document.getElementById('authOverlay').style.display='none';return;}
+  document.body.style.overflow='hidden';
+
+  function show(v){['Login','Reg','Success'].forEach(function(x){document.getElementById('authView'+x).style.display=x===v?'':'none';});}
+
+  window.authShowReg=function(){show('Reg');setTimeout(function(){document.getElementById('regName').focus();},50);};
+  window.authShowLogin=function(){show('Login');};
+
+  ['authName','authPhone'].forEach(function(id){
+    document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')doAuthLogin();});
+  });
+  ['regName','regPhone'].forEach(function(id){
+    document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')doAuthReg();});
+  });
+
+  window.doAuthLogin=function(){
+    var name=document.getElementById('authName').value.trim();
+    var phone=document.getElementById('authPhone').value.replace(/[\s\-\(\)]/g,'');
+    document.getElementById('authName').classList.remove('auth-err');
+    document.getElementById('authPhone').classList.remove('auth-err');
+    document.getElementById('authErr').style.display='none';
+    var ok=true;
+    if(name.length<2){document.getElementById('authName').classList.add('auth-err');ok=false;}
+    if(phone.replace(/\D/g,'').length<9){document.getElementById('authPhone').classList.add('auth-err');ok=false;}
+    if(!ok)return;
+    var norm=phone.replace(/\D/g,'').replace(/^0+/,'');
+    function grantAccess(){
+      try{var s=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');if(s.indexOf(norm)===-1){s.push(norm);}localStorage.setItem('hahizd_phones',JSON.stringify(s));}catch(e){}
+      sessionStorage.setItem('hahizd_auth','1');
+      // עדכון "כניסה אחרונה" בשיטס
+      fetch(SHEETS_URL+'?action=visit&phone='+encodeURIComponent(norm),{method:'GET',mode:'no-cors'}).catch(function(){});
+      document.body.style.overflow='';
+      var o=document.getElementById('authOverlay');
+      o.style.transition='opacity .4s ease';o.style.opacity='0';
+      setTimeout(function(){o.style.display='none';},420);
+    }
+    // Check localStorage first (instant)
+    var saved=[];try{saved=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');}catch(e){}
+    if(saved.indexOf(norm)>-1){grantAccess();return;}
+    // Fallback: check Google Sheets
+    var btn=document.getElementById('authBtn');
+    document.getElementById('authBtnTxt').style.display='none';
+    document.getElementById('authSpin').style.display='block';
+    btn.disabled=true;
+    var p=new URLSearchParams({action:'lookup',name:name,phone:norm});
+    fetch(SHEETS_URL+'?'+p.toString())
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d.found){grantAccess();}
+        else{document.getElementById('authBtnTxt').style.display='';document.getElementById('authSpin').style.display='none';btn.disabled=false;document.getElementById('authErr').style.display='block';}
+      })
+      .catch(function(){document.getElementById('authBtnTxt').style.display='';document.getElementById('authSpin').style.display='none';btn.disabled=false;document.getElementById('authErr').style.display='block';});
+  };
+
+  window.doAuthReg=function(){
+    var name=document.getElementById('regName').value.trim();
+    var phone=document.getElementById('regPhone').value.trim();
+    var notes=document.getElementById('regNotes').value.trim().slice(0,500);
+    document.getElementById('regName').classList.remove('auth-err');
+    document.getElementById('regPhone').classList.remove('auth-err');
+    document.getElementById('regErr').style.display='none';
+    var ok=true;
+    if(name.length<2){document.getElementById('regName').classList.add('auth-err');ok=false;}
+    if(phone.replace(/[\s\-\D]/g,'').length<9){document.getElementById('regPhone').classList.add('auth-err');ok=false;}
+    if(!ok){document.getElementById('regErr').style.display='block';return;}
+    var btn=document.getElementById('regBtn');
+    document.getElementById('regBtnTxt').style.display='none';
+    document.getElementById('regSpin').style.display='block';
+    btn.disabled=true;
+    // Save phone to localStorage so this browser can log in later
+    try{
+      var norm=phone.replace(/\D/g,'').replace(/^0+/,'');
+      var saved=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');
+      if(saved.indexOf(norm)===-1){saved.push(norm);}
+      localStorage.setItem('hahizd_phones',JSON.stringify(saved));
+    }catch(e){}
+    var p=new URLSearchParams({name:name,phone:phone,notes:notes,timestamp:new Date().toLocaleString('he-IL')});
+    fetch(SHEETS_URL+'?'+p.toString(),{method:'GET',mode:'no-cors'}).catch(function(){}).finally(function(){
+      show('Success');
+      // Grant access after 2 seconds
+      sessionStorage.setItem('hahizd_auth','1');
+      document.body.style.overflow='';
+      setTimeout(function(){
+        var ov=document.getElementById('authOverlay');
+        ov.style.transition='opacity .5s ease';ov.style.opacity='0';
+        setTimeout(function(){ov.style.display='none';},520);
+      },2000);
+    });
+  };
+})();
+</script>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="hahazdamnut.html">ההזדמנות שלי</a>
+    <div class="nav-cats">
+      <a href="employment.html" class="nav-cat here">💼 תעסוקתי</a>
+      <a href="finance.html" class="nav-cat">💰 כלכלי</a>
+      <a href="personal.html" class="nav-cat">🌱 אישי</a>
+    </div>
+    <button onclick="openRegModal()" class="nav-btn">קבע פגישה</button>
+  </div>
+</nav>
+
+<!-- ══ PAGE HEADER ══ -->
+<header class="page-hdr">
+  <div class="container">
+    <a href="hahazdamnut.html" class="back-link">→ חזרה לדף הבית</a>
+    <span class="hdr-emoji">💼</span>
+    <h1 class="hdr-title">הזדמנויות תעסוקתי</h1>
+    <p class="hdr-sub">מציאת עבודה, ייעוץ קריירה, הכנה לשוק העבודה — כל מה שצריך כדי להתחיל נכון</p>
+  </div>
+</header>
+
+<!-- ══ TABS BAR ══ -->
+<div class="tabs-bar"><div class="tabs-inner" id="tabBar"></div></div>
+
+<!-- ══ MAIN ══ -->
+<main class="content">
+  <div class="container" id="mainContainer"></div>
+</main>
+
+<footer>
+  <a href="hahazdamnut.html">ההזדמנות שלי</a> — מלווה משוחררים וצעירים לבניית החיים שתמיד רצו
+</footer>
+
+<script>
+var DATA = [
+  {
+    id: 'job-search',
+    label: 'מציאת עבודה',
+    icon: '🔍',
+    cards: [
+      {title:'Isrotel',badge:'אירוח',desc:'הזדמנות תעסוקה ברשת מלונות ישראלית מובילה — חדרי מלון, שירות לקוחות, מסעדנות ועוד.',tags:['אירוח','תיירות','ישראל'],link:'hahazdamnut.html#contact',img:null,icon:'🏨'},
+      {title:'MD Club — סיישל',badge:'חו"ל',desc:'הזדמנות עבודה בינלאומית מרתקת באיי סיישל — עבודה בסביבת לוקסוס עם תנאים מצוינים.',tags:['חו"ל','אירוח','בינלאומי'],link:'hahazdamnut.html#contact',img:null,icon:'✈️'},
+      {title:'אבטחה ימית',badge:'אבטחה',desc:'עבודה כאיש אבטחה על אוניות ספינות — ניסיון צבאי לגיטימי, שכר גבוה, עבודה בינלאומית.',tags:['אבטחה','ים','בינלאומי'],link:'hahazdamnut.html#contact',img:null,icon:'⚓'},
+      {title:'מפעל TAMA — נגב',badge:'תעשייה',desc:'הזדמנות תעסוקה בתעשייה וייצור במפעל TAMA באזור הנגב — עבודה יציבה עם תנאים טובים.',tags:['תעשייה','נגב','ייצור'],link:'hahazdamnut.html#contact',img:null,icon:'🏭'},
+      {title:'אבטחת מטוסים',badge:'אבטחה',desc:'עבודה בתחום אבטחה אווירית — ניסיון צבאי הכרחי, שכר מצוין, עבודה מגוונת ומאתגרת.',tags:['אבטחה','תעופה','ביטחון'],link:'hahazdamnut.html#contact',img:null,icon:'✈️'},
+      {title:'אבטחת אסדות',badge:'אבטחה',desc:'תפקידי אבטחה על אסדות קידוח ופלטפורמות ימיות — שכר גבוה, תנאים ייחודיים.',tags:['אבטחה','ים','גמישות'],link:'hahazdamnut.html#contact',img:null,icon:'🛡️'},
+      {title:'דרושים',badge:'לוחות דרושים',desc:'לוחות דרושים מובילים בישראל — כל הכלים למציאת עבודה במקום אחד. חפשו לפי תחום, אזור ושכר.',tags:['דרושים','חיפוש עבודה','ישראל'],link:'hahazdamnut.html#contact',img:null,icon:'🔍'}
+    ]
+  },
+  {
+    id: 'guidance',
+    label: 'הכוונה וייעוץ אישי',
+    icon: '🎯',
+    cards: [
+      {title:'הכוונה — האגף והקרן',badge:'ממשלתי',desc:'האגף לחיילים משוחררים ומילואים — גוף ממשלתי המציע ייעוץ חינמי לכיוון תעסוקתי ומעבר לחיים האזרחיים.',tags:['ממשלתי','חינמי','ייעוץ'],link:'https://www.hachvana.mod.gov.il/ConsultationAndDirection/Consultation/Pages/default.aspx',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/האגף-והקרן.png',icon:'🏛️'},
+      {title:'עמית לדרך',badge:'מנטורינג',desc:'תוכנית מנטורינג אישי לצעירים המחפשים כיוון מקצועי — חיבור עם מנטורים מנוסים מתעשיות שונות.',tags:['מנטורינג','קריירה','חינמי'],link:'https://www.amitladerech.org/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/5.png',icon:'🤝'},
+      {title:'מילואימנטור',badge:'מילואים',desc:'מנטורינג ייחודי למשרתי מילואים — חיבור לאנשי מקצוע מובילים שיסייעו במעבר קריירה.',tags:['מילואים','מנטורינג','קריירה'],link:'https://www.milumentor.com/miluimnikim',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/מילומנטור.png',icon:'🎖️'},
+      {title:'מבחן אישיות',badge:'הכרה עצמית',desc:'מבחן האישיות המפורסם בעולם — 16Personalities. הבן את עצמך טוב יותר לפני שאתה בוחר כיוון.',tags:['הכרה עצמית','אישיות','כיוון'],link:'https://www.16personalities.com/free-personality-test',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/16-אישויות.png',icon:'🧠'},
+      {title:'לימודים בישראל',badge:'אקדמיה',desc:'ייעוץ אקדמי חינמי לבחירת מסלול לימודים נכון — מידע על מוסדות, מסלולים ואפשרויות מימון.',tags:['לימודים','אקדמיה','ייעוץ'],link:'https://www.study.co.il/%D7%94%D7%94%D7%A6%D7%9C%D7%97%D7%94-%D7%A9%D7%9C%D7%9A-%D7%91%D7%93%D7%A8%D7%9A/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/לימודים-בישראל.png',icon:'📚'},
+      {title:'השגים',badge:'ייעוץ',desc:'השגים — ייעוץ אישי להשכלה גבוהה ופיתוח קריירה. קביעת ייעוץ חינמי לבניית דרך מקצועית.',tags:['ייעוץ','השכלה','קריירה'],link:'https://hesegim.org.il/haskala/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/3.png',icon:'🎯'}
+    ]
+  },
+  {
+    id: 'prep',
+    label: 'הכנה לשוק העבודה',
+    icon: '📋',
+    cards: [
+      {title:'תלוש משכורת',badge:'ידע פיננסי',desc:'הסבר מפורט על קריאת תלוש משכורת ותיאום מס — דברים שלא לימדו אותך בצבא אבל חייבים לדעת.',tags:['פיננסי','עבודה','ידע חיוני'],link:'https://www.youtube.com/watch?v=G6M90wUXARk',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/תלוש-משכורת.png',icon:'💳'},
+      {title:'ראיון עבודה',badge:'כלים',desc:'זומנתם לראיון עבודה? למדו איך להציג את עצמכם באופן המקצועי ביותר.',tags:['ראיון','קריירה','כלים'],link:'https://www.youtube.com/playlist?list=PL_WInT35Y_tJ691kxfAqCYF48Uosk74WR',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/ראיון-עבודה.png',icon:'🎤'},
+      {title:'לינקדאין',badge:'נטוורקינג',desc:'הרשת החברתית-עסקית הגדולה בעולם — הזדמנויות מקצועיות, שיתופי פעולה ומותג אישי.',tags:['נטוורקינג','דיגיטל','קריירה'],link:'https://www.youtube.com/playlist?list=PL_WInT35Y_tJVd47wd-WkXQDm1muXGPFT',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/לינקדאין.png',icon:'💼'},
+      {title:'קורות חיים — אושרת צרפתי',badge:'חינמי',desc:'יצירה ושיפוץ קורות חיים בחינם למשוחררים ומשוחררות — שירות מקצועי ואישי.',tags:['קורות חיים','חינמי','מקצועי'],link:'hahazdamnut.html#contact',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/קורות-חיים.png',icon:'📄'}
+    ]
+  },
+  {
+    id: 'entrepreneurs',
+    label: 'יזמים ובעלי עסקים',
+    icon: '🚀',
+    cards: [
+      {title:'Startup Academy',badge:'יזמות',desc:'תוכנית האצה ייחודית ליזמים צעירים — מהרעיון לשלב ההשקה עם ליווי מנטורים מנוסים.',tags:['יזמות','סטארטאפ','האצה'],link:'https://startupacademy.world/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/סטארטאפ-אקדמי.png',icon:'🚀'},
+      {title:'מומנטום ליזמות',badge:'ליווי',desc:'תוכנית ליווי ליזמים בתחילת דרכם — מהאפיון העסקי ועד לשלב הראשון בשוק.',tags:['יזמות','ליווי','עסקים'],link:'https://www.momentum4u.org/initiator/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/מומנטום.png',icon:'⚡'},
+      {title:'18X — חממה לסטארטאפים',badge:'חממה',desc:'18 אנשי עסקים מובילים מספקים חממה חמה לסטארטאפים מבטיחים — מימון, ייעוץ וחיבורים.',tags:['חממה','השקעה','מנטורים'],link:'https://www.18ximpact.org/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2026/01/1000160985.jpg',icon:'🏗️'},
+      {title:'הגויינט — חממה חברתית',badge:'חברתי',desc:'תמיכה ביוזמות חברתיות וסטארטאפים עם מטרה — חיבור לרשת הגויינט הבינלאומית.',tags:['חברתי','יזמות','בינלאומי'],link:'https://hackaveret.org/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2026/01/Screenshot_20260113_191639_Google.jpg',icon:'🌍'},
+      {title:'קורס יזמות — פרונט לייף',badge:'קורס',desc:'קורס יזמות מקיף ומסובסד ללוחמים ומשוחררים — מהבסיס ועד לתוכנית עסקית מלאה.',tags:['קורס','לוחמים','יזמות'],link:'https://www.frontlife.org.il/entrpnr',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2026/01/Screenshot_20251230_170353_Chrome.jpg',icon:'📊'},
+      {title:'ליווי להקמת עסק — גב ללוחם',badge:'עסק עצמאי',desc:'תוכנית ייחודית של גב ללוחם לסיוע בהקמת עסק עצמאי — ליווי, כלים עסקיים וחיבורים לשוק.',tags:['עסק עצמאי','ליווי','לוחמים'],link:'https://www.gavla.org.il/%d7%aa%d7%9b%d7%a0%d7%99%d7%aa-%d7%a2%d7%a6%d7%9e%d7%90%d7%99%d7%99%d7%9d/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2026/01/1000161116.jpg',icon:'🏢'},
+      {title:'תוכנית קרן שמש',badge:'יזמות',desc:'תוכנית האצה ייחודית לעסקים קיימים — מנטורים מנהלים בכירים שיסייעו לקדם את העסק שלך.',tags:['עסקים','מנטורים','ניהול'],link:'https://lp.ogen.org/booster/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/קרן-שמש.png',icon:'☀️'},
+      {title:'מעוף',badge:'ממשלתי',desc:'תוכנית מעוף של רשות המיסים — סיוע מסובסד להקמת עסק קטן עם ליווי מקצועי ומימון מועדף.',tags:['ממשלתי','עסק קטן','מימון'],link:'https://www.sba.org.il/hb/AidPrograms/Pages/pr1.aspx#fillDetails2',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/מעוף.png',icon:'🦅'}
+    ]
+  },
+  {
+    id: 'career',
+    label: 'תוכניות ליווי קריירה',
+    icon: '🗺️',
+    cards: [
+      {title:'לוחמים להייטק עתידיים',badge:'הייטק',desc:'מסלול הכנה מקיף לכניסה לעולם ההייטק עבור לוחמים משוחררים — קורסים, חיבורים וראיונות.',tags:['הייטק','לוחמים','קריירה'],link:'https://techidf.co.il/#form-anchor',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/8.png',icon:'💻'},
+      {title:'תוכניות ליווי קריירה',badge:'ליווי',desc:'מסלולי ליווי קריירה מקיפים עם מנטורים מנוסים — מאפיון הכיוון ועד למציאת העבודה הנכונה.',tags:['ליווי','קריירה','מנטורינג'],link:'https://tofsimkivun.org.il/candidate/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/6.png',icon:'🗺️'},
+      {title:'גב ללוחם',badge:'תמיכה',desc:'ארגון המסייע ללוחמים בשלב המעבר לחיים האזרחיים — תמיכה רגשית, מקצועית וקהילתית.',tags:['לוחמים','תמיכה','קהילה'],link:'https://www.gavla.org.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/4.png',icon:'🤝'},
+      {title:'יום בחיי — פרונט לייף',badge:'חוויה',desc:'בלה יום שלם בחברה מובילה לצד אנשי מקצוע מהתעשייה — לחיבור בין לוחמים להייטק.',tags:['חוויה','הייטק','לוחמים'],link:'https://www.frontlife.org.il/adayinthelife',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/יום-בחיי.png',icon:'🌟'},
+      {title:'הוילה בלוד',badge:'מגורים',desc:'תוכנית מגורים ועצמאות למשוחררים — בית, קהילה וכלים לתחילת חיים עצמאיים בעיר לוד.',tags:['מגורים','עצמאות','משוחררים'],link:'https://villatruda.org/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/30.png',icon:'🏠'},
+      {title:'תוכנית אלונים — פרונט לייף',badge:'מנהיגות',desc:'תוכנית מנהיגות מיוחדת ללוחמים: מחזית הלחימה לחזית החיים. ליווי מקצועי וכלים.',tags:['מנהיגות','לוחמים','מעבר'],link:'https://fronlifementorprogram.fillout.com/t/hfchHVnQ7eus',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/אלונים.png',icon:'🌳'}
+    ]
+  }
+];
+
+function buildCard(card, delay) {
+  var isExternal = card.link.startsWith('http');
+  var imgHtml = card.img
+    ? '<img class="card-img" src="' + card.img + '" alt="' + card.title + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=card-no-img>' + card.icon + '</div>\'">'
+    : '<div class="card-no-img">' + card.icon + '</div>';
+
+  var tagsHtml = card.tags.map(function(t) {
+    return '<span class="card-tag">' + t + '</span>';
+  }).join('');
+
+  var a = document.createElement('a');
+  a.href = card.link;
+  a.target = isExternal ? '_blank' : '_self';
+  if (isExternal) a.rel = 'noopener noreferrer';
+  a.className = 'card fade-up';
+  a.style.animationDelay = delay + 's';
+  a.style.opacity = '0';
+  a.innerHTML =
+    '<div class="card-img-wrap">' + imgHtml + '</div>' +
+    '<div class="card-body">' +
+      '<span class="card-badge">' + card.badge + '</span>' +
+      '<div class="card-title">' + card.title + '</div>' +
+      '<div class="card-desc">' + card.desc + '</div>' +
+      '<div class="card-tags">' + tagsHtml + '</div>' +
+      '<span class="card-link">למידע נוסף ←</span>' +
+    '</div>';
+  return a;
+}
+
+var activeTab = 0;
+(function(){
+  var hash = location.hash.replace('#','');
+  var idx = DATA.findIndex(function(s){ return s.id === hash; });
+  if(idx >= 0) activeTab = idx;
+})();
+
+function buildTabs() {
+  var bar = document.getElementById('tabBar');
+  bar.innerHTML = '';
+  DATA.forEach(function(sub, i) {
+    var btn = document.createElement('button');
+    btn.className = 'tab-btn' + (i === activeTab ? ' active' : '');
+    btn.textContent = sub.icon + ' ' + sub.label;
+    btn.onclick = (function(ii, sid){
+      return function() {
+        activeTab = ii;
+        history.replaceState(null, '', '#' + sid);
+        buildTabs();
+        render();
+        window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
+      };
+    })(i, sub.id);
+    bar.appendChild(btn);
+  });
+}
+
+function render() {
+  var container = document.getElementById('mainContainer');
+  container.innerHTML = '';
+  var subcat = DATA[activeTab];
+
+  var section = document.createElement('section');
+  section.className = 'subcat-section';
+  section.id = subcat.id;
+
+  var header = document.createElement('div');
+  header.className = 'subcat-header';
+  header.innerHTML =
+    '<div class="subcat-icon">' + subcat.icon + '</div>' +
+    '<div class="subcat-info">' +
+      '<div class="subcat-title">' + subcat.label + '</div>' +
+      '<div class="subcat-count">' + subcat.cards.length + ' הזדמנויות</div>' +
+    '</div>';
+  section.appendChild(header);
+
+  var grid = document.createElement('div');
+  grid.className = 'cards-grid';
+  subcat.cards.forEach(function(card, i) {
+    grid.appendChild(buildCard(card, i * 0.06));
+  });
+  section.appendChild(grid);
+  container.appendChild(section);
+}
+
+buildTabs();
+render();
+</script>
+
+<!-- ══ MEETING MODAL ══ -->
+<style>
+#regModal{position:fixed;inset:0;z-index:99998;background:rgba(10,22,40,.75);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;font-family:'Heebo',sans-serif}
+#regModal.open{display:flex}
+.reg-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:440px;width:100%;box-shadow:0 32px 80px rgba(0,0,0,.35);position:relative;animation:regSlideIn .3s ease}
+@keyframes regSlideIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.reg-close{position:absolute;top:14px;left:16px;width:32px;height:32px;border-radius:50%;background:#F1F5F9;border:none;cursor:pointer;font-size:1.1rem;color:#64748B;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.reg-close:hover{background:#E2E8F0}
+.reg-title{font-size:1.45rem;font-weight:900;color:#0F172A;margin-bottom:6px;line-height:1.3;text-align:center}
+.reg-sub{font-size:.88rem;color:#64748B;margin-bottom:24px;text-align:center;line-height:1.6}
+.reg-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:1rem;font-family:'Heebo',sans-serif;margin-bottom:12px;text-align:right;outline:none;transition:border-color .2s;display:block;box-sizing:border-box}
+.reg-field:focus{border-color:#1A56A0;box-shadow:0 0 0 3px rgba(26,86,160,.1)}
+.reg-field.reg-err{border-color:#EF4444}
+.reg-btn{width:100%;padding:14px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:4px;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.reg-btn:hover{opacity:.9}.reg-btn:disabled{opacity:.55;cursor:default}
+#rmSuccess{display:none;text-align:center;padding:12px 0}
+#rmSuccess .rm-ic{font-size:3rem;margin-bottom:12px}
+#rmSuccess h3{font-size:1.3rem;font-weight:900;margin-bottom:8px}
+#rmSuccess p{color:#64748B;font-size:.9rem;margin-bottom:20px}
+#rmSuccess a{display:inline-block;padding:13px 28px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none}
+@keyframes rmSpin{to{transform:rotate(360deg)}}
+.rm-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:rmSpin .75s linear infinite;display:none}
+</style>
+<div id="regModal">
+  <div class="reg-card">
+    <button class="reg-close" onclick="closeRegModal()">✕</button>
+    <div id="rmForm">
+      <h2 class="reg-title">קבע פגישת ליווי חינם</h2>
+      <p class="reg-sub">השאר פרטים ונחזור אליך בהקדם לתיאום</p>
+      <input type="text" id="rmName" class="reg-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="rmPhone" class="reg-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <textarea id="rmNotes" class="reg-field" rows="3" placeholder="ספר לנו קצת על עצמך (לא חובה)" style="resize:none;margin-bottom:16px"></textarea>
+      <button id="rmBtn" class="reg-btn" onclick="submitRegModal()">
+        <span id="rmBtnTxt">שלח ← קבע פגישה</span>
+        <div class="rm-spin" id="rmSpin"></div>
+      </button>
+    </div>
+    <div id="rmSuccess">
+      <div class="rm-ic">🎉</div>
+      <h3>תודה! קיבלנו את הפרטים</h3>
+      <p>ניצור איתך קשר בהקדם לתיאום הפגישה.</p>
+      <a href="https://calendly.com/giladunna/30min" target="_blank">לתיאום מועד פגישה ←</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var SU='https://script.google.com/macros/s/AKfycbxLwDpP0-Rhy5dhxjSemgIaWBvK5uyqntFQw3tqZCE2Wg4xZFcV0NTkLQIWUnCYiI-CDQ/exec';
+  window.openRegModal=function(){document.getElementById('regModal').classList.add('open');document.body.style.overflow='hidden';document.getElementById('rmName').focus();};
+  window.closeRegModal=function(){document.getElementById('regModal').classList.remove('open');document.body.style.overflow='';};
+  document.getElementById('regModal').addEventListener('click',function(e){if(e.target===this)closeRegModal();});
+  ['rmName','rmPhone'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')submitRegModal();});});
+  window.submitRegModal=function(){
+    var name=document.getElementById('rmName').value.trim();
+    var phone=document.getElementById('rmPhone').value.trim();
+    var notes=document.getElementById('rmNotes').value.trim().slice(0,500);
+    document.getElementById('rmName').classList.remove('reg-err');
+    document.getElementById('rmPhone').classList.remove('reg-err');
+    var ok=true;
+    if(name.length<2){document.getElementById('rmName').classList.add('reg-err');ok=false;}
+    if(phone.replace(/\D/g,'').length<9){document.getElementById('rmPhone').classList.add('reg-err');ok=false;}
+    if(!ok)return;
+    var btn=document.getElementById('rmBtn');
+    document.getElementById('rmBtnTxt').style.display='none';
+    document.getElementById('rmSpin').style.display='block';
+    btn.disabled=true;
+    try{var n=phone.replace(/\D/g,'').replace(/^0+/,'');var s=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');if(s.indexOf(n)===-1){s.push(n);}localStorage.setItem('hahizd_phones',JSON.stringify(s));}catch(e){}
+    var p=new URLSearchParams({name:name,phone:phone,notes:notes,timestamp:new Date().toLocaleString('he-IL')});
+    fetch(SU+'?'+p.toString(),{method:'GET',mode:'no-cors'}).catch(function(){}).finally(function(){
+      document.getElementById('rmForm').style.display='none';
+      document.getElementById('rmSuccess').style.display='block';
+    });
+  };
+})();
+</script>
+</body>
+</html>

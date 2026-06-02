@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>הזדמנויות אישי — ההזדמנות שלי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+:root{--cat:#7C3AED;--cat-dk:#5B21B6;--cat-light:rgba(124,58,237,.08);--cat-border:rgba(124,58,237,.2);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;color:#0F172A;background:#F5F3FF;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── Navbar ── */
+#navbar{position:fixed;top:0;right:0;left:0;z-index:1000;height:64px;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(15,23,42,.07);display:flex;align-items:center}
+.nav-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 24px}
+.nav-logo{font-size:1.2rem;font-weight:900;color:var(--cat)}
+.nav-cats{display:flex;align-items:center;gap:4px}
+.nav-cat{padding:7px 14px;border-radius:8px;font-size:.88rem;font-weight:600;color:#64748B;transition:all .2s}
+.nav-cat:hover{color:var(--cat);background:rgba(124,58,237,.06)}
+.nav-cat.here{color:var(--cat);background:rgba(124,58,237,.1);font-weight:700}
+.nav-btn{padding:8px 20px;border-radius:50px;background:var(--cat);color:#fff;font-size:.88rem;font-weight:700;transition:opacity .2s;flex-shrink:0}
+.nav-btn:hover{opacity:.85}
+@media(max-width:640px){.nav-cats{display:none}}
+
+/* ── Header ── */
+.page-hdr{background:linear-gradient(135deg,var(--cat-dk) 0%,var(--cat) 100%);padding:88px 0 52px;position:relative;overflow:hidden}
+.page-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(255,255,255,.07),transparent 60%);pointer-events:none}
+.page-hdr::after{content:'';position:absolute;bottom:-60px;right:-100px;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.04)}
+.page-hdr .container{position:relative;z-index:1}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.65);font-size:.88rem;font-weight:600;margin-bottom:20px;transition:color .2s}
+.back-link:hover{color:#fff}
+.hdr-emoji{font-size:2.8rem;display:block;margin-bottom:12px}
+.hdr-title{font-size:clamp(2rem,5vw,2.8rem);font-weight:900;color:#fff;margin-bottom:10px}
+.hdr-sub{font-size:1rem;color:rgba(255,255,255,.75);max-width:560px;line-height:1.7}
+
+/* ── Main content ── */
+.content{padding:48px 0 80px}
+
+/* ── Section header ── */
+.subcategory{margin-bottom:56px}
+.subcategory:last-child{margin-bottom:0}
+.section-hdr{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.section-hdr-left{flex:1}
+.section-title{font-size:1.55rem;font-weight:900;color:#0F172A;margin-bottom:2px}
+.section-count{font-size:.88rem;color:#64748B;font-weight:500}
+.section-line{flex:1;height:2px;background:linear-gradient(to left,transparent,var(--cat-border))}
+.section-badge{padding:5px 16px;border-radius:50px;background:var(--cat-light);border:1px solid var(--cat-border);color:var(--cat);font-size:.8rem;font-weight:700;white-space:nowrap;flex-shrink:0}
+
+/* ── Cards grid ── */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:960px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards-grid{grid-template-columns:1fr}}
+
+/* ── Card ── */
+.card{background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04);overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(15,23,42,.06);transition:transform .22s ease,box-shadow .22s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(15,23,42,.13)}
+.card-img-wrap{height:200px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,var(--cat-dk),var(--cat))}
+.card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.card:hover .card-img{transform:scale(1.05)}
+.card-no-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(124,58,237,.04))}
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.card-badge{display:inline-flex;align-items:center;padding:4px 12px;border-radius:50px;font-size:.75rem;font-weight:700;background:var(--cat-light);border:1px solid var(--cat-border);color:var(--cat);margin-bottom:10px;align-self:flex-start}
+.card-title{font-size:1.05rem;font-weight:800;margin-bottom:8px;line-height:1.3;color:#0F172A}
+.card-desc{font-size:.875rem;color:#64748B;line-height:1.65;flex:1;margin-bottom:14px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.card-tag{padding:3px 10px;border-radius:50px;font-size:.72rem;font-weight:600;background:#F5F3FF;color:#64748B;border:1px solid rgba(15,23,42,.07)}
+.card-link{display:inline-flex;align-items:center;gap:6px;color:var(--cat);font-size:.875rem;font-weight:700;padding:9px 18px;border-radius:50px;border:2px solid var(--cat);transition:all .2s;align-self:flex-start;margin-top:auto}
+.card-link:hover{background:var(--cat);color:#fff}
+
+/* ── Footer ── */
+footer{background:#0F172A;color:rgba(255,255,255,.55);text-align:center;padding:28px 24px;font-size:.85rem}
+footer a{color:rgba(255,255,255,.75);font-weight:600}
+
+/* ── Animations ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .32s ease forwards}
+
+/* ── Tabs ── */
+.tabs-bar{background:#fff;border-bottom:2px solid rgba(15,23,42,.07);position:sticky;top:64px;z-index:900}
+.tabs-inner{display:flex;align-items:center;gap:4px;padding:0 24px;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto}
+.tabs-inner::-webkit-scrollbar{display:none}
+.tab-btn{padding:14px 20px;font-size:.88rem;font-weight:600;color:#64748B;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;background:none;border-top:none;border-right:none;border-left:none;cursor:pointer;font-family:inherit}
+.tab-btn:hover{color:var(--cat)}
+.tab-btn.active{color:var(--cat);border-bottom-color:var(--cat);font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ══ AUTH OVERLAY ══ -->
+<style>
+#authTopBar{position:fixed;top:0;right:0;left:0;z-index:100000;height:52px;background:rgba(10,22,40,.98);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-family:'Heebo',sans-serif}
+#authTopBar .atb-logo{font-size:1.1rem;font-weight:900;color:#fff}
+#authTopBar .atb-back{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.65);font-size:.88rem;font-weight:600;text-decoration:none;transition:color .2s}
+#authTopBar .atb-back:hover{color:#fff}
+#authOverlay{position:fixed;inset:0;z-index:99999;background:rgba(10,22,40,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:72px 20px 20px;font-family:'Heebo',sans-serif;overflow-y:auto}
+.auth-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:440px;width:100%;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.5);margin:auto}
+.auth-logo{font-size:1.2rem;font-weight:900;color:#1A56A0;margin-bottom:10px}
+.auth-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(26,86,160,.09);border:1px solid rgba(26,86,160,.2);color:#1A56A0;font-size:.78rem;font-weight:700;padding:5px 14px;border-radius:50px;margin-bottom:20px}
+.auth-title{font-size:1.5rem;font-weight:900;color:#0F172A;margin-bottom:8px;line-height:1.3}
+.auth-sub{font-size:.88rem;color:#64748B;margin-bottom:24px;line-height:1.65}
+.auth-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:1rem;font-family:'Heebo',sans-serif;margin-bottom:12px;text-align:right;transition:border-color .2s;outline:none;display:block;box-sizing:border-box}
+.auth-field:focus{border-color:#1A56A0;box-shadow:0 0 0 3px rgba(26,86,160,.1)}
+.auth-field.auth-err{border-color:#EF4444}
+.auth-btn{width:100%;padding:14px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:4px;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.auth-btn:hover{opacity:.9}
+.auth-btn:disabled{opacity:.55;cursor:default}
+.auth-errmsg{color:#EF4444;font-size:.85rem;margin-top:10px;display:none;line-height:1.5}
+.auth-divider{margin-top:20px;padding-top:18px;border-top:1px solid #F1F5F9;font-size:.85rem;color:#94A3B8}
+.auth-switch{background:none;border:none;color:#1A56A0;font-weight:700;font-size:.85rem;font-family:'Heebo',sans-serif;cursor:pointer;padding:0;text-decoration:underline}
+.auth-back{background:none;border:none;color:#64748B;font-size:.82rem;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:14px;display:flex;align-items:center;gap:4px}
+.auth-back:hover{color:#1A56A0}
+.auth-success-ic{font-size:3rem;margin-bottom:12px}
+.auth-success-title{font-size:1.3rem;font-weight:900;margin-bottom:8px}
+.auth-success-sub{color:#64748B;font-size:.88rem;margin-bottom:20px;line-height:1.6}
+.auth-cal-btn{display:inline-block;padding:13px 28px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:'Heebo',sans-serif}
+@keyframes authSpin{to{transform:rotate(360deg)}}
+.auth-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:authSpin .75s linear infinite;display:none;flex-shrink:0}
+</style>
+<div id="authTopBar">
+  <a href="hahazdamnut.html" class="atb-back">→ חזרה לדף הבית</a>
+  <span class="atb-logo">ההזדמנות שלי</span>
+</div>
+<div id="authOverlay">
+  <div class="auth-card">
+    <div class="auth-logo">ההזדמנות שלי</div>
+    <div id="authViewLogin">
+      <div class="auth-badge">🔒 אזור מנויים</div>
+      <h2 class="auth-title">כניסה לתכנים האישיים</h2>
+      <p class="auth-sub">תכנים אלו מיועדים לרשומים בלבד.<br/>הזן את <strong>השם והטלפון</strong> שהשארת בטופס ההרשמה.</p>
+      <input type="text" id="authName" class="auth-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="authPhone" class="auth-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <button id="authBtn" class="auth-btn" onclick="doAuthLogin()">
+        <span id="authBtnTxt">כניסה לתכנים</span>
+        <div class="auth-spin" id="authSpin"></div>
+      </button>
+      <div class="auth-errmsg" id="authErr">הפרטים לא נמצאו במערכת.<br/>ודא שהשם והטלפון זהים לפרטים שהשארת בטופס.</div>
+      <div class="auth-divider">עדיין לא נרשמת? <button class="auth-switch" onclick="authShowReg()">לחץ כאן לטופס ייעוץ חינם ←</button></div>
+    </div>
+    <div id="authViewReg" style="display:none">
+      <div class="auth-badge">🎯 שיחת ייעוץ</div>
+      <h2 class="auth-title">שיחת ייעוץ ללא עלות</h2>
+      <p class="auth-sub">השאר פרטים ונחזור אליך בהקדם לתיאום שיחה</p>
+      <input type="text" id="regName" class="auth-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="regPhone" class="auth-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <textarea id="regNotes" class="auth-field" rows="3" placeholder="ספר לנו קצת על עצמך ומה אתה מחפש..." style="resize:none;margin-bottom:16px"></textarea>
+      <button id="regBtn" class="auth-btn" onclick="doAuthReg()">
+        <span id="regBtnTxt">שלח פרטים וקבע פגישה</span>
+        <div class="auth-spin" id="regSpin"></div>
+      </button>
+      <div class="auth-errmsg" id="regErr">אנא מלא שם מלא ומספר טלפון תקין.</div>
+      <div style="text-align:center"><button class="auth-back" onclick="authShowLogin()">→ חזור לכניסה</button></div>
+    </div>
+    <div id="authViewSuccess" style="display:none">
+      <div class="auth-success-ic">🎉</div>
+      <h3 class="auth-success-title">תודה! קיבלנו את הפרטים</h3>
+      <p class="auth-success-sub">ניצור איתך קשר בהקדם לתיאום השיחה.</p>
+      <p style="font-size:.85rem;color:#64748B;margin-bottom:16px">נכנס לתכנים תוך שניות...</p>
+      <a href="https://calendly.com/giladunna/30min" target="_blank" class="auth-cal-btn">לתיאום מועד פגישה ←</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var SHEETS_URL='https://script.google.com/macros/s/AKfycbxLwDpP0-Rhy5dhxjSemgIaWBvK5uyqntFQw3tqZCE2Wg4xZFcV0NTkLQIWUnCYiI-CDQ/exec';
+  if(sessionStorage.getItem('hahizd_auth')==='1'){document.getElementById('authOverlay').style.display='none';return;}
+  document.body.style.overflow='hidden';
+  function show(v){['Login','Reg','Success'].forEach(function(x){document.getElementById('authView'+x).style.display=x===v?'':'none';});}
+  window.authShowReg=function(){show('Reg');setTimeout(function(){document.getElementById('regName').focus();},50);};
+  window.authShowLogin=function(){show('Login');};
+  ['authName','authPhone'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')doAuthLogin();});});
+  ['regName','regPhone'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')doAuthReg();});});
+  window.doAuthLogin=function(){
+    var name=document.getElementById('authName').value.trim();
+    var phone=document.getElementById('authPhone').value.replace(/[\s\-\(\)]/g,'');
+    document.getElementById('authName').classList.remove('auth-err');
+    document.getElementById('authPhone').classList.remove('auth-err');
+    document.getElementById('authErr').style.display='none';
+    var ok=true;
+    if(name.length<2){document.getElementById('authName').classList.add('auth-err');ok=false;}
+    if(phone.replace(/\D/g,'').length<9){document.getElementById('authPhone').classList.add('auth-err');ok=false;}
+    if(!ok)return;
+    var norm=phone.replace(/\D/g,'').replace(/^0+/,'');
+    function grantAccess(){
+      try{var s=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');if(s.indexOf(norm)===-1){s.push(norm);}localStorage.setItem('hahizd_phones',JSON.stringify(s));}catch(e){}
+      sessionStorage.setItem('hahizd_auth','1');
+      fetch(SHEETS_URL+'?action=visit&phone='+encodeURIComponent(norm),{method:'GET',mode:'no-cors'}).catch(function(){});
+      document.body.style.overflow='';var o=document.getElementById('authOverlay');o.style.transition='opacity .4s ease';o.style.opacity='0';setTimeout(function(){o.style.display='none';},420);
+    }
+    var saved=[];try{saved=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');}catch(e){}
+    if(saved.indexOf(norm)>-1){grantAccess();return;}
+    var btn=document.getElementById('authBtn');
+    document.getElementById('authBtnTxt').style.display='none';document.getElementById('authSpin').style.display='block';btn.disabled=true;
+    var p=new URLSearchParams({action:'lookup',name:name,phone:norm});
+    fetch(SHEETS_URL+'?'+p.toString())
+      .then(function(r){return r.json();})
+      .then(function(d){if(d.found){grantAccess();}else{document.getElementById('authBtnTxt').style.display='';document.getElementById('authSpin').style.display='none';btn.disabled=false;document.getElementById('authErr').style.display='block';}})
+      .catch(function(){document.getElementById('authBtnTxt').style.display='';document.getElementById('authSpin').style.display='none';btn.disabled=false;document.getElementById('authErr').style.display='block';});
+  };
+  window.doAuthReg=function(){
+    var name=document.getElementById('regName').value.trim();
+    var phone=document.getElementById('regPhone').value.trim();
+    var notes=document.getElementById('regNotes').value.trim().slice(0,500);
+    document.getElementById('regName').classList.remove('auth-err');
+    document.getElementById('regPhone').classList.remove('auth-err');
+    document.getElementById('regErr').style.display='none';
+    var ok=true;
+    if(name.length<2){document.getElementById('regName').classList.add('auth-err');ok=false;}
+    if(phone.replace(/[\s\-\D]/g,'').length<9){document.getElementById('regPhone').classList.add('auth-err');ok=false;}
+    if(!ok){document.getElementById('regErr').style.display='block';return;}
+    var btn=document.getElementById('regBtn');
+    document.getElementById('regBtnTxt').style.display='none';
+    document.getElementById('regSpin').style.display='block';
+    btn.disabled=true;
+    try{var n2=phone.replace(/\D/g,'').replace(/^0+/,'');var s2=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');if(s2.indexOf(n2)===-1){s2.push(n2);}localStorage.setItem('hahizd_phones',JSON.stringify(s2));}catch(e){}
+    var p=new URLSearchParams({name:name,phone:phone,notes:notes,timestamp:new Date().toLocaleString('he-IL')});
+    fetch(SHEETS_URL+'?'+p.toString(),{method:'GET',mode:'no-cors'}).catch(function(){}).finally(function(){
+      show('Success');
+      sessionStorage.setItem('hahizd_auth','1');
+      document.body.style.overflow='';
+      setTimeout(function(){
+        var ov=document.getElementById('authOverlay');
+        ov.style.transition='opacity .5s ease';ov.style.opacity='0';
+        setTimeout(function(){ov.style.display='none';},520);
+      },2000);
+    });
+  };
+})();
+</script>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="hahazdamnut.html">ההזדמנות שלי</a>
+    <div class="nav-cats">
+      <a href="employment.html" class="nav-cat">💼 תעסוקתי</a>
+      <a href="finance.html" class="nav-cat">💰 כלכלי</a>
+      <a href="personal.html" class="nav-cat here">🌱 אישי</a>
+    </div>
+    <button onclick="openRegModal()" class="nav-btn">קבע פגישה</button>
+  </div>
+</nav>
+
+<header class="page-hdr">
+  <div class="container">
+    <a href="hahazdamnut.html" class="back-link">→ חזרה לדף הבית</a>
+    <span class="hdr-emoji">🌱</span>
+    <h1 class="hdr-title">הזדמנויות אישי</h1>
+    <p class="hdr-sub">תוכניות צעירים, הטיול הגדול, התפתחות אישית והתנדבות — לבנות את עצמך מבפנים</p>
+  </div>
+</header>
+
+<!-- ══ TABS BAR ══ -->
+<div class="tabs-bar"><div class="tabs-inner" id="tabBar"></div></div>
+
+<main class="content">
+  <div class="container" id="mainContent"></div>
+</main>
+
+<footer>
+  <a href="hahazdamnut.html">ההזדמנות שלי</a> — מלווה משוחררים וצעירים לבניית החיים שתמיד רצו
+</footer>
+
+<script>
+var DATA = [
+  {
+    id:'youth', label:'תוכניות צעירים', icon:'🌟',
+    cards:[
+      {title:'המיניבוס',badge:'12 ימים',desc:'תוכנית קצרה ומרוכזת בת 12 יום לצעירים מעולים — מנהיגות, עשייה משמעותית ופיתוח אישי עמוק.',tags:['12 ימים','מנהיגות','צעירים'],link:'https://docs.google.com/forms/d/e/1FAIpQLSc2RhAH8Y6Xe7qcwb2HqbFmASSHX8auQrlAde9xCCvFKukqrg/closedform',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/מיניבוס.png',icon:'🚌'},
+      {title:'פרונט לייף',badge:'לוחמים',desc:'בית עבור כל הלוחמים והלוחמות במילואים — קהילה חזקה, קורסים מסובסדים, הזדמנויות ותמיכה.',tags:['לוחמים','קהילה','קורסים'],link:'https://www.frontlife.org.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/%D7%A4%D7%A8%D7%95%D7%A0%D7%98%D7%9C%D7%99%D7%99%D7%A3.png',icon:'⚡'},
+      {title:'בית הספר לקוסמים',badge:'3 חודשים',desc:'קבוצה קטנה ומובחרת עוברת מסע של שלושה חודשים שיחולל שינוי אמיתי — חשיבה, יצירה, עשייה.',tags:['3 חודשים','שינוי','נבחרת'],link:'https://www.mehina.net/%D7%91%D7%99%D7%AA-%D7%A1%D7%A4%D7%A8-%D7%9C%D7%A7%D7%95%D7%A1%D7%9E%D7%99%D7%9D',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/בית-הספר-לקוסמים.png',icon:'✨'},
+      {title:'TLI',badge:'24-35',desc:'תכנית יוקרתית למנהלים צעירים גילאי 24-35 — פיתוח מנהיגות, ניהול ויכולות אסטרטגיות.',tags:['מנהיגות','ניהול','24-35'],link:'https://tli-il.com/advance/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/טי-אל-אי.png',icon:'🏆'},
+      {title:'הופמן קופמן',badge:'מנהיגות',desc:'תוכניות מובילות בישראל לידרשיפ וניהול — שיטות מוכחות, מרצים מובילים, קהילה חזקה.',tags:['מנהיגות','ניהול','ישראל'],link:'https://www.hoffmankofman.com/pay-it-forward',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/הופמן-קופמן.png',icon:'👑'},
+      {title:'תוכנית זריחה',badge:'שחרור',desc:'מסע חוויתי לעיבוד חוויית השחרור לפני הכניסה לריצה של החיים — עצירה, חשיבה, כיוון.',tags:['שחרור','עיבוד','כיוון'],link:'https://kulna.org.il/%d7%aa%d7%95%d7%9b%d7%a0%d7%99%d7%aa-%d7%96%d7%a8%d7%99%d7%97%d7%94/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/זריחה.png',icon:'🌅'},
+      {title:'דרומה',badge:'גילוי עצמי',desc:'פגוש את עצמך בנקודה משמעותית בחיים — מסע לגילוי עצמי ולקבלת החלטות שישנו את כיוון החיים.',tags:['גילוי עצמי','כיוון','החלטות'],link:'https://www.magal-negev-israel.org/%D7%93%D7%A8%D7%95%D7%9E%D7%94',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/דרומה.png',icon:'🌵'},
+      {title:'מסע אל האופק',badge:'עצמאות',desc:'תוכנית המסייעת למשוחררים להגיע לעצמאות כלכלית ולהשתלבות חברתית — מסע מקיף לחיים טובים.',tags:['עצמאות','כלכלי','שילוב'],link:'hahazdamnut.html#contact',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/מסע-אל-האופק.png',icon:'🌄'},
+      {title:'הישיבה החילונית',badge:'לימוד',desc:'תוכנית לימוד ייחודית המשלבת תרבות יהודית, עברית ומחשבה — לצעירים שרוצים ללמוד את שורשיהם.',tags:['לימוד','תרבות','יהדות'],link:'https://jsy.org.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/הישיבה-החילונית.png',icon:'📖'},
+      {title:'סדנת משתחררים — נומרה',badge:'10 ימים',desc:'עשרה ימי סדנה מלאי תוכן וחוויות בלב הטבע בגליל — תוכנית מיוחדת למשוחררים בתחילת דרכם.',tags:['סדנה','טבע','משוחררים'],link:'https://www.facebook.com/havat.namura/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/נמורה.png',icon:'🌿'},
+      {title:'מסעות תגלית',badge:'תגלית',desc:'מסע ייחודי בישראל המחבר בין קהילות יהודיות מכל העולם — תוכנית חינמית עם הרשמה מוקדמת.',tags:['מסע','קהילה','בינלאומי'],link:'https://application.taglitisrael.co.il/login?origin=EducationalInstitution&unit=361&product=BRI',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/הזדמנויות-צעירים-IL-1.png',icon:'🌍'},
+      {title:'ישראל 2050',badge:'שינוי חברתי',desc:'תנועה המחזקת את המעורבות האזרחית של צעירים ועיצוב עתיד ישראל — שיח, השפעה ושינוי אמיתי.',tags:['אזרחות','שינוי','עתיד'],link:'https://israel2050.co.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/ישראל-2050.png',icon:'🇮🇱'},
+      {title:'LINK 20',badge:'מנהיגות',desc:'רשת צעירים עם ובלי מוגבלויות לקידום שוויון, גיוון וזכויות — תוכניות מנהיגות בחסות רוטשילד.',tags:['מנהיגות','שוויון','גיוון'],link:'https://link20.org/%d7%aa%d7%95%d7%9b%d7%a0%d7%99%d7%95%d7%aa-%d7%9e%d7%a0%d7%94%d7%99%d7%92%d7%95%d7%aa/',img:'https://link20.org/wp-content/uploads/2024/04/site-logo.png',icon:'🔗'}
+    ]
+  },
+  {
+    id:'bigtrip', label:'הטיול הגדול', icon:'✈️',
+    cards:[
+      {title:'ניו זילנד',badge:'יעד',desc:'רותם מרכזת הכל למטיילים בניו זילנד — מפות, טיפים, קבוצות וואטסאפ והטבות בלעדיות לישראלים.',tags:['ניו זילנד','מדריך','קהילה'],link:'https://rotemnz.com/%d7%a8%d7%95%d7%aa%d7%9d/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/ניו-זילנד.png',icon:'🥝'},
+      {title:'אוסטרליה',badge:'יעד',desc:'ניסיון של 44 מדינות ב-4 שנים — המדריך המלא לטיול ועבודה באוסטרליה עם כל הטיפים.',tags:['אוסטרליה','עבודה','טיול'],link:'https://australia-travel.co.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/אוסטרליה.png',icon:'🦘'},
+      {title:'דרום ומרכז אמריקה',badge:'יעד',desc:'מוצילר — האתר המוביל לדרום ומרכז אמריקה. מפות, יעדים, קבוצות, הטבות ועדכונים שוטפים.',tags:['אמריקה','מדריך','קהילה'],link:'https://www.muchiler.co.il/muchicard.html',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/דרום-ומרכז-אמריקה.png',icon:'🌎'},
+      {title:'הכנה ותכנון טיול',badge:'חינמי',desc:'משאבים חינמיים, וובינרים ומפגשים להכנה לטיול הגדול — ישראל IS, קהילות, ביטוח ועוד.',tags:['הכנה','חינמי','ביטוח'],link:'https://www.israel-is.org/events/5943/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/תכנון-טיול.png',icon:'🗺️'},
+      {title:'ציוד טיולים',badge:'ציוד',desc:'השכרה ורכישה של ציוד טיול עם הכוונה מקצועית — כל מה שצריך בשביל הטיול הגדול.',tags:['ציוד','השכרה','טיול'],link:'https://wisetrek.wordpress.com/%D7%A8%D7%99%D7%9B%D7%95%D7%96-%D7%90%D7%AA%D7%A8%D7%99%D7%9D-%D7%A9%D7%99%D7%9E%D7%95%D7%A9%D7%99%D7%99%D7%9D-%D7%9C%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/ציוד-לטיולים.png',icon:'🎒'},
+      {title:'המזרח',badge:'יעד',desc:'קהילה עם מפות, קבוצות וואטסאפ והטבות בלעדיות לטיול במזרח — תאילנד, הודו, נפאל ועוד.',tags:['מזרח','קהילה','הטבות'],link:'https://mizrahnik.co.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/טיול-למזרח.png',icon:'🐘'},
+      {title:'אפריקה',badge:'יעד',desc:'קהילת מוזונגו — מרכזת הכל לאפריקה. מפות, קבוצות, יעדים מומלצים והטבות לקהילה.',tags:['אפריקה','קהילה','הרפתקה'],link:'https://mzungusite.com/discounts/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/אפריקה.png',icon:'🦁'},
+      {title:'שביל ישראל',badge:'מקומי',desc:'מסע לגילוי עצמי ולקבלת החלטות משנות חיים — שביל ישראל כמסע פנימי לא פחות ממסע חיצוני.',tags:['שביל ישראל','גילוי עצמי','טבע'],link:'https://www.teva.org.il/israel-national-trail',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/שביל-ישראל.png',icon:'🥾'}
+    ]
+  },
+  {
+    id:'development', label:'התפתחות אישית', icon:'🧠',
+    cards:[
+      {title:'מדיטציה וויפאסנה',badge:'ריטריט',desc:'ריטריט מדיטציה של 10 ימים בתשלום חופשי — חוויה מחוללת שינוי שכולם ממליצים עליה.',tags:['מדיטציה','ריטריט','10 ימים'],link:'https://www.il.dhamma.org/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/הזדמנויות-צעירים-IL.png',icon:'🧘'},
+      {title:'ספרים מומלצים',badge:'קריאה',desc:'רשימת הספרים שכל צעיר בן 20 חייב לקרוא — פיתוח עצמי, עסקים, פסיכולוגיה ופיננסים.',tags:['ספרים','קריאה','פיתוח'],link:'https://data.gov.il/dataset/642/resource/daea8017-f845-49db-ac7b-7823bf9a4135',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/הזדמנויות-צעירים-IL-2.png',icon:'📚'},
+      {title:'פודקאסטים',badge:'תוכן',desc:'הפודקאסטים הטובים ביותר לפיתוח עצמי בעברית ובאנגלית — מדורגים ומסוננים בשבילך.',tags:['פודקאסט','עברית','אנגלית'],link:'https://youtube.com/@matannistor?si=vs2oQ80Q4udd2Y5B',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/4-1.png',icon:'🎙️'},
+      {title:'סרטים מומלצים',badge:'השראה',desc:'סרטים שיעניקו לך השראה, יפתחו לך אופקים ויגרמו לך לחשוב אחרת על החיים.',tags:['סרטים','השראה','אופקים'],link:'https://www.stremio.com/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/3-1.png',icon:'🎬'},
+      {title:'מורים אמיתיים',badge:'מנטורינג',desc:'חיבור עם מורים ומנטורים אמיתיים מתחומים שונים שיעזרו לך לצמוח ולהתפתח.',tags:['מורים','מנטורינג','צמיחה'],link:'https://youtube.com/@financialclowning?si=7DsLcCatPjLiYitn',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/5-1.png',icon:'👨‍🏫'},
+      {title:'אלול מן המזרח',badge:'זהות',desc:'תוכנית המביאה את המסר הייחודי של יהדות המזרח לחברה הישראלית — זהות, חברה, מוזיקה ואמנות.',tags:['זהות','תרבות','מזרח'],link:'https://kulna.org.il/%d7%aa%d7%95%d7%9b%d7%a0%d7%99%d7%aa-%d7%90%d7%9c%d7%95%d7%9c-%d7%9e%d7%9f-%d7%94%d7%9e%d7%96%d7%a8%d7%97/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/אלול-מן-המזרח.png',icon:'🌙'}
+    ]
+  },
+  {
+    id:'volunteering', label:'התנדבות', icon:'💚',
+    cards:[
+      {title:'התנדבות בישראל',badge:'ישראל',desc:'תוכניות התנדבות מגוונות בישראל שיפתחו אופקים, יעשירו קורות חיים ויעניקו משמעות אמיתית.',tags:['התנדבות','ישראל','משמעות'],link:'https://hfl.org.il/%d7%94%d7%aa%d7%a0%d7%93%d7%91%d7%95%d7%aa/',img:null,icon:'🇮🇱'},
+      {title:'Workaway',badge:'חו"ל',desc:'עבוד בחו"ל בתמורה לדיור ואוכל — נסיון חיים שאין כמותו. מאות הזדמנויות ב-170 מדינות.',tags:['חו"ל','עבודה','נסיון'],link:'https://www.workaway.info/en/signup/workawayer',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/וורקאווי.png',icon:'🌐'},
+      {title:'בדרכו של עידו',badge:'זיכרון',desc:'תוכנית התנדבות ייחודית לזכר עידו — מסע משמעותי שמכבד את הזיכרון דרך עשייה חברתית.',tags:['זיכרון','התנדבות','משמעות'],link:'https://www.instagram.com/kamalbe__volunteering/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/בדרכו-של-עידן.png',icon:'💙'},
+      {title:'רוח טובה',badge:'חברתי',desc:'התנדבות משמעותית שתשנה את החיים שלך ושל האחרים — מגוון תחומי התנדבות ברחבי הארץ.',tags:['חברתי','התנדבות','שינוי'],link:'https://www.ruachtova.org.il/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/רוח-טובה.png',icon:'💚'},
+      {title:'One Day — יום בחיי',badge:'גיוון',desc:'חוויית יום מלא עם אנשים מרקעים שונים לחלוטין — פתיחת לב, שבירת דעות קדומות, חיבורים.',tags:['גיוון','יום','חוויה'],link:'https://www.instagram.com/OneDaySV/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/11.png',icon:'🌈'},
+      {title:'Help Up',badge:'בינלאומי',desc:'תוכנית התנדבות בינלאומית — צא לעולם, עזור לאחרים ותחזור עם ניסיון חיים ועושר פנימי.',tags:['בינלאומי','התנדבות','ניסיון'],link:'https://helpup.org.il/contact/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/הלפאף.png',icon:'✋'},
+      {title:'לוחמים ללא גבולות',badge:'ציוני',desc:'ארגון ציוני ללא מטרות רווח המשלב טיול גדול עם התנדבות הומניטרית — פניה היפות של ישראל בעולם.',tags:['ציוני','התנדבות','טיול'],link:'https://hfl.org.il/%d7%94%d7%aa%d7%a0%d7%93%d7%91%d7%95%d7%aa/',img:'https://hahizdamnut-shelly.com/wp-content/uploads/2025/04/לוחמים-ללא-גבולות.png',icon:'🕊️'}
+    ]
+  }
+];
+
+function buildCard(card, delay) {
+  var a = document.createElement('a');
+  a.href = card.link;
+  a.target = card.link.startsWith('http') ? '_blank' : '_self';
+  a.rel = card.link.startsWith('http') ? 'noopener noreferrer' : '';
+  a.className = 'card fade-up';
+  a.style.animationDelay = delay + 's';
+  a.style.opacity = '0';
+
+  var imgHtml;
+  if (card.img) {
+    var imgSrc = encodeURI(decodeURI(card.img));
+    imgHtml = '<img class="card-img" src="' + imgSrc + '" alt="' + card.title + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=card-no-img>' + card.icon + '</div>\'">';
+  } else {
+    imgHtml = '<div class="card-no-img">' + card.icon + '</div>';
+  }
+
+  a.innerHTML =
+    '<div class="card-img-wrap">' + imgHtml + '</div>' +
+    '<div class="card-body">' +
+      '<span class="card-badge">' + card.badge + '</span>' +
+      '<div class="card-title">' + card.title + '</div>' +
+      '<div class="card-desc">' + card.desc + '</div>' +
+      '<div class="card-tags">' + card.tags.map(function(t){ return '<span class="card-tag">' + t + '</span>'; }).join('') + '</div>' +
+      '<span class="card-link">למידע נוסף ←</span>' +
+    '</div>';
+  return a;
+}
+
+var activeTab = 0;
+(function(){
+  var hash = location.hash.replace('#','');
+  var idx = DATA.findIndex(function(s){ return s.id === hash; });
+  if(idx >= 0) activeTab = idx;
+})();
+
+function buildTabs() {
+  var bar = document.getElementById('tabBar');
+  bar.innerHTML = '';
+  DATA.forEach(function(sub, i) {
+    var btn = document.createElement('button');
+    btn.className = 'tab-btn' + (i === activeTab ? ' active' : '');
+    btn.textContent = (sub.icon ? sub.icon + ' ' : '') + sub.label;
+    btn.onclick = (function(ii, sid){
+      return function() {
+        activeTab = ii;
+        history.replaceState(null, '', '#' + sid);
+        buildTabs();
+        buildPage();
+        window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
+      };
+    })(i, sub.id);
+    bar.appendChild(btn);
+  });
+}
+
+function buildPage() {
+  var container = document.getElementById('mainContent');
+  container.innerHTML = '';
+  var section = DATA[activeTab];
+
+  var sec = document.createElement('section');
+  sec.className = 'subcategory';
+  sec.id = section.id;
+
+  var hdr = document.createElement('div');
+  hdr.className = 'section-hdr';
+  hdr.innerHTML =
+    '<div class="section-hdr-left">' +
+      '<div class="section-title">' + section.label + '</div>' +
+      '<div class="section-count">' + section.cards.length + ' הזדמנויות</div>' +
+    '</div>' +
+    '<div class="section-line"></div>' +
+    '<div class="section-badge">' + section.cards.length + ' תוכניות</div>';
+  sec.appendChild(hdr);
+
+  var grid = document.createElement('div');
+  grid.className = 'cards-grid';
+  section.cards.forEach(function(card, i) {
+    grid.appendChild(buildCard(card, i * 0.05));
+  });
+  sec.appendChild(grid);
+  container.appendChild(sec);
+}
+
+buildTabs();
+buildPage();
+</script>
+
+<!-- ══ MEETING MODAL ══ -->
+<style>
+#regModal{position:fixed;inset:0;z-index:99998;background:rgba(10,22,40,.75);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;font-family:'Heebo',sans-serif}
+#regModal.open{display:flex}
+.reg-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:440px;width:100%;box-shadow:0 32px 80px rgba(0,0,0,.35);position:relative;animation:regSlideIn .3s ease}
+@keyframes regSlideIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.reg-close{position:absolute;top:14px;left:16px;width:32px;height:32px;border-radius:50%;background:#F1F5F9;border:none;cursor:pointer;font-size:1.1rem;color:#64748B;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.reg-close:hover{background:#E2E8F0}
+.reg-title{font-size:1.45rem;font-weight:900;color:#0F172A;margin-bottom:6px;line-height:1.3;text-align:center}
+.reg-sub{font-size:.88rem;color:#64748B;margin-bottom:24px;text-align:center;line-height:1.6}
+.reg-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:1rem;font-family:'Heebo',sans-serif;margin-bottom:12px;text-align:right;outline:none;transition:border-color .2s;display:block;box-sizing:border-box}
+.reg-field:focus{border-color:#1A56A0;box-shadow:0 0 0 3px rgba(26,86,160,.1)}
+.reg-field.reg-err{border-color:#EF4444}
+.reg-btn{width:100%;padding:14px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:4px;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.reg-btn:hover{opacity:.9}.reg-btn:disabled{opacity:.55;cursor:default}
+#rmSuccess{display:none;text-align:center;padding:12px 0}
+#rmSuccess .rm-ic{font-size:3rem;margin-bottom:12px}
+#rmSuccess h3{font-size:1.3rem;font-weight:900;margin-bottom:8px}
+#rmSuccess p{color:#64748B;font-size:.9rem;margin-bottom:20px}
+#rmSuccess a{display:inline-block;padding:13px 28px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none}
+@keyframes rmSpin{to{transform:rotate(360deg)}}
+.rm-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:rmSpin .75s linear infinite;display:none}
+</style>
+<div id="regModal">
+  <div class="reg-card">
+    <button class="reg-close" onclick="closeRegModal()">✕</button>
+    <div id="rmForm">
+      <h2 class="reg-title">קבע פגישת ליווי חינם</h2>
+      <p class="reg-sub">השאר פרטים ונחזור אליך בהקדם לתיאום</p>
+      <input type="text" id="rmName" class="reg-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="rmPhone" class="reg-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <textarea id="rmNotes" class="reg-field" rows="3" placeholder="ספר לנו קצת על עצמך (לא חובה)" style="resize:none;margin-bottom:16px"></textarea>
+      <button id="rmBtn" class="reg-btn" onclick="submitRegModal()">
+        <span id="rmBtnTxt">שלח ← קבע פגישה</span>
+        <div class="rm-spin" id="rmSpin"></div>
+      </button>
+    </div>
+    <div id="rmSuccess">
+      <div class="rm-ic">🎉</div>
+      <h3>תודה! קיבלנו את הפרטים</h3>
+      <p>ניצור איתך קשר בהקדם לתיאום הפגישה.</p>
+      <a href="https://calendly.com/giladunna/30min" target="_blank">לתיאום מועד פגישה ←</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var SU='https://script.google.com/macros/s/AKfycbxLwDpP0-Rhy5dhxjSemgIaWBvK5uyqntFQw3tqZCE2Wg4xZFcV0NTkLQIWUnCYiI-CDQ/exec';
+  window.openRegModal=function(){document.getElementById('regModal').classList.add('open');document.body.style.overflow='hidden';document.getElementById('rmName').focus();};
+  window.closeRegModal=function(){document.getElementById('regModal').classList.remove('open');document.body.style.overflow='';};
+  document.getElementById('regModal').addEventListener('click',function(e){if(e.target===this)closeRegModal();});
+  ['rmName','rmPhone'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')submitRegModal();});});
+  window.submitRegModal=function(){
+    var name=document.getElementById('rmName').value.trim();
+    var phone=document.getElementById('rmPhone').value.trim();
+    var notes=document.getElementById('rmNotes').value.trim().slice(0,500);
+    document.getElementById('rmName').classList.remove('reg-err');
+    document.getElementById('rmPhone').classList.remove('reg-err');
+    var ok=true;
+    if(name.length<2){document.getElementById('rmName').classList.add('reg-err');ok=false;}
+    if(phone.replace(/\D/g,'').length<9){document.getElementById('rmPhone').classList.add('reg-err');ok=false;}
+    if(!ok)return;
+    var btn=document.getElementById('rmBtn');
+    document.getElementById('rmBtnTxt').style.display='none';
+    document.getElementById('rmSpin').style.display='block';
+    btn.disabled=true;
+    try{var n=phone.replace(/\D/g,'').replace(/^0+/,'');var s=JSON.parse(localStorage.getItem('hahizd_phones')||'[]');if(s.indexOf(n)===-1){s.push(n);}localStorage.setItem('hahizd_phones',JSON.stringify(s));}catch(e){}
+    var p=new URLSearchParams({name:name,phone:phone,notes:notes,timestamp:new Date().toLocaleString('he-IL')});
+    fetch(SU+'?'+p.toString(),{method:'GET',mode:'no-cors'}).catch(function(){}).finally(function(){
+      document.getElementById('rmForm').style.display='none';
+      document.getElementById('rmSuccess').style.display='block';
+    });
+  };
+})();
+</script>
+</body>
+</html>
