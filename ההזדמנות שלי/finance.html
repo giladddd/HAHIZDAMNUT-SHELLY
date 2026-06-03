@@ -791,8 +791,8 @@ var TABS = [
   {id:'stocks',      label:'🥇 שוק ההון'}
 ];
 var activeId = TABS[0].id;
-var hash = location.hash.replace('#','');
-if(TABS.some(function(t){return t.id===hash;})) activeId = hash;
+history.replaceState(null,'',location.pathname);
+window.scrollTo(0,0);
 
 function activateTab(id) {
   activeId = id;
