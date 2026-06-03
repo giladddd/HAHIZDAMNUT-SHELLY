@@ -196,10 +196,17 @@ section{padding-block:88px}
 #testimonials{background:var(--hero-bg)}
 #testimonials .sec-title{color:#fff}
 #testimonials .sec-sub{color:rgba(255,255,255,.5)}
-.wa-two{display:flex;gap:24px;justify-content:center;margin-top:56px}
+.wa-slider{position:relative;margin-top:56px;overflow:hidden}
+.wa-two{display:flex;gap:24px;transition:transform .4s cubic-bezier(.4,0,.2,1)}
 .wa-slide{flex:0 0 calc(50% - 12px);max-width:480px;border-radius:var(--r-lg);overflow:hidden;background:#111;box-shadow:var(--sh-xl)}
 .wa-slide img{width:100%;display:block;object-fit:cover}
-@media(max-width:767px){.wa-two{flex-direction:column;align-items:center}.wa-slide{flex:0 0 auto;width:90%;max-width:380px}}
+.wa-arrows{display:flex;justify-content:center;gap:12px;margin-top:24px}
+.wa-arrow{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.wa-arrow:hover{background:rgba(255,255,255,.3)}
+.wa-dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.wa-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:background .2s}
+.wa-dot.active{background:#fff}
+@media(max-width:767px){.wa-slide{flex:0 0 85%;max-width:85%;max-width:380px}}
 
 /* ── GRADUATES / VIDEO TESTIMONIALS ── */
 #graduates{background:#F4F8FF;padding-block:88px}
@@ -709,9 +716,16 @@ function toggleFaq(btn){
     <h2 class="sec-title">מה אומרים עלינו</h2>
     <p class="sec-sub" style="margin-inline:auto">הודעות אמיתיות שקיבלנו מהמתאמנים שלנו</p>
   </div>
-  <div class="wa-two">
-    <div class="wa-slide"><img src="https://hahizdamnut-shelly.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-26-at-14.52.02.jpeg" alt="המלצה בווצאפ" loading="lazy"/></div>
-    <div class="wa-slide"><img src="https://hahizdamnut-shelly.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-26-at-14.27.18.jpeg" alt="המלצה בווצאפ" loading="lazy"/></div>
+  <div class="wa-slider" id="waSlider">
+    <div class="wa-two" id="waTrack">
+      <div class="wa-slide"><img src="https://hahizdamnut-shelly.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-26-at-14.52.02.jpeg" alt="המלצה בווצאפ" loading="lazy"/></div>
+      <div class="wa-slide"><img src="https://hahizdamnut-shelly.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-26-at-14.27.18.jpeg" alt="המלצה בווצאפ" loading="lazy"/></div>
+    </div>
+    <div class="wa-arrows">
+      <button class="wa-arrow" id="waPrev">‹</button>
+      <button class="wa-arrow" id="waNext">›</button>
+    </div>
+    <div class="wa-dots" id="waDots"></div>
   </div>
 </div>
 </section>
@@ -1108,6 +1122,39 @@ var OPP_ALL = [
 })();
 
 /* WA: static 2-image layout, no slider needed */
+
+/* ============================================================
+   WHATSAPP TESTIMONIALS SLIDER
+============================================================ */
+(function(){
+  var track = document.getElementById('waTrack');
+  var dotsEl = document.getElementById('waDots');
+  if(!track) return;
+  var slides = Array.from(track.children);
+  var total = slides.length;
+  var cur = 0;
+  // build dots
+  slides.forEach(function(_,i){
+    var d = document.createElement('div');
+    d.className = 'wa-dot' + (i===0?' active':'');
+    d.addEventListener('click', function(){ goTo(i); });
+    dotsEl.appendChild(d);
+  });
+  function goTo(n){
+    cur = (n + total) % total;
+    var slideW = track.parentElement.offsetWidth;
+    track.style.transform = 'translateX(' + (cur * slideW / 2) + 'px)';
+    // on mobile show one at a time
+    if(window.innerWidth <= 767){
+      track.style.transform = 'translateX(' + (cur * slideW * 0.92) + 'px)';
+    }
+    Array.from(dotsEl.children).forEach(function(d,i){ d.classList.toggle('active', i===cur); });
+  }
+  document.getElementById('waPrev').addEventListener('click', function(){ goTo(cur-1); });
+  document.getElementById('waNext').addEventListener('click', function(){ goTo(cur+1); });
+  // auto play
+  setInterval(function(){ goTo(cur+1); }, 4000);
+})();
 
 /* ============================================================
    VIDEO TESTIMONIALS SLIDER
