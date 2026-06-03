@@ -61,6 +61,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .drawer-bottom{padding:16px;margin-top:auto}
 .btn-primary{background:#1A56A0;color:#fff}
 .btn-primary:hover{background:#0F3873}
+.drawer-social{display:flex;justify-content:center;gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}.drawer-social a{width:40px;height:40px;border-radius:50%;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;transition:background .2s}.drawer-social a:hover{background:#E8F4FF}.drawer-social svg{width:20px;height:20px}
 @media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex}.nav-drawer{display:flex}}
 /* ── QUICK NAV ── */
 .quick-nav{margin-top:var(--nav-h,64px);background:#fff;border-bottom:1px solid rgba(15,23,42,.08);padding:0;display:flex;justify-content:center}
@@ -325,6 +326,20 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
   </div>
   <div class="drawer-bottom">
     <button onclick="openRegModal()" class="btn btn-primary" style="width:100%;padding:14px;border-radius:50px;font-size:1rem">קבע פגישה עכשיו</button>
+        <div class="drawer-social">
+          <a href="https://wa.link/081ywl" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.855L.057 23.882l6.198-1.625A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.359-.213-3.722.976.993-3.625-.234-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/hahizdamnut_shelly?igsh=MWlnMXJvbXhjOXJ3aA==" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="url(#ig)" stroke-width="1.8">
+              <defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#cc2366" stroke="none"/>
+            </svg>
+          </a>
+          <a href="mailto:hahizdamnutshelly@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A56A0" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </a>
+        </div>
   </div>
 </div>
 
@@ -590,6 +605,7 @@ window.addEventListener('scroll', function(){ document.getElementById('navbar').
 </script>
 </body>
 </html>
+
 
 
 
