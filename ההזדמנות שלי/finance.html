@@ -792,12 +792,9 @@ var TABS = [
   {id:'stocks',      label:'🥇 שוק ההון'}
 ];
 var activeId = TABS[0].id;
-history.replaceState(null,'',location.pathname);
-window.scrollTo(0,0);
 
 function activateTab(id) {
   activeId = id;
-  history.replaceState(null,'','#'+id);
   document.querySelectorAll('.tab-btn').forEach(function(btn){
     btn.classList.toggle('active', btn.dataset.target === id);
   });
@@ -900,6 +897,7 @@ window.addEventListener('scroll', function(){ document.getElementById('navbar').
 </script>
 </body>
 </html>
+
 
 
 

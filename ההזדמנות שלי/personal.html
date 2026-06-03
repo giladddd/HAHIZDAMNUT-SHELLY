@@ -461,8 +461,7 @@ function buildTabs() {
     btn.onclick = (function(ii, sid){
       return function() {
         activeTab = ii;
-        history.replaceState(null, '', '#' + sid);
-        buildTabs();
+            buildTabs();
         buildPage();
         window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
       };
@@ -591,6 +590,7 @@ window.addEventListener('scroll', function(){ document.getElementById('navbar').
 </script>
 </body>
 </html>
+
 
 
 
