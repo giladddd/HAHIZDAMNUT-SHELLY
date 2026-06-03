@@ -427,6 +427,21 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
   };
 })();
 </script>
+<script>
+// Hamburger menu
+var hamburger = document.getElementById('navHamburger');
+var drawer = document.getElementById('navDrawer');
+var overlay = document.getElementById('navOverlay');
+if(hamburger && drawer && overlay){
+  var drawerOpen = false;
+  function openDrawer(){ drawerOpen=true; hamburger.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer(){ drawerOpen=false; hamburger.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  hamburger.addEventListener('click', function(){ drawerOpen ? closeDrawer() : openDrawer(); });
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link, .nav-drawer .btn').forEach(function(l){ l.addEventListener('click', closeDrawer); });
+}
+window.addEventListener('scroll', function(){ var nb=document.getElementById('navbar'); if(nb) nb.classList.toggle('scrolled', window.scrollY > 10); });
+</script>
 
 <!-- ══ NAVBAR ══ --><nav id="navbar">
 <div class="container nav-inner">
@@ -718,8 +733,24 @@ render();
   };
 })();
 </script>
+<script>
+// Hamburger menu
+var hamburger = document.getElementById('navHamburger');
+var drawer = document.getElementById('navDrawer');
+var overlay = document.getElementById('navOverlay');
+if(hamburger && drawer && overlay){
+  var drawerOpen = false;
+  function openDrawer(){ drawerOpen=true; hamburger.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer(){ drawerOpen=false; hamburger.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  hamburger.addEventListener('click', function(){ drawerOpen ? closeDrawer() : openDrawer(); });
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link, .nav-drawer .btn').forEach(function(l){ l.addEventListener('click', closeDrawer); });
+}
+window.addEventListener('scroll', function(){ var nb=document.getElementById('navbar'); if(nb) nb.classList.toggle('scrolled', window.scrollY > 10); });
+</script>
 </body>
 </html>
+
 
 
 
