@@ -499,6 +499,23 @@
     <button onclick="openRegModal()" class="nav-btn">קבע פגישה</button>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="drawer-top">
+    <a href="hahazdamnut.html" class="drawer-link">🏠 בית</a>
+    <a href="about.html" class="drawer-link">👋 אודות</a>
+    <a href="employment.html" class="drawer-link">💼 תעסוקתי</a>
+    <a href="finance.html" class="drawer-link">💰 כלכלי</a>
+    <a href="personal.html" class="drawer-link">🌱 אישי</a>
+    <a href="hahazdamnut.html#programs" class="drawer-link">📋 מסלולים</a>
+    <a href="app.html" class="drawer-link">📱 אפליקציה</a>
+    <a href="partners.html" class="drawer-link">🤝 שיתופי פעולה</a>
+    <a href="hahazdamnut.html#contact" class="drawer-link">✉️ צור קשר</a>
+  </div>
+  <div class="drawer-bottom">
+    <button onclick="openRegModal()" class="btn btn-primary">קבע פגישה עכשיו</button>
+  </div>
+</div>
 
 <!-- ── Header ── -->
 <header class="page-hdr">
@@ -858,9 +875,20 @@ activateTab(activeId);
     });
   };
 })();
+var hamburger = document.getElementById('navHamburger');
+var drawer = document.getElementById('navDrawer');
+var overlay = document.getElementById('navOverlay');
+var drawerOpen = false;
+function openDrawer(){ drawerOpen=true; hamburger.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+function closeDrawer(){ drawerOpen=false; hamburger.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+hamburger.addEventListener('click', function(){ drawerOpen ? closeDrawer() : openDrawer(); });
+overlay.addEventListener('click', closeDrawer);
+document.querySelectorAll('.drawer-link, .nav-drawer .btn').forEach(function(l){ l.addEventListener('click', closeDrawer); });
+window.addEventListener('scroll', function(){ document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10); });
 </script>
 </body>
 </html>
+
 
 
 

@@ -23,17 +23,45 @@ a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* ── Navbar ── */
-#navbar{position:fixed;top:0;right:0;left:0;z-index:1000;height:64px;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(15,23,42,.07);display:flex;align-items:center}
-.nav-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 24px}
-.nav-logo{font-size:1.2rem;font-weight:900;color:var(--cat)}
-.nav-cats{display:flex;align-items:center;gap:4px}
-.nav-cat{padding:7px 14px;border-radius:8px;font-size:.88rem;font-weight:600;color:#64748B;transition:all .2s}
-.nav-cat:hover{color:var(--cat);background:rgba(124,58,237,.06)}
-.nav-cat.here{color:var(--cat);background:rgba(124,58,237,.1);font-weight:700}
-.nav-btn{padding:8px 20px;border-radius:50px;background:var(--cat);color:#fff;font-size:.88rem;font-weight:700;transition:opacity .2s;flex-shrink:0}
-.nav-btn:hover{opacity:.85}
-@media(max-width:640px){.nav-cats{display:none}}
+/* ── NAVBAR ── */
+:root{--nav-h:64px;--primary:#1A56A0;--primary-dk:#0F3873;--bg:#fff;--bg-soft:#F2F7FD;--text:#0F172A;--muted:#64748B;--border:rgba(15,23,42,.08);--r-sm:8px;--r-md:12px;--r-lg:18px;--sh-md:0 4px 24px rgba(0,0,0,.1);--tr:.2s ease}
+#navbar{position:fixed;top:0;right:0;left:0;z-index:1000;height:var(--nav-h);background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow var(--tr)}
+#navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{font-size:1.3rem;font-weight:900;color:#1A56A0;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;list-style:none}
+.nav-links>li{position:relative}
+.nav-links a,.nav-links button.nav-link-btn{padding:8px 11px;border-radius:var(--r-sm);font-size:.92rem;font-weight:500;color:var(--muted);transition:color var(--tr),background var(--tr);display:flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;font-family:inherit}
+.nav-links a:hover,.nav-links a.active,.nav-links button.nav-link-btn:hover{color:#1A56A0;background:var(--bg-soft)}
+.nav-arrow{font-size:.65rem;transition:transform var(--tr)}
+.nav-has-drop{position:relative}
+.nav-drop{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--sh-md);min-width:160px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity var(--tr),transform var(--tr),visibility var(--tr);z-index:200}
+.nav-has-drop:hover .nav-drop,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-drop-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--r-sm);font-size:.95rem;font-weight:600;color:var(--text);transition:background var(--tr),color var(--tr);white-space:nowrap}
+.nav-drop-item:hover{background:var(--bg-soft);color:#1A56A0}
+.nav-drop-item span{font-size:1.1rem}
+.nav-cta{flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:50px;font-family:inherit;font-weight:700;cursor:pointer;transition:all var(--tr);text-decoration:none}
+.btn-outline{background:transparent;border:2px solid #1A56A0;color:#1A56A0}
+.btn-outline:hover{background:#1A56A0;color:#fff}
+.btn-sm{padding:8px 20px;font-size:.88rem}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;border-radius:var(--r-sm);background:none;border:none;cursor:pointer}
+.nav-hamburger:hover{background:var(--bg-soft)}
+.nav-hamburger span{display:block;height:2px;background:var(--text);border-radius:2px;transition:transform .25s ease,opacity .2s ease;transform-origin:center}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:998}
+.nav-overlay.open{display:block}
+.nav-drawer{position:fixed;top:var(--nav-h);right:0;bottom:0;width:300px;background:#fff;border-right:1px solid var(--border);z-index:999;box-shadow:-4px 0 32px rgba(0,0,0,.1);transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:none;flex-direction:column}
+.nav-drawer.open{transform:translateX(0)}
+.drawer-top{padding:16px 16px 8px;display:flex;flex-direction:column;gap:2px}
+.drawer-link{display:block;padding:11px 14px;border-radius:var(--r-sm);font-size:1rem;font-weight:600;color:var(--text);transition:background var(--tr),color var(--tr)}
+.drawer-link:hover{background:var(--bg-soft);color:#1A56A0}
+.drawer-bottom{padding:16px;margin-top:auto}
+.btn-primary{background:#1A56A0;color:#fff}
+.btn-primary:hover{background:#0F3873}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex}.nav-drawer{display:flex}}
 
 /* ── Header ── */
 .page-hdr{background:linear-gradient(135deg,var(--cat-dk) 0%,var(--cat) 100%);padding:88px 0 52px;position:relative;overflow:hidden}
@@ -503,9 +531,20 @@ buildPage();
     });
   };
 })();
+var hamburger = document.getElementById('navHamburger');
+var drawer = document.getElementById('navDrawer');
+var overlay = document.getElementById('navOverlay');
+var drawerOpen = false;
+function openDrawer(){ drawerOpen=true; hamburger.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+function closeDrawer(){ drawerOpen=false; hamburger.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+hamburger.addEventListener('click', function(){ drawerOpen ? closeDrawer() : openDrawer(); });
+overlay.addEventListener('click', closeDrawer);
+document.querySelectorAll('.drawer-link, .nav-drawer .btn').forEach(function(l){ l.addEventListener('click', closeDrawer); });
+window.addEventListener('scroll', function(){ document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10); });
 </script>
 </body>
 </html>
+
 
 
 
