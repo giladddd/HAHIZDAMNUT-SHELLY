@@ -68,6 +68,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-primary:hover{background:#0F3873}
 @media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex}.nav-drawer{display:flex}}
 
+
+/* ── QUICK NAV ── */
+.quick-nav{background:#fff;border-bottom:1px solid rgba(15,23,42,.08);padding:0;display:flex;justify-content:center}
+.quick-nav-inner{display:flex;gap:8px;padding:10px 24px}
+.quick-nav a{padding:8px 20px;border-radius:50px;font-size:.9rem;font-weight:600;color:#64748B;transition:all .2s;text-decoration:none;border:1.5px solid transparent}
+.quick-nav a:hover{color:#1A56A0;background:#F2F7FD;border-color:rgba(26,86,160,.2)}
+.quick-nav a.active{color:#1A56A0;background:#EBF3FF;border-color:#1A56A0}
 /* ── PAGE HEADER ── */
 .page-hdr{
   background:linear-gradient(135deg,var(--cat-dk) 0%,var(--cat) 100%);
@@ -445,6 +452,15 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
     <span></span><span></span><span></span>
   </button>
 </div>
+
+<!-- ══ QUICK NAV ══ -->
+<div class="quick-nav">
+  <div class="quick-nav-inner">
+    <a href="employment.html" class="active">💼 תעסוקתי</a>
+    <a href="finance.html">💰 כלכלי</a>
+    <a href="personal.html">🌱 אישי</a>
+  </div>
+</div>
 </nav>
 
 <!-- ══ PAGE HEADER ══ -->
@@ -704,6 +720,7 @@ render();
 </script>
 </body>
 </html>
+
 
 
 

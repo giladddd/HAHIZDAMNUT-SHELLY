@@ -91,7 +91,14 @@
   .nav-btn:hover { opacity: .85; }
   @media (max-width: 640px) { .nav-cats { display: none; } }
 
-  /* ── Page Header ── */
+  
+/* ── QUICK NAV ── */
+.quick-nav{background:#fff;border-bottom:1px solid rgba(15,23,42,.08);padding:0;display:flex;justify-content:center}
+.quick-nav-inner{display:flex;gap:8px;padding:10px 24px}
+.quick-nav a{padding:8px 20px;border-radius:50px;font-size:.9rem;font-weight:600;color:#64748B;transition:all .2s;text-decoration:none;border:1.5px solid transparent}
+.quick-nav a:hover{color:#1A56A0;background:#F2F7FD;border-color:rgba(26,86,160,.2)}
+.quick-nav a.active{color:#1A56A0;background:#EBF3FF;border-color:#1A56A0}
+/* ── Page Header ── */
   .page-hdr {
     background: linear-gradient(135deg, var(--cat-dk) 0%, var(--cat) 100%);
     padding: 100px 0 56px;
@@ -889,6 +896,7 @@ window.addEventListener('scroll', function(){ document.getElementById('navbar').
 </script>
 </body>
 </html>
+
 
 
 
