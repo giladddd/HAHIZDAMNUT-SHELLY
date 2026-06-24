@@ -123,7 +123,13 @@
   }
 
   function hahizdSubmit(payload) {
-    return hahizdRequest(payload, false);
+    if (payload._hp) return Promise.resolve({ ok: true });
+    var isFormSubmit = !payload.action && payload.form_type !== 'calendly_booking';
+    if (isFormSubmit && !checkRateLimit()) return Promise.reject(new Error('rate_limit'));
+    // fire-and-forget — don't wait for GAS cold start
+    var qs = paramsFromPayload(payload).toString();
+    fetch(HAHIZD_SHEETS_URL + '?' + qs, { method: 'GET' }).catch(function () {});
+    return Promise.resolve({ ok: true });
   }
 
   function hahizdLookup(name, phone) {
