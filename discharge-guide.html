@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE5D7Y3LFM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZE5D7Y3LFM');</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>המדריך למשוחרר — ההזדמנות שלי</title>
+<meta name="description" content="מדריך 16 שלבים למשוחרר — צ&apos;קליסט מעשי לחיים אחרי הצבא, חינם."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2235%22 cy=%2240%22 r=%2230%22 fill=%22%231A56A0%22 opacity=%220.85%22/><circle cx=%2265%22 cy=%2240%22 r=%2230%22 fill=%22%230F3873%22 opacity=%220.85%22/><circle cx=%2250%22 cy=%2265%22 r=%2230%22 fill=%22%234DAEF5%22 opacity=%220.85%22/></svg>">
+<style>
+:root{
+  --cat:#7C3AED;--cat-dk:#5B21B6;--cat-light:rgba(124,58,237,.08);--cat-border:rgba(124,58,237,.2);
+  --nav-h:64px;--primary:#1A56A0;--primary-dk:#0F3873;
+  --bg:#fff;--bg-soft:#F2F7FD;--text:#0F172A;--muted:#64748B;
+  --border:rgba(15,23,42,.08);--r-sm:8px;--r-md:12px;--sh-md:0 4px 24px rgba(0,0,0,.1);--tr:.2s ease
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;color:#0F172A;background:#F5F3FF;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:860px;margin:0 auto;padding:0 24px}
+
+/* ── NAVBAR ── */
+#navbar{position:fixed;top:0;right:0;left:0;z-index:1000;height:var(--nav-h);background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow var(--tr)}
+#navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{font-size:1.3rem;font-weight:900;color:#1A56A0;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;list-style:none}
+.nav-links>li{position:relative}
+.nav-links a,.nav-links button.nav-link-btn{padding:8px 11px;border-radius:var(--r-sm);font-size:.92rem;font-weight:500;color:var(--muted);transition:color var(--tr),background var(--tr);display:flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;font-family:inherit}
+.nav-links a:hover,.nav-links a.active,.nav-links button.nav-link-btn:hover{color:#1A56A0;background:var(--bg-soft)}
+.nav-has-drop{position:relative}
+.nav-drop{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--sh-md);min-width:160px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity var(--tr),transform var(--tr),visibility var(--tr);z-index:200}
+.nav-has-drop:hover .nav-drop,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-drop-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--r-sm);font-size:.95rem;font-weight:600;color:var(--text);transition:background var(--tr),color var(--tr);white-space:nowrap}
+.nav-drop-item:hover{background:var(--bg-soft);color:#1A56A0}
+.nav-cta{flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:50px;font-family:inherit;font-weight:700;cursor:pointer;transition:all var(--tr);text-decoration:none}
+.btn-outline{background:transparent;border:2px solid #1A56A0;color:#1A56A0}
+.btn-outline:hover{background:#1A56A0;color:#fff}
+.btn-sm{padding:8px 20px;font-size:.88rem}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;border-radius:var(--r-sm)}
+.nav-hamburger span{display:block;height:2px;background:var(--text);border-radius:2px;transition:transform .25s ease,opacity .2s ease;transform-origin:center}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:998}
+.nav-overlay.open{display:block}
+.nav-drawer{position:fixed;top:var(--nav-h);right:0;bottom:0;width:300px;background:#fff;border-right:1px solid var(--border);z-index:999;box-shadow:-4px 0 32px rgba(0,0,0,.1);transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:none;flex-direction:column}
+.nav-drawer.open{transform:translateX(0)}
+.drawer-top{padding:16px 16px 8px;display:flex;flex-direction:column;gap:2px}
+.drawer-link{display:block;padding:11px 14px;border-radius:var(--r-sm);font-size:1rem;font-weight:600;color:var(--text);transition:background var(--tr),color var(--tr)}
+.drawer-link:hover{background:var(--bg-soft);color:#1A56A0}
+.drawer-bottom{padding:16px;margin-top:auto}
+.btn-primary{background:#1A56A0;color:#fff}
+.btn-primary:hover{background:#0F3873}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex}.nav-drawer{display:flex}}
+
+/* ── HEADER ── */
+.page-hdr{background:linear-gradient(135deg,var(--cat-dk) 0%,var(--cat) 100%);padding:calc(var(--nav-h) + 48px) 0 52px;position:relative;overflow:hidden}
+.page-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(255,255,255,.07),transparent 60%);pointer-events:none}
+.page-hdr .container{position:relative;z-index:1}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.65);font-size:.88rem;font-weight:600;margin-bottom:20px;transition:color .2s}
+.back-link:hover{color:#fff}
+.hdr-emoji{font-size:2.8rem;display:block;margin-bottom:12px}
+.hdr-title{font-size:clamp(2rem,5vw,2.8rem);font-weight:900;color:#fff;margin-bottom:10px}
+.hdr-sub{font-size:1rem;color:rgba(255,255,255,.75);max-width:620px;line-height:1.7}
+.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.82rem;font-weight:700;padding:6px 16px;border-radius:50px;margin-bottom:16px}
+
+/* ── PROGRESS BAR ── */
+.progress-wrap{background:#fff;border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:var(--nav-h);z-index:100}
+.progress-inner{display:flex;align-items:center;gap:16px}
+.progress-label{font-size:.85rem;font-weight:700;color:var(--text);white-space:nowrap;flex-shrink:0}
+.progress-track{flex:1;height:8px;background:#E2E8F0;border-radius:50px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(to left,var(--cat),var(--cat-dk));border-radius:50px;transition:width .4s ease}
+.progress-count{font-size:.82rem;font-weight:700;color:var(--cat);white-space:nowrap;flex-shrink:0}
+
+/* ── FILTER CHIPS ── */
+.filter-bar{padding:20px 0 0}
+.filter-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.filter-chip{padding:7px 18px;border-radius:50px;font-size:.85rem;font-weight:600;background:#fff;border:1.5px solid rgba(124,58,237,.2);color:#64748B;cursor:pointer;transition:all .2s;font-family:'Heebo',sans-serif}
+.filter-chip:hover{border-color:var(--cat);color:var(--cat)}
+.filter-chip.active{background:var(--cat);color:#fff;border-color:var(--cat)}
+
+/* ── ACCORDION STEPS ── */
+.steps-list{display:flex;flex-direction:column;gap:12px;padding-bottom:80px}
+.step-item{background:#fff;border-radius:16px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(15,23,42,.04);overflow:hidden;transition:box-shadow .2s}
+.step-item:hover{box-shadow:0 4px 20px rgba(15,23,42,.1)}
+.step-item.done .step-num{background:var(--cat);color:#fff}
+.step-item.done .step-title{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(100,116,139,.4)}
+.step-header{display:flex;align-items:center;gap:14px;padding:18px 20px;cursor:pointer;user-select:none}
+.step-check{width:24px;height:24px;border-radius:50%;border:2px solid #CBD5E1;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:.9rem}
+.step-check:hover{border-color:var(--cat)}
+.step-item.done .step-check{background:var(--cat);border-color:var(--cat);color:#fff}
+.step-num{width:34px;height:34px;border-radius:50%;background:var(--cat-light);border:1.5px solid var(--cat-border);color:var(--cat);font-size:.82rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.step-info{flex:1;min-width:0}
+.step-cat-badge{font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:2px;display:block}
+.step-title{font-size:1rem;font-weight:800;color:var(--text);line-height:1.3;transition:color .2s}
+.step-arrow{font-size:.9rem;color:var(--muted);transition:transform .25s ease;flex-shrink:0}
+.step-item.open .step-arrow{transform:rotate(180deg)}
+.step-body{display:none;padding:0 20px 20px 20px;border-top:1px solid var(--border)}
+.step-item.open .step-body{display:block}
+.step-desc{font-size:.9rem;color:var(--muted);line-height:1.75;padding-top:16px;margin-bottom:16px}
+.step-links{display:flex;flex-wrap:wrap;gap:8px}
+.step-link-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:50px;border:2px solid var(--cat);color:var(--cat);font-size:.84rem;font-weight:700;transition:all .2s;text-decoration:none}
+.step-link-btn:hover{background:var(--cat);color:#fff}
+.step-link-btn.primary{background:var(--cat);color:#fff}
+.step-link-btn.primary:hover{background:var(--cat-dk);border-color:var(--cat-dk)}
+.step-tip{background:var(--cat-light);border:1px solid var(--cat-border);border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:.84rem;color:#4C1D95;line-height:1.6}
+.step-tip strong{font-weight:700}
+
+/* ── STEP 19 — DANGER SECTION ── */
+.danger-card{background:#FFF5F5;border:2px solid #FCA5A5;border-radius:16px;padding:28px;margin-top:8px}
+.danger-title{font-size:1.1rem;font-weight:900;color:#DC2626;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.danger-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.danger-list li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:#450A0A;line-height:1.6}
+.danger-list li::before{content:'⚠️';flex-shrink:0;margin-top:2px}
+
+/* ── STEP 20 — CTA CARD ── */
+.cta-card{background:linear-gradient(135deg,var(--cat-dk) 0%,var(--cat) 100%);border-radius:20px;padding:36px 32px;text-align:center;margin-top:8px;color:#fff}
+.cta-emoji{font-size:2.5rem;display:block;margin-bottom:12px}
+.cta-title{font-size:1.5rem;font-weight:900;margin-bottom:10px}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.82);line-height:1.7;max-width:500px;margin:0 auto 20px}
+.cta-features{display:flex;flex-direction:column;gap:8px;text-align:right;max-width:420px;margin:0 auto 24px}
+.cta-feature{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:rgba(255,255,255,.9)}
+.cta-feature::before{content:'✅';flex-shrink:0}
+.cta-price{font-size:1.1rem;font-weight:700;color:rgba(255,255,255,.75);margin-bottom:20px}
+.cta-price strong{font-size:1.6rem;color:#fff}
+.cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 40px;background:#fff;color:var(--cat-dk);border:none;border-radius:50px;font-size:1.05rem;font-weight:900;cursor:pointer;font-family:'Heebo',sans-serif;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+
+/* ── SECTION DIVIDER ── */
+.section-label{display:flex;align-items:center;gap:12px;margin:32px 0 4px}
+.section-label span{font-size:1rem;font-weight:900;color:var(--text)}
+.section-label::before,.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── FOOTER ── */
+footer{background:#0F172A;color:rgba(255,255,255,.55);text-align:center;padding:28px 24px;font-size:.85rem}
+footer a{color:rgba(255,255,255,.75);font-weight:600}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .32s ease forwards}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+<div class="container" style="max-width:1200px">
+  <div class="nav-inner" style="padding:0 24px">
+    <a class="nav-logo" href="hahazdamnut.html">ההזדמנות שלי</a>
+    <ul class="nav-links">
+      <li><a href="hahazdamnut.html">בית</a></li>
+      <li><a href="about.html">אודות</a></li>
+      <li class="nav-has-drop">
+        <button class="nav-link-btn">תחומים <span>▾</span></button>
+        <div class="nav-drop">
+          <a href="employment.html" class="nav-drop-item"><span>💼</span>תעסוקתי</a>
+          <a href="finance.html" class="nav-drop-item"><span>💰</span>כלכלי</a>
+          <a href="personal.html" class="nav-drop-item"><span>🌱</span>אישי</a>
+        </div>
+      </li>
+      <li><a href="hahazdamnut.html#programs">מסלולים</a></li>
+      <li><a href="discharge-guide.html" class="active">מדריך למשוחרר 🎁</a></li>
+      <li><a href="app.html">אפליקציה</a></li>
+      <li><a href="partners.html">שיתופי פעולה</a></li>
+      <li><a href="hahazdamnut.html#contact">צור קשר</a></li>
+    </ul>
+    <button onclick="openRegModal()" class="btn btn-outline btn-sm nav-cta">קבע פגישה</button>
+    <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+  </div>
+</div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="drawer-top">
+    <a href="hahazdamnut.html" class="drawer-link">🏠 בית</a>
+    <a href="about.html" class="drawer-link">👋 אודות</a>
+    <a href="employment.html" class="drawer-link">💼 תעסוקתי</a>
+    <a href="finance.html" class="drawer-link">💰 כלכלי</a>
+    <a href="personal.html" class="drawer-link">🌱 אישי</a>
+    <a href="hahazdamnut.html#programs" class="drawer-link">📋 מסלולים</a>
+    <a href="discharge-guide.html" class="drawer-link active">🎁 מדריך למשוחרר</a>
+    <a href="app.html" class="drawer-link">📱 אפליקציה</a>
+    <a href="partners.html" class="drawer-link">🤝 שיתופי פעולה</a>
+    <a href="hahazdamnut.html#contact" class="drawer-link">✉️ צור קשר</a>
+  </div>
+  <div class="drawer-bottom">
+    <button onclick="openRegModal()" class="btn btn-primary" style="width:100%;padding:14px;border-radius:50px;font-size:1rem">קבע פגישה עכשיו</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="page-hdr">
+  <div class="container">
+    <a href="personal.html#youth" class="back-link">→ חזרה לתוכניות צעירים</a>
+    <span class="hdr-emoji">🚀</span>
+    <div class="hdr-badge">🆓 חינמי לחלוטין</div>
+    <h1 class="hdr-title">המדריך למשוחרר</h1>
+    <p class="hdr-sub">16 הצעדים הראשונים בדרך לאימפריה אישית — כל הבירוקרטיה, הזכויות והמהלכים החכמים שכל משוחרר חייב לדעת.</p>
+  </div>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-wrap">
+  <div class="container">
+    <div class="progress-inner">
+      <div class="progress-label">ההתקדמות שלי</div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <div class="progress-count" id="progressCount">0 / 16</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main style="padding-bottom:40px">
+  <div class="container">
+    <!-- FILTER CHIPS -->
+    <div class="filter-bar">
+      <div class="filter-chips" id="filterChips"></div>
+    </div>
+    <!-- STEPS LIST -->
+    <div class="steps-list" id="stepsList"></div>
+  </div>
+</main>
+
+<footer>
+  <a href="hahazdamnut.html">ההזדמנות שלי</a> — מלווה משוחררים וצעירים לבניית החיים שתמיד רצו
+</footer>
+
+<!-- MEETING MODAL -->
+<style>
+#regModal{position:fixed;inset:0;z-index:99998;background:rgba(10,22,40,.75);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;font-family:'Heebo',sans-serif}
+#regModal.open{display:flex}
+.reg-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:440px;width:100%;box-shadow:0 32px 80px rgba(0,0,0,.35);position:relative;animation:regSlideIn .3s ease}
+@keyframes regSlideIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.reg-close{position:absolute;top:14px;left:16px;width:32px;height:32px;border-radius:50%;background:#F1F5F9;border:none;cursor:pointer;font-size:1.1rem;color:#64748B;display:flex;align-items:center;justify-content:center}
+.reg-close:hover{background:#E2E8F0}
+.reg-title{font-size:1.45rem;font-weight:900;color:#0F172A;margin-bottom:6px;text-align:center}
+.reg-sub{font-size:.88rem;color:#64748B;margin-bottom:24px;text-align:center;line-height:1.6}
+.reg-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:1rem;font-family:'Heebo',sans-serif;margin-bottom:12px;text-align:right;outline:none;transition:border-color .2s;display:block;box-sizing:border-box}
+.reg-field:focus{border-color:#1A56A0;box-shadow:0 0 0 3px rgba(26,86,160,.1)}
+.reg-field.reg-err{border-color:#EF4444}
+.reg-btn{width:100%;padding:14px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;margin-top:4px;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.reg-btn:hover{opacity:.9}.reg-btn:disabled{opacity:.55;cursor:default}
+#rmSuccess{display:none;text-align:center;padding:12px 0}
+#rmSuccess .rm-ic{font-size:3rem;margin-bottom:12px}
+#rmSuccess h3{font-size:1.3rem;font-weight:900;margin-bottom:8px}
+#rmSuccess p{color:#64748B;font-size:.9rem;margin-bottom:20px}
+#rmSuccess a{display:inline-block;padding:13px 28px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none}
+@keyframes rmSpin{to{transform:rotate(360deg)}}
+.rm-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:rmSpin .75s linear infinite;display:none}
+</style>
+<div id="regModal">
+  <div class="reg-card">
+    <button class="reg-close" onclick="closeRegModal()">✕</button>
+    <div id="rmForm">
+      <h2 class="reg-title">שיחת התאמה ללא עלות</h2>
+      <p class="reg-sub">השאר פרטים ונחזור אליך בהקדם לתיאום</p>
+      <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;opacity:0;pointer-events:none">
+      <input type="text" id="rmName" class="reg-field" placeholder="שם מלא" autocomplete="name"/>
+      <input type="tel" id="rmPhone" class="reg-field" placeholder="מספר טלפון" autocomplete="tel"/>
+      <textarea id="rmNotes" class="reg-field" rows="3" placeholder="ספר לנו קצת על עצמך (לא חובה)" style="resize:none;margin-bottom:16px"></textarea>
+      <button id="rmBtn" class="reg-btn" onclick="submitRegModal()">
+        <span id="rmBtnTxt">שלח ← קבע פגישה</span>
+        <div class="rm-spin" id="rmSpin"></div>
+      </button>
+    </div>
+    <div id="rmSuccess">
+      <div class="rm-ic">🎉</div>
+      <h3>תודה! קיבלנו את הפרטים</h3>
+      <p>ניצור איתך קשר בהקדם לתיאום פגישת ליווי 1:1.</p>
+      <a href="https://calendly.com/giladunna/30min" target="_blank">לתיאום מועד עכשיו ←</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── DATA ──
+var STEPS = [
+  {id:1, cat:'כסף', emoji:'🛡️', title:'ביטוח לאומי — ראש שקט מחובות',
+   desc:'מיד לאחר השחרור עליך לעדכן את המוסד לביטוח לאומי לגבי סטטוסך — שכיר, סטודנט, מטייל, עצמאי. אם לא תעדכן, תצבור חוב שריבית תנפח אותו. התשלום המינימלי כשאתה לא עובד הוא נמוך מאוד — אבל חובה לשלם.',
+   tip:'💡 אל תחכה עם זה! ביטוח לאומי ממש קפדני על עדכון סטטוס ורטרואקטיבי.',
+   links:[{text:'המוסד לביטוח לאומי', url:'https://www.btl.gov.il/Pages/default.aspx'}]},
+
+  {id:2, cat:'כסף', emoji:'🐷', title:'חיסכון לכל ילד — כסף שמחכה לך',
+   desc:'מדינת ישראל חסכה עבורך כסף מגיל לידה ועד גיל 21 — בערך ₪10,000-20,000. ניתן למשוך אותו בגיל 21 או לבחור להמשיך לצבור. המלצה: השתמש בסכום הזה בתור הון ראשוני להשקעה, לא להוצאות שוטפות.',
+   tip:'💡 לפני משיכה, שקול להעביר לתיק השקעות. חצי שנה של תשואה שווה יותר מחופשה.',
+   links:[{text:'בדיקת יתרה — בנק ישראל', url:'https://www.bankisrael.org.il/'}]},
+
+  {id:3, cat:'בריאות', emoji:'💊', title:'קופת חולים — הביטוח של הגוף',
+   desc:'יש לך חלון זמן של חודשיים לאחר השחרור להסדיר ביטוח בריאות. חשוב לא להחמיץ את זה ולהירשם בסניף הקרוב אליך. כדאי לבדוק מראש איזו קופה נגישה יותר לאזורך ולבחור לפי הטבות — רפואת שיניים, עיניים, ספורט ורפואה משלימה.',
+   tip:'💡 בדוק לאיזה "שב"ן" (שירותי בריאות נוספים) יש זכאות מוקטנת — לפעמים שווה להישאר עם הקופה שהיית בה מהצבא.',
+   links:[{text:'אתר משרד הבריאות', url:'https://www.health.gov.il/Subjects/hsbasket/Pages/default.aspx'}]},
+
+  {id:4, cat:'כסף', emoji:'💳', title:'מועדון "בהצדעה" — כרטיס עם הטבות',
+   desc:'מועדון "בהצדעה" מציע כרטיס אשראי מיוחד לחיילים משוחררים עם הנחות על בילויים, דלק, מסעדות וקניות. הרשמה פשוטה וההטבות שוות.',
+   links:[{text:'הצטרפות למועדון בהצדעה', url:'https://www.behatsadaa.co.il/'}]},
+
+  {id:5, cat:'כסף', emoji:'🏦', title:'חשבון בנק מסודר — תתמקח כמו מנכ"ל',
+   desc:'רוב הצעירים פשוט ממשיכים עם הבנק שהיו בו מהצבא מבלי לנהל משא ומתן. טעות יקרה! בקש מהבנק "תדפיס תעריפים" ונהל מו"מ על עמלות — תוכל לחסוך מאות שקלים בשנה. אפשרות נוספת: בנק דיגיטלי כמו ONE ZERO עם אפס עמלות.',
+   links:[{text:'ONE ZERO — בנק דיגיטלי', url:'https://www.onezero.bank/'}]},
+
+  {id:6, cat:'כסף', emoji:'📈', title:'פתיחת תיק מסחר — הכסף עובד בשבילך',
+   desc:'כסף שיושב בעו"ש מפסיד כסף כל יום בגלל אינפלציה. פתח תיק מסחר ב-IBI, מיטב, מור או Robinhood ותתחיל להשקיע גם בסכומים קטנים. תיק מגוון שמשלב מניות, קרנות מחקות ואגרות חוב הוא נקודת ההתחלה הנכונה.',
+   tip:'💡 קרן מחקה S&P 500 היא אחת ההשקעות הכי חכמות לטווח ארוך — עם עמלה נמוכה מאוד.',
+   links:[{text:'הזדמנויות פיננסיות', url:'finance.html'}]},
+
+  {id:7, cat:'כסף', emoji:'🏛️', title:'סדר בפנסיה ודמי ניהול',
+   desc:'כל עובד חייב לפתוח קרן פנסיה. חשוב מאוד לבחור קרן עם דמי ניהול נמוכים — הפרש של 0.5% בדמי ניהול שווה עשרות אלפי שקלים לאחר 40 שנה. פגישת ייעוץ עם סוכן פנסיה היא חינמית לחלוטין (הסוכן מקבל עמלה מחברת הביטוח).',
+   tip:'💡 אל תקח את קרן ברירת המחדל של המעסיק — בדוק ב-Cover לפני כל התחייבות.',
+   links:[{text:'COVER — השוואת פנסיה', url:'https://cover.co.il/'}]},
+
+  {id:8, cat:'כסף', emoji:'🏔️', title:'סדר בכספים אבודים — אתר הר הכסף',
+   desc:'אתר ממשלתי שמאפשר לחפש חשבונות בנק, קופות גמל, קרנות פנסיה וכספים אחרים שאולי שכחת על קיומם. ישראלים רבים מגלים שם כסף שלא ידעו שמחכה להם.',
+   tip:'💡 ממוצע הכסף שנמצא באתר הוא אלפי שקלים. שווה 5 דקות.',
+   links:[{text:'הר הכסף', url:'https://www.gov.il/he/departments/guides/money-mountain'}]},
+
+  {id:9, cat:'כסף', emoji:'🗄️', title:'סדר בביטוח — אתר הר הביטוח',
+   desc:'אתר ממשלתי שמציג את כל פוליסות הביטוח הפרטיות שרשומות על שמך. אתה תגלה שיש לך ביטוחים כפולים, ביטוחים שהוריך פתחו עבורך וכבר לא רלוונטיים, ותשלומים מיותרים. מומלץ מאוד לבדוק — אנשים מגלים שם אלפי שקלים.',
+   links:[{text:'הר הביטוח', url:'https://www.gov.il/he/departments/guides/insurance-mountain'}]},
+
+  {id:10, cat:'קריירה', emoji:'📄', title:'בניית קורות חיים — השיווק שלך',
+   desc:'הצבא נתן לך ניסיון שאזרחים לא מבינים — תפעול צוותים, עבודה תחת לחץ, למידה עצמאית, אחריות. המפתח הוא לתרגם את השפה הצבאית לשפה אזרחית. "קמ"ן" הופך ל"מנהל פרויקטים בצוות של 30 אנשים".',
+   tip:'💡 השתמש בפועלים חזקים: ניהלתי, הובלתי, שיפרתי, יזמתי — לא "הייתי אחראי על".',
+   links:[]},
+
+  {id:11, cat:'כסף', emoji:'🎁', title:'מענק שחרור — תכנון חכם',
+   desc:'קיבלת מהצבא מענק ופיקדון:\n• המענק — כסף נזיל שניתן מיד. השתמש בו בתבונה, לא לבזבוז חד-פעמי.\n• הפיקדון — סכום גדול יותר שנועד ללימודים, עסק או דיור, וניתן לפדייה על פני 5 שנים.\nלפני שאתה מחליט מה לעשות עם הכסף, בדוק את היתרה המדויקת.',
+   links:[{text:'בדיקת יתרת פיקדון — בטחת', url:'https://www.pkadon.mod.gov.il/'}]},
+
+  {id:12, cat:'לימודים', emoji:'🎓', title:'זכויות ומלגות — לימודים בחינם או בהנחה',
+   desc:'כמשוחרר יש לך גישה למגוון זכויות ומלגות שרוב האנשים לא מודעים אליהן — מלגות מהמדינה, מעיריות, מקרנות פרטיות, קורס מקצועי חינמי דרך קמפוס IL ועוד. כדאי להגיש מועמדות לכמה שיותר — גם מלגת ₪3,000 שנה שווה את הזמן.',
+   links:[
+     {text:'מילגה פו — אגרגטור מלגות', url:'https://www.milgapo.co.il/'},
+     {text:'קמפוס IL — קורסים חינמיים', url:'https://campus.gov.il/'}
+   ]},
+
+  {id:13, cat:'טיול', emoji:'✈️', title:'תכנון טיול גדול + ביטוח נסיעות חינם',
+   desc:'הטיול הגדול הוא חוויה שלא תחזרו — אבל תכנון לקוי הוא אחת הסיבות הנפוצות לחובות. תדע: משוחררים זכאים לביטוח נסיעות חינמי לתקופה של עד 3 חודשים! בדוק זאת לפני שאתה קונה ביטוח. תכנן תקציב ריאלי, השווה טיסות מוקדם ושמור "כרית ביטחון" לחירום.',
+   tip:'💡 בדוק זכאות לביטוח נסיעות חינם לפני שאתה משלם — זה יכול לחסוך לך מאות שקלים.',
+   links:[{text:'המטייל החכם', url:'https://hamayel.co.il/'}]},
+
+  {id:14, cat:'קריירה', emoji:'💼', title:'מציאת עבודה שתקדם אותי — לא רק כסף',
+   desc:'הטעות הכי גדולה היא לקחת כל עבודה "בשביל הכסף" מבלי לשים לב לניסיון ולצמיחה המקצועית. בחר עבודה שבה אתה לומד משהו חדש, צובר ניסיון שיאפשר לך להרוויח יותר בעוד 2-3 שנים. השאל את עצמך: "האם בעוד שנה אהיה שווה יותר?"',
+   links:[{text:'לוח עבודות — ההזדמנות שלי', url:'employment.html'}]},
+
+  {id:15, cat:'קריירה', emoji:'🤝', title:'תוכניות משוחררים והרחבת רשת קשרים',
+   desc:'תוכניות צעירים הן הדרך המהירה ביותר לבנות רשת קשרים, לצבור ניסיון ולהיחשף להזדמנויות שרוב האנשים לא מכירים — מינהל, מנהיגות, הייטק, גיאוגרפיה ועוד. בנוסף, הקשרים שלך מהצבא הם נכס אדיר — שמור עליהם.',
+   links:[{text:'תוכניות צעירים — ההזדמנות שלי', url:'personal.html'}]},
+
+  {id:16, cat:'ניהול עצמי', emoji:'📅', title:'בניית לוז ויצירת שגרת חיים',
+   desc:'בצבא הלוח"ז ניתן לך. באזרחות — אתה אחראי על עצמך. אחד הקשיים הגדולים של משוחררים הוא המעבר מסדר יום מוכתב לחופש מוחלט. צור לעצמך מסגרת: שעות קבועות לעבודה/לימוד, זמן לכושר, זמן חברתי. ג\'וגל קלנדר הוא כלי מינימלי להתחיל איתו.',
+   tip:'💡 שגרה בריאה = 30 דק׳ ספורט בבוקר + מטרה יומית אחת ברורה. זה ההתחלה.',
+   links:[{text:'Google Calendar', url:'https://calendar.google.com'}]}
+];
+
+var TOTAL = STEPS.length; // 16 checkable steps
+
+var FILTERS = ['הכל','💊 בריאות','💰 כסף','💼 קריירה','🎓 לימודים','✈️ טיול','📅 ניהול עצמי'];
+var CAT_MAP = {'בריאות':'💊 בריאות','כסף':'💰 כסף','קריירה':'💼 קריירה','לימודים':'🎓 לימודים','טיול':'✈️ טיול','ניהול עצמי':'📅 ניהול עצמי'};
+var activeCat = 'הכל';
+
+function getDone() {
+  try { return JSON.parse(localStorage.getItem('hahizd_guide_done') || '[]'); } catch(e) { return []; }
+}
+function saveDone(arr) {
+  localStorage.setItem('hahizd_guide_done', JSON.stringify(arr));
+}
+function updateProgress() {
+  var done = getDone();
+  var pct = Math.round((done.length / TOTAL) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressCount').textContent = done.length + ' / ' + TOTAL;
+}
+
+function toggleDone(id, e) {
+  e.stopPropagation();
+  var done = getDone();
+  var idx = done.indexOf(id);
+  if (idx > -1) done.splice(idx, 1); else done.push(id);
+  saveDone(done);
+  renderSteps();
+  updateProgress();
+}
+
+function toggleOpen(id) {
+  var el = document.getElementById('step-' + id);
+  if (!el) return;
+  el.classList.toggle('open');
+}
+
+function renderSteps() {
+  var done = getDone();
+  var list = document.getElementById('stepsList');
+  list.innerHTML = '';
+
+  var filtered = activeCat === 'הכל' ? STEPS : STEPS.filter(function(s) {
+    return CAT_MAP[s.cat] === activeCat;
+  });
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div style="text-align:center;color:var(--muted);padding:40px 0;font-size:.95rem">אין שלבים בקטגוריה זו</div>';
+  }
+
+  filtered.forEach(function(s, vi) {
+    var isDone = done.indexOf(s.id) > -1;
+    var item = document.createElement('div');
+    item.className = 'step-item fade-up' + (isDone ? ' done' : '');
+    item.id = 'step-' + s.id;
+    item.style.animationDelay = (vi * 0.04) + 's';
+    item.style.opacity = '0';
+
+    var linksHtml = s.links.map(function(l) {
+      if (l.onclick) {
+        return '<button onclick="' + l.onclick + '" class="step-link-btn">' + l.text + ' ←</button>';
+      }
+      return '<a href="' + l.url + '" target="_blank" rel="noopener" class="step-link-btn">' + l.text + ' ←</a>';
+    }).join('');
+
+    var tipHtml = s.tip ? '<div class="step-tip"><strong>טיפ:</strong> ' + s.tip.replace(/^💡 /,'') + '</div>' : '';
+
+    item.innerHTML =
+      '<div class="step-header" onclick="toggleOpen(' + s.id + ')">' +
+        '<div class="step-check" onclick="toggleDone(' + s.id + ', event)">' + (isDone ? '✓' : '') + '</div>' +
+        '<div class="step-num">' + s.id + '</div>' +
+        '<div class="step-info">' +
+          '<span class="step-cat-badge">' + CAT_MAP[s.cat] + '</span>' +
+          '<div class="step-title">' + s.emoji + ' ' + s.title + '</div>' +
+        '</div>' +
+        '<div class="step-arrow">▼</div>' +
+      '</div>' +
+      '<div class="step-body">' +
+        '<div class="step-desc">' + s.desc.replace(/\n/g,'<br>') + '</div>' +
+        tipHtml +
+        (linksHtml ? '<div class="step-links">' + linksHtml + '</div>' : '') +
+      '</div>';
+
+    list.appendChild(item);
+  });
+
+  // Danger section — 10 mistakes
+  if (activeCat === 'הכל' || activeCat === '📅 ניהול עצמי') {
+    var danger = document.createElement('div');
+    danger.className = 'step-item fade-up';
+    danger.style.animationDelay = ((filtered.length) * 0.04) + 's';
+    danger.style.opacity = '0';
+    danger.innerHTML =
+      '<div class="step-header" onclick="this.parentElement.classList.toggle(\'open\')">' +
+        '<div class="step-check" style="visibility:hidden"></div>' +
+        '<div class="step-num" style="background:#FEE2E2;border-color:#FCA5A5;color:#DC2626">⚠️</div>' +
+        '<div class="step-info">' +
+          '<span class="step-cat-badge">⚠️ מוקשים</span>' +
+          '<div class="step-title">⚠️ 10 הטעויות שישרפו לך את השחרור</div>' +
+        '</div>' +
+        '<div class="step-arrow">▼</div>' +
+      '</div>' +
+      '<div class="step-body">' +
+        '<div class="danger-card">' +
+          '<div class="danger-title">⚠️ שים לב — מוקשים בדרך</div>' +
+          '<ul class="danger-list">' +
+          '<li>בזבוז הפיקדון על קורסים שאינם מקדמים אותך</li>' +
+          '<li>קורסים "להתעשרות מהירה" שגוזלים כסף ואנרגיה</li>' +
+          '<li>טיול ללא הכנה פיננסית — ולחזור עם חובות</li>' +
+          '<li>עבודות מתות ללא ניסיון וערך מוסף מקצועי</li>' +
+          '<li>חוסר חזון ברור לאן אתה רוצה להגיע</li>' +
+          '<li>אין תוכנית עבודה ל-3 שנים קדימה</li>' +
+          '<li>השקעות לא בטוחות ממקורות לא מהימנים</li>' +
+          '<li>דילוג על שלבי ביטוח וזכויות — הפסד כסף אמיתי</li>' +
+          '<li>בידוד חברתי וחוסר בניית רשת קשרים</li>' +
+          '<li>ניסיון לעשות הכל לבד ללא ליווי מקצועי</li>' +
+          '</ul>' +
+        '</div>' +
+      '</div>';
+    list.appendChild(danger);
+  }
+
+  // CTA — ייעוץ וליווי
+  if (activeCat === 'הכל') {
+    var cta = document.createElement('div');
+    cta.className = 'step-item fade-up';
+    cta.style.animationDelay = ((filtered.length + 1) * 0.04) + 's';
+    cta.style.opacity = '0';
+    cta.style.border = 'none';
+    cta.style.boxShadow = 'none';
+    cta.style.background = 'transparent';
+    cta.innerHTML =
+      '<div class="cta-card">' +
+        '<span class="cta-emoji">🌟</span>' +
+        '<div style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:6px">הצעד הכי חשוב — לקחת ייעוץ וליווי</div>' +
+        '<div class="cta-title">פגישת ליווי 1:1 — במחיר מסובסד</div>' +
+        '<div class="cta-sub">שיחה של שעה עד שעתיים שהופכת את הבלגן לתוכנית פעולה ברורה — זום או פגישה אישית. ליווי נכון בתחילת הדרך חוסך שנים של ניסוי וטעייה.</div>' +
+        '<div class="cta-features">' +
+          '<div class="cta-feature">מצפן מקצועי: חיבור לעבודה עם ניסיון טוב ושכר הוגן</div>' +
+          '<div class="cta-feature">ביסוס פיננסי: תוכנית השקעה בטוחה ומותאמת אישית</div>' +
+          '<div class="cta-feature">מפתחות ביד: מערכת Self Mentor לניהול עצמי</div>' +
+        '</div>' +
+        '<div class="cta-price">מחיר: <strong>₪297</strong></div>' +
+        '<button class="cta-btn" onclick="openRegModal()">🚀 קבע פגישת ליווי 1:1 עכשיו</button>' +
+      '</div>';
+    list.appendChild(cta);
+  }
+}
+
+function renderFilters() {
+  var bar = document.getElementById('filterChips');
+  bar.innerHTML = '';
+  FILTERS.forEach(function(f) {
+    var btn = document.createElement('button');
+    btn.className = 'filter-chip' + (activeCat === f ? ' active' : '');
+    btn.textContent = f;
+    btn.onclick = function() { activeCat = f; renderFilters(); renderSteps(); };
+    bar.appendChild(btn);
+  });
+}
+
+// init
+renderFilters();
+renderSteps();
+updateProgress();
+
+</script>
+<!-- FLOATING BUTTONS -->
+<style>
+.float-btns{position:fixed;bottom:24px;left:24px;z-index:9990;display:flex;flex-direction:column;gap:12px;align-items:center}
+.float-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.22);cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;border:none;font-family:inherit}
+.float-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,0,0,.3)}
+.float-wa{background:#25D366}
+.float-access{background:#7C3AED;color:#fff;font-size:1.4rem}
+/* accessibility panel */
+#accessPanel{position:fixed;bottom:90px;left:24px;z-index:9991;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.18);padding:20px 18px;width:200px;display:none;direction:rtl;font-family:'Heebo',sans-serif}
+#accessPanel.open{display:block}
+#accessPanel h4{margin:0 0 12px;font-size:.95rem;font-weight:800;color:#0F172A}
+.acc-btn{display:flex;align-items:center;gap:8px;width:100%;padding:9px 12px;border-radius:10px;background:#F8FAFC;border:1.5px solid #E2E8F0;font-size:.85rem;font-weight:600;color:#374151;cursor:pointer;margin-bottom:8px;font-family:'Heebo',sans-serif;transition:background .15s}
+.acc-btn:hover{background:#EDE9FE;border-color:#7C3AED;color:#7C3AED}
+.acc-btn.on{background:#7C3AED;color:#fff;border-color:#7C3AED}
+</style>
+<div class="float-btns">
+  <a href="https://api.whatsapp.com/send?phone=972523960215&text=%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%94%D7%96%D7%93%D7%9E%D7%A0%D7%95%D7%99%D7%95%D7%AA%20%D7%A9%D7%9C%D7%99%20%D7%95%D7%A4%D7%92%D7%99%D7%A9%D7%94%201%3A1" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <button class="float-btn float-access" aria-label="נגישות" onclick="toggleAccessPanel()">♿</button>
+</div>
+<div id="accessPanel">
+  <h4>♿ נגישות</h4>
+  <button class="acc-btn" id="accFont" onclick="toggleFontSize()">🔤 הגדל טקסט</button>
+  <button class="acc-btn" id="accContrast" onclick="toggleContrast()">🌓 ניגודיות גבוהה</button>
+  <button class="acc-btn" id="accLinks" onclick="toggleLinks()">🔗 הדגש קישורים</button>
+</div>
+<script>
+(function(){
+  var panelOpen=false;
+  var fontOn=false,contrastOn=false,linksOn=false;
+  window.toggleAccessPanel=function(){
+    panelOpen=!panelOpen;
+    document.getElementById('accessPanel').classList.toggle('open',panelOpen);
+  };
+  document.addEventListener('click',function(e){
+    if(panelOpen&&!e.target.closest('#accessPanel')&&!e.target.closest('.float-access')){
+      panelOpen=false;document.getElementById('accessPanel').classList.remove('open');
+    }
+  });
+  window.toggleFontSize=function(){
+    fontOn=!fontOn;
+    document.documentElement.style.fontSize=fontOn?'118%':'';
+    document.getElementById('accFont').classList.toggle('on',fontOn);
+  };
+  window.toggleContrast=function(){
+    contrastOn=!contrastOn;
+    document.body.style.filter=contrastOn?'contrast(1.25)':'';
+    document.getElementById('accContrast').classList.toggle('on',contrastOn);
+  };
+  window.toggleLinks=function(){
+    linksOn=!linksOn;
+    var s=document.getElementById('_accLinksStyle');
+    if(!s){s=document.createElement('style');s.id='_accLinksStyle';document.head.appendChild(s);}
+    s.textContent=linksOn?'a{text-decoration:underline!important;font-weight:700!important}':'';
+    document.getElementById('accLinks').classList.toggle('on',linksOn);
+  };
+})();
+</script>
+<script src="assets/js/hahizd-common.js"></script>
+<script>
+Hahizd.initNav();
+Hahizd.initRegModal();
+</script>
+
+</body>
+</html>

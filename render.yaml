@@ -1,0 +1,8 @@
+# Render Static Site — root: ההזדמנות שלי/
+# In Render dashboard: New > Static Site > set Publish Directory to this folder.
+services:
+  - type: web
+    name: hahizdamnut-shelly
+    runtime: static
+    staticPublishPath: .
+    buildCommand: echo "No build — static HTML + assets/"
