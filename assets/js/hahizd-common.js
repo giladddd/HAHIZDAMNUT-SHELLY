@@ -216,9 +216,7 @@
     chip.style.cssText = 'display:flex;align-items:center;gap:8px;flex-shrink:0';
 
     if (s) {
-      var firstName = s.name ? s.name.split(' ')[0] : '';
       chip.innerHTML =
-        '<span style="font-size:.82rem;color:#64748B;font-weight:600">שלום, ' + firstName + '</span>' +
         '<button onclick="window.haHizdLogout()" style="font-size:.78rem;color:#EF4444;background:none;border:1px solid #FCA5A5;border-radius:50px;padding:4px 12px;cursor:pointer;font-family:inherit;font-weight:600">התנתק</button>';
     } else {
       chip.innerHTML =
