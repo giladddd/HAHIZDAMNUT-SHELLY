@@ -71,9 +71,10 @@
   }
 
   function setSession(name, phone) {
+    var stored = isValidPhone(phone) ? normalizePhone(phone) : phone;
     localStorage.setItem(
       SESSION_KEY,
-      JSON.stringify({ name: name, phone: normalizePhone(phone), ts: Date.now() })
+      JSON.stringify({ name: name, phone: stored, ts: Date.now() })
     );
   }
 
