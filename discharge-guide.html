@@ -386,7 +386,13 @@ function toggleDone(id, e) {
   var idx = done.indexOf(id);
   if (idx > -1) done.splice(idx, 1); else done.push(id);
   saveDone(done);
-  renderSteps();
+  var isDone = done.indexOf(id) > -1;
+  var el = document.getElementById('step-' + id);
+  if (el) {
+    el.classList.toggle('done', isDone);
+    var chk = el.querySelector('.step-check');
+    if (chk) chk.textContent = isDone ? '✓' : '';
+  }
   updateProgress();
 }
 
