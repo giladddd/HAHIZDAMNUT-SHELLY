@@ -104,7 +104,7 @@ section{padding-block:88px}
 .nav-overlay.open{display:block}
 
 /* ── HERO ── */
-#hero{min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden;background:var(--hero-bg)}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);padding-bottom:0;position:relative;overflow:hidden;background:var(--hero-bg)}
 .hero-circle{position:absolute;top:-200px;left:-240px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(77,174,245,.08) 0%,rgba(26,86,160,.06) 50%,transparent 100%);pointer-events:none}
 .hero-circle-2{position:absolute;bottom:-220px;right:-180px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(26,86,160,.1) 0%,transparent 70%);pointer-events:none}
 .hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
@@ -180,6 +180,11 @@ section{padding-block:88px}
 .programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1160px;margin-inline:auto}
 .plan-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px 36px;box-shadow:var(--sh-sm);position:relative;transition:box-shadow var(--tr),transform var(--tr);display:flex;flex-direction:column}
 .plan-cta{margin-top:auto}
+.pro-expand-item{padding-block:8px}
+.pro-chevron{font-size:1.1rem;color:var(--primary);transition:transform .2s;display:inline-block}
+.pro-expand-item.open .pro-chevron{transform:rotate(90deg)}
+.pro-expand-body{display:none;font-size:.82rem;color:var(--muted);line-height:1.6;padding:6px 0 0 22px}
+.pro-expand-item.open .pro-expand-body{display:block}
 .plan-card:hover{box-shadow:var(--sh-lg);transform:translateY(-3px)}
 .plan-card.featured{border-right:4px solid var(--primary);background:linear-gradient(160deg,#fff 0%,#F5F8FF 100%)}
 .plan-badge{position:absolute;top:-14px;right:28px;background:linear-gradient(135deg,var(--primary),#2A7CE0);color:#fff;font-size:.78rem;font-weight:700;padding:5px 16px;border-radius:50px;box-shadow:0 3px 12px rgba(26,86,160,.3)}
@@ -312,6 +317,7 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
   .hero-stats{grid-template-columns:1fr;max-width:280px}
   .hero-actions{flex-direction:column;align-items:center}
   .hero-actions .btn{width:100%;max-width:300px;justify-content:center}
+  #hero{min-height:auto;padding-bottom:48px}
   .programs-grid{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
   .partners-grid{grid-template-columns:1fr;max-width:300px;margin-inline:auto}
   .footer-grid{grid-template-columns:1fr}
@@ -459,154 +465,21 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
         <button class="btn btn-primary btn-lg" onclick="openRegModal()">לקביעת שיחת התאמה ללא עלות</button>
         <a href="employment.html" class="btn btn-outline btn-lg">גלה את ההזדמנויות</a>
       </div>
-      <div class="hero-guarantee">
-        <span class="hg-shield">🛡️</span>
-        <span>100% התחייבות להחזר כספי</span>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY SLIDER -->
-<section id="gallery">
-  <div class="container">
-    <h2 class="gallery-title">גם אתם יכולים!</h2>
-    <div class="gallery-slider">
-      <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" aria-label="הקודם">‹</button>
-      <div class="gallery-overflow">
-        <div class="gallery-track" id="galleryTrack">
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-1.png" alt="ההזדמנות שלי 1" loading="lazy"/></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-01.webp" type="image/webp"/><img src="images/lecture-01.jpeg" alt="הרצאה 1" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-3.png" alt="ההזדמנות שלי 3" loading="lazy"/></div>
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-4.png" alt="ההזדמנות שלי 4" loading="lazy"/></div>
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-5.png" alt="ההזדמנות שלי 5" loading="lazy"/></div>
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-6.png" alt="ההזדמנות שלי 6" loading="lazy"/></div>
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-7.png" alt="ההזדמנות שלי 7" loading="lazy"/></div>
-          <div class="gallery-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-2.png" alt="ההזדמנות שלי 2" loading="lazy"/></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-02.webp" type="image/webp"/><img src="images/lecture-02.jpeg" alt="הרצאה 2" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה 3" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-04.webp" type="image/webp"/><img src="images/lecture-04.jpeg" alt="הרצאה 4" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-05.webp" type="image/webp"/><img src="images/lecture-05.jpeg" alt="הרצאה 5" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-06.webp" type="image/webp"/><img src="images/lecture-06.jpeg" alt="הרצאה 6" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-07.webp" type="image/webp"/><img src="images/lecture-07.jpeg" alt="הרצאה 7" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-08.webp" type="image/webp"/><img src="images/lecture-08.jpeg" alt="הרצאה 8" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-09.webp" type="image/webp"/><img src="images/lecture-09.jpeg" alt="הרצאה 9" loading="lazy"/></picture></div>
-          <div class="gallery-slide"><picture><source srcset="images/lecture-10.webp" type="image/webp"/><img src="images/lecture-10.jpeg" alt="הרצאה 10" loading="lazy"/></picture></div>
-        </div>
-      </div>
-      <button class="gallery-arrow gallery-arrow-next" id="galleryNext" aria-label="הבא">›</button>
+<!-- TESTIMONIAL VIDEO -->
+<section id="gallery" style="padding-block:0 60px;background:#0A1628;margin-top:0">
+  <div class="container" style="max-width:520px">
+    <h2 class="gallery-title" style="color:#fff;margin-bottom:28px">גם אתם יכולים!</h2>
+    <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:9/16;background:#000;max-width:320px;margin-inline:auto">
+      <video controls playsinline preload="auto" style="width:100%;height:100%;display:block;object-fit:cover">
+        <source src="assets/testimonial-video.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
-
-<!-- ABOUT -->
-<section id="about">
-<div class="container">
-  <div class="about-grid">
-
-    <!-- FAQ RIGHT -->
-    <div class="about-faq">
-      <h2 class="about-faq-title">איך עובד הליווי?</h2>
-      <p class="about-faq-sub">כל מה שרצית לדעת לפני שמתחילים</p>
-      <div class="faq-list">
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה קורה בפגישה 1:1 בזום במסלול הבסיסי?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">פגישה של שעתיים 1:1 בזום שבה אנחנו עוברים יחד על שלושת התחומים — תעסוקתי, כלכלי ואישי. יוצאים עם תוכנית פעולה מדויקת, כלים פרקטיים וחיבור להזדמנויות שמתאימות בדיוק לך.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה זה אומר למצוא כיוון תעסוקתי?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">למצוא קריירה שמשלבת את החוזקות, הערכים והאינטרסים שלך — לא סתם עבודה, אלא מסלול שיתן לך משמעות ופרנסה טובה. נבנה יחד מפת דרכים ברורה: אילו הכשרות, קורסים ותארים רלוונטיים, ואיך להיכנס לשוק בצורה חכמה.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה זה אומר לבנות תיק השקעות ותוכנית כלכלית אישית?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">נבנה יחד תוכנית שמתאימה למצבך הנוכחי: איך לנהל הכנסות והוצאות, איך להתחיל להשקיע גם עם סכומים קטנים, ואיזה כלים פיננסיים מתאימים לך עכשיו. המטרה — שתצא עם ידע שמייצר לך כסף לאורך זמן.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה זה הזדמנויות מותאמות אישית?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">חיבור להזדמנויות פרימיום שרוב האנשים לא מכירים — עבודות שוות, תוכניות צעירים, טיולים גדולים מסובסדים, הכשרות ומלגות. נמצא יחד מה מתאים בדיוק לשלב שבו אתה נמצא.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה הכוונה 100% התחייבות להחזר כספי?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">אם יצאת מהפגישה ולא הרגשת שקיבלת ערך אמיתי — מחזירים לך את מלוא הסכום, ללא שאלות ובלי בירוקרטיה. אנחנו בטוחים בתוצאה.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה זה אומר להפוך להיות המנטור של עצמך?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">המטרה שלנו היא לא שתהיה תלוי בנו לנצח — אלא שתצא עם כלים, מחשבה ומסגרת עבודה שיאפשרו לך לקבל החלטות טובות בעצמך, לבד, לכל החיים.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>מה יש במסלול הפרימיום?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">מסלול ליווי מעמיק ומתמשך הכולל מספר פגישות לאורך זמן, מעקב שוטף, תמיכה בין פגישות, חיבור לרשת הזדמנויות רחבה יותר וכלים מתקדמים לניהול עצמי. מתאים למי שרוצה שינוי אמיתי ומשמעותי.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>למה יש הגבלה של נרשמים?</span>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a"><div class="faq-a-inner">כדי לשמור על איכות הליווי ולהבטיח שכל אחד מקבל את הזמן והתשומת לב שהוא ראוי לה — אנחנו מגבילים ל-15 משוחררים בחודש בלבד. זו לא שיטת שיווק, זו מחויבות לתוצאות.</div></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- VIDEO LEFT -->
-    <div class="about-video-wrap">
-      <a href="https://www.youtube.com/shorts/xCwwBuLgQ14" target="_blank" style="display:block;width:100%;height:100%;position:relative;text-decoration:none">
-        <img src="https://img.youtube.com/vi/xCwwBuLgQ14/0.jpg" alt="סרטון ההזדמנות שלי" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(1.7)"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0)">
-          <div style="width:64px;height:64px;background:rgba(255,0,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
-          </div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-</div>
-</section>
-<script>
-function toggleFaq(btn){
-  var item=btn.closest('.faq-item');
-  var ans=item.querySelector('.faq-a');
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el){
-    el.classList.remove('open');
-    el.querySelector('.faq-a').style.maxHeight='0';
-  });
-  if(!isOpen){
-    item.classList.add('open');
-    ans.style.maxHeight=ans.scrollHeight+40+'px';
-  }
-}
-</script>
 
 <!-- PROGRAMS -->
 <section id="programs">
@@ -629,8 +502,8 @@ function toggleFaq(btn){
       </ul>
       <a href="discharge-guide.html" class="btn btn-outline plan-cta">למדריך המלא</a>
     </div>
-    <div class="plan-card">
-      <div style="text-align:center;margin-bottom:12px">
+    <div class="plan-card" style="position:relative">
+      <div style="text-align:center;margin-bottom:14px">
         <span style="display:inline-flex;align-items:center;gap:6px;background:#ECFDF5;border:1.5px solid #10B981;color:#065F46;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:50px">✅ 100% התחייבות להחזר אם לא קיבלת ערך</span>
       </div>
       <div class="plan-name">פגישת ליווי</div>
@@ -648,13 +521,27 @@ function toggleFaq(btn){
     <div class="plan-card featured">
       <div class="plan-badge">⭐ הכי פופולרי</div>
       <div class="plan-name">מסלול פרו</div>
-      <div class="plan-price">5,900 <span>₪</span></div>
       <div class="plan-div"></div>
-      <ul class="plan-features">
-        <li class="plan-feat"><span class="plan-feat-ic">✓</span><span>5 מפגשים של ליווי יד ביד</span></li>
-        <li class="plan-feat"><span class="plan-feat-ic">✓</span><span>כיוון תעסוקתי מלא</span></li>
-        <li class="plan-feat"><span class="plan-feat-ic">✓</span><span>הקמת תיק השקעות ראשון</span></li>
-        <li class="plan-feat"><span class="plan-feat-ic">✓</span><span>ניהול עצמי וכלים אישיים</span></li>
+      <ul class="plan-features" style="gap:0">
+        <li class="plan-feat"><span class="plan-feat-ic">✓</span><span>3 מפגשי ליווי יד ביד</span></li>
+        <li class="plan-feat pro-expand-item" onclick="toggleProItem(this)" style="flex-direction:column;align-items:flex-start;cursor:pointer">
+          <div style="display:flex;align-items:center;gap:10px;width:100%">
+            <span class="plan-feat-ic">✓</span><span style="flex:1">מיפוי תעסוקתי מלא</span><span class="pro-chevron">›</span>
+          </div>
+          <div class="pro-expand-body">שאלוני כיוון מקצועיים, יתרונות וחסרונות, בניית קורות חיים, גישה לעבודות הכי שוות למשוחררים, ועוד.</div>
+        </li>
+        <li class="plan-feat pro-expand-item" onclick="toggleProItem(this)" style="flex-direction:column;align-items:flex-start;cursor:pointer">
+          <div style="display:flex;align-items:center;gap:10px;width:100%">
+            <span class="plan-feat-ic">✓</span><span style="flex:1">ליווי כלכלי מלא</span><span class="pro-chevron">›</span>
+          </div>
+          <div class="pro-expand-body">מיפוי דוח מצב כלכלי מלא, תוכנית כלכלית עם יעדים חודשיים, פתיחת חשבון מסחר, ניתוח אופציות השקעה בהתאמה אישית, גישה לעסקאות פרימיום.</div>
+        </li>
+        <li class="plan-feat pro-expand-item" onclick="toggleProItem(this)" style="flex-direction:column;align-items:flex-start;cursor:pointer">
+          <div style="display:flex;align-items:center;gap:10px;width:100%">
+            <span class="plan-feat-ic">✓</span><span style="flex:1">מיפוי אישי מלא</span><span class="pro-chevron">›</span>
+          </div>
+          <div class="pro-expand-body">שאלוני אישיות מקצועיים, סגנונות תקשורת, בריאות וכושר, ולמידה איך להפוך להיות המנטור של עצמך.</div>
+        </li>
         <li class="plan-feat"><span class="plan-feat-ic">✓</span><span>גישה לאפליקציה לניהול (חינמית)</span></li>
       </ul>
       <button onclick="openRegModal()" class="btn btn-primary plan-cta">התחל את המסלול</button>
@@ -663,6 +550,130 @@ function toggleFaq(btn){
   </div>
 </div>
 </section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+  <div class="about-grid">
+
+    <!-- FAQ RIGHT -->
+    <div class="about-faq">
+      <h2 class="about-faq-title">איך עובד הליווי?</h2>
+      <p class="about-faq-sub">כל מה שרצית לדעת לפני שמתחילים</p>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>מה הסיפור שלכם?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">ההזדמנות שלי נבנתה על ידי משוחררים שהבינו שאף אחד לא מכין אותך לחיים שאחרי הצבא. לא לכסף, לא לקריירה, לא לניהול עצמי. אחרי שהצלחנו בעצמנו בדרך הקשה, ואחרי בזבוז של הרבה זמן וכסף בדרך — אנחנו מביאים את הכל אליכם בפגישה אחת.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>מה זה המדריך למשתחרר?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">מדריך חינמי עם 16 צעדים שכל משוחרר חייב לעשות — החל מביורוקרטיה, דרך ביטוח לאומי וקופת חולים, עד כספים אבודים, פנסיה, זכויות ומלגות. הכל במקום אחד, בצורה ברורה וממוקדת.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>מה קורה בפגישת בהירות 1:1?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">פגישה אישית בזום שבה אנחנו עוברים יחד על שלושת התחומים — תעסוקתי, כלכלי ואישי. בונים יחד מפת דרכים ל-3 השנים הקרובות כדי ליצור בהירות ומיקוד, יוצאים עם תוכנית פעולה מדויקת, כלים פרקטיים וחיבור להזדמנויות שמתאימות בדיוק לך.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>מה כולל המסלול פרימיום?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">3 מפגשי ליווי יד ביד עם מיפוי תעסוקתי מלא, ליווי כלכלי מלא ומיפוי אישי מעמיק. כולל בניית קורות חיים, תוכנית כלכלית עם יעדים, פתיחת חשבון מסחר, שאלוני אישיות מקצועיים וגישה לאפליקציה לניהול. מיועד למי שרוצה לטרוף את החיים ולהגשים חלומות.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>מה זה ההזדמנויות שאתם אומרים?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">הזדמנויות פרימיום שרוב האנשים לא מכירים — עבודות שוות, תוכניות צעירים, טיולים גדולים מסובסדים, הכשרות ומלגות. אנחנו מחברים אותך בדיוק למה שמתאים לשלב שבו אתה נמצא.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>מה הכוונה ב-100% התחייבות להחזר כספי מלא?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">אם יצאת מהפגישה ולא הרגשת שקיבלת ערך אמיתי — מחזירים לך את מלוא הסכום, ללא שאלות ובלי בירוקרטיה. אנחנו בטוחים בתוצאה.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>האם מקבלים כל אחד למסלול הפרימיום?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">לא. המסלול מוגבל ל-5 מקומות בחודש בלבד, ועובר תהליך בחירה. אנחנו מחפשים אנשים שבאמת רוצים להשתנות ומוכנים להשקיע בעצמם. הפגישה הראשונה היא גם תהליך ההיכרות שמחליט האם זה מתאים לשני הצדדים.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>למה יש הגבלה של נרשמים?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">כדי לשמור על איכות הליווי ולהבטיח שכל אחד מקבל את הזמן והתשומת לב שהוא ראוי לה — אנחנו מגבילים ל-15 משוחררים בחודש בלבד. זו לא שיטת שיווק, זו מחויבות לתוצאות.</div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GALLERY LEFT -->
+    <div style="min-width:0">
+      <div class="gallery-slider">
+        <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" aria-label="הקודם">‹</button>
+        <div class="gallery-overflow">
+          <div class="gallery-track" id="galleryTrack">
+            <div class="gallery-slide"><picture><source srcset="images/lecture-01.webp" type="image/webp"/><img src="images/lecture-01.jpeg" alt="הרצאה 1" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-02.webp" type="image/webp"/><img src="images/lecture-02.jpeg" alt="הרצאה 2" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה 3" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-04.webp" type="image/webp"/><img src="images/lecture-04.jpeg" alt="הרצאה 4" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-05.webp" type="image/webp"/><img src="images/lecture-05.jpeg" alt="הרצאה 5" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-06.webp" type="image/webp"/><img src="images/lecture-06.jpeg" alt="הרצאה 6" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-07.webp" type="image/webp"/><img src="images/lecture-07.jpeg" alt="הרצאה 7" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-08.webp" type="image/webp"/><img src="images/lecture-08.jpeg" alt="הרצאה 8" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-09.webp" type="image/webp"/><img src="images/lecture-09.jpeg" alt="הרצאה 9" loading="lazy"/></picture></div>
+            <div class="gallery-slide"><picture><source srcset="images/lecture-10.webp" type="image/webp"/><img src="images/lecture-10.jpeg" alt="הרצאה 10" loading="lazy"/></picture></div>
+          </div>
+        </div>
+        <button class="gallery-arrow gallery-arrow-next" id="galleryNext" aria-label="הבא">›</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+<script>
+function toggleProItem(el){
+  var isOpen = el.classList.contains('open');
+  document.querySelectorAll('.pro-expand-item.open').forEach(function(i){ i.classList.remove('open'); });
+  if(!isOpen) el.classList.add('open');
+}
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var ans=item.querySelector('.faq-a');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){
+    el.classList.remove('open');
+    el.querySelector('.faq-a').style.maxHeight='0';
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    ans.style.maxHeight=ans.scrollHeight+40+'px';
+  }
+}
+</script>
 
 <!-- GRADUATES / VIDEO TESTIMONIALS -->
 <section id="graduates">
@@ -673,16 +684,16 @@ function toggleFaq(btn){
   </div>
   <div class="graduates-stats">
     <div>
-      <div class="grad-stat-num">289</div>
-      <div class="grad-stat-label">בוגרי תוכנית</div>
+      <div class="grad-stat-num">389</div>
+      <div class="grad-stat-label">תהליכי פרימיום</div>
     </div>
     <div>
-      <div class="grad-stat-num">95%</div>
-      <div class="grad-stat-label">אחוזי הצלחה</div>
+      <div class="grad-stat-num">98%</div>
+      <div class="grad-stat-label">בוגרים מרוצים</div>
     </div>
     <div>
-      <div class="grad-stat-num">567</div>
-      <div class="grad-stat-label">בוגרי תוכנית</div>
+      <div class="grad-stat-num">856</div>
+      <div class="grad-stat-label">פגישות</div>
     </div>
   </div>
   <div class="vid-slider">
@@ -700,27 +711,6 @@ function toggleFaq(btn){
         <div class="vid-card">
           <video preload="metadata" playsinline loop>
             <source src="assets/uploads/2026/03/WhatsApp-Video-2026-02-26-at-14.17.53-1.mp4" type="video/mp4"/>
-          </video>
-          <div class="vid-overlay"><div class="vid-play-ic"><svg viewBox="0 0 24 24" fill="var(--primary)"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        </div>
-
-        <div class="vid-card">
-          <video preload="metadata" playsinline loop>
-            <source src="assets/uploads/2026/03/WhatsApp-Video-2026-02-26-at-14.18.19-1.mp4" type="video/mp4"/>
-          </video>
-          <div class="vid-overlay"><div class="vid-play-ic"><svg viewBox="0 0 24 24" fill="var(--primary)"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        </div>
-
-        <div class="vid-card">
-          <video preload="metadata" playsinline loop>
-            <source src="assets/uploads/2026/03/WhatsApp-Video-2026-02-26-at-14.19.48-1-1.mp4" type="video/mp4"/>
-          </video>
-          <div class="vid-overlay"><div class="vid-play-ic"><svg viewBox="0 0 24 24" fill="var(--primary)"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        </div>
-
-        <div class="vid-card">
-          <video preload="metadata" playsinline loop>
-            <source src="assets/uploads/2026/03/WhatsApp-Video-2026-02-26-at-14.19.48-2-1.mp4" type="video/mp4"/>
           </video>
           <div class="vid-overlay"><div class="vid-play-ic"><svg viewBox="0 0 24 24" fill="var(--primary)"><polygon points="5,3 19,12 5,21"/></svg></div></div>
         </div>
@@ -1235,10 +1225,21 @@ var OPP_ALL = [
     nextBtn.disabled = idx >= max;
   }
 
-  prevBtn.addEventListener('click', function(){ idx--; render(); });
-  nextBtn.addEventListener('click', function(){ idx++; render(); });
+  prevBtn.addEventListener('click', function(){ idx--; render(); resetAuto(); });
+  nextBtn.addEventListener('click', function(){ idx++; render(); resetAuto(); });
   window.addEventListener('resize', function(){ render(); });
   render();
+
+  var autoTimer;
+  function autoAdvance(){
+    var pp = perPage();
+    var max = Math.max(0, total - pp);
+    idx = idx >= max ? 0 : idx + 1;
+    render();
+  }
+  function startAuto(){ autoTimer = setInterval(autoAdvance, 2000); }
+  function resetAuto(){ clearInterval(autoTimer); startAuto(); }
+  startAuto();
 })();
 
 /* ============================================================
