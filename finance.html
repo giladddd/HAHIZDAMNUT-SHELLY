@@ -506,9 +506,11 @@
 <!-- ── Tabs Bar ── -->
 <div class="tabs-bar">
   <div class="tabs-inner">
+    <button class="tab-btn" data-target="banking">💳 בנקים ואשראי</button>
+    <button class="tab-btn" data-target="emergency">🛡️ קרן חירום</button>
     <button class="tab-btn" data-target="investments">📈 השקעות</button>
-    <button class="tab-btn" data-target="realestate">🏠 נדל״ן</button>
     <button class="tab-btn" data-target="pension">🏦 פנסיה והשתלמות</button>
+    <button class="tab-btn" data-target="realestate">🏠 נדל״ן</button>
     <button class="tab-btn" data-target="stocks">🥇 השקעה בזהב</button>
     <button class="tab-btn" data-target="crypto">₿ ביטקוין וקריפטו</button>
   </div>
@@ -517,6 +519,99 @@
 <!-- ── Main Content ── -->
 <main class="main-content">
   <div class="container">
+
+    <!-- Section: בנקים ואשראי -->
+    <section class="cat-section" id="banking">
+      <div class="cat-section-header">
+        <h2 class="cat-section-label">💳 בנקים ואשראי</h2>
+        <span class="cat-section-pill">3 הזדמנויות</span>
+      </div>
+      <div class="cards-grid">
+
+        <a class="card fade-up" style="animation-delay:.05s;opacity:0"
+           href="https://ineedit.co.il" target="_blank" rel="noopener noreferrer">
+          <div class="card-img-wrap">
+            <div class="card-no-img">💳</div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">אשראי</span>
+            <div class="card-title">I NEED IT</div>
+            <div class="card-desc">כרטיס אשראי ייחודי לצעירים — ללא ערבים, ללא הכנסה מינימלית, עם הטבות ייעודיות לגיל הצעיר ותנאים נוחים לתחילת דרך.</div>
+            <div class="card-tags">
+              <span class="card-tag">אשראי</span>
+              <span class="card-tag">צעירים</span>
+              <span class="card-tag">כרטיס</span>
+            </div>
+            <span class="card-link">למידע נוסף ←</span>
+          </div>
+        </a>
+
+        <a class="card fade-up" style="animation-delay:.1s;opacity:0"
+           href="https://www.hatzda.co.il" target="_blank" rel="noopener noreferrer">
+          <div class="card-img-wrap">
+            <div class="card-no-img">🎖️</div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">הצדעה</span>
+            <div class="card-title">הצדעה</div>
+            <div class="card-desc">מועדון הטבות בלעדי לחיילים, משוחררים ומשפחותיהם — הנחות והטבות אצל מאות בתי עסק ברחבי הארץ.</div>
+            <div class="card-tags">
+              <span class="card-tag">הנחות</span>
+              <span class="card-tag">חיילים</span>
+              <span class="card-tag">הטבות</span>
+            </div>
+            <span class="card-link">למידע נוסף ←</span>
+          </div>
+        </a>
+
+        <a class="card fade-up" style="animation-delay:.15s;opacity:0"
+           href="https://www.isracard.co.il/basic" target="_blank" rel="noopener noreferrer">
+          <div class="card-img-wrap">
+            <div class="card-no-img">🏦</div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">ישראכרט</span>
+            <div class="card-title">ישראכרט בייסיק</div>
+            <div class="card-desc">כרטיס האשראי של ישראכרט לצעירים — ללא דמי כרטיס, תנאים נוחים ומתאים לצעירים בתחילת דרכם הפיננסית.</div>
+            <div class="card-tags">
+              <span class="card-tag">ישראכרט</span>
+              <span class="card-tag">אשראי</span>
+              <span class="card-tag">חינמי</span>
+            </div>
+            <span class="card-link">למידע נוסף ←</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Section: קרן חירום -->
+    <section class="cat-section" id="emergency">
+      <div class="cat-section-header">
+        <h2 class="cat-section-label">🛡️ קרן חירום</h2>
+        <span class="cat-section-pill">1 הזדמנות</span>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card fade-up" style="animation-delay:.05s;opacity:0">
+          <div class="card-img-wrap">
+            <div class="card-no-img">🛡️</div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">חיוני</span>
+            <div class="card-title">קרן חירום</div>
+            <div class="card-desc">יצירת קרן חירום בגובה 3–6 חודשי מחייה — כסף נזיל ומיידי בקרן כספית. ביטחון פיננסי לכל מצב לא צפוי.</div>
+            <div class="card-tags">
+              <span class="card-tag">חיסכון</span>
+              <span class="card-tag">ביטחון</span>
+              <span class="card-tag">נזיל</span>
+            </div>
+            <span class="card-link" style="color:#64748B;cursor:default;font-weight:600;font-size:.9rem">פתח בחשבון הבנק שלך 🏦</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Section: השקעות -->
     <section class="cat-section" id="investments">
@@ -684,12 +779,12 @@
     <section class="cat-section" id="pension">
       <div class="cat-section-header">
         <h2 class="cat-section-label">🏦 פנסיה והשתלמות</h2>
-        <span class="cat-section-pill">1 הזדמנות</span>
+        <span class="cat-section-pill">2 הזדמנויות</span>
       </div>
       <div class="cards-grid">
 
         <a class="card fade-up" style="animation-delay:.05s;opacity:0"
-           href="personal.html#programs" target="_blank" rel="noopener">
+           href="https://www.mygemel.net/" target="_blank" rel="noopener noreferrer">
           <div class="card-img-wrap">
             <img class="card-img" src="assets/uploads/2025/04/ייעוץ-פיננסי-חינם.png"
                  alt="פנסיה, השתלמות וגמל" loading="lazy"
@@ -703,6 +798,24 @@
               <span class="card-tag">פנסיה</span>
               <span class="card-tag">חיסכון</span>
               <span class="card-tag">השתלמות</span>
+            </div>
+            <span class="card-link">למידע נוסף ←</span>
+          </div>
+        </a>
+
+        <a class="card fade-up" style="animation-delay:.1s;opacity:0"
+           href="https://www.cover.co.il/" target="_blank" rel="noopener noreferrer">
+          <div class="card-img-wrap">
+            <div class="card-no-img">🗂️</div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">כלי דיגיטלי</span>
+            <div class="card-title">COVER</div>
+            <div class="card-desc">פלטפורמה שמרכזת את כל הפנסיה, קרן ההשתלמות, ביטוחי הבריאות והחיים שלך במקום אחד — ניהול פשוט, שקוף ומקצועי.</div>
+            <div class="card-tags">
+              <span class="card-tag">פנסיה</span>
+              <span class="card-tag">ניהול</span>
+              <span class="card-tag">דיגיטלי</span>
             </div>
             <span class="card-link">למידע נוסף ←</span>
           </div>
@@ -780,10 +893,13 @@
 
 <script>
 var TABS = [
+  {id:'banking',     label:'💳 בנקים ואשראי'},
+  {id:'emergency',   label:'🛡️ קרן חירום'},
   {id:'investments', label:'📈 השקעות'},
-  {id:'realestate',  label:'🏠 נדל״ן'},
   {id:'pension',     label:'🏦 פנסיה והשתלמות'},
-  {id:'stocks',      label:'🥇 השקעה בזהב'}
+  {id:'realestate',  label:'🏠 נדל״ן'},
+  {id:'stocks',      label:'🥇 השקעה בזהב'},
+  {id:'crypto',      label:'₿ ביטקוין וקריפטו'}
 ];
 var activeId = TABS[0].id;
 

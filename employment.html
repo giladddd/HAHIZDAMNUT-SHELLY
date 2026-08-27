@@ -10,7 +10,7 @@
   gtag('config', 'G-ZE5D7Y3LFM');
 </script>
 <meta charset="UTF-8"/>
-<script>!function(){try{var s=localStorage.getItem("hahizd_session");if(s){var p=JSON.parse(s);if(p<meta charset="UTF-8"/><meta charset="UTF-8"/>p.ts<meta charset="UTF-8"/><meta charset="UTF-8"/>Date.now()-p.ts<604800000)return;}document.documentElement.style.visibility="hidden";}catch(e){}}();</script>
+<script>!function(){try{var s=localStorage.getItem("hahizd_session");if(s){var p=JSON.parse(s);if(p&&p.ts&&Date.now()-p.ts<604800000)return;}document.documentElement.style.visibility="hidden";}catch(e){}}();</script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>הזדמנויות תעסוקתי — ההזדמנות שלי</title>
 <meta name="description" content="הזדמנויות תעסוקתיות למשוחררים — משרות, עבודה בחו״ל, אבטחה והכשרות מקצועיות."/>
@@ -215,6 +215,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   text-decoration:none;transition:opacity .2s;
 }
 .btn-apply:hover{opacity:.88}
+.btn-sublink{display:block;margin-top:8px;padding:9px 16px;background:#F0F7FF;border:1.5px solid rgba(26,86,160,.2);color:#1A56A0;border-radius:10px;font-weight:600;font-size:.85rem;text-decoration:none;transition:background .2s,border-color .2s}
+.btn-sublink:hover{background:#DBEAFE;border-color:#1A56A0}
 
 /* ── FOOTER ── */
 footer{
@@ -492,7 +494,7 @@ var DATA = [
   },
   {
     id: 'guidance',
-    label: 'הכוונה וייעוץ אישי',
+    label: 'ליווי וייעוץ לקריירה',
     icon: '🎯',
     cards: [
       {title:'הכוונה — האגף והקרן',badge:'ממשלתי',desc:'האגף לחיילים משוחררים ומילואים — גוף ממשלתי המציע ייעוץ חינמי לכיוון תעסוקתי ומעבר לחיים האזרחיים.',tags:['ממשלתי','חינמי','ייעוץ'],link:'https://www.hachvana.mod.gov.il/ConsultationAndDirection/Consultation/Pages/default.aspx',img:'assets/uploads/2025/04/האגף-והקרן.png',icon:'🏛️'},
@@ -500,18 +502,29 @@ var DATA = [
       {title:'מילואימנטור',badge:'מילואים',desc:'מנטורינג ייחודי למשרתי מילואים — חיבור לאנשי מקצוע מובילים שיסייעו במעבר קריירה.',tags:['מילואים','מנטורינג','קריירה'],link:'https://www.milumentor.com/miluimnikim',img:'assets/uploads/2025/04/מילומנטור.png',icon:'🎖️'},
       {title:'מבחן אישיות',badge:'הכרה עצמית',desc:'מבחן האישיות המפורסם בעולם — 16Personalities. הבן את עצמך טוב יותר לפני שאתה בוחר כיוון.',tags:['הכרה עצמית','אישיות','כיוון'],link:'https://www.16personalities.com/free-personality-test',img:'assets/uploads/2025/04/16-אישויות.png',icon:'🧠'},
       {title:'לימודים בישראל',badge:'אקדמיה',desc:'ייעוץ אקדמי חינמי לבחירת מסלול לימודים נכון — מידע על מוסדות, מסלולים ואפשרויות מימון.',tags:['לימודים','אקדמיה','ייעוץ'],link:'https://www.study.co.il/%D7%94%D7%94%D7%A6%D7%9C%D7%97%D7%94-%D7%A9%D7%9C%D7%9A-%D7%91%D7%93%D7%A8%D7%9A/',img:'assets/uploads/2025/04/לימודים-בישראל.png',icon:'📚'},
-      {title:'השגים',badge:'ייעוץ',desc:'השגים — ייעוץ אישי להשכלה גבוהה ופיתוח קריירה. קביעת ייעוץ חינמי לבניית דרך מקצועית.',tags:['ייעוץ','השכלה','קריירה'],link:'https://hesegim.org.il/haskala/',img:'assets/uploads/2025/04/3.png',icon:'🎯'}
+      {title:'השגים',badge:'ייעוץ',desc:'השגים — ייעוץ אישי להשכלה גבוהה ופיתוח קריירה. קביעת ייעוץ חינמי לבניית דרך מקצועית.',tags:['ייעוץ','השכלה','קריירה'],link:'https://hesegim.org.il/haskala/',img:'assets/uploads/2025/04/3.png',icon:'🎯'},
+      {title:'לוחמים להייטק עתידיים',badge:'הייטק',desc:'מסלול הכנה מקיף לכניסה לעולם ההייטק עבור לוחמים משוחררים — קורסים, חיבורים וראיונות.',tags:['הייטק','לוחמים','קריירה'],link:'https://techidf.co.il/#form-anchor',img:'assets/uploads/2025/04/8.png',icon:'💻'},
+      {title:'תוכניות ליווי קריירה',badge:'ליווי',desc:'מסלולי ליווי קריירה מקיפים עם מנטורים מנוסים — מאפיון הכיוון ועד למציאת העבודה הנכונה.',tags:['ליווי','קריירה','מנטורינג'],link:'https://tofsimkivun.org.il/candidate/',img:'assets/uploads/2025/04/6.png',icon:'🗺️'},
+      {title:'גב ללוחם',badge:'תמיכה',desc:'ארגון המסייע ללוחמים בשלב המעבר לחיים האזרחיים — תמיכה רגשית, מקצועית וקהילתית.',tags:['לוחמים','תמיכה','קהילה'],link:'https://www.gavla.org.il/',img:'assets/uploads/2025/04/4.png',icon:'🤝'},
+      {title:'יום בחיי — פרונט לייף',badge:'חוויה',desc:'בלה יום שלם בחברה מובילה לצד אנשי מקצוע מהתעשייה — לחיבור בין לוחמים להייטק.',tags:['חוויה','הייטק','לוחמים'],link:'https://www.frontlife.org.il/adayinthelife',img:'assets/uploads/2025/04/יום-בחיי.png',icon:'🌟'},
+      {title:'הוילה בלוד',badge:'מגורים',desc:'תוכנית מגורים ועצמאות למשוחררים — בית, קהילה וכלים לתחילת חיים עצמאיים בעיר לוד.',tags:['מגורים','עצמאות','משוחררים'],link:'https://villatruda.org/',img:'assets/uploads/2025/04/30.png',icon:'🏠'},
+      {title:'תוכנית אלונים — פרונט לייף',badge:'מנהיגות',desc:'תוכנית מנהיגות מיוחדת ללוחמים: מחזית הלחימה לחזית החיים. ליווי מקצועי וכלים.',tags:['מנהיגות','לוחמים','מעבר'],link:'https://fronlifementorprogram.fillout.com/t/hfchHVnQ7eus',img:'assets/uploads/2025/04/אלונים.png',icon:'🌳'}
     ]
   },
   {
     id: 'prep',
-    label: 'הכנה לשוק העבודה',
-    icon: '📋',
+    label: 'כלים לבחירת מקצוע',
+    icon: '🧭',
     cards: [
-      {title:'תלוש משכורת',badge:'ידע פיננסי',desc:'הסבר מפורט על קריאת תלוש משכורת ותיאום מס — דברים שלא לימדו אותך בצבא אבל חייבים לדעת.',tags:['פיננסי','עבודה','ידע חיוני'],link:'https://www.youtube.com/watch?v=G6M90wUXARk',img:'assets/uploads/2025/04/תלוש-משכורת.png',icon:'💳'},
-      {title:'ראיון עבודה',badge:'כלים',desc:'זומנתם לראיון עבודה? למדו איך להציג את עצמכם באופן המקצועי ביותר.',tags:['ראיון','קריירה','כלים'],link:'https://www.youtube.com/playlist?list=PL_WInT35Y_tJ691kxfAqCYF48Uosk74WR',img:'assets/uploads/2025/04/ראיון-עבודה.png',icon:'🎤'},
-      {title:'לינקדאין',badge:'נטוורקינג',desc:'הרשת החברתית-עסקית הגדולה בעולם — הזדמנויות מקצועיות, שיתופי פעולה ומותג אישי.',tags:['נטוורקינג','דיגיטל','קריירה'],link:'https://www.youtube.com/playlist?list=PL_WInT35Y_tJVd47wd-WkXQDm1muXGPFT',img:'assets/uploads/2025/04/לינקדאין.png',icon:'💼'},
-      {title:'קורות חיים — אושרת צרפתי',badge:'חינמי',desc:'יצירה ושיפוץ קורות חיים בחינם למשוחררים ומשוחררות — שירות מקצועי ואישי.',tags:['קורות חיים','חינמי','מקצועי'],link:'hahazdamnut.html#contact',img:'assets/uploads/2025/04/קורות-חיים.png',icon:'📄'}
+      {title:'בחני אישיות',badge:'שאלונים',desc:'מגוון שאלוני אישיות והכוונה מקצועית — גלה מה מתאים לך לפני שאתה בוחר כיוון.',tags:['אישיות','הכוונה','כיוון'],img:'assets/uploads/2025/04/16-אישויות.png',icon:'🧠',sublinks:[
+        {label:'אבחון הכוונה ותעסוקה — הקרן',url:'https://www.hachvana.mod.gov.il/ConsultationAndDirection/Pages/Career-Assessment-Platform.aspx'},
+        {label:'שאלון נטיות תעסוקתיות',url:'https://logipass.net/assessment'},
+        {label:'סגנונות אישיות — 16 Personalities',url:'https://www.16personalities.com/he/%D7%9E%D7%91%D7%97%D7%9F-%D7%90%D7%99%D7%A9%D7%99%D7%95%D7%AA'}
+      ]},
+      {title:'קורות חיים — אושרת צרפתי',badge:'חינמי',desc:'יצירה ושיפוץ קורות חיים בחינם למשוחררים ומשוחררות — שירות מקצועי ואישי.',tags:['קורות חיים','חינמי','מקצועי'],link:'hahazdamnut.html#contact',img:'assets/uploads/2025/04/קורות-חיים.png',icon:'📄'},
+      {title:'חישוב קבלה לתארים',badge:'אקדמיה',desc:'חשב את סיכויי הקבלה שלך למוסדות אקדמיים — בדוק דרישות, ציונים וסיכויים לפי מסלול.',tags:['לימודים','אקדמיה','קבלה'],link:'https://www.study.co.il/P39734/4',img:'assets/uploads/2025/04/לימודים-בישראל.png',icon:'🎓'},
+      {title:'חישוב שכר ממוצע לפי מקצוע',badge:'שכר',desc:'גלה כמה מרוויחים בכל מקצוע — נתוני שכר אמיתיים לפי תפקיד, ניסיון ואזור גיאוגרפי.',tags:['שכר','קריירה','תכנון'],link:'https://myrole.co.il/',img:'',icon:'💰'},
+      {title:'מחשבון היתכנות עסקית',badge:'יזמות',desc:'בדוק את ההיתכנות הכלכלית של העסק שלך — כלי מקצועי לתכנון פיננסי של יזמים.',tags:['עסק','יזמות','כלכלה'],link:'https://bizdata.org.il/',img:'',icon:'📊'}
     ]
   },
   {
@@ -528,19 +541,6 @@ var DATA = [
       {title:'תוכנית קרן שמש',badge:'יזמות',desc:'תוכנית האצה ייחודית לעסקים קיימים — מנטורים מנהלים בכירים שיסייעו לקדם את העסק שלך.',tags:['עסקים','מנטורים','ניהול'],link:'https://lp.ogen.org/booster/',img:'assets/uploads/2025/04/קרן-שמש.png',icon:'☀️'},
       {title:'מעוף',badge:'ממשלתי',desc:'תוכנית מעוף של רשות המיסים — סיוע מסובסד להקמת עסק קטן עם ליווי מקצועי ומימון מועדף.',tags:['ממשלתי','עסק קטן','מימון'],link:'https://www.sba.org.il/hb/AidPrograms/Pages/pr1.aspx#fillDetails2',img:'assets/uploads/2025/04/מעוף.png',icon:'🦅'}
     ]
-  },
-  {
-    id: 'career',
-    label: 'תוכניות ליווי קריירה',
-    icon: '🗺️',
-    cards: [
-      {title:'לוחמים להייטק עתידיים',badge:'הייטק',desc:'מסלול הכנה מקיף לכניסה לעולם ההייטק עבור לוחמים משוחררים — קורסים, חיבורים וראיונות.',tags:['הייטק','לוחמים','קריירה'],link:'https://techidf.co.il/#form-anchor',img:'assets/uploads/2025/04/8.png',icon:'💻'},
-      {title:'תוכניות ליווי קריירה',badge:'ליווי',desc:'מסלולי ליווי קריירה מקיפים עם מנטורים מנוסים — מאפיון הכיוון ועד למציאת העבודה הנכונה.',tags:['ליווי','קריירה','מנטורינג'],link:'https://tofsimkivun.org.il/candidate/',img:'assets/uploads/2025/04/6.png',icon:'🗺️'},
-      {title:'גב ללוחם',badge:'תמיכה',desc:'ארגון המסייע ללוחמים בשלב המעבר לחיים האזרחיים — תמיכה רגשית, מקצועית וקהילתית.',tags:['לוחמים','תמיכה','קהילה'],link:'https://www.gavla.org.il/',img:'assets/uploads/2025/04/4.png',icon:'🤝'},
-      {title:'יום בחיי — פרונט לייף',badge:'חוויה',desc:'בלה יום שלם בחברה מובילה לצד אנשי מקצוע מהתעשייה — לחיבור בין לוחמים להייטק.',tags:['חוויה','הייטק','לוחמים'],link:'https://www.frontlife.org.il/adayinthelife',img:'assets/uploads/2025/04/יום-בחיי.png',icon:'🌟'},
-      {title:'הוילה בלוד',badge:'מגורים',desc:'תוכנית מגורים ועצמאות למשוחררים — בית, קהילה וכלים לתחילת חיים עצמאיים בעיר לוד.',tags:['מגורים','עצמאות','משוחררים'],link:'https://villatruda.org/',img:'assets/uploads/2025/04/30.png',icon:'🏠'},
-      {title:'תוכנית אלונים — פרונט לייף',badge:'מנהיגות',desc:'תוכנית מנהיגות מיוחדת ללוחמים: מחזית הלחימה לחזית החיים. ליווי מקצועי וכלים.',tags:['מנהיגות','לוחמים','מעבר'],link:'https://fronlifementorprogram.fillout.com/t/hfchHVnQ7eus',img:'assets/uploads/2025/04/אלונים.png',icon:'🌳'}
-    ]
   }
 ];
 
@@ -551,7 +551,7 @@ function toggleExpand(btn) {
   btn.textContent = open ? 'למידע נוסף ←' : 'סגור ↑';
 }
 
-function buildCard(card, delay) {
+function buildCard(card, delay, isJobTab) {
   var imgHtml = card.img
     ? '<img class="card-img" src="' + card.img + '" alt="' + card.title + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=card-no-img>' + card.icon + '</div>\'">'
     : '<div class="card-no-img">' + card.icon + '</div>';
@@ -560,8 +560,15 @@ function buildCard(card, delay) {
     return '<span class="card-tag">' + t + '</span>';
   }).join('');
 
-  var waText = encodeURIComponent('היי, אני מעוניין/ת בתפקיד: ' + card.title);
-  var waLink = 'https://wa.me/972523960215?text=' + waText;
+  var actionLink, actionLabel;
+  if (isJobTab) {
+    var waText = encodeURIComponent('היי, אני מעוניין/ת בתפקיד: ' + card.title);
+    actionLink = 'https://wa.me/972523960215?text=' + waText;
+    actionLabel = '📲 שלח מועמדות';
+  } else {
+    actionLink = card.link;
+    actionLabel = 'למידע נוסף ←';
+  }
 
   var el = document.createElement('div');
   el.className = 'card fade-up';
@@ -573,12 +580,22 @@ function buildCard(card, delay) {
       '<span class="card-badge">' + card.badge + '</span>' +
       '<div class="card-title">' + card.title + '</div>' +
       '<div class="card-desc">' + card.desc + '</div>' +
-      '<div class="card-expand" style="display:none">' +
-        '<div class="card-desc-full">' + card.desc + '</div>' +
-        '<a class="btn-apply" href="' + waLink + '" target="_blank" rel="noopener noreferrer">📲 שלח מועמדות</a>' +
-      '</div>' +
-      '<div class="card-tags">' + tagsHtml + '</div>' +
-      '<button class="card-link" onclick="toggleExpand(this)">למידע נוסף ←</button>' +
+      (isJobTab
+        ? '<div class="card-expand" style="display:none">' +
+            '<div class="card-desc-full">' + card.desc + '</div>' +
+            '<a class="btn-apply" href="' + actionLink + '" target="_blank" rel="noopener noreferrer">' + actionLabel + '</a>' +
+          '</div>' +
+          '<div class="card-tags">' + tagsHtml + '</div>' +
+          '<button class="card-link" onclick="toggleExpand(this)">למידע נוסף ←</button>'
+        : card.sublinks
+          ? '<div class="card-expand" style="display:none">' +
+              card.sublinks.map(function(sl){ return '<a class="btn-sublink" href="' + sl.url + '" target="_blank" rel="noopener noreferrer">↗ ' + sl.label + '</a>'; }).join('') +
+            '</div>' +
+            '<div class="card-tags">' + tagsHtml + '</div>' +
+            '<button class="card-link" onclick="toggleExpand(this)">למידע נוסף ←</button>'
+          : '<div class="card-tags">' + tagsHtml + '</div>' +
+            '<a class="card-link" href="' + card.link + '" target="_blank" rel="noopener noreferrer">למידע נוסף ←</a>'
+      ) +
     '</div>';
   return el;
 }
@@ -651,8 +668,9 @@ function render() {
 
   var grid = document.createElement('div');
   grid.className = 'cards-grid';
+  var isJobTab = subcat.id === 'job-search';
   visibleCards.forEach(function(card, i) {
-    grid.appendChild(buildCard(card, i * 0.06));
+    grid.appendChild(buildCard(card, i * 0.06, isJobTab));
   });
   section.appendChild(grid);
   container.appendChild(section);
