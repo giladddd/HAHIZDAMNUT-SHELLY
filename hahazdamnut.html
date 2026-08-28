@@ -1438,8 +1438,10 @@ window.submitHeroForm = function() {
   try {
     fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, { method: 'GET' });
   } catch(e) {}
-  document.getElementById('heroForm').style.display = 'none';
-  document.getElementById('heroSuccess').style.display = 'block';
+  btn.disabled = false;
+  btn.style.background = '#16a34a';
+  btn.style.borderColor = '#16a34a';
+  btn.textContent = '✅ הפרטים נשלחו — נחזור אליך בהקדם!';
 };
 </script>
 
