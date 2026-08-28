@@ -528,14 +528,20 @@ buildPage();
   <div class="reg-card">
     <button class="reg-close" onclick="closeRegModal()">✕</button>
     <div id="rmForm">
-      <h2 class="reg-title">שיחת התאמה ללא עלות</h2>
-      <p class="reg-sub">השאר פרטים ונחזור אליך בהקדם לתיאום</p>
+      <h2 class="reg-title">ההזדמנויות פתוחות לארגונים שבשיתוף פעולה איתנו או למי שעשה שיחת הכוונה חד פעמית / ליווי מלא</h2>
+      <p class="reg-sub">לשיחת התאמה ללא עלות — השאר פרטים ונחזור אליך בהקדם</p>
       <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;opacity:0;pointer-events:none">
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <input type="text" id="rmOrgCode" class="reg-field" placeholder="קוד ארגון" style="margin-bottom:0;flex:1" autocomplete="off"/>
+        <button type="button" onclick="submitOrgCode()" style="padding:0 18px;background:#1A56A0;color:#fff;border:none;border-radius:12px;font-size:.9rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;white-space:nowrap">כניסה</button>
+      </div>
+      <div id="rmOrgErr" style="display:none;color:#EF4444;font-size:.82rem;margin-bottom:10px;text-align:right">קוד שגוי, נסה שוב</div>
+      <hr style="border:none;border-top:1px solid #E2E8F0;margin:4px 0 16px">
       <input type="text" id="rmName" class="reg-field" placeholder="שם מלא" autocomplete="name"/>
       <input type="tel" id="rmPhone" class="reg-field" placeholder="מספר טלפון" autocomplete="tel"/>
-      <textarea id="rmNotes" class="reg-field" rows="3" placeholder="ספר לנו קצת על עצמך (לא חובה)" style="resize:none;margin-bottom:16px"></textarea>
+      <textarea id="rmNotes" class="reg-field" rows="2" placeholder="הערות (לא חובה)" style="resize:none;margin-bottom:16px"></textarea>
       <button id="rmBtn" class="reg-btn" onclick="submitRegModal()">
-        <span id="rmBtnTxt">שלח ← קבע פגישה</span>
+        <span id="rmBtnTxt">שלח ← לשיחת התאמה</span>
         <div class="rm-spin" id="rmSpin"></div>
       </button>
     </div>
@@ -551,6 +557,20 @@ buildPage();
 <script src="assets/js/hahizd-common.js"></script>
 <script>
 Hahizd.initNav();
+
+window.submitOrgCode = function() {
+  var code = (document.getElementById('rmOrgCode').value || '').trim();
+  var errEl = document.getElementById('rmOrgErr');
+  if (code === '1000') {
+    try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
+    document.body.classList.remove('content-locked');
+    window.closeRegModal();
+  } else {
+    errEl.style.display = 'block';
+    setTimeout(function(){ errEl.style.display = 'none'; }, 3000);
+  }
+};
+
 Hahizd.initRegModal({
   onSuccess: function() {
     try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
