@@ -661,6 +661,10 @@
       })
         .then(function () {
           savePhoneUX(phone);
+          if (options.onSuccess) {
+            options.onSuccess();
+            return;
+          }
           var formEl = document.getElementById(formId);
           var successEl = document.getElementById(successId);
           if (formEl) formEl.style.display = 'none';

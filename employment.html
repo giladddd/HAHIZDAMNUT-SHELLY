@@ -247,6 +247,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
 }
 .tab-btn:hover{color:var(--cat)}
 .tab-btn.active{color:var(--cat);border-bottom-color:var(--cat);font-weight:700}
+.tab-locked{opacity:.65;cursor:pointer}
 
 /* ── FILTER CHIPS ── */
 .filter-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
@@ -602,6 +603,20 @@ function buildCard(card, delay, isJobTab) {
 
 var activeTab = 0;
 var filterCat = 'הכל';
+var pendingTab = null;
+
+function isUnlocked() {
+  try {
+    var raw = localStorage.getItem('hahizd_emp_unlocked');
+    if (!raw) return false;
+    var d = JSON.parse(raw);
+    return d && (Date.now() - d.ts < 30 * 24 * 60 * 60 * 1000);
+  } catch(e) { return false; }
+}
+function setUnlocked() {
+  try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
+}
+
 (function(){
   var hash = location.hash.replace('#','');
   var idx = DATA.findIndex(function(s){ return s.id === hash; });
@@ -611,19 +626,26 @@ var filterCat = 'הכל';
 function buildTabs() {
   var bar = document.getElementById('tabBar');
   bar.innerHTML = '';
+  var unlocked = isUnlocked();
   DATA.forEach(function(sub, i) {
     var btn = document.createElement('button');
-    btn.className = 'tab-btn' + (i === activeTab ? ' active' : '');
-    btn.textContent = sub.icon + ' ' + sub.label;
-    btn.onclick = (function(ii){
+    var isLocked = sub.id !== 'job-search' && !unlocked;
+    btn.className = 'tab-btn' + (i === activeTab ? ' active' : '') + (isLocked ? ' tab-locked' : '');
+    btn.textContent = sub.icon + ' ' + sub.label + (isLocked ? ' 🔒' : '');
+    btn.onclick = (function(ii, locked){
       return function() {
+        if (locked) {
+          pendingTab = ii;
+          document.getElementById('regModal').classList.add('open');
+          return;
+        }
         activeTab = ii;
         filterCat = 'הכל';
         buildTabs();
         render();
         window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
       };
-    })(i);
+    })(i, isLocked);
     bar.appendChild(btn);
   });
 }
@@ -791,7 +813,20 @@ render();
 <script>
 Hahizd.initNav();
 Hahizd.initProtectedAuth();
-Hahizd.initRegModal();
+Hahizd.initRegModal({
+  onSuccess: function() {
+    setUnlocked();
+    if (pendingTab !== null) {
+      activeTab = pendingTab;
+      pendingTab = null;
+    }
+    filterCat = 'הכל';
+    buildTabs();
+    render();
+    window.closeRegModal();
+    window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
+  }
+});
 </script>
 
 </body>
