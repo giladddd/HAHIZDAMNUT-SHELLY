@@ -602,7 +602,6 @@ function buildCard(card, delay, isJobTab) {
 
 var activeTab = 0;
 var filterCat = 'הכל';
-var pendingTab = null;
 
 function isUnlocked() {
   try {
@@ -611,9 +610,6 @@ function isUnlocked() {
     var d = JSON.parse(raw);
     return d && (Date.now() - d.ts < 30 * 24 * 60 * 60 * 1000);
   } catch(e) { return false; }
-}
-function setUnlocked() {
-  try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
 }
 
 (function(){
@@ -625,26 +621,19 @@ function setUnlocked() {
 function buildTabs() {
   var bar = document.getElementById('tabBar');
   bar.innerHTML = '';
-  var unlocked = isUnlocked();
   DATA.forEach(function(sub, i) {
     var btn = document.createElement('button');
-    var isLocked = sub.id !== 'job-search' && !unlocked;
-    btn.className = 'tab-btn' + (i === activeTab ? ' active' : '') + (isLocked ? ' tab-locked' : '');
-    btn.textContent = sub.icon + ' ' + sub.label + (isLocked ? ' 🔒' : '');
-    btn.onclick = (function(ii, locked){
+    btn.className = 'tab-btn' + (i === activeTab ? ' active' : '');
+    btn.textContent = sub.icon + ' ' + sub.label;
+    btn.onclick = (function(ii){
       return function() {
-        if (locked) {
-          pendingTab = ii;
-          document.getElementById('regModal').classList.add('open');
-          return;
-        }
         activeTab = ii;
         filterCat = 'הכל';
         buildTabs();
         render();
         window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
       };
-    })(i, isLocked);
+    })(i);
     bar.appendChild(btn);
   });
 }
@@ -690,8 +679,19 @@ function render() {
   var grid = document.createElement('div');
   grid.className = 'cards-grid';
   var isJobTab = subcat.id === 'job-search';
+  var tabLocked = subcat.id !== 'job-search' && !isUnlocked();
   visibleCards.forEach(function(card, i) {
-    grid.appendChild(buildCard(card, i * 0.06, isJobTab));
+    var el = buildCard(card, i * 0.06, isJobTab);
+    if (tabLocked) {
+      el.style.position = 'relative';
+      el.style.cursor = 'pointer';
+      var lockDiv = document.createElement('div');
+      lockDiv.style.cssText = 'position:absolute;inset:0;background:rgba(255,255,255,.55);backdrop-filter:blur(6px);border-radius:inherit;display:flex;align-items:center;justify-content:center;font-size:2rem;z-index:2;';
+      lockDiv.textContent = '🔒';
+      lockDiv.onclick = function(e) { e.preventDefault(); e.stopPropagation(); window.openRegModal(); };
+      el.appendChild(lockDiv);
+    }
+    grid.appendChild(el);
   });
   section.appendChild(grid);
   container.appendChild(section);
@@ -699,6 +699,14 @@ function render() {
 
 buildTabs();
 render();
+
+document.addEventListener('click', function(e) {
+  var card = e.target.closest('.card');
+  if (card && card.querySelector('[style*="backdrop-filter"]')) {
+    e.preventDefault();
+    window.openRegModal();
+  }
+});
 </script>
 
 <!-- ══ MEETING MODAL ══ -->
@@ -813,16 +821,11 @@ render();
 Hahizd.initNav();
 Hahizd.initRegModal({
   onSuccess: function() {
-    setUnlocked();
-    if (pendingTab !== null) {
-      activeTab = pendingTab;
-      pendingTab = null;
-    }
+    try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
     filterCat = 'הכל';
     buildTabs();
     render();
     window.closeRegModal();
-    window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 64, behavior:'smooth'});
   }
 });
 </script>
