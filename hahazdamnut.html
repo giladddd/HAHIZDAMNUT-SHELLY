@@ -1425,21 +1425,22 @@ window.submitHeroForm = function() {
   var name = nameEl.value.trim();
   var phone = phoneEl.value.trim();
   var ok = true;
-  if (name.length < 2) { nameEl.style.borderColor='#EF4444'; ok=false; }
-  if (!/^[0-9+\-\s]{7,}$/.test(phone)) { phoneEl.style.borderColor='#EF4444'; ok=false; }
+  if (name.length < 2) { nameEl.style.borderColor='#EF4444'; ok=false; } else { nameEl.style.borderColor=''; }
+  if (phone.replace(/\D/g,'').length < 7) { phoneEl.style.borderColor='#EF4444'; ok=false; } else { phoneEl.style.borderColor=''; }
   if (!ok) return;
   var btn = document.getElementById('heroBtn');
   btn.disabled = true;
   btn.textContent = 'שולח...';
-  hahizdSubmit({ name: name, phone: phone, notes: '', timestamp: new Date().toLocaleString('he-IL'), form_type: 'lead', _hp: '' })
-    .then(function() {
+  var qs = 'name=' + encodeURIComponent(name) +
+            '&phone=' + encodeURIComponent(phone) +
+            '&notes=' + encodeURIComponent('') +
+            '&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL')) +
+            '&form_type=lead&_hp=';
+  fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, { method: 'GET' })
+    .catch(function(){})
+    .finally(function() {
       document.getElementById('heroForm').style.display = 'none';
       document.getElementById('heroSuccess').style.display = 'block';
-    })
-    .catch(function() {
-      btn.disabled = false;
-      btn.textContent = 'לקביעת שיחת התאמה ללא עלות ←';
-      alert('שגיאה בשליחה. נסה שוב.');
     });
 };
 </script>
