@@ -1433,15 +1433,13 @@ window.submitHeroForm = function() {
   btn.textContent = 'שולח...';
   var qs = 'name=' + encodeURIComponent(name) +
             '&phone=' + encodeURIComponent(phone) +
-            '&notes=' + encodeURIComponent('') +
-            '&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL')) +
+            '&notes=&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL')) +
             '&form_type=lead&_hp=';
-  fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, { method: 'GET' })
-    .catch(function(){})
-    .finally(function() {
-      document.getElementById('heroForm').style.display = 'none';
-      document.getElementById('heroSuccess').style.display = 'block';
-    });
+  try {
+    fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, { method: 'GET' });
+  } catch(e) {}
+  document.getElementById('heroForm').style.display = 'none';
+  document.getElementById('heroSuccess').style.display = 'block';
 };
 </script>
 
