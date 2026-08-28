@@ -121,6 +121,9 @@ section{padding-block:88px}
 .hero-actions .btn-outline{color:#fff;border-color:rgba(255,255,255,.35)}
 .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.6)}
 .hero-guarantee{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.8);font-size:.9rem;font-weight:700;padding:10px 22px;border-radius:50px;margin-top:4px;margin-bottom:56px}
+.hero-guarantee-inline{color:rgba(255,255,255,.85);font-size:.88rem;font-weight:700;margin-top:14px;margin-bottom:4px}
+#heroName::placeholder,#heroPhone::placeholder{color:rgba(255,255,255,.6)}
+#heroName:focus,#heroPhone:focus{border-color:rgba(255,255,255,.7)!important;background:rgba(255,255,255,.18)!important}
 .hg-shield{font-size:1.2rem}
 
 /* ── GALLERY SLIDER ──
@@ -454,17 +457,23 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
   <div class="container">
     <div class="hero-content">
       <span class="hero-badge">לצעירים משוחררים/לפני שחרור בגילאי 19–25 🎖️</span>
-      <h1 class="hero-h1">הופכים את השחרור<br><em>להזדמנות להגשים את עצמך</em></h1>
+      <h1 class="hero-h1">הופכים את השחרור<br><em>להזדמנות</em></h1>
       <ul class="hero-checks">
         <li><span class="hc-icon">✅</span> בונים מסלול קריירה מדוייק</li>
         <li><span class="hc-icon">✅</span> בונים תיק השקעות ותוכנית כלכלית אישית</li>
-        <li><span class="hc-icon">✅</span> מלמדים אותך לנהל הכל בעצמך</li>
-        <li><span class="hc-icon">✅</span> מחברים אותך להזדמנויות פרימיום מותאמות</li>
+        <li><span class="hc-icon">✅</span> מחברים אותך להזדמנויות אמיתיות</li>
+        <li><span class="hc-icon">✅</span> לומדים איך לנהל הכל והופכים אותך למנטור של עצמך</li>
       </ul>
-      <div class="hero-actions">
-        <button class="btn btn-primary btn-lg" onclick="openRegModal()">לקביעת שיחת התאמה ללא עלות</button>
-        <a href="employment.html" class="btn btn-outline btn-lg">גלה את ההזדמנויות</a>
+      <div class="hero-guarantee-inline">💯 100% התחייבות להחזר במידה ואת/ה לא מרוצים</div>
+      <div id="heroFormWrap">
+        <div id="heroForm" style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+          <input id="heroName" type="text" placeholder="השם שלך" autocomplete="name" style="padding:13px 16px;border-radius:50px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:1rem;font-family:inherit;outline:none;text-align:right" oninput="this.style.borderColor='rgba(255,255,255,.3)'">
+          <input id="heroPhone" type="tel" placeholder="טלפון" autocomplete="tel" style="padding:13px 16px;border-radius:50px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:1rem;font-family:inherit;outline:none;text-align:right" oninput="this.style.borderColor='rgba(255,255,255,.3)'">
+          <button id="heroBtn" class="btn btn-primary btn-lg" onclick="submitHeroForm()" style="width:100%">לקביעת שיחת התאמה ללא עלות ←</button>
+        </div>
+        <div id="heroSuccess" style="display:none;background:rgba(255,255,255,.15);border-radius:16px;padding:18px;text-align:center;color:#fff;font-weight:700;font-size:1.05rem;margin-top:16px">🎉 תודה! קיבלנו את הפרטים — נחזור אליך בהקדם.</div>
       </div>
+      <a href="employment.html" class="btn btn-outline btn-lg" style="margin-top:10px;display:inline-block">גלה את ההזדמנויות</a>
     </div>
   </div>
 </section>
@@ -1409,6 +1418,30 @@ var OPP_ALL = [
 Hahizd.initNav();
 Hahizd.initContactForm('contactForm');
 Hahizd.initRegModal({ formId: 'regForm', successId: 'regSuccess' });
+
+window.submitHeroForm = function() {
+  var nameEl = document.getElementById('heroName');
+  var phoneEl = document.getElementById('heroPhone');
+  var name = nameEl.value.trim();
+  var phone = phoneEl.value.trim();
+  var ok = true;
+  if (name.length < 2) { nameEl.style.borderColor='#EF4444'; ok=false; }
+  if (!/^[0-9+\-\s]{7,}$/.test(phone)) { phoneEl.style.borderColor='#EF4444'; ok=false; }
+  if (!ok) return;
+  var btn = document.getElementById('heroBtn');
+  btn.disabled = true;
+  btn.textContent = 'שולח...';
+  hahizdSubmit({ name: name, phone: phone, timestamp: new Date().toLocaleString('he-IL'), form_type: 'hero-lead' })
+    .then(function() {
+      document.getElementById('heroForm').style.display = 'none';
+      document.getElementById('heroSuccess').style.display = 'block';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'לקביעת שיחת התאמה ללא עלות ←';
+      alert('שגיאה בשליחה. נסה שוב.');
+    });
+};
 </script>
 
 <!-- COOKIE BANNER -->
