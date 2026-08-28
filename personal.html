@@ -10,7 +10,6 @@
   gtag('config', 'G-ZE5D7Y3LFM');
 </script>
 <meta charset="UTF-8"/>
-<script>!function(){try{var s=localStorage.getItem("hahizd_session");if(s){var p=JSON.parse(s);if(p<meta charset="UTF-8"/><meta charset="UTF-8"/>p.ts<meta charset="UTF-8"/><meta charset="UTF-8"/>Date.now()-p.ts<604800000)return;}document.documentElement.style.visibility="hidden";}catch(e){}}();</script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>הזדמנויות אישי — ההזדמנות שלי</title>
 <meta name="description" content="ליווי אישי למשוחררים — ספרים, סרטים, מורים, פודקאסטים ומדיטציה לצמיחה אישית."/>
@@ -547,11 +546,32 @@ buildPage();
   </div>
 </div>
 
+<div id="pageLockedOverlay" style="display:none;position:fixed;inset:0;z-index:9000;background:rgba(15,23,42,.82);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:24px;font-family:'Heebo',sans-serif">
+  <div style="background:#fff;border-radius:24px;padding:36px 28px;max-width:400px;width:100%;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.4)">
+    <div style="font-size:2.8rem;margin-bottom:12px">🔒</div>
+    <h2 style="font-size:1.35rem;font-weight:900;color:#0F172A;margin-bottom:8px;line-height:1.3">ההזדמנויות פתוחות רק למי שעשה שיחת הכוונה חד פעמית / ליווי מלא</h2>
+    <p style="font-size:.88rem;color:#64748B;margin-bottom:24px;line-height:1.6">לבדיקת התאמה ללא עלות — השאר פרטים ונחזור אליך בהקדם</p>
+    <button onclick="openRegModal()" style="width:100%;padding:14px;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer">לבדיקת התאמה ללא עלות ←</button>
+  </div>
+</div>
 <script src="assets/js/hahizd-common.js"></script>
 <script>
 Hahizd.initNav();
-Hahizd.initProtectedAuth();
-Hahizd.initRegModal();
+Hahizd.initRegModal({
+  onSuccess: function() {
+    try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
+    var ov = document.getElementById('pageLockedOverlay');
+    if (ov) ov.style.display = 'none';
+    window.closeRegModal();
+  }
+});
+(function(){
+  function isUnlocked(){try{var r=localStorage.getItem('hahizd_emp_unlocked');if(!r)return false;var d=JSON.parse(r);return d&&(Date.now()-d.ts<30*24*60*60*1000);}catch(e){return false;}}
+  if (!isUnlocked()) {
+    var ov = document.getElementById('pageLockedOverlay');
+    if (ov) ov.style.display = 'flex';
+  }
+})();
 </script>
 
 </body>
