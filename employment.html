@@ -440,6 +440,9 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
 <!-- ══ TABS BAR ══ -->
 <div class="tabs-bar"><div class="tabs-inner" id="tabBar"></div></div>
 
+<!-- ══ FILTER BAR ══ -->
+<div id="filterBar" style="display:none;position:sticky;top:calc(var(--nav-h,64px) + 90px);z-index:850;background:#fff;border-bottom:1px solid rgba(15,23,42,.07);padding:10px 24px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;"></div>
+
 <!-- ══ MAIN ══ -->
 <main class="content">
   <div class="container" id="mainContainer"></div>
@@ -654,18 +657,22 @@ function render() {
     '</div>';
   section.appendChild(header);
 
+  var filterBar = document.getElementById('filterBar');
   if (subcat.id === 'job-search') {
     var FILTERS = ['הכל','עבודות מומלצות','עבודה בחו"ל','אבטחה','מכירות','חקלאות','חינוך','כולל מגורים'];
-    var chips = document.createElement('div');
-    chips.className = 'filter-chips';
+    filterBar.innerHTML = '';
+    filterBar.style.display = 'block';
     FILTERS.forEach(function(cat) {
       var btn = document.createElement('button');
       btn.className = 'filter-chip' + (filterCat === cat ? ' active' : '');
+      btn.style.marginLeft = '8px';
       btn.textContent = cat;
       btn.onclick = function() { filterCat = cat; render(); };
-      chips.appendChild(btn);
+      filterBar.appendChild(btn);
     });
-    section.appendChild(chips);
+  } else {
+    filterBar.style.display = 'none';
+    filterBar.innerHTML = '';
   }
 
   var grid = document.createElement('div');
