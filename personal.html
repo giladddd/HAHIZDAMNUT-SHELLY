@@ -499,6 +499,16 @@ function buildPage() {
 
 buildTabs();
 buildPage();
+
+function updateStickyTops() {
+  var navEl = document.getElementById('navbar');
+  var qnEl = document.querySelector('.quick-nav');
+  var tbEl = document.querySelector('.tabs-bar');
+  if (!navEl || !qnEl || !tbEl) return;
+  tbEl.style.top = (navEl.offsetHeight + qnEl.offsetHeight) + 'px';
+}
+updateStickyTops();
+window.addEventListener('resize', updateStickyTops);
 </script>
 
 <!-- ══ MEETING MODAL ══ -->
