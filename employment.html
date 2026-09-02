@@ -633,7 +633,7 @@ function buildCard(card, delay, isJobTab) {
 }
 
 var activeTab = 0;
-var filterCat = 'הכל';
+var filterCat = 'כל הקטגוריות';
 
 function isUnlocked() {
   try {
@@ -660,7 +660,7 @@ function buildTabs() {
     btn.onclick = (function(ii){
       return function() {
         activeTab = ii;
-        filterCat = 'הכל';
+        filterCat = 'כל הקטגוריות';
         buildTabs();
         render();
         window.scrollTo({top: document.querySelector('.tabs-bar').offsetTop - 114, behavior:'smooth'});
@@ -680,7 +680,7 @@ function render() {
   section.id = subcat.id;
 
   var visibleCards = subcat.cards;
-  if (subcat.id === 'job-search' && filterCat !== 'הכל') {
+  if (subcat.id === 'job-search' && filterCat !== 'כל הקטגוריות') {
     visibleCards = subcat.cards.filter(function(c){ return c.cats && c.cats.indexOf(filterCat) > -1; });
   }
 
@@ -696,7 +696,7 @@ function render() {
 
   var filterBar = document.getElementById('filterBar');
   if (subcat.id === 'job-search') {
-    var FILTERS = ['הכל','מומלצות','עם מגורים','בחול','מכירות','אבטחה','חינוך','חקלאות','הייטק','עבודה בידיים','הדרכה','סטודנטים'];
+    var FILTERS = ['כל הקטגוריות','מומלצות','עם מגורים','בחול','מכירות','אבטחה','חינוך','חקלאות','הייטק','עבודה בידיים','הדרכה','סטודנטים'];
     filterBar.innerHTML = '';
     filterBar.style.display = 'flex';
 
@@ -915,7 +915,7 @@ window.submitOrgCode = function() {
   var errEl = document.getElementById('rmOrgErr');
   if (code === '1000') {
     try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
-    filterCat = 'הכל'; buildTabs(); render(); window.closeRegModal();
+    filterCat = 'כל הקטגוריות'; buildTabs(); render(); window.closeRegModal();
   } else {
     errEl.style.display = 'block';
     setTimeout(function(){ errEl.style.display = 'none'; }, 3000);
@@ -925,7 +925,7 @@ window.submitOrgCode = function() {
 Hahizd.initRegModal({
   onSuccess: function() {
     try { localStorage.setItem('hahizd_emp_unlocked', JSON.stringify({ts: Date.now()})); } catch(e) {}
-    filterCat = 'הכל';
+    filterCat = 'כל הקטגוריות';
     buildTabs();
     render();
     window.closeRegModal();
