@@ -229,6 +229,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
   background:#fff;
   border-bottom:2px solid rgba(15,23,42,.07);
   position:sticky;top:114px;z-index:900;
+  transition:top .1s;
 }
 .tabs-inner{
   display:flex;align-items:center;gap:4px;
@@ -698,6 +699,21 @@ function render() {
 
 buildTabs();
 render();
+
+function updateStickyTops() {
+  var navEl = document.getElementById('navbar');
+  var qnEl = document.querySelector('.quick-nav');
+  var tbEl = document.querySelector('.tabs-bar');
+  var fbEl = document.getElementById('filterBar');
+  if (!navEl || !qnEl || !tbEl) return;
+  var navH = navEl.offsetHeight;
+  var qnH = qnEl.offsetHeight;
+  var tbH = tbEl.offsetHeight;
+  tbEl.style.top = (navH + qnH) + 'px';
+  if (fbEl) fbEl.style.top = (navH + qnH + tbH) + 'px';
+}
+updateStickyTops();
+window.addEventListener('resize', updateStickyTops);
 
 document.addEventListener('click', function(e) {
   var card = e.target.closest('.card');
