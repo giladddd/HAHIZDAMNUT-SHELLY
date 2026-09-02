@@ -494,7 +494,7 @@ var DATA = [
       {title:'פרטנר — מכירות',badge:'מכירות',desc:'הצטרפו לצוות המכירות של פרטנר — עמלות גבוהות, סביבת עבודה צעירה ומוטיבציה גבוהה.',tags:['מכירות','תקשורת','עמלות'],cats:['מכירות','סטודנטים'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-123945.png',icon:'📱'},
       {title:'סלקום — מכירות',badge:'מכירות',desc:'מכירות בסלקום — אחת מחברות הסלולר המובילות בישראל. שכר בסיס + עמלות, אפשרויות קידום.',tags:['מכירות','סלולר','עמלות'],cats:['מכירות','סטודנטים'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-123358.png',icon:'📡'},
       {title:'ביטוח ישיר — מכירות',badge:'מכירות',desc:'עבודה במכירות ביטוח — שכר בסיס מצוין ועמלות גבוהות. תחום מבוקש עם אפשרויות קידום.',tags:['מכירות','ביטוח','עמלות'],cats:['מכירות'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-123535.png',icon:'🛡️'},
-      {title:'ישראכרט — מכירות',badge:'מכירות',desc:'הצטרפו לצוות המכירות של ישראכרט — מותג מוביל בתחום פיננסי עם תנאים מצוינים.',tags:['מכירות','פיננסי','בנקאות'],cats:['מכירות'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-123318.png',icon:'💳'},
+      {title:'ישראכרט — מכירות',badge:'מכירות',desc:'הצטרפו לצוות המכירות של ישראכרט — מותג מוביל בתחום פיננסי עם תנאים מצוינים.',tags:['מכירות','פיננסי','בנקאות'],cats:['מכירות'],link:'hahazdamnut.html#contact',img:'',icon:'💳'},
       {title:'מקס — מכירות',badge:'מכירות',desc:'עבודה במכירות ובשירות לקוחות של מקס — חברת כרטיסי אשראי מובילה. תנאים מצוינים ואפשרויות קידום.',tags:['מכירות','כרטיסי אשראי','שירות'],cats:['מכירות'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-123604.png',icon:'💰'},
       {title:'טרגטקול — מכירות',badge:'מכירות',desc:'מרכז מכירות טלפוניות מוביל — עמלות גבוהות, שעות גמישות ואפשרויות קידום מהירות.',tags:['מכירות','טלפוניות','עמלות'],cats:['מכירות','סטודנטים'],link:'hahazdamnut.html#contact',img:'',icon:'📞'},
       {title:'קאל — מכירות',badge:'מכירות',desc:'מכירות בחברת כרטיסי האשראי קאל — מותג מוביל, שכר בסיס + עמלות ואפשרויות קידום.',tags:['מכירות','אשראי','עמלות'],cats:['מכירות'],link:'hahazdamnut.html#contact',img:'',icon:'💳'},
@@ -720,7 +720,7 @@ function render() {
         btn.classList.remove('open');
         render();
         var fb = document.getElementById('filterBar');
-        if (fb) window.scrollTo({top: fb.getBoundingClientRect().top + window.scrollY - fb.offsetHeight - 10, behavior:'smooth'});
+        if (fb) { var stickyTop = parseInt(fb.style.top) || 0; window.scrollTo({top: fb.offsetTop - stickyTop, behavior:'smooth'}); }
       };
       drop.appendChild(chip);
     });
