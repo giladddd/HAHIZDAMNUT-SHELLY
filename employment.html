@@ -249,11 +249,16 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
 .tab-btn.active{color:var(--cat);border-bottom-color:var(--cat);font-weight:700}
 .tab-locked{opacity:.65;cursor:pointer}
 
-/* ── FILTER CHIPS ── */
-.filter-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.filter-chip{padding:7px 18px;border-radius:50px;font-size:.85rem;font-weight:600;background:#fff;border:1.5px solid rgba(26,86,160,.2);color:#64748B;cursor:pointer;transition:all .2s;font-family:'Heebo',sans-serif}
+/* ── FILTER DROPDOWN ── */
+.filter-btn{display:flex;align-items:center;gap:8px;padding:9px 18px;border-radius:50px;font-size:.9rem;font-weight:700;background:var(--cat);color:#fff;border:none;cursor:pointer;font-family:'Heebo',sans-serif;transition:background .2s;white-space:nowrap}
+.filter-btn .arrow{transition:transform .2s;font-size:.75rem}
+.filter-btn.open .arrow{transform:rotate(180deg)}
+.filter-dropdown{position:absolute;top:calc(100% + 6px);right:0;left:0;background:#fff;border:1.5px solid rgba(26,86,160,.2);border-radius:16px;box-shadow:0 8px 32px rgba(26,86,160,.15);z-index:800;padding:10px;display:none;flex-wrap:wrap;gap:8px;max-width:600px;margin:0 auto}
+.filter-dropdown.open{display:flex}
+.filter-chip{padding:7px 16px;border-radius:50px;font-size:.85rem;font-weight:600;background:#fff;border:1.5px solid rgba(26,86,160,.2);color:#64748B;cursor:pointer;transition:all .2s;font-family:'Heebo',sans-serif;white-space:nowrap}
 .filter-chip:hover{border-color:var(--cat);color:var(--cat)}
 .filter-chip.active{background:var(--cat);color:#fff;border-color:var(--cat)}
+#filterBar{position:relative;display:flex;justify-content:center;}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{
@@ -442,7 +447,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
 <div class="tabs-bar"><div class="tabs-inner" id="tabBar"></div></div>
 
 <!-- ══ FILTER BAR ══ -->
-<div id="filterBar" style="display:none;position:sticky;top:calc(var(--nav-h,64px) + 90px);z-index:850;background:#fff;border-bottom:1px solid rgba(15,23,42,.07);padding:10px 24px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;"></div>
+<div id="filterBar" style="display:none;position:sticky;top:calc(var(--nav-h,64px) + 90px);z-index:850;background:#fff;border-bottom:1px solid rgba(15,23,42,.07);padding:10px 24px;"></div>
 
 <!-- ══ MAIN ══ -->
 <main class="content">
@@ -693,15 +698,48 @@ function render() {
   if (subcat.id === 'job-search') {
     var FILTERS = ['הכל','מומלצות','עם מגורים','בחול','מכירות','אבטחה','חינוך','חקלאות','הייטק','עבודה בידיים','הדרכה','סטודנטים'];
     filterBar.innerHTML = '';
-    filterBar.style.display = 'block';
+    filterBar.style.display = 'flex';
+
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.innerHTML = '<span class="label">' + filterCat + '</span><span class="arrow">▼</span>';
+    filterBar.appendChild(btn);
+
+    var drop = document.createElement('div');
+    drop.className = 'filter-dropdown';
     FILTERS.forEach(function(cat) {
-      var btn = document.createElement('button');
-      btn.className = 'filter-chip' + (filterCat === cat ? ' active' : '');
-      btn.style.marginLeft = '8px';
-      btn.textContent = cat;
-      btn.onclick = function() { filterCat = cat; render(); };
-      filterBar.appendChild(btn);
+      var chip = document.createElement('button');
+      chip.className = 'filter-chip' + (filterCat === cat ? ' active' : '');
+      chip.textContent = cat;
+      chip.onclick = function(e) {
+        e.stopPropagation();
+        filterCat = cat;
+        drop.classList.remove('open');
+        btn.classList.remove('open');
+        render();
+        var fb = document.getElementById('filterBar');
+        if (fb) window.scrollTo({top: fb.getBoundingClientRect().top + window.scrollY - fb.offsetHeight - 10, behavior:'smooth'});
+      };
+      drop.appendChild(chip);
     });
+    filterBar.appendChild(drop);
+
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      var isOpen = drop.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      if (isOpen) {
+        setTimeout(function() {
+          document.addEventListener('click', function closeDD(ev) {
+            if (!filterBar.contains(ev.target)) {
+              drop.classList.remove('open');
+              btn.classList.remove('open');
+              document.removeEventListener('click', closeDD);
+            }
+          });
+        }, 0);
+      }
+    };
   } else {
     filterBar.style.display = 'none';
     filterBar.innerHTML = '';
