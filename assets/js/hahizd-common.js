@@ -162,6 +162,7 @@
   resetHorizontalScroll();
   document.addEventListener('DOMContentLoaded', initHoneypotFields);
   document.addEventListener('DOMContentLoaded', renderNavUser);
+  (function injectNavUserStyle(){var s=document.createElement('style');s.textContent='@media(max-width:768px){.nav-user-chip{display:none!important}}';document.head.appendChild(s);})();
   window.addEventListener('load', initHoneypotFields);
   window.addEventListener('load', resetHorizontalScroll);
   window.addEventListener('pageshow', resetHorizontalScroll);
@@ -221,6 +222,7 @@
     var chip = document.createElement('div');
     chip.id = 'navUserChip';
     chip.style.cssText = 'display:flex;align-items:center;gap:8px;flex-shrink:0';
+    chip.className = 'nav-user-chip';
 
     if (s) {
       chip.innerHTML =
