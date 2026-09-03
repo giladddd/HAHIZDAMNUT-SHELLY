@@ -205,6 +205,62 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
   </div>
 </header>
 
+<!-- GATE OVERLAY -->
+<style>
+#guideGate{position:fixed;inset:0;z-index:9000;background:linear-gradient(160deg,#7C3AED 0%,#1A56A0 100%);display:flex;align-items:center;justify-content:center;padding:20px;font-family:'Heebo',sans-serif}
+#guideGate.hidden{display:none}
+.gate-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:420px;width:100%;box-shadow:0 32px 80px rgba(0,0,0,.35);text-align:center}
+@media(max-width:480px){.gate-card{padding:28px 20px;border-radius:16px}}
+.gate-emoji{font-size:3rem;margin-bottom:12px}
+.gate-title{font-size:1.5rem;font-weight:900;color:#0F172A;margin-bottom:8px}
+.gate-sub{font-size:.9rem;color:#64748B;margin-bottom:24px;line-height:1.6}
+.gate-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:1rem;font-family:'Heebo',sans-serif;margin-bottom:12px;text-align:right;outline:none;transition:border-color .2s;box-sizing:border-box}
+.gate-field:focus{border-color:#7C3AED;box-shadow:0 0 0 3px rgba(124,58,237,.1)}
+.gate-field.err{border-color:#EF4444}
+.gate-err-msg{color:#EF4444;font-size:.82rem;margin-top:-8px;margin-bottom:10px;text-align:right}
+.gate-btn{width:100%;padding:14px;background:linear-gradient(135deg,#7C3AED,#1A56A0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.gate-btn:hover{opacity:.9}.gate-btn:disabled{opacity:.55;cursor:default}
+.gate-note{font-size:.78rem;color:#94A3B8;margin-top:12px}
+</style>
+<div id="guideGate">
+  <div class="gate-card">
+    <div class="gate-emoji">🚀</div>
+    <h2 class="gate-title">המדריך למשוחרר</h2>
+    <p class="gate-sub">השאר שם וטלפון ונפתח לך את המדריך המלא — חינמי לגמרי</p>
+    <input id="gateName" class="gate-field" type="text" placeholder="השם שלך" autocomplete="name">
+    <input id="gatePhone" class="gate-field" type="tel" placeholder="טלפון (05XXXXXXXX)" autocomplete="tel" maxlength="10">
+    <div id="gateErrMsg" class="gate-err-msg" style="display:none"></div>
+    <button class="gate-btn" id="gateBtn" onclick="submitGate()">פתח את המדריך ←</button>
+    <p class="gate-note">לא שולחים ספאם. הפרטים שמורים אצלנו בלבד.</p>
+  </div>
+</div>
+<script>
+(function(){
+  if(localStorage.getItem('guide_unlocked')==='1'){
+    document.getElementById('guideGate').classList.add('hidden');
+  }
+})();
+function submitGate(){
+  var nameEl=document.getElementById('gateName');
+  var phoneEl=document.getElementById('gatePhone');
+  var errEl=document.getElementById('gateErrMsg');
+  var btn=document.getElementById('gateBtn');
+  var name=nameEl.value.trim();
+  var phone=phoneEl.value.trim().replace(/[\s\-]/g,'');
+  var ok=true;
+  nameEl.classList.remove('err'); phoneEl.classList.remove('err'); errEl.style.display='none';
+  if(!name){nameEl.classList.add('err');ok=false;}
+  if(!/^05\d{8}$/.test(phone)){phoneEl.classList.add('err');errEl.textContent='טלפון חייב להתחיל ב-05 ולהכיל 10 ספרות';errEl.style.display='block';ok=false;}
+  if(!ok)return;
+  btn.disabled=true; btn.textContent='שולח...';
+  var qs='name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&notes=מדריך+למשוחרר&timestamp='+encodeURIComponent(new Date().toLocaleString('he-IL'))+'&form_type=מדריך&_hp=';
+  try{fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?'+qs,{method:'GET'});}catch(e){}
+  localStorage.setItem('guide_unlocked','1');
+  document.getElementById('guideGate').classList.add('hidden');
+}
+document.addEventListener('keydown',function(e){if(e.key==='Enter'){var g=document.getElementById('guideGate');if(g&&!g.classList.contains('hidden'))submitGate();}});
+</script>
+
 <!-- PROGRESS BAR -->
 <div class="progress-wrap">
   <div class="container">
