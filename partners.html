@@ -258,73 +258,195 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
   </div>
 </div>
 
-<!-- PAGE HERO -->
-<div id="page-hero">
-  <div class="hero-grid-lines" aria-hidden="true"></div>
-  <div class="hero-circle" aria-hidden="true"></div>
-  <div class="hero-circle-2" aria-hidden="true"></div>
+<!-- ═══ NEW ONE-PAGER STYLES ═══ -->
+<style>
+/* HERO */
+#partners-hero{padding-top:var(--nav-h);background:var(--hero-bg);position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.ph-circle{position:absolute;top:-200px;left:-240px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(77,174,245,.1) 0%,rgba(26,86,160,.06) 50%,transparent 100%);pointer-events:none}
+.ph-circle2{position:absolute;bottom:-220px;right:-180px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(26,86,160,.12) 0%,transparent 70%);pointer-events:none}
+.ph-inner{position:relative;text-align:center;padding:80px 0 60px;max-width:780px;margin-inline:auto}
+.ph-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(77,174,245,.12);border:1px solid rgba(77,174,245,.3);color:#7EC8F5;font-size:.82rem;font-weight:700;padding:7px 20px;border-radius:50px;margin-bottom:32px;letter-spacing:.3px}
+.ph-h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:900;line-height:1.1;margin-bottom:22px;color:#fff;letter-spacing:-.025em}
+.ph-h1 span{background:linear-gradient(135deg,#4DAEF5,#7EC8F5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ph-sub{font-size:clamp(1rem,2vw,1.18rem);color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:40px}
+.ph-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.ph-stats{display:flex;gap:0;justify-content:center;margin-top:64px;border-top:1px solid rgba(255,255,255,.1);padding-top:44px}
+.ph-stat{flex:1;max-width:200px;text-align:center;padding-inline:16px}
+.ph-stat:not(:last-child){border-left:1px solid rgba(255,255,255,.1)}
+.ph-stat-num{font-size:2.6rem;font-weight:900;color:#fff;line-height:1;margin-bottom:6px}
+.ph-stat-num span{font-size:1.8rem;color:#4DAEF5}
+.ph-stat-lbl{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.4}
+@media(max-width:767px){.ph-stats{flex-wrap:wrap;gap:28px}.ph-stat{flex:1 0 40%;max-width:none}.ph-stat:not(:last-child){border-left:none}}
+/* PROBLEM */
+#partners-problem{background:#fff}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1060px;margin-inline:auto}
+.prob-list{display:flex;flex-direction:column;gap:16px;margin-top:28px}
+.prob-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;border-radius:14px;background:#F8FAFF;border:1px solid var(--border)}
+.prob-ic{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.prob-txt{font-size:.97rem;color:var(--text);font-weight:500;line-height:1.55}
+.prob-visual{border-radius:24px;overflow:hidden;box-shadow:var(--sh-xl)}
+.prob-visual video{width:100%;display:block;background:#000}
+@media(max-width:1023px){.prob-grid{grid-template-columns:1fr;gap:44px}.prob-visual{max-width:600px;margin-inline:auto}}
+/* HOW IT WORKS */
+#partners-how{background:#F8FAFF}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1060px;margin-inline:auto;position:relative}
+.how-steps::before{content:'';position:absolute;top:44px;right:17%;left:17%;height:2px;background:linear-gradient(to left,var(--primary),#4DAEF5);z-index:0}
+.how-step{background:#fff;border-radius:20px;padding:36px 28px;text-align:center;box-shadow:var(--sh-md);position:relative;z-index:1}
+.how-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#2066C0);color:#fff;font-size:1.2rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin-inline:auto;margin-bottom:20px;box-shadow:0 4px 14px rgba(26,86,160,.3)}
+.how-step h3{font-size:1.05rem;font-weight:800;margin-bottom:10px}
+.how-step p{font-size:.92rem;color:var(--muted);line-height:1.6}
+@media(max-width:767px){.how-steps{grid-template-columns:1fr;max-width:440px;margin-inline:auto}.how-steps::before{display:none}}
+/* SERVICES */
+#partners-services{background:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1100px;margin-inline:auto}
+.svc-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:36px 28px;text-align:center;box-shadow:var(--sh-sm);display:flex;flex-direction:column;align-items:center;transition:box-shadow var(--tr),transform var(--tr)}
+.svc-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
+.svc-card.svc-featured{border:2px solid var(--primary);box-shadow:var(--sh-md)}
+.svc-card img{width:64px;height:64px;object-fit:contain;margin-bottom:20px}
+.svc-card h3{font-size:1.08rem;font-weight:800;margin-bottom:12px}
+.svc-card p{color:var(--muted);font-size:.93rem;line-height:1.7}
+@media(max-width:1023px){.svc-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}}
+/* WHY */
+#partners-why{background:#F8FAFF}
+.why-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1100px;margin-inline:auto}
+.why4-card{background:#fff;border-radius:16px;padding:30px 22px;text-align:center;box-shadow:var(--sh-sm);transition:box-shadow var(--tr),transform var(--tr)}
+.why4-card:hover{box-shadow:var(--sh-md);transform:translateY(-3px)}
+.why4-ic{font-size:2rem;margin-bottom:14px}
+.why4-txt{font-size:.97rem;font-weight:600;color:var(--text);line-height:1.5}
+@media(max-width:1023px){.why-grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.why-grid4{grid-template-columns:1fr;max-width:380px;margin-inline:auto}}
+/* LOGOS */
+#partners-logos{background:#fff}
+.logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:52px}
+.logo-box{background:#F8FAFF;border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;align-items:center;justify-content:center;min-height:86px;transition:box-shadow var(--tr),transform var(--tr)}
+.logo-box:hover{box-shadow:var(--sh-md);transform:translateY(-3px)}
+.logo-box img{max-width:110px;max-height:56px;object-fit:contain}
+@media(max-width:1023px){.logos-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.logos-grid{grid-template-columns:repeat(3,1fr)}}
+/* PHOTOS */
+#partners-photos{background:#F8FAFF}
+.photos-grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.photos-grid6 .photo-item{border-radius:16px;overflow:hidden;box-shadow:var(--sh-md)}
+.photos-grid6 .photo-item img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .4s ease}
+.photos-grid6 .photo-item:hover img{transform:scale(1.04)}
+@media(max-width:767px){.photos-grid6{grid-template-columns:1fr 1fr;max-width:500px;margin-inline:auto}}
+/* CONTACT */
+#partners-contact{background:var(--hero-bg);position:relative;overflow:hidden}
+.contact-glow{position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(77,174,245,.08) 0%,transparent 70%);pointer-events:none}
+.contact-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1060px;margin-inline:auto}
+.contact-text .sec-title{color:#fff;margin-bottom:14px}
+.contact-text .sec-sub{color:rgba(255,255,255,.6)}
+.contact-bullets{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+.contact-bullet{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.8);font-size:.97rem;font-weight:500}
+.contact-bullet::before{content:'✓';width:26px;height:26px;border-radius:50%;background:rgba(77,174,245,.2);border:1px solid rgba(77,174,245,.4);color:#4DAEF5;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem}
+.contact-form-card{background:#fff;border-radius:24px;padding:40px 36px;box-shadow:var(--sh-xl)}
+.cf-field{width:100%;padding:13px 16px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:.97rem;font-family:'Heebo',sans-serif;margin-bottom:14px;text-align:right;outline:none;transition:border-color .2s,box-shadow .2s;box-sizing:border-box}
+.cf-field:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,86,160,.1)}
+.cf-field.err{border-color:#EF4444}
+.cf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cf-submit{width:100%;padding:15px;background:linear-gradient(135deg,var(--primary),#2066C0);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;transition:opacity .2s;margin-top:6px}
+.cf-submit:hover{opacity:.9}.cf-submit:disabled{opacity:.55;cursor:default}
+.cf-success{display:none;text-align:center;padding:24px 0}
+.cf-success-ic{font-size:3rem;margin-bottom:12px}
+.cf-success h3{font-size:1.3rem;font-weight:900;color:var(--text);margin-bottom:8px}
+.cf-success p{color:var(--muted);font-size:.92rem}
+@media(max-width:1023px){.contact-inner{grid-template-columns:1fr;gap:44px}.contact-form-card{max-width:560px;margin-inline:auto}}
+@media(max-width:480px){.cf-row2{grid-template-columns:1fr}.contact-form-card{padding:28px 20px}}
+</style>
+
+<!-- ═══ HERO ═══ -->
+<div id="partners-hero">
+  <div class="ph-grid" aria-hidden="true"></div>
+  <div class="ph-circle" aria-hidden="true"></div>
+  <div class="ph-circle2" aria-hidden="true"></div>
   <div class="container">
-    <div class="page-hero-inner">
-      <span class="page-hero-badge">🤝 ארגונים ועמותות</span>
-      <h1 class="page-hero-h1">שיתופי פעולה</h1>
-      <p class="page-hero-sub">הבוגרים שלכם נתנו לנו את הכל — עכשיו תורכם לתת להם את המפתח להצלחה</p>
+    <div class="ph-inner">
+      <span class="ph-badge">🤝 לארגונים ועמותות</span>
+      <h1 class="ph-h1">הבוגרים שלכם נתנו הכל —<br><span>תנו להם את המפתח להצלחה</span></h1>
+      <p class="ph-sub">אנחנו מלווים את המשוחררים מהרגע שיוצאים מהצבא — עם כלים, הזדמנויות וליווי אישי —<br>הכל תחת הדגל של הארגון שלכם</p>
+      <div class="ph-ctas">
+        <a href="#partners-contact" class="btn btn-primary btn-lg">קבעו שיחת היכרות ←</a>
+        <a href="#partners-problem" class="btn btn-lg" style="background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.25)">גלו עוד</a>
+      </div>
+      <div class="ph-stats">
+        <div class="ph-stat"><div class="ph-stat-num">+<span>50</span></div><div class="ph-stat-lbl">ארגונים ועמותות<br>עובדים איתנו</div></div>
+        <div class="ph-stat"><div class="ph-stat-num">+<span>2000</span></div><div class="ph-stat-lbl">משוחררים<br>שליוינו</div></div>
+        <div class="ph-stat"><div class="ph-stat-num"><span>4.9</span>★</div><div class="ph-stat-lbl">דירוג ממוצע<br>מהארגונים</div></div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- VIDEO -->
-<section id="video-section" style="background:#fff">
+<!-- ═══ PROBLEM ═══ -->
+<section id="partners-problem">
 <div class="container">
-  <div class="partners-video-wrap">
-    <video controls playsinline preload="metadata">
-      <source src="assets/uploads/2026/03/סרטון-עמותות.mp4" type="video/mp4"/>
-    </video>
-  </div>
-</div>
-</section>
-
-<!-- WHY US -->
-<section id="why-us" style="background:#fff">
-<div class="container">
-  <div class="sec-hd" style="text-align:center">
-    <h2 class="sec-title">למה לעשות את זה איתנו?</h2>
-  </div>
-  <div class="partners-why-grid">
-    <div class="why-card">
-      <div class="why-card-icon">💡</div>
-      <p class="why-card-text">אתם לא צריכים לגייס עוד כוח אדם או להוציא מאות אלפי שקלים</p>
+  <div class="prob-grid">
+    <div class="prob-text">
+      <h2 class="sec-title">הבוגרים שלכם יוצאים מהצבא — ואז מה?</h2>
+      <p class="sec-sub">רוב הארגונים רוצים לתמוך בבוגריהם אחרי השחרור, אבל חסרים להם הכלים, הזמן והמשאבים לעשות את זה בצורה מקצועית ועקבית.</p>
+      <div class="prob-list">
+        <div class="prob-item"><span class="prob-ic">😕</span><span class="prob-txt">הבוגרים לא יודעים לאן לפנות ומרגישים אבודים בשוק העבודה</span></div>
+        <div class="prob-item"><span class="prob-ic">🕰️</span><span class="prob-txt">לרכזי הבוגרים אין זמן לתת ליווי אישי לכל אחד</span></div>
+        <div class="prob-item"><span class="prob-ic">📉</span><span class="prob-txt">ללא ליווי מסודר, הקשר עם הארגון נחלש מיד אחרי השחרור</span></div>
+        <div class="prob-item"><span class="prob-ic">💡</span><span class="prob-txt">אנחנו הפתרון — ליווי מקצועי, מלא ומדיד לכל בוגר שלכם</span></div>
+      </div>
     </div>
-    <div class="why-card">
-      <div class="why-card-icon">🎯</div>
-      <p class="why-card-text">אנחנו מוודאים שאף בוגר שלכם לא הולך לאיבוד</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon">🏅</div>
-      <p class="why-card-text">הבוגרים שלכם, המותג שלכם — כל ליווי מוצג תחת שם הארגון שלכם</p>
+    <div class="prob-visual">
+      <video controls playsinline preload="metadata">
+        <source src="assets/uploads/2026/03/סרטון-עמותות.mp4" type="video/mp4"/>
+      </video>
     </div>
   </div>
 </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" style="background:#F8FAFF">
+<!-- ═══ HOW IT WORKS ═══ -->
+<section id="partners-how">
 <div class="container">
   <div class="sec-hd" style="text-align:center">
-    <h2 class="sec-title">מה אנחנו מציעים לעמותה שלכם?</h2>
-    <p class="sec-sub" style="margin-inline:auto">אנחנו מביאים את הידע, הטכנולוגיה והקשרים — אתם מביאים את הבוגרים</p>
+    <h2 class="sec-title">איך זה עובד?</h2>
+    <p class="sec-sub" style="margin-inline:auto">תהליך פשוט ומוכח — משיחה ראשונה ועד בוגרים שמרגישים בנויים לדרך</p>
   </div>
-  <div class="partners-services-grid">
-    <div class="service-card featured">
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-num">1</div>
+      <h3>שיחת היכרות וצרכים</h3>
+      <p>נבין את הארגון, הבוגרים ומה הם צריכים — ונבנה תוכנית מותאמת בדיוק לכם</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">2</div>
+      <h3>סנדה ייחודית לבוגריכם</h3>
+      <p>נגיע לבוגרים שלכם עם סדנה מעשית — כל אחד יוצא עם תוכנית ברורה לשנה הראשונה</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">3</div>
+      <h3>ליווי שוטף ומדיד</h3>
+      <p>הבוגרים מקבלים גישה לכלים, הזדמנויות ותמיכה — אתם מקבלים דוחות ומעקב</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="partners-services">
+<div class="container">
+  <div class="sec-hd" style="text-align:center">
+    <h2 class="sec-title">מה הארגון שלכם מקבל?</h2>
+    <p class="sec-sub" style="margin-inline:auto">שלושה כלים שעובדים יחד — כדי שאף בוגר לא יישאר מאחור</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card svc-featured">
       <img src="assets/uploads/2026/03/mega1.png" alt="">
       <h3>סנדה ייחודית למשוחררים</h3>
       <p>כל בוגר יוצא עם תוכנית פעולה מסודרת וכלים לניהול עצמי בשחרור — מעשי, ממוקד ומותאם אישית</p>
     </div>
-    <div class="service-card">
+    <div class="svc-card">
       <img src="assets/uploads/2026/03/messege.png" alt="">
       <h3>הזדמנויות ישר לוואטסאפ</h3>
       <p>נצטרף לקבוצה הקיימת שלכם או נקים קבוצת הזדמנויות ייעודית — כל ההזדמנויות הכי שוות לצעירים שלכם במקום אחד</p>
     </div>
-    <div class="service-card">
+    <div class="svc-card">
       <img src="assets/uploads/2026/03/medal.png" alt="">
       <h3>ליווי עצמי באפליקציה</h3>
       <p>כל צעיר מקבל אפליקציה לניהול עצמי המחוברת ליומן — לפניות, ייעוץ ותקשורת עם הרכז בצורה ברורה, מקצועית וקלה</p>
@@ -333,13 +455,52 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 </div>
 </section>
 
-<!-- ACTIVITY PHOTOS -->
-<section id="photos" style="background:#fff">
+<!-- ═══ WHY US ═══ -->
+<section id="partners-why">
+<div class="container">
+  <div class="sec-hd" style="text-align:center">
+    <h2 class="sec-title">למה לעשות את זה איתנו?</h2>
+  </div>
+  <div class="why-grid4">
+    <div class="why4-card"><div class="why4-ic">💡</div><p class="why4-txt">אתם לא צריכים לגייס עוד כוח אדם או להוציא מאות אלפי שקלים</p></div>
+    <div class="why4-card"><div class="why4-ic">🎯</div><p class="why4-txt">אנחנו מוודאים שאף בוגר שלכם לא הולך לאיבוד</p></div>
+    <div class="why4-card"><div class="why4-ic">📊</div><p class="why4-txt">תקבלו דוחות ומעקב — תדעו שהבוגרים שלכם מתקדמים</p></div>
+    <div class="why4-card"><div class="why4-ic">🏅</div><p class="why4-txt">הבוגרים שלכם, המותג שלכם — כל ליווי מוצג תחת שם הארגון שלכם</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ LOGOS ═══ -->
+<section id="partners-logos">
+<div class="container">
+  <div class="sec-hd" style="text-align:center">
+    <h2 class="sec-title">כבר עובדים איתנו</h2>
+    <p class="sec-sub" style="margin-inline:auto">ארגונים ועמותות שכבר נותנים לבוגריהם את הליווי שהם מגיעים לו</p>
+  </div>
+  <div class="logos-grid">
+    <div class="logo-box"><img src="assets/uploads/2025/04/1.png" alt="PROPERTEAM"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/2.png" alt="FRONTLIFE"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/3.png" alt="הישגים"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/4.png" alt="גב ללוחם"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/5.png" alt="עמית לדרך"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/6.png" alt="תופסים כיוון"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/7.png" alt="IGOLD"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/8.png" alt="לוחמים להייטק"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/9.png" alt="קרן השועל"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/10.png" alt="דרך ארץ"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/11.png" alt="ONEDAY"></div>
+    <div class="logo-box"><img src="assets/uploads/2025/04/12.png" alt="SMART START"></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ PHOTOS ═══ -->
+<section id="partners-photos">
 <div class="container">
   <div class="sec-hd" style="text-align:center;margin-bottom:36px">
     <h2 class="sec-title">אנחנו בשטח</h2>
   </div>
-  <div class="partners-photos-grid">
+  <div class="photos-grid6">
     <div class="photo-item"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה בפני קהל גדול" loading="lazy"></picture></div>
     <div class="photo-item"><img src="assets/uploads/2026/03/2-1.png" alt="סדנה בקבוצה קטנה" loading="lazy"></div>
     <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-בתוכנית-משוחררים.png" alt="הרצאה בתוכנית משוחררים" loading="lazy"></div>
@@ -350,29 +511,65 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 </div>
 </section>
 
-<!-- PARTNERS LOGOS -->
-<section id="partners" style="background:#F8FAFF">
-<div class="container">
-  <div class="sec-hd" style="text-align:center">
-    <h2 class="sec-title">בשיתוף עם:</h2>
+<!-- ═══ CONTACT FORM ═══ -->
+<section id="partners-contact">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <h2 class="sec-title" style="color:#fff">מוכנים להתחיל?</h2>
+        <p class="sec-sub" style="color:rgba(255,255,255,.6)">השאירו פרטים ונחזור אליכם תוך 24 שעות לשיחת היכרות ללא עלות וללא התחייבות</p>
+        <div class="contact-bullets">
+          <div class="contact-bullet">שיחה ראשונה — חינמית לחלוטין</div>
+          <div class="contact-bullet">ללא התחייבות</div>
+          <div class="contact-bullet">תוכנית מותאמת לארגון שלכם</div>
+          <div class="contact-bullet">מענה תוך 24 שעות</div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <div id="pContactForm">
+          <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:6px;color:var(--text)">קבעו שיחת היכרות</h3>
+          <p style="font-size:.88rem;color:var(--muted);margin-bottom:24px">מלאו פרטים ונחזור אליכם בהקדם</p>
+          <div class="cf-row2">
+            <input id="pcName" class="cf-field" type="text" placeholder="שם מלא *" autocomplete="name">
+            <input id="pcOrg" class="cf-field" type="text" placeholder="שם הארגון *">
+          </div>
+          <div class="cf-row2">
+            <input id="pcPhone" class="cf-field" type="tel" placeholder="טלפון *" autocomplete="tel" maxlength="10">
+            <input id="pcRole" class="cf-field" type="text" placeholder="תפקיד">
+          </div>
+          <textarea id="pcNotes" class="cf-field" rows="3" placeholder="ספרו לנו על הארגון ומה אתם מחפשים..." style="resize:vertical"></textarea>
+          <div id="pcErrMsg" style="color:#EF4444;font-size:.82rem;margin-bottom:10px;display:none"></div>
+          <button class="cf-submit" id="pcBtn" onclick="submitPartnerContact()">שלחו — נחזור אליכם תוך 24 שעות ←</button>
+          <p style="font-size:.75rem;color:var(--muted);margin-top:12px;text-align:center">לא שולחים ספאם. הפרטים נשמרים אצלנו בלבד.</p>
+        </div>
+        <div id="pContactSuccess" class="cf-success">
+          <div class="cf-success-ic">🎉</div>
+          <h3>תודה! קיבלנו את פרטיכם</h3>
+          <p>נחזור אליכם תוך 24 שעות לתיאום שיחת היכרות.<br>מצפים לדבר!</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="partners-logos-grid">
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/1.png" alt="PROPERTEAM"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/2.png" alt="FRONTLIFE"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/3.png" alt="הישגים"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/4.png" alt="גב ללוחם"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/5.png" alt="עמית לדרך"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/6.png" alt="תופסים כיוון"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/7.png" alt="IGOLD"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/8.png" alt="לוחמים להייטק"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/9.png" alt="קרן השועל"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/10.png" alt="דרך ארץ"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/11.png" alt="ONEDAY"></div>
-    <div class="partner-logo-box"><img src="assets/uploads/2025/04/12.png" alt="SMART START"></div>
-  </div>
-  <div style="text-align:center"><a href="hahazdamnut.html#contact" class="btn btn-outline">לשיתוף פעולה — צור קשר</a></div>
-</div>
 </section>
+<script>
+function submitPartnerContact(){
+  var nameEl=document.getElementById('pcName'),orgEl=document.getElementById('pcOrg'),phoneEl=document.getElementById('pcPhone'),roleEl=document.getElementById('pcRole'),notesEl=document.getElementById('pcNotes'),errEl=document.getElementById('pcErrMsg'),btn=document.getElementById('pcBtn');
+  var name=nameEl.value.trim(),org=orgEl.value.trim(),phone=phoneEl.value.trim().replace(/[\s\-]/g,''),role=roleEl.value.trim(),notes=notesEl.value.trim();
+  [nameEl,orgEl,phoneEl].forEach(function(el){el.classList.remove('err')});errEl.style.display='none';
+  var ok=true;
+  if(!name){nameEl.classList.add('err');ok=false;}
+  if(!org){orgEl.classList.add('err');ok=false;}
+  if(!/^05\d{8}$/.test(phone)){phoneEl.classList.add('err');errEl.textContent='טלפון חייב להתחיל ב-05 ולהכיל 10 ספרות';errEl.style.display='block';ok=false;}
+  if(!ok)return;
+  btn.disabled=true;btn.textContent='שולח...';
+  var qs='name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&notes='+encodeURIComponent('ארגון: '+org+(role?' | תפקיד: '+role:'')+(notes?' | '+notes:''))+'&timestamp='+encodeURIComponent(new Date().toLocaleString('he-IL'))+'&form_type='+encodeURIComponent('שיתוף פעולה')+'&_hp=';
+  try{fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?'+qs,{method:'GET'});}catch(e){}
+  document.getElementById('pContactForm').style.display='none';
+  document.getElementById('pContactSuccess').style.display='block';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Enter'&&document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#pContactForm')){submitPartnerContact();}});
+</script>
 
 <!-- FOOTER -->
 <footer>
