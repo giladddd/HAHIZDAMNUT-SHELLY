@@ -303,16 +303,19 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 .how-step h3{font-size:1.05rem;font-weight:800;margin-bottom:10px}
 .how-step p{font-size:.92rem;color:var(--muted);line-height:1.6}
 @media(max-width:767px){.how-steps{grid-template-columns:1fr;max-width:440px;margin-inline:auto}.how-steps::before{display:none}}
-/* SERVICES */
+/* SOLUTION */
 #partners-services{background:#fff}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1100px;margin-inline:auto}
-.svc-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:36px 28px;text-align:center;box-shadow:var(--sh-sm);display:flex;flex-direction:column;align-items:center;transition:box-shadow var(--tr),transform var(--tr)}
-.svc-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
-.svc-card.svc-featured{border:2px solid var(--primary);box-shadow:var(--sh-md)}
-.svc-card img{width:64px;height:64px;object-fit:contain;margin-bottom:20px}
-.svc-card h3{font-size:1.08rem;font-weight:800;margin-bottom:12px}
-.svc-card p{color:var(--muted);font-size:.93rem;line-height:1.7}
-@media(max-width:1023px){.svc-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}}
+.sol-list{display:flex;flex-direction:column;gap:28px;max-width:900px;margin-inline:auto}
+.sol-item{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:36px 40px;box-shadow:var(--sh-sm);display:flex;align-items:flex-start;gap:24px;position:relative;transition:box-shadow var(--tr),transform var(--tr)}
+.sol-item:hover{box-shadow:var(--sh-lg);transform:translateY(-3px)}
+.sol-num{flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#2066C0);color:#fff;font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(26,86,160,.3)}
+.sol-body{display:flex;align-items:flex-start;gap:20px;flex:1}
+.sol-icon img{width:54px;height:54px;object-fit:contain;flex-shrink:0}
+.sol-text h3{font-size:1.15rem;font-weight:900;margin-bottom:10px}
+.sol-text p{font-size:.95rem;color:var(--muted);line-height:1.75}
+.sol-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.sol-tags span{background:#F0F4FF;border:1px solid #C7D7F5;color:var(--primary);font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:50px}
+@media(max-width:767px){.sol-item{flex-direction:column;gap:16px;padding:28px 24px}.sol-body{flex-direction:column;gap:14px}.sol-icon img{width:44px;height:44px}}
 /* WHY */
 #partners-why{background:#F8FAFF}
 .why-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1100px;margin-inline:auto}
@@ -423,56 +426,64 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 </div>
 </section>
 
-<!-- ═══ HOW IT WORKS ═══ -->
-<section id="partners-how">
+<!-- ═══ SOLUTION ═══ -->
+<section id="partners-services" style="background:#fff">
 <div class="container">
   <div class="sec-hd" style="text-align:center">
-    <h2 class="sec-title">איך זה עובד?</h2>
-    <p class="sec-sub" style="margin-inline:auto">תהליך פשוט ומוכח — משיחה ראשונה ועד בוגרים שמרגישים בנויים לדרך</p>
+    <h2 class="sec-title">הפתרון שלנו</h2>
+    <p class="sec-sub" style="margin-inline:auto">שלושה רבדים שעובדים יחד — כדי שכל בוגר ירגיש שיש לו מעטפת אמיתית</p>
   </div>
-  <div class="how-steps">
-    <div class="how-step">
-      <div class="how-num">1</div>
-      <h3>שיחת היכרות וצרכים</h3>
-      <p>נבין את הארגון, הבוגרים ומה הם צריכים — ונבנה תוכנית מותאמת בדיוק לכם</p>
-    </div>
-    <div class="how-step">
-      <div class="how-num">2</div>
-      <h3>סנדה ייחודית לבוגריכם</h3>
-      <p>נגיע לבוגרים שלכם עם סדנה מעשית — כל אחד יוצא עם תוכנית ברורה לשנה הראשונה</p>
-    </div>
-    <div class="how-step">
-      <div class="how-num">3</div>
-      <h3>ליווי שוטף ומדיד</h3>
-      <p>הבוגרים מקבלים גישה לכלים, הזדמנויות ותמיכה — אתם מקבלים דוחות ומעקב</p>
-    </div>
-  </div>
-</div>
-</section>
+  <div class="sol-list">
 
-<!-- ═══ SERVICES ═══ -->
-<section id="partners-services">
-<div class="container">
-  <div class="sec-hd" style="text-align:center">
-    <h2 class="sec-title">מה הארגון שלכם מקבל?</h2>
-    <p class="sec-sub" style="margin-inline:auto">שלושה כלים שעובדים יחד — כדי שאף בוגר לא יישאר מאחור</p>
-  </div>
-  <div class="svc-grid">
-    <div class="svc-card svc-featured">
-      <img src="assets/uploads/2026/03/mega1.png" alt="">
-      <h3>סנדה ייחודית למשוחררים</h3>
-      <p>כל בוגר יוצא עם תוכנית פעולה מסודרת וכלים לניהול עצמי בשחרור — מעשי, ממוקד ומותאם אישית</p>
+    <div class="sol-item">
+      <div class="sol-num">1</div>
+      <div class="sol-body">
+        <div class="sol-icon"><img src="assets/uploads/2026/03/mega1.png" alt=""></div>
+        <div class="sol-text">
+          <h3>סדנה ייחודית למשוחררים שלכם</h3>
+          <p>נגיע לבוגרים שלכם עם סדנה מעשית ומעמיקה. דרך האפליקציה לניהול אישי נעבור יחד על שלושת התחומים המרכזיים — <strong>תעסוקתי, כלכלי ואישי</strong>. כל משתתף יצא עם חזון ומפת דרכים אישית, יבין איך לנהל את עצמו, ויחובר לארגונים ועמותות שיכולים לעזור לו בדרך.</p>
+          <div class="sol-tags">
+            <span>💼 תעסוקה וקריירה</span>
+            <span>💰 ניהול כלכלי</span>
+            <span>🌱 פיתוח אישי</span>
+            <span>🗺️ חזון ומפת דרכים</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="svc-card">
-      <img src="assets/uploads/2026/03/messege.png" alt="">
-      <h3>הזדמנויות ישר לוואטסאפ</h3>
-      <p>נצטרף לקבוצה הקיימת שלכם או נקים קבוצת הזדמנויות ייעודית — כל ההזדמנויות הכי שוות לצעירים שלכם במקום אחד</p>
+
+    <div class="sol-item">
+      <div class="sol-num">2</div>
+      <div class="sol-body">
+        <div class="sol-icon"><img src="assets/uploads/2026/03/messege.png" alt=""></div>
+        <div class="sol-text">
+          <h3>הזדמנויות ישר לוואטסאפ</h3>
+          <p>נצטרף לקבוצת הווטסאפ הקיימת שלכם, או נקים קבוצת הזדמנויות ייעודית לבוגרים. כל ההזדמנויות הכי שוות — עבודות, מלגות, קורסים, אירועים — מגיעות ישר לטלפון בלי שהבוגר צריך לחפש.</p>
+          <div class="sol-tags">
+            <span>📲 עדכונים שוטפים</span>
+            <span>🔍 מיון ואיכות</span>
+            <span>⚡ בזמן אמת</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="svc-card">
-      <img src="assets/uploads/2026/03/medal.png" alt="">
-      <h3>ליווי עצמי באפליקציה</h3>
-      <p>כל צעיר מקבל אפליקציה לניהול עצמי המחוברת ליומן — לפניות, ייעוץ ותקשורת עם הרכז בצורה ברורה, מקצועית וקלה</p>
+
+    <div class="sol-item">
+      <div class="sol-num">3</div>
+      <div class="sol-body">
+        <div class="sol-icon"><img src="assets/uploads/2026/03/medal.png" alt=""></div>
+        <div class="sol-text">
+          <h3>ליווי לטווח ארוך — למשוחרר וגם לרכז</h3>
+          <p>כל בוגר ממשיך להיות מלווה דרך האפליקציה — מרגיש שנותנים לו מעטפת ומתעניינים בו גם חודשים אחרי השחרור. ורכז הבוגרים מקבל תמונת מצב ברורה: מי מתקדם, מי צריך עזרה, ואיך לכוון כל אחד בצורה טובה יותר.</p>
+          <div class="sol-tags">
+            <span>📱 אפליקציה לכל בוגר</span>
+            <span>📊 דשבורד לרכז</span>
+            <span>🤝 קשר מתמשך</span>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 </section>
