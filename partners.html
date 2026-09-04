@@ -280,14 +280,20 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 @media(max-width:767px){.ph-stats{flex-wrap:wrap;gap:28px}.ph-stat{flex:1 0 40%;max-width:none}.ph-stat:not(:last-child){border-left:none}}
 /* PROBLEM */
 #partners-problem{background:#fff}
-.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1060px;margin-inline:auto}
-.prob-list{display:flex;flex-direction:column;gap:16px;margin-top:28px}
-.prob-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;border-radius:14px;background:#F8FAFF;border:1px solid var(--border)}
-.prob-ic{font-size:1.4rem;flex-shrink:0;margin-top:2px}
-.prob-txt{font-size:.97rem;color:var(--text);font-weight:500;line-height:1.55}
-.prob-visual{border-radius:24px;overflow:hidden;box-shadow:var(--sh-xl)}
-.prob-visual video{width:100%;display:block;background:#000}
-@media(max-width:1023px){.prob-grid{grid-template-columns:1fr;gap:44px}.prob-visual{max-width:600px;margin-inline:auto}}
+.prob-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1060px;margin-inline:auto}
+.prob-card{border-radius:20px;padding:40px 32px;text-align:center;position:relative;overflow:hidden}
+.prob-card-1{background:linear-gradient(145deg,#FFF5F5,#FEE2E2);border:1.5px solid #FECACA}
+.prob-card-2{background:linear-gradient(145deg,#FFFBEB,#FEF3C7);border:1.5px solid #FDE68A}
+.prob-card-3{background:linear-gradient(145deg,#EFF6FF,#DBEAFE);border:1.5px solid #BFDBFE}
+.prob-card-emoji{font-size:2.6rem;margin-bottom:18px;display:block}
+.prob-card-label{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;opacity:.5}
+.prob-card h3{font-size:1.2rem;font-weight:900;margin-bottom:12px;color:var(--text)}
+.prob-card p{font-size:.93rem;color:var(--muted);line-height:1.7}
+@media(max-width:767px){.prob-cards{grid-template-columns:1fr;max-width:420px;margin-inline:auto}}
+/* VIDEO SECTION */
+#partners-video{background:#F8FAFF}
+.video-wrap{max-width:860px;margin-inline:auto;border-radius:24px;overflow:hidden;box-shadow:var(--sh-xl)}
+.video-wrap video{width:100%;display:block;background:#000}
 /* HOW IT WORKS */
 #partners-how{background:#F8FAFF}
 .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1060px;margin-inline:auto;position:relative}
@@ -373,24 +379,45 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
   </div>
 </div>
 
+<!-- ═══ PHOTOS ═══ -->
+<section id="partners-photos" style="background:#fff">
+<div class="container">
+  <div class="photos-grid6">
+    <div class="photo-item"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה בפני קהל גדול" loading="lazy"></picture></div>
+    <div class="photo-item"><img src="assets/uploads/2026/03/2-1.png" alt="סדנה בקבוצה קטנה" loading="lazy"></div>
+    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-בתוכנית-משוחררים.png" alt="הרצאה בתוכנית משוחררים" loading="lazy"></div>
+    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-למשוחררים.png" alt="הרצאה למשוחררים" loading="lazy"></div>
+    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-תוכנית-משוחררים.png" alt="תוכנית משוחררים" loading="lazy"></div>
+    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה.png" alt="הרצאה" loading="lazy"></div>
+  </div>
+</div>
+</section>
+
 <!-- ═══ PROBLEM ═══ -->
 <section id="partners-problem">
 <div class="container">
-  <div class="prob-grid">
-    <div class="prob-text">
-      <h2 class="sec-title">הבוגרים שלכם יוצאים מהצבא — ואז מה?</h2>
-      <p class="sec-sub">רוב הארגונים רוצים לתמוך בבוגריהם אחרי השחרור, אבל חסרים להם הכלים, הזמן והמשאבים לעשות את זה בצורה מקצועית ועקבית.</p>
-      <div class="prob-list">
-        <div class="prob-item"><span class="prob-ic">😕</span><span class="prob-txt">הבוגרים לא יודעים לאן לפנות ומרגישים אבודים בשוק העבודה</span></div>
-        <div class="prob-item"><span class="prob-ic">🕰️</span><span class="prob-txt">לרכזי הבוגרים אין זמן לתת ליווי אישי לכל אחד</span></div>
-        <div class="prob-item"><span class="prob-ic">📉</span><span class="prob-txt">ללא ליווי מסודר, הקשר עם הארגון נחלש מיד אחרי השחרור</span></div>
-        <div class="prob-item"><span class="prob-ic">💡</span><span class="prob-txt">אנחנו הפתרון — ליווי מקצועי, מלא ומדיד לכל בוגר שלכם</span></div>
-      </div>
+  <div class="sec-hd" style="text-align:center">
+    <h2 class="sec-title">הכאב האמיתי שאתם מכירים</h2>
+    <p class="sec-sub" style="margin-inline:auto">הבוגרים שלכם השקיעו הכל — אבל ברגע השחרור, רובם עומדים מול שאלה אחת גדולה: <strong>מה עכשיו?</strong></p>
+  </div>
+  <div class="prob-cards">
+    <div class="prob-card prob-card-1">
+      <span class="prob-card-emoji">😵‍💫</span>
+      <div class="prob-card-label">כאב 1</div>
+      <h3>בוגרים מבולבלים</h3>
+      <p>הם יצאו עם ניסיון, מוטיבציה וערכים — אבל בלי מפה. בלי מישהו שיגיד להם לאן לפנות, רובם הולכים לאיבוד בשלושת החודשים הראשונים</p>
     </div>
-    <div class="prob-visual">
-      <video controls playsinline preload="metadata">
-        <source src="assets/uploads/2026/03/סרטון-עמותות.mp4" type="video/mp4"/>
-      </video>
+    <div class="prob-card prob-card-2">
+      <span class="prob-card-emoji">⚙️</span>
+      <div class="prob-card-label">כאב 2</div>
+      <h3>אין מספיק משאבים</h3>
+      <p>אתם רוצים לתמוך בכולם — אבל לרכזים אין זמן, אין כלים ואין תקציב ללוות כל בוגר באופן אישי ועקבי</p>
+    </div>
+    <div class="prob-card prob-card-3">
+      <span class="prob-card-emoji">📡</span>
+      <div class="prob-card-label">כאב 3</div>
+      <h3>הקשר עם הבוגרים דועך</h3>
+      <p>ברגע שהארגון כבר לא המסגרת שלהם, הקשר נחלש. ההשקעה שלכם לאורך שנים — פשוט נעלמת</p>
     </div>
   </div>
 </div>
@@ -489,19 +516,17 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 </div>
 </section>
 
-<!-- ═══ PHOTOS ═══ -->
-<section id="partners-photos">
+<!-- ═══ VIDEO ═══ -->
+<section id="partners-video">
 <div class="container">
-  <div class="sec-hd" style="text-align:center;margin-bottom:36px">
-    <h2 class="sec-title">אנחנו בשטח</h2>
+  <div class="sec-hd" style="text-align:center">
+    <h2 class="sec-title">בשיתוף פעולה איתנו</h2>
+    <p class="sec-sub" style="margin-inline:auto">ראו איך זה נראה בפועל</p>
   </div>
-  <div class="photos-grid6">
-    <div class="photo-item"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה בפני קהל גדול" loading="lazy"></picture></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/2-1.png" alt="סדנה בקבוצה קטנה" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-בתוכנית-משוחררים.png" alt="הרצאה בתוכנית משוחררים" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-למשוחררים.png" alt="הרצאה למשוחררים" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-תוכנית-משוחררים.png" alt="תוכנית משוחררים" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה.png" alt="הרצאה" loading="lazy"></div>
+  <div class="video-wrap">
+    <video controls playsinline preload="metadata">
+      <source src="assets/uploads/2026/03/סרטון-עמותות.mp4" type="video/mp4"/>
+    </video>
   </div>
 </div>
 </section>
