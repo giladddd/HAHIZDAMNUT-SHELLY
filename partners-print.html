@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ההזדמנות שלי — שיתוף פעולה עם עמותות וארגונים</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;direction:rtl;background:#fff;color:#1A1A2E;font-size:11pt;line-height:1.5}
+
+/* A4 page */
+@page{size:A4 portrait;margin:0}
+.page{width:210mm;min-height:297mm;padding:0;margin:0 auto;overflow:hidden}
+
+/* HEADER */
+.header{background:linear-gradient(160deg,#0A1628 0%,#1A3A6B 100%);color:#fff;padding:28px 36px 24px;display:flex;justify-content:space-between;align-items:flex-start}
+.header-left h1{font-size:22pt;font-weight:900;line-height:1.15;margin-bottom:6px}
+.header-left h1 span{color:#4DAEF5}
+.header-left p{font-size:10pt;color:rgba(255,255,255,.65);margin-bottom:10px}
+.header-tags{display:flex;gap:8px;flex-wrap:wrap}
+.header-tag{background:rgba(77,174,245,.15);border:1px solid rgba(77,174,245,.35);color:#7EC8F5;font-size:8pt;font-weight:700;padding:3px 10px;border-radius:50px}
+.header-right{text-align:left;flex-shrink:0}
+.header-logo{font-size:15pt;font-weight:900;color:#fff;margin-bottom:6px}
+.header-contact{font-size:8.5pt;color:rgba(255,255,255,.6);line-height:1.7}
+.header-contact a{color:#4DAEF5;text-decoration:none}
+
+/* BODY */
+.body{padding:20px 36px 0}
+
+/* SECTION TITLE */
+.sec{margin-bottom:18px}
+.sec-title{font-size:13pt;font-weight:900;color:#1A1A2E;margin-bottom:4px;border-right:4px solid #1A56A0;padding-right:10px}
+.sec-sub{font-size:9pt;color:#64748B;margin-bottom:12px;padding-right:14px}
+
+/* CHALLENGE */
+.challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ch-card{border-radius:10px;padding:14px 14px 12px;text-align:center}
+.ch-1{background:#FEF2F2;border:1.5px solid #FECACA}
+.ch-2{background:#FFFBEB;border:1.5px solid #FDE68A}
+.ch-3{background:#EFF6FF;border:1.5px solid #BFDBFE}
+.ch-emoji{font-size:18pt;margin-bottom:6px;display:block}
+.ch-title{font-size:10pt;font-weight:900;margin-bottom:5px}
+.ch-body{font-size:8.5pt;color:#475569;line-height:1.5}
+
+/* SOLUTION */
+.sol-list{display:flex;flex-direction:column;gap:9px}
+.sol-item{border:1.5px solid #E2E8F0;border-radius:10px;padding:12px 16px;display:flex;gap:12px;align-items:flex-start}
+.sol-num{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;font-size:11pt;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sol-body{flex:1}
+.sol-body h3{font-size:10.5pt;font-weight:900;margin-bottom:4px}
+.sol-body p{font-size:8.5pt;color:#475569;line-height:1.5}
+.sol-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.sol-tag{background:#F0F4FF;border:1px solid #C7D7F5;color:#1A56A0;font-size:7.5pt;font-weight:700;padding:2px 8px;border-radius:50px}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.why-card{background:#F8FAFF;border:1px solid #E2E8F0;border-radius:10px;padding:12px 10px;text-align:center}
+.why-ic{font-size:15pt;margin-bottom:6px;display:block}
+.why-txt{font-size:8pt;font-weight:600;color:#334155;line-height:1.4}
+
+/* LOGOS */
+.logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.logo-box{background:#F8FAFF;border:1px solid #E2E8F0;border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;height:46px}
+.logo-box img{max-width:80px;max-height:30px;object-fit:contain}
+
+/* DIVIDER */
+.divider{height:1px;background:#E2E8F0;margin:16px 0}
+
+/* FOOTER */
+.footer{background:#0A1628;color:rgba(255,255,255,.7);padding:14px 36px;display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.footer-brand{font-size:12pt;font-weight:900;color:#fff}
+.footer-tagline{font-size:8pt;color:rgba(255,255,255,.5);margin-top:2px}
+.footer-cta{text-align:left}
+.footer-cta p{font-size:8.5pt;color:rgba(255,255,255,.6);margin-bottom:4px}
+.footer-cta a{background:linear-gradient(135deg,#1A56A0,#2066C0);color:#fff;font-size:9pt;font-weight:700;padding:7px 18px;border-radius:8px;text-decoration:none;display:inline-block}
+
+@media print{
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:100%;margin:0}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>הבוגרים שלכם נתנו הכל —<br><span>הגיע הזמן לתת להם בחזרה</span></h1>
+      <p>מלווים את הבוגרים שלכם להגשמה באזרחות</p>
+      <div class="header-tags">
+        <span class="header-tag">💼 תעסוקתי</span>
+        <span class="header-tag">💰 כלכלי</span>
+        <span class="header-tag">🌱 אישי</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-logo">ההזדמנות שלי</div>
+      <div class="header-contact">
+        המנטור שלך לחיים שאחרי הצבא<br>
+        <a href="https://hahizdamnut-shelly.com">hahizdamnut-shelly.com</a><br>
+        לשיתוף פעולה: <a href="https://hahizdamnut-shelly.com/partners.html">פרטים נוספים</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- CHALLENGE -->
+    <div class="sec">
+      <div class="sec-title">האתגר</div>
+      <div class="sec-sub">הבוגרים שלכם השקיעו הכל — אבל ברגע השחרור, רובם עומדים מול שאלה אחת גדולה: מה עכשיו?</div>
+      <div class="challenge-grid">
+        <div class="ch-card ch-1">
+          <span class="ch-emoji">😵‍💫</span>
+          <div class="ch-title">בוגרים</div>
+          <div class="ch-body">יוצאים מהתקופה המאתגרת מבולבלים, בלי יד מכוונת ומי שילווה אותם בתהליך</div>
+        </div>
+        <div class="ch-card ch-2">
+          <span class="ch-emoji">⚙️</span>
+          <div class="ch-title">משאבים</div>
+          <div class="ch-body">לרכזים אין זמן, כלים ותקציב ללוות כל בוגר באופן אישי ועקבי</div>
+        </div>
+        <div class="ch-card ch-3">
+          <span class="ch-emoji">📡</span>
+          <div class="ch-title">קהילה</div>
+          <div class="ch-body">הארגון תופס פחות חלק בהתפתחות הבוגרים אחרי הצבא — והקשר דועך</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SOLUTION -->
+    <div class="sec">
+      <div class="sec-title">הפתרון שלנו</div>
+      <div class="sec-sub">שלושה רבדים שעובדים יחד — כדי שכל בוגר ירגיש שיש לו מעטפת אמיתית</div>
+      <div class="sol-list">
+        <div class="sol-item">
+          <div class="sol-num">1</div>
+          <div class="sol-body">
+            <h3>סדנה ייחודית למשוחררים שלכם</h3>
+            <p>סדנה מעשית ומעמיקה דרך אפליקציה לניהול אישי. נעבור על שלושת התחומים — תעסוקתי, כלכלי ואישי. כל משתתף יוצא עם חזון ומפת דרכים אישית ומחובר לארגונים שיכולים לעזור לו בדרך.</p>
+            <div class="sol-tags">
+              <span class="sol-tag">💼 תעסוקה</span>
+              <span class="sol-tag">💰 כלכלה</span>
+              <span class="sol-tag">🌱 פיתוח אישי</span>
+              <span class="sol-tag">🗺️ מפת דרכים</span>
+            </div>
+          </div>
+        </div>
+        <div class="sol-item">
+          <div class="sol-num">2</div>
+          <div class="sol-body">
+            <h3>הזדמנויות ישר לוואטסאפ</h3>
+            <p>נצטרף לקבוצת הווטסאפ הקיימת שלכם או נקים קבוצה ייעודית. כל ההזדמנויות הכי שוות — עבודות, מלגות, קורסים ואירועים — מגיעות ישר לטלפון בלי שהבוגר צריך לחפש.</p>
+            <div class="sol-tags">
+              <span class="sol-tag">📲 עדכונים שוטפים</span>
+              <span class="sol-tag">🔍 מיון ואיכות</span>
+              <span class="sol-tag">⚡ בזמן אמת</span>
+            </div>
+          </div>
+        </div>
+        <div class="sol-item">
+          <div class="sol-num">3</div>
+          <div class="sol-body">
+            <h3>ליווי לטווח ארוך — למשוחרר וגם לרכז</h3>
+            <p>כל בוגר ממשיך להיות מלווה דרך האפליקציה — מרגיש שנותנים לו מעטפת גם חודשים אחרי השחרור. רכז הבוגרים מקבל תמונת מצב ברורה ויכול לכוון כל אחד בצורה טובה יותר.</p>
+            <div class="sol-tags">
+              <span class="sol-tag">📱 אפליקציה לכל בוגר</span>
+              <span class="sol-tag">📊 דשבורד לרכז</span>
+              <span class="sol-tag">🤝 קשר מתמשך</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- WHY -->
+    <div class="sec">
+      <div class="sec-title">למה לעשות את זה איתנו?</div>
+      <div class="why-grid">
+        <div class="why-card"><span class="why-ic">💡</span><p class="why-txt">לא צריך לגייס כוח אדם או להוציא עשרות אלפי שקלים</p></div>
+        <div class="why-card"><span class="why-ic">🎯</span><p class="why-txt">אף בוגר לא הולך לאיבוד — כולם מקבלים ליווי</p></div>
+        <div class="why-card"><span class="why-ic">📊</span><p class="why-txt">מעקב אחרי התקדמות הבוגרים — תדעו שהם זזים קדימה</p></div>
+        <div class="why-card"><span class="why-ic">🤗</span><p class="why-txt">הבוגרים מרגישים שהעמותה עוטפת ודואגת להם בכל רגע</p></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- LOGOS -->
+    <div class="sec">
+      <div class="sec-title">כבר עובדים איתנו</div>
+      <div class="logos-grid">
+        <div class="logo-box"><img src="assets/uploads/2025/04/1.png" alt="PROPERTEAM"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/2.png" alt="FRONTLIFE"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/3.png" alt="הישגים"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/4.png" alt="גב ללוחם"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/5.png" alt="עמית לדרך"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/6.png" alt="תופסים כיוון"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/7.png" alt="IGOLD"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/8.png" alt="לוחמים להייטק"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/9.png" alt="קרן השועל"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/10.png" alt="דרך ארץ"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/11.png" alt="ONEDAY"></div>
+        <div class="logo-box"><img src="assets/uploads/2025/04/12.png" alt="SMART START"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="footer-brand">ההזדמנות שלי</div>
+      <div class="footer-tagline">המנטור שלך לחיים שאחרי הצבא</div>
+    </div>
+    <div class="footer-cta">
+      <p>מוכנים לדבר? קבעו שיחת היכרות ללא עלות</p>
+      <a href="https://hahizdamnut-shelly.com/partners.html#partners-contact">קבעו שיחת היכרות ←</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
