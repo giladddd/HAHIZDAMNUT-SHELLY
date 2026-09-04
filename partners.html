@@ -333,21 +333,44 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 .why4-txt{font-size:.97rem;font-weight:600;color:var(--text);line-height:1.5}
 @media(max-width:1023px){.why-grid4{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.why-grid4{grid-template-columns:1fr;max-width:380px;margin-inline:auto}}
-/* LOGOS */
-#partners-logos{background:#fff}
-.logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:52px}
-.logo-box{background:#F8FAFF;border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;align-items:center;justify-content:center;min-height:86px;transition:box-shadow var(--tr),transform var(--tr)}
-.logo-box:hover{box-shadow:var(--sh-md);transform:translateY(-3px)}
-.logo-box img{max-width:110px;max-height:56px;object-fit:contain}
-@media(max-width:1023px){.logos-grid{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:600px){.logos-grid{grid-template-columns:repeat(3,1fr)}}
-/* PHOTOS */
+/* PHOTOS SLIDER */
 #partners-photos{background:#F8FAFF}
-.photos-grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.photos-grid6 .photo-item{border-radius:16px;overflow:hidden;box-shadow:var(--sh-md)}
-.photos-grid6 .photo-item img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .4s ease}
-.photos-grid6 .photo-item:hover img{transform:scale(1.04)}
-@media(max-width:767px){.photos-grid6{grid-template-columns:1fr 1fr;max-width:500px;margin-inline:auto}}
+.photo-slider{position:relative;overflow:hidden;border-radius:20px;box-shadow:var(--sh-xl)}
+.photo-slides{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.photo-slide{flex:0 0 100%;position:relative}
+.photo-slide img{width:100%;height:480px;object-fit:cover;display:block}
+@media(max-width:767px){.photo-slide img{height:280px}}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);border:none;border-radius:50%;width:44px;height:44px;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-md);z-index:2;transition:background .2s}
+.slider-btn:hover{background:#fff}
+.slider-btn.prev{right:14px}.slider-btn.next{left:14px}
+.slider-dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.slider-dot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:background .2s,transform .2s}
+.slider-dot.active{background:var(--primary);transform:scale(1.3)}
+/* PROBLEM TABS */
+#partners-problem{background:#fff}
+.prob-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+.prob-tab{padding:10px 28px;border-radius:50px;border:2px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;color:var(--muted)}
+.prob-tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(26,86,160,.25)}
+.prob-panels{position:relative;max-width:720px;margin-inline:auto}
+.prob-panel{display:none;animation:fadeIn .35s ease}
+.prob-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.prob-card{border-radius:24px;padding:48px 44px;text-align:center}
+.prob-card-1{background:linear-gradient(145deg,#FFF5F5,#FEE2E2);border:2px solid #FECACA}
+.prob-card-2{background:linear-gradient(145deg,#FFFBEB,#FEF3C7);border:2px solid #FDE68A}
+.prob-card-3{background:linear-gradient(145deg,#EFF6FF,#DBEAFE);border:2px solid #BFDBFE}
+.prob-card-emoji{font-size:3.2rem;margin-bottom:20px;display:block}
+.prob-card h3{font-size:1.5rem;font-weight:900;margin-bottom:14px;color:var(--text)}
+.prob-card p{font-size:1rem;color:var(--muted);line-height:1.8;max-width:560px;margin-inline:auto}
+@media(max-width:600px){.prob-card{padding:32px 24px}.prob-tab{padding:8px 18px;font-size:.85rem}}
+/* LOGOS SLIDER */
+#partners-logos{background:#F8FAFF}
+.logo-slider-wrap{overflow:hidden}
+.logo-track{display:flex;gap:16px;animation:logoScroll 22s linear infinite}
+.logo-track:hover{animation-play-state:paused}
+.logo-item{flex:0 0 160px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:center;min-height:86px}
+.logo-item img{max-width:110px;max-height:52px;object-fit:contain}
+@keyframes logoScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 /* CONTACT */
 #partners-contact{background:var(--hero-bg);position:relative;overflow:hidden}
 .contact-glow{position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(77,174,245,.08) 0%,transparent 70%);pointer-events:none}
@@ -390,49 +413,79 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
   </div>
 </div>
 
-<!-- ═══ PHOTOS ═══ -->
-<section id="partners-photos" style="background:#fff">
+<!-- ═══ PHOTOS SLIDER ═══ -->
+<section id="partners-photos">
 <div class="container">
-  <div class="photos-grid6">
-    <div class="photo-item"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה בפני קהל גדול" loading="lazy"></picture></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/2-1.png" alt="סדנה בקבוצה קטנה" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-בתוכנית-משוחררים.png" alt="הרצאה בתוכנית משוחררים" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-למשוחררים.png" alt="הרצאה למשוחררים" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-תוכנית-משוחררים.png" alt="תוכנית משוחררים" loading="lazy"></div>
-    <div class="photo-item"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה.png" alt="הרצאה" loading="lazy"></div>
+  <div class="photo-slider" id="photoSlider">
+    <div class="photo-slides" id="photoSlides">
+      <div class="photo-slide"><picture><source srcset="images/lecture-03.webp" type="image/webp"/><img src="images/lecture-03.jpeg" alt="הרצאה בפני קהל גדול"></picture></div>
+      <div class="photo-slide"><img src="assets/uploads/2026/03/2-1.png" alt="סדנה בקבוצה קטנה"></div>
+      <div class="photo-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-בתוכנית-משוחררים.png" alt="הרצאה בתוכנית משוחררים"></div>
+      <div class="photo-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה-למשוחררים.png" alt="הרצאה למשוחררים"></div>
+      <div class="photo-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-תוכנית-משוחררים.png" alt="תוכנית משוחררים"></div>
+      <div class="photo-slide"><img src="assets/uploads/2026/03/ההזדמנות-שלי-הרצאה.png" alt="הרצאה"></div>
+    </div>
+    <button class="slider-btn prev" onclick="photoSlide(-1)">‹</button>
+    <button class="slider-btn next" onclick="photoSlide(1)">›</button>
   </div>
+  <div class="slider-dots" id="photoDots"></div>
 </div>
 </section>
+<script>
+(function(){
+  var cur=0,total=6;
+  var slides=document.getElementById('photoSlides');
+  var dotsEl=document.getElementById('photoDots');
+  for(var i=0;i<total;i++){var d=document.createElement('div');d.className='slider-dot'+(i===0?' active':'');d.dataset.i=i;d.onclick=function(){goTo(+this.dataset.i)};dotsEl.appendChild(d);}
+  function goTo(n){cur=(n+total)%total;slides.style.transform='translateX('+cur*100+'%)';dotsEl.querySelectorAll('.slider-dot').forEach(function(d,i){d.classList.toggle('active',i===cur)});}
+  window.photoSlide=function(dir){goTo(cur+dir)};
+  setInterval(function(){goTo(cur+1)},4000);
+})();
+</script>
 
-<!-- ═══ PROBLEM ═══ -->
+<!-- ═══ PROBLEM TABS ═══ -->
 <section id="partners-problem">
 <div class="container">
   <div class="sec-hd" style="text-align:center">
     <h2 class="sec-title">הכאב האמיתי שאתם מכירים</h2>
     <p class="sec-sub" style="margin-inline:auto">הבוגרים שלכם השקיעו הכל — אבל ברגע השחרור, רובם עומדים מול שאלה אחת גדולה: <strong>מה עכשיו?</strong></p>
   </div>
-  <div class="prob-cards">
-    <div class="prob-card prob-card-1">
-      <span class="prob-card-emoji">😵‍💫</span>
-      <div class="prob-card-label">כאב 1</div>
-      <h3>בוגרים מבולבלים</h3>
-      <p>הם יצאו עם ניסיון, מוטיבציה וערכים — אבל בלי מפה. בלי מישהו שיגיד להם לאן לפנות, רובם הולכים לאיבוד בשלושת החודשים הראשונים</p>
+  <div class="prob-tabs">
+    <button class="prob-tab active" onclick="showProb(0)">1 — בוגרים מבולבלים</button>
+    <button class="prob-tab" onclick="showProb(1)">2 — אין מספיק משאבים</button>
+    <button class="prob-tab" onclick="showProb(2)">3 — הקשר דועך</button>
+  </div>
+  <div class="prob-panels">
+    <div class="prob-panel active">
+      <div class="prob-card prob-card-1">
+        <span class="prob-card-emoji">😵‍💫</span>
+        <h3>בוגרים מבולבלים</h3>
+        <p>הם יצאו עם ניסיון, מוטיבציה וערכים — אבל בלי מפה. בלי מישהו שיגיד להם לאן לפנות, רובם הולכים לאיבוד בשלושת החודשים הראשונים</p>
+      </div>
     </div>
-    <div class="prob-card prob-card-2">
-      <span class="prob-card-emoji">⚙️</span>
-      <div class="prob-card-label">כאב 2</div>
-      <h3>אין מספיק משאבים</h3>
-      <p>אתם רוצים לתמוך בכולם — אבל לרכזים אין זמן, אין כלים ואין תקציב ללוות כל בוגר באופן אישי ועקבי</p>
+    <div class="prob-panel">
+      <div class="prob-card prob-card-2">
+        <span class="prob-card-emoji">⚙️</span>
+        <h3>אין מספיק משאבים</h3>
+        <p>אתם רוצים לתמוך בכולם — אבל לרכזים אין זמן, אין כלים ואין תקציב ללוות כל בוגר באופן אישי ועקבי</p>
+      </div>
     </div>
-    <div class="prob-card prob-card-3">
-      <span class="prob-card-emoji">📡</span>
-      <div class="prob-card-label">כאב 3</div>
-      <h3>הקשר עם הבוגרים דועך</h3>
-      <p>ברגע שהארגון כבר לא המסגרת שלהם, הקשר נחלש. ההשקעה שלכם לאורך שנים — פשוט נעלמת</p>
+    <div class="prob-panel">
+      <div class="prob-card prob-card-3">
+        <span class="prob-card-emoji">📡</span>
+        <h3>הקשר עם הבוגרים דועך</h3>
+        <p>ברגע שהארגון כבר לא המסגרת שלהם, הקשר נחלש. ההשקעה שלכם לאורך שנים — פשוט נעלמת</p>
+      </div>
     </div>
   </div>
 </div>
 </section>
+<script>
+function showProb(n){
+  document.querySelectorAll('.prob-tab').forEach(function(t,i){t.classList.toggle('active',i===n)});
+  document.querySelectorAll('.prob-panel').forEach(function(p,i){p.classList.toggle('active',i===n)});
+}
+</script>
 
 <!-- ═══ SOLUTION ═══ -->
 <section id="partners-services" style="background:#fff">
@@ -511,26 +564,41 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 </div>
 </section>
 
-<!-- ═══ LOGOS ═══ -->
+<!-- ═══ LOGOS SCROLL ═══ -->
 <section id="partners-logos">
 <div class="container">
   <div class="sec-hd" style="text-align:center">
     <h2 class="sec-title">כבר עובדים איתנו</h2>
     <p class="sec-sub" style="margin-inline:auto">ארגונים ועמותות שכבר נותנים לבוגריהם את הליווי שהם מגיעים לו</p>
   </div>
-  <div class="logos-grid">
-    <div class="logo-box"><img src="assets/uploads/2025/04/1.png" alt="PROPERTEAM"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/2.png" alt="FRONTLIFE"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/3.png" alt="הישגים"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/4.png" alt="גב ללוחם"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/5.png" alt="עמית לדרך"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/6.png" alt="תופסים כיוון"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/7.png" alt="IGOLD"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/8.png" alt="לוחמים להייטק"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/9.png" alt="קרן השועל"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/10.png" alt="דרך ארץ"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/11.png" alt="ONEDAY"></div>
-    <div class="logo-box"><img src="assets/uploads/2025/04/12.png" alt="SMART START"></div>
+</div>
+<div class="logo-slider-wrap">
+  <div class="logo-track">
+    <div class="logo-item"><img src="assets/uploads/2025/04/1.png" alt="PROPERTEAM"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/2.png" alt="FRONTLIFE"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/3.png" alt="הישגים"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/4.png" alt="גב ללוחם"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/5.png" alt="עמית לדרך"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/6.png" alt="תופסים כיוון"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/7.png" alt="IGOLD"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/8.png" alt="לוחמים להייטק"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/9.png" alt="קרן השועל"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/10.png" alt="דרך ארץ"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/11.png" alt="ONEDAY"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/12.png" alt="SMART START"></div>
+    <!-- duplicate for seamless loop -->
+    <div class="logo-item"><img src="assets/uploads/2025/04/1.png" alt="PROPERTEAM"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/2.png" alt="FRONTLIFE"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/3.png" alt="הישגים"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/4.png" alt="גב ללוחם"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/5.png" alt="עמית לדרך"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/6.png" alt="תופסים כיוון"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/7.png" alt="IGOLD"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/8.png" alt="לוחמים להייטק"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/9.png" alt="קרן השועל"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/10.png" alt="דרך ארץ"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/11.png" alt="ONEDAY"></div>
+    <div class="logo-item"><img src="assets/uploads/2025/04/12.png" alt="SMART START"></div>
   </div>
 </div>
 </section>
@@ -542,8 +610,8 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
     <h2 class="sec-title">בשיתוף פעולה איתנו</h2>
     <p class="sec-sub" style="margin-inline:auto">ראו איך זה נראה בפועל</p>
   </div>
-  <div class="video-wrap">
-    <video controls playsinline preload="metadata">
+  <div style="max-width:560px;margin-inline:auto;border-radius:18px;overflow:hidden;box-shadow:var(--sh-xl)">
+    <video controls playsinline preload="metadata" style="width:100%;display:block;background:#000">
       <source src="assets/uploads/2026/03/סרטון-עמותות.mp4" type="video/mp4"/>
     </video>
   </div>
