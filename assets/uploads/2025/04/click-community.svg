@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#8b2fc9"/>
+  <!-- Sparkle star top right -->
+  <text x="162" y="55" font-family="'Arial',sans-serif" font-size="22" fill="#ffdd00" text-anchor="middle">✦</text>
+  <!-- Click text in bubble style -->
+  <text x="100" y="110" font-family="'Arial Rounded MT Bold','Arial',sans-serif" font-size="56" font-weight="900" fill="#ffffff" text-anchor="middle" stroke="#cc44ff" stroke-width="3" paint-order="stroke">Click</text>
+  <!-- Subtitle -->
+  <rect x="20" y="128" width="160" height="26" rx="13" fill="#ffffff" opacity="0.2"/>
+  <text x="100" y="146" font-family="'Arial',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">with your people</text>
+</svg>

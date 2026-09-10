@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <rect width="200" height="220" fill="#f0f4e8"/>
+  <!-- Circle background -->
+  <circle cx="100" cy="90" r="72" fill="#87ceeb"/>
+  <!-- Green fields at bottom of circle -->
+  <ellipse cx="100" cy="148" rx="72" ry="20" fill="#4a8c2a"/>
+  <rect x="28" y="130" width="144" height="18" fill="#4a8c2a"/>
+  <!-- Field stripes -->
+  <ellipse cx="100" cy="142" rx="60" ry="8" fill="#5aa832"/>
+  <ellipse cx="100" cy="150" rx="50" ry="6" fill="#3d7a20"/>
+  <!-- Person figure with arms raised -->
+  <circle cx="100" cy="72" r="12" fill="#1a6fa8"/>
+  <!-- Body -->
+  <path d="M92 84 L88 120 L100 116 L112 120 L108 84 Z" fill="#1a6fa8"/>
+  <!-- Arms raised -->
+  <path d="M92 90 Q75 75 68 65" stroke="#1a6fa8" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M108 90 Q125 75 132 65" stroke="#1a6fa8" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Star/leaf decorations on hands -->
+  <circle cx="68" cy="65" r="6" fill="#f0c030"/>
+  <circle cx="132" cy="65" r="6" fill="#f0c030"/>
+  <!-- תלמים text -->
+  <text x="100" y="178" font-family="'Arial','Helvetica',sans-serif" font-size="32" font-weight="900" fill="#2d5a1a" text-anchor="middle">תלמים</text>
+  <text x="100" y="202" font-family="'Arial','Helvetica',sans-serif" font-size="14" font-weight="600" fill="#4a8c2a" text-anchor="middle">משירות להעצמה</text>
+</svg>

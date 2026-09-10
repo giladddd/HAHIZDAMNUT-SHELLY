@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <rect width="320" height="80" rx="8" fill="#0a1628"/>
+  <!-- Yellow icon box -->
+  <rect x="12" y="12" width="56" height="56" rx="10" fill="#f5e700"/>
+  <!-- "b" letter in dark -->
+  <text x="40" y="54" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#0a1628" text-anchor="middle">b</text>
+  <!-- Star sparkle -->
+  <text x="57" y="26" font-family="Arial" font-size="14" fill="#0a1628">✦</text>
+  <!-- bits of gold text -->
+  <text x="82" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" dominant-baseline="middle">bits of gold</text>
+</svg>

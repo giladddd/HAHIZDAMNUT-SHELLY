@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0d0d2b"/>
+  <!-- Blue "i" letter -->
+  <text x="72" y="148" font-family="'Georgia','Times New Roman',serif" font-size="130" font-weight="900" fill="#6b7fd4" text-anchor="middle">i</text>
+  <!-- Pink "n" letter -->
+  <text x="138" y="148" font-family="'Georgia','Times New Roman',serif" font-size="130" font-weight="900" fill="#e8456a" text-anchor="middle">n</text>
+  <!-- Blue dot on i -->
+  <circle cx="60" cy="42" r="13" fill="#6b7fd4"/>
+  <!-- Pink dot accent -->
+  <circle cx="118" cy="38" r="13" fill="#e8456a"/>
+</svg>

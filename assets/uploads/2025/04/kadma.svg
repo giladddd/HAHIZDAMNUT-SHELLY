@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 110" width="280" height="110">
+  <rect width="280" height="110" fill="#f5f0e8"/>
+  <!-- Circle with soldiers silhouette -->
+  <circle cx="230" cy="55" r="42" fill="#e8a840"/>
+  <!-- Two soldier silhouettes -->
+  <ellipse cx="220" cy="38" rx="7" ry="7" fill="#1a2a6e"/>
+  <path d="M213 45 Q213 68 213 72 Q220 70 220 72 Q220 70 227 72 Q227 68 227 45 Q220 43 213 45Z" fill="#1a2a6e"/>
+  <ellipse cx="240" cy="40" rx="6" ry="6" fill="#1a2a6e"/>
+  <path d="M234 46 Q234 68 234 72 Q240 70 240 72 Q240 70 246 72 Q246 68 246 46 Q240 44 234 46Z" fill="#1a2a6e"/>
+  <!-- Hat on left soldier -->
+  <ellipse cx="220" cy="31" rx="9" ry="3" fill="#1a2a6e"/>
+  <rect x="218" y="28" width="4" height="5" fill="#1a2a6e"/>
+  <!-- Hat on right soldier -->
+  <ellipse cx="240" cy="34" rx="8" ry="2.5" fill="#1a2a6e"/>
+  <rect x="238" y="31" width="4" height="5" fill="#1a2a6e"/>
+  <!-- קדמה text -->
+  <text x="20" y="52" font-family="'Arial','Helvetica',sans-serif" font-size="42" font-weight="900" fill="#1a2a6e" direction="rtl" text-anchor="start">קדמה</text>
+  <!-- subtitle -->
+  <text x="20" y="76" font-family="'Arial','Helvetica',sans-serif" font-size="16" font-weight="600" fill="#1a2a6e" direction="rtl" text-anchor="start">התיישבות צעירים</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#111111"/>
+  <text x="100" y="62" font-family="'Arial',sans-serif" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">RUN</text>
+  <text x="100" y="92" font-family="'Arial',sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">FOR</text>
+  <text x="100" y="122" font-family="'Arial',sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="0">STARTUPS</text>
+  <text x="100" y="155" font-family="'Arial',sans-serif" font-size="10" font-weight="700" fill="#aaff00" text-anchor="middle" letter-spacing="2">MEET. RUN. CONNECT</text>
+</svg>

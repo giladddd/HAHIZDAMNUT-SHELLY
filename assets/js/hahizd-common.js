@@ -375,13 +375,10 @@
     var overlay = document.getElementById('authOverlay');
     if (!overlay) return;
 
-    // If fresh session exists — grant immediately, no UI flicker
-    var session = getSession();
-    if (session && Date.now() - session.ts < SESSION_REVERIFY_MS) {
-      grantAuthAccess(session.name, session.phone);
-      renderNavUser();
-      return;
-    }
+    // Open access — grant immediately for all visitors
+    grantAuthAccess('guest', '');
+    renderNavUser();
+    return;
 
     renderNavUser();
     injectAuthCloseBtn();

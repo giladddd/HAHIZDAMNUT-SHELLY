@@ -109,6 +109,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 /* ── Card ── */
 .card{background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04);overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(15,23,42,.06);transition:transform .22s ease,box-shadow .22s ease}
 .card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(15,23,42,.13)}
+.card-no-link{cursor:default}
+.card-no-link:hover{transform:none;box-shadow:0 2px 12px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04)}
 .card-img-wrap{height:200px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,var(--cat-dk),var(--cat))}
 .card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
 .card:hover .card-img{transform:scale(1.05)}
@@ -325,31 +327,35 @@ var DATA = [
   {
     id:'youth', label:'תוכניות צעירים', icon:'🌟',
     cards:[
-      {title:'המיניבוס',badge:'12 ימים',desc:'תוכנית קצרה ומרוכזת בת 12 יום לצעירים מעולים — מנהיגות, עשייה משמעותית ופיתוח אישי עמוק.',tags:['12 ימים','מנהיגות','צעירים'],link:'https://docs.google.com/forms/d/e/1FAIpQLSc2RhAH8Y6Xe7qcwb2HqbFmASSHX8auQrlAde9xCCvFKukqrg/closedform',img:'assets/uploads/2025/04/מיניבוס.png',icon:'🚌',cats:['מנהיגות']},
-      {title:'פרונט לייף',badge:'לוחמים',desc:'בית עבור כל הלוחמים והלוחמות במילואים — קהילה חזקה, קורסים מסובסדים, הזדמנויות ותמיכה.',tags:['לוחמים','קהילה','קורסים'],link:'https://www.frontlife.org.il/',img:'assets/uploads/2025/04/פרונטלייף.png',icon:'⚡',cats:['קהילה']},
-      {title:'בית הספר לקוסמים',badge:'3 חודשים',desc:'קבוצה קטנה ומובחרת עוברת מסע של שלושה חודשים שיחולל שינוי אמיתי — חשיבה, יצירה, עשייה.',tags:['3 חודשים','שינוי','נבחרת'],link:'https://www.mehina.net/%D7%91%D7%99%D7%AA-%D7%A1%D7%A4%D7%A8-%D7%9C%D7%A7%D7%95%D7%A1%D7%9E%D7%99%D7%9D',img:'assets/uploads/2025/04/בית-הספר-לקוסמים.png',icon:'✨',cats:['מנהיגות']},
+      {title:'המיניבוס',badge:'12 ימים',desc:'תוכנית קצרה ומרוכזת בת 12 יום לצעירים מעולים — מנהיגות, עשייה משמעותית ופיתוח אישי עמוק.',tags:['12 ימים','מנהיגות','צעירים'],link:'https://mini-bus.org/',img:'assets/uploads/2025/04/מיניבוס.png',icon:'🚌',cats:['מנהיגות']},
+      {title:'פרונט לייף',badge:'לוחמים',desc:'בית עבור כל הלוחמים והלוחמות במילואים — קהילה חזקה, קורסים מסובסדים, הזדמנויות ותמיכה.',tags:['לוחמים','קהילה','קורסים'],link:'https://www.frontlife.org.il/landingpage',img:'assets/uploads/2025/04/פרונטלייף.png',icon:'⚡',cats:['קהילה']},
+      {title:'בית הספר לקוסמים',badge:'3 חודשים',desc:'קבוצה קטנה ומובחרת עוברת מסע של שלושה חודשים שיחולל שינוי אמיתי — חשיבה, יצירה, עשייה.',tags:['3 חודשים','שינוי','נבחרת'],link:'https://mehina.net/the-magicians/',img:'assets/uploads/2025/04/בית-הספר-לקוסמים.png',icon:'✨',cats:['מנהיגות']},
       {title:'TLI',badge:'24-35',desc:'תכנית יוקרתית למנהלים צעירים גילאי 24-35 — פיתוח מנהיגות, ניהול ויכולות אסטרטגיות.',tags:['מנהיגות','ניהול','24-35'],link:'https://tli-il.com/advance/',img:'assets/uploads/2025/04/טי-אל-אי.png',icon:'🏆',cats:['מנהיגות']},
       {title:'הופמן קופמן',badge:'מנהיגות',desc:'תוכניות מובילות בישראל לידרשיפ וניהול — שיטות מוכחות, מרצים מובילים, קהילה חזקה.',tags:['מנהיגות','ניהול','ישראל'],link:'https://www.hoffmankofman.com/pay-it-forward',img:'assets/uploads/2025/04/הופמן-קופמן.png',icon:'👑',cats:['מנהיגות']},
       {title:'תוכנית זריחה',badge:'שחרור',desc:'מסע חוויתי לעיבוד חוויית השחרור לפני הכניסה לריצה של החיים — עצירה, חשיבה, כיוון.',tags:['שחרור','עיבוד','כיוון'],link:'https://kulna.org.il/%d7%aa%d7%95%d7%9b%d7%a0%d7%99%d7%aa-%d7%96%d7%a8%d7%99%d7%97%d7%94/',img:'assets/uploads/2025/04/זריחה.png',icon:'🌅',cats:['שחרור']},
       {title:'דרומה',badge:'גילוי עצמי',desc:'פגוש את עצמך בנקודה משמעותית בחיים — מסע לגילוי עצמי ולקבלת החלטות שישנו את כיוון החיים.',tags:['גילוי עצמי','כיוון','החלטות'],link:'https://www.magal-negev-israel.org/%D7%93%D7%A8%D7%95%D7%9E%D7%94',img:'assets/uploads/2025/04/דרומה.png',icon:'🌵',cats:['גילוי עצמי','שחרור']},
-      {title:'מסע אל האופק',badge:'עצמאות',desc:'תוכנית המסייעת למשוחררים להגיע לעצמאות כלכלית ולהשתלבות חברתית — מסע מקיף לחיים טובים.',tags:['עצמאות','כלכלי','שילוב'],link:'personal.html#programs',img:'assets/uploads/2025/04/מסע-אל-האופק.png',icon:'🌄',cats:['שחרור']},
+      {title:'מסע אל האופק',badge:'עצמאות',desc:'תוכנית המסייעת למשוחררים להגיע לעצמאות כלכלית ולהשתלבות חברתית — מסע מקיף לחיים טובים.',tags:['עצמאות','כלכלי','שילוב'],link:'https://www.masaelhaofek.org/',img:'assets/uploads/2025/04/מסע-אל-האופק.png',icon:'🌄',cats:['שחרור']},
       {title:'הישיבה החילונית',badge:'לימוד',desc:'תוכנית לימוד ייחודית המשלבת תרבות יהודית, עברית ומחשבה — לצעירים שרוצים ללמוד את שורשיהם.',tags:['לימוד','תרבות','יהדות'],link:'https://jsy.org.il/',img:'assets/uploads/2025/04/הישיבה-החילונית.png',icon:'📖',cats:['גילוי עצמי']},
-      {title:'סדנת משתחררים — נומרה',badge:'10 ימים',desc:'עשרה ימי סדנה מלאי תוכן וחוויות בלב הטבע בגליל — תוכנית מיוחדת למשוחררים בתחילת דרכם.',tags:['סדנה','טבע','משוחררים'],link:'https://www.facebook.com/havat.namura/',img:'assets/uploads/2025/04/נמורה.png',icon:'🌿',cats:['שחרור']},
+      {title:'סדנת משתחררים — נומרה',badge:'10 ימים',desc:'עשרה ימי סדנה מלאי תוכן וחוויות בלב הטבע בגליל — תוכנית מיוחדת למשוחררים בתחילת דרכם.',tags:['סדנה','טבע','משוחררים'],link:'https://www.facebook.com/namura.farm/',img:'assets/uploads/2025/04/נמורה.png',icon:'🌿',cats:['שחרור']},
       {title:'מסעות תגלית',badge:'תגלית',desc:'מסע ייחודי בישראל המחבר בין קהילות יהודיות מכל העולם — תוכנית חינמית עם הרשמה מוקדמת.',tags:['מסע','קהילה','בינלאומי'],link:'https://application.taglitisrael.co.il/login?origin=EducationalInstitution&unit=361&product=BRI',img:'assets/uploads/2025/04/הזדמנויות-צעירים-IL-1.png',icon:'🌍',cats:['בינלאומי','קהילה']},
       {title:'ישראל 2050',badge:'שינוי חברתי',desc:'תנועה המחזקת את המעורבות האזרחית של צעירים ועיצוב עתיד ישראל — שיח, השפעה ושינוי אמיתי.',tags:['אזרחות','שינוי','עתיד'],link:'https://israel2050.co.il/',img:'assets/uploads/2025/04/ישראל-2050.png',icon:'🇮🇱',cats:['קהילה']},
       {title:'LINK 20',badge:'מנהיגות',desc:'רשת צעירים עם ובלי מוגבלויות לקידום שוויון, גיוון וזכויות — תוכניות מנהיגות בחסות רוטשילד.',tags:['מנהיגות','שוויון','גיוון'],link:'https://link20.org/%d7%aa%d7%95%d7%9b%d7%a0%d7%99%d7%95%d7%aa-%d7%9e%d7%a0%d7%94%d7%99%d7%92%d7%95%d7%aa/',img:'https://link20.org/wp-content/uploads/2024/04/site-logo.png',icon:'🔗',cats:['מנהיגות','קהילה']},
       {title:'אלול מן המזרח',badge:'זהות',desc:'תוכנית המביאה את המסר הייחודי של יהדות המזרח לחברה הישראלית — זהות, חברה, מוזיקה ואמנות.',tags:['זהות','תרבות','מזרח'],link:'https://kulna.org.il/%d7%aa%d7%95%d7%9b%d7%a0%d7%99%d7%aa-%d7%90%d7%9c%d7%95%d7%9c-%d7%9e%d7%9f-%d7%94%d7%9e%d7%96%d7%a8%d7%97/',img:'assets/uploads/2025/04/אלול-מן-המזרח.png',icon:'🌙',cats:['גילוי עצמי']},
-      {title:'מדיטציה וויפאסנה',badge:'ריטריט',desc:'ריטריט מדיטציה של 10 ימים בתשלום חופשי — חוויה מחוללת שינוי שכולם ממליצים עליה.',tags:['מדיטציה','ריטריט','10 ימים'],link:'personal-meditation.html',img:'assets/uploads/2025/04/הזדמנויות-צעירים-IL.png',icon:'🧘',cats:['פיתוח אישי']}
+      {title:'מדיטציה וויפאסנה',badge:'ריטריט',desc:'ריטריט מדיטציה של 10 ימים בתשלום חופשי — חוויה מחוללת שינוי שכולם ממליצים עליה.',tags:['מדיטציה','ריטריט','10 ימים'],link:'personal-meditation.html',img:'assets/uploads/2025/04/הזדמנויות-צעירים-IL.png',icon:'🧘',cats:['פיתוח אישי']},
+      {title:'תכנית אלול — ללמוד להקשיב',badge:'גילוי עצמי',desc:'חודש של ללמוד להקשיב ולהיות — הזדמנות למפגש עם רעיונות גדולים, אנשים וטקסטים, ועם עצמך.',tags:['גילוי עצמי','זהות','עיון'],link:'https://mabua.org/%d7%aa%d7%9b%d7%a0%d7%99%d7%aa-%d7%90%d7%9c%d7%95%d7%9c/',img:'assets/uploads/2025/04/elul-mabua.png',logo:true,icon:'🌙',cats:['גילוי עצמי']},
+      {title:'מבוע — בית מדרש ישראלי',badge:'זהות ישראלית',desc:'סמינר צעירים לזהות ישראלית ולהסתכלות פנימה — מסע של גילוי עצמי, שורשים ותרבות ישראלית עמוקה.',tags:['זהות','ישראלי','גילוי עצמי'],link:'https://mabua.org/%d7%aa%d7%9b%d7%a0%d7%99%d7%aa-%d7%9e%d7%91%d7%95%d7%a2/',img:'assets/uploads/2025/04/mabua.png',logo:true,icon:'🌊',cats:['גילוי עצמי']},
+      {title:'תחנת רוח — סמינר משוחררים',badge:'שחרור',desc:'סמינר ייחודי למשוחררות ומשוחררים — עצירה, עיבוד ועיון. שבוע של חשיבה עמוקה על הדרך שעברת והדרך שלפניך.',tags:['שחרור','סמינר','עיבוד'],link:'https://mabua.org/windmill/',img:'assets/uploads/2025/04/tachnat-ruach.png',logo:true,icon:'🌬️',cats:['שחרור']},
+      {title:'מדרשת תבור — כביש 90',badge:'מנהיגות',desc:'תוכנית מנהיגות ציונית ייחודית של מדרשת תבור — מסע ערכי, קהילתי ואישי לצעירים שרוצים להוביל.',tags:['מנהיגות','ציוני','תבור'],link:'https://www.tavor.org.il/leadership-institute#programs',img:'assets/uploads/2025/04/tavor.svg',logo:true,icon:'⛰️',cats:['מנהיגות']}
     ]
   },
   {
     id:'bigtrip', label:'הטיול הגדול', icon:'✈️',
     cards:[
+      {title:'המדריך המלא לטיול הגדול',badge:'חינמי',desc:'המדריך הכי שלם לטיול הגדול — הכנה, תכנון, קהילות, ביטוח, יעדים וכל מה שצריך לדעת לפני שיוצאים.',tags:['הכנה','מדריך','טיול'],link:'https://the-smart-traveller.com/guide.html',img:'assets/uploads/2025/04/smart-traveller.png',logo:true,icon:'🌍'},
+      {title:'ציוד + הכנה לטיול 360 — המטייל החכם',badge:'ציוד',desc:'השכרה ורכישה של ציוד טיול עם הכוונה מקצועית — כל מה שצריך בשביל הטיול הגדול.',tags:['ציוד','השכרה','טיול'],link:'https://the-smart-traveller.com/',img:'assets/uploads/2025/04/ציוד-לטיולים.png',icon:'🎒'},
       {title:'ניו זילנד',badge:'יעד',desc:'רותם מרכזת הכל למטיילים בניו זילנד — מפות, טיפים, קבוצות וואטסאפ והטבות בלעדיות לישראלים.',tags:['ניו זילנד','מדריך','קהילה'],link:'https://rotemnz.com/%d7%a8%d7%95%d7%aa%d7%9d/',img:'assets/uploads/2025/04/ניו-זילנד.png',icon:'🥝'},
       {title:'אוסטרליה',badge:'יעד',desc:'ניסיון של 44 מדינות ב-4 שנים — המדריך המלא לטיול ועבודה באוסטרליה עם כל הטיפים.',tags:['אוסטרליה','עבודה','טיול'],link:'https://australia-travel.co.il/',img:'assets/uploads/2025/04/אוסטרליה.png',icon:'🦘'},
       {title:'דרום ומרכז אמריקה',badge:'יעד',desc:'מוצילר — האתר המוביל לדרום ומרכז אמריקה. מפות, יעדים, קבוצות, הטבות ועדכונים שוטפים.',tags:['אמריקה','מדריך','קהילה'],link:'https://www.muchiler.co.il/muchicard.html',img:'assets/uploads/2025/04/דרום-ומרכז-אמריקה.png',icon:'🌎'},
-      {title:'הכנה ותכנון טיול',badge:'חינמי',desc:'משאבים חינמיים, וובינרים ומפגשים להכנה לטיול הגדול — ישראל IS, קהילות, ביטוח ועוד.',tags:['הכנה','חינמי','ביטוח'],link:'https://www.israel-is.org/events/5943/',img:'assets/uploads/2025/04/תכנון-טיול.png',icon:'🗺️'},
-      {title:'ציוד טיולים',badge:'ציוד',desc:'השכרה ורכישה של ציוד טיול עם הכוונה מקצועית — כל מה שצריך בשביל הטיול הגדול.',tags:['ציוד','השכרה','טיול'],link:'https://wisetrek.wordpress.com/%D7%A8%D7%99%D7%9B%D7%95%D7%96-%D7%90%D7%AA%D7%A8%D7%99%D7%9D-%D7%A9%D7%99%D7%9E%D7%95%D7%A9%D7%99%D7%99%D7%9D-%D7%9C%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D/',img:'assets/uploads/2025/04/ציוד-לטיולים.png',icon:'🎒'},
       {title:'המזרח',badge:'יעד',desc:'קהילה עם מפות, קבוצות וואטסאפ והטבות בלעדיות לטיול במזרח — תאילנד, הודו, נפאל ועוד.',tags:['מזרח','קהילה','הטבות'],link:'https://mizrahnik.co.il/',img:'assets/uploads/2025/04/טיול-למזרח.png',icon:'🐘'},
       {title:'אפריקה',badge:'יעד',desc:'קהילת מוזונגו — מרכזת הכל לאפריקה. מפות, קבוצות, יעדים מומלצים והטבות לקהילה.',tags:['אפריקה','קהילה','הרפתקה'],link:'https://mzungusite.com/discounts/',img:'assets/uploads/2025/04/אפריקה.png',icon:'🦁'},
       {title:'שביל ישראל',badge:'מקומי',desc:'מסע לגילוי עצמי ולקבלת החלטות משנות חיים — שביל ישראל כמסע פנימי לא פחות ממסע חיצוני.',tags:['שביל ישראל','גילוי עצמי','טבע'],link:'https://www.teva.org.il/israel-national-trail',img:'assets/uploads/2025/04/שביל-ישראל.png',icon:'🥾'}
@@ -358,10 +364,16 @@ var DATA = [
   {
     id:'community', label:'סביבה וקהילה', icon:'🌿',
     cards:[
-      {title:'החממה',badge:'קהילה',desc:'החממה — מרחב קהילתי לצעירים העושים שינוי סביבתי וחברתי. תכנים, כלים ואנשים שמניעים.',tags:['קהילה','סביבה','שינוי'],link:'hahazdamnut.html#contact',img:'',icon:'🌱'},
-      {title:'CLICK',badge:'קהילה',desc:'CLICK — ארגון צעירים לקידום שוויון, קהילה ושיתוף פעולה. פעילויות, אירועים ומסגרת משמעותית.',tags:['קהילה','שוויון','צעירים'],link:'hahazdamnut.html#contact',img:'',icon:'🔵'},
-      {title:'במבו קלאב',badge:'קהילה',desc:'במבו קלאב — קהילת ספורט, אמנות ותרבות לצעירים. מרחב יצירתי ומחבר שמפתח חברות עמוקה.',tags:['קהילה','ספורט','תרבות'],link:'hahazdamnut.html#contact',img:'',icon:'🎋'},
-      {title:'סלסה',badge:'ריקוד',desc:'קהילת סלסה — ריקוד, חברה ושמחה. הצטרף לאחת הקהילות התוססות והמחברות ביותר לצעירים.',tags:['ריקוד','קהילה','חברה'],link:'hahazdamnut.html#contact',img:'',icon:'💃'},
+      {title:'תלמים — משירות להעצמה',badge:'קהילה',desc:'תלמים — תוכנית העצמה לצעירים אחרי שירות. חיבור לאדמה, לקהילה ולעצמך — דרך חקלאות, התנדבות ומשמעות.',tags:['קהילה','העצמה','חקלאות'],link:'https://tlamim-il.org/',img:'assets/uploads/2025/04/tlamim.svg',logo:true,icon:'🌾'},
+      {title:'מגורי סטודנטים — קדמה',badge:'מגורים',desc:'ארגון קדמה — התיישבות צעירים. מגורי סטודנטים בקהילה עם שיכון במחיר סביר וקהילה תוססת.',tags:['מגורים','קהילה','סטודנטים'],link:'hahazdamnut.html#contact',img:'assets/uploads/2025/04/kadma.svg',logo:true,icon:'🏠'},
+      {title:'מגורי סטודנטים — איילים',badge:'מגורים',desc:'ארגון איילים — חולמים, יוזמים, מגשימים. מגורי סטודנטים בקהילה עם אווירה ייחודית לצעירים.',tags:['מגורים','קהילה','סטודנטים'],link:'hahazdamnut.html#contact',img:'assets/uploads/2025/04/ayalim.svg',logo:true,icon:'🦌'},
+      {title:'InPerson',badge:'קהילה',desc:'InPerson — פלטפורמת היכרויות בחוויות אמיתיות. פגישות פנים אל פנים שיוצרות חיבורים עמוקים ואותנטיים.',tags:['קהילה','היכרויות','חוויה'],link:'https://www.instagram.com/inperson_il/',img:'assets/uploads/2025/04/inperson.svg',logo:true,icon:'💜'},
+      {title:'החממה',badge:'קהילה',desc:'החממה — מרחב קהילתי לצעירים העושים שינוי סביבתי וחברתי. תכנים, כלים ואנשים שמניעים.',tags:['קהילה','סביבה','שינוי'],link:'https://www.instagram.com/hamama.tlv/',img:'assets/uploads/2025/04/hamama.svg',logo:true,icon:'🌱'},
+      {title:'CLICK',badge:'קהילה',desc:'CLICK — ארגון צעירים לקידום שוויון, קהילה ושיתוף פעולה. פעילויות, אירועים ומסגרת משמעותית.',tags:['קהילה','שוויון','צעירים'],link:'https://www.instagram.com/click_communityy/',img:'assets/uploads/2025/04/click-community.svg',logo:true,icon:'🔵'},
+      {title:'במבו קלאב',badge:'קהילה',desc:'במבו קלאב — קהילת ספורט, אמנות ותרבות לצעירים. מרחב יצירתי ומחבר שמפתח חברות עמוקה.',tags:['קהילה','ספורט','תרבות'],link:'https://www.instagram.com/bamboo.club.il/',img:'assets/uploads/2025/04/bamboo-club.svg',logo:true,icon:'🎋'},
+      {title:'Life in Balance',badge:'קהילה',desc:'Life in Balance — קהילת ולנס ואנשים. מרחב של איזון, בריאות ואנשים שמחפשים חיים מלאים יותר.',tags:['קהילה','ולנס','בריאות'],link:'https://www.instagram.com/life_in_balance/',img:'assets/uploads/2025/04/balance.svg',logo:true,icon:'⚖️'},
+      {title:'Run for Startups',badge:'קהילה',desc:'Run for Startups — קהילת ריצה ויזמות. Meet. Run. Connect — רצים, מתחברים ובונים ביחד.',tags:['ריצה','יזמות','קהילה'],link:'https://www.instagram.com/runforstartups/',img:'assets/uploads/2025/04/run-for-startups.svg',logo:true,icon:'🏃'},
+      {title:'Baila — סלסה ובאצ\'טה',badge:'ריקוד',desc:'Baila — קהילת סלסה ובאצ\'טה. ריקוד, חברה ושמחה — הצטרף לאחת הקהילות התוססות והמחברות ביותר.',tags:['ריקוד','קהילה','חברה'],link:'https://www.instagram.com/baila.salsa.bachata/',img:'assets/uploads/2025/04/baila.svg',logo:true,icon:'💃'},
       {title:'INSPIRE',badge:'קהילה',desc:'INSPIRE — תוכנית להעצמה וקהילה לצעירים שרוצים להשפיע ולשנות את העולם מסביבם.',tags:['העצמה','השפעה','שינוי'],link:'hahazdamnut.html#contact',img:'',icon:'⚡'},
       {title:'קבוצת ריצה',badge:'ספורט',desc:'קבוצת ריצה קהילתית לצעירים — חיבורים אמיתיים, שגרת ספורט ואנרגיה חיובית בבוקר.',tags:['ריצה','ספורט','קהילה'],link:'hahazdamnut.html#contact',img:'',icon:'🏃'}
     ]
@@ -386,22 +398,61 @@ var DATA = [
       {title:'Help Up',badge:'בינלאומי',desc:'תוכנית התנדבות בינלאומית — צא לעולם, עזור לאחרים ותחזור עם ניסיון חיים ועושר פנימי.',tags:['בינלאומי','התנדבות','ניסיון'],link:'https://helpup.org.il/contact/',img:'assets/uploads/2025/04/הלפאפ.png',icon:'✋'},
       {title:'לוחמים ללא גבולות',badge:'ציוני',desc:'ארגון ציוני ללא מטרות רווח המשלב טיול גדול עם התנדבות הומניטרית — פניה היפות של ישראל בעולם.',tags:['ציוני','התנדבות','טיול'],link:'https://hfl.org.il/%d7%94%d7%aa%d7%a0%d7%93%d7%91%d7%95%d7%aa/',img:'assets/uploads/2025/04/לוחמים-ללא-גבולות.png',icon:'🕊️'}
     ]
+  },
+  {
+    id:'relationship', label:'זוגיות', icon:'💑',
+    cards:[
+      {title:'InPerson',badge:'היכרויות',desc:'InPerson — פלטפורמת היכרויות בחוויות אמיתיות. פגישות פנים אל פנים שיוצרות חיבורים עמוקים ואותנטיים.',tags:['זוגיות','היכרויות','חוויה'],link:'https://www.instagram.com/inperson_il/',img:'assets/uploads/2025/04/inperson.svg',logo:true,icon:'💜'},
+      {title:'מכירים אחרת',badge:'היכרויות',desc:'מכירים אחרת — מפגשי היכרות חוויתיים. דרך אחרת ומשמעותית להכיר אנשים ולמצוא חיבורים אמיתיים.',tags:['זוגיות','היכרויות','חוויה'],link:'https://www.instagram.com/mekirim_aheret/',img:'assets/uploads/2025/04/mekirim-aheret.svg',logo:true,icon:'💫'},
+      {title:'יש לנו מה לדבר',badge:'זוגיות',desc:'תוכנית לחיזוק הזוגיות — כלים פרקטיים, שיחות עומק ומפגשים שיחזקו את הקשר ויפתחו תקשורת אמיתית.',tags:['זוגיות','תקשורת','קשר'],link:'hahazdamnut.html#contact',img:'',icon:'💑'},
+      {title:'טיפול זוגי',badge:'ליווי',desc:'טיפול זוגי מקצועי לזוגות בכל שלב — שיפור תקשורת, פתרון קונפליקטים ובניית קשר עמוק יותר.',tags:['טיפול','זוגיות','ליווי'],link:'hahazdamnut.html#contact',img:'',icon:'💬'},
+      {title:'סדנאות זוגיות',badge:'סדנה',desc:'סדנאות וימי עיון לזוגות — כלים מעשיים לתקשורת, אינטימיות ורומנטיקה בחיי היומיום.',tags:['סדנה','זוגיות','כלים'],link:'hahazdamnut.html#contact',img:'',icon:'🌹'}
+    ]
+  },
+  {
+    id:'hobbies', label:'תחביבים', icon:'🎨',
+    cards:[
+      {title:'Baila — סלסה ובאצ\'טה',badge:'ריקוד',desc:'Baila — קהילת סלסה ובאצ\'טה. ריקוד, חברה ושמחה — הצטרף לאחת הקהילות התוססות והמחברות ביותר.',tags:['ריקוד','קהילה','חברה'],link:'https://www.instagram.com/baila.salsa.bachata/',img:'assets/uploads/2025/04/baila.svg',logo:true,icon:'💃'},
+      {title:'ציור ויצירה',badge:'אמנות',desc:'קורסי ציור, יצירה ואמנות לכל רמה — פתח את היצירתיות שלך ותגלה עולם חדש של ביטוי אישי.',tags:['ציור','אמנות','יצירה'],link:'hahazdamnut.html#contact',img:'',icon:'🎨'},
+      {title:'מוזיקה',badge:'מוזיקה',desc:'לימוד גיטרה, פסנתר, שירה ועוד. מוזיקה היא שפה — תחל לדבר אותה בכל גיל ובכל רמה.',tags:['מוזיקה','גיטרה','שירה'],link:'hahazdamnut.html#contact',img:'',icon:'🎸'},
+      {title:'בישול ואפייה',badge:'קולינריה',desc:'קורסי בישול, סדנאות אפייה וחוגים לאוכל — תגלה עולם של טעמים ויצירה במטבח.',tags:['בישול','אפייה','קולינריה'],link:'hahazdamnut.html#contact',img:'',icon:'🍳'},
+      {title:'צילום',badge:'צילום',desc:'קורסי צילום מקצועיים — מיסודות הצילום ועד עריכה ופרסום. תלמד לצלם ולבטא את עצמך חזותית.',tags:['צילום','אמנות','ביטוי'],link:'hahazdamnut.html#contact',img:'',icon:'📷'},
+      {title:'כתיבה יוצרת',badge:'כתיבה',desc:'סדנאות כתיבה יוצרת — ספרים, סיפורים קצרים, שירה ורשתות חברתיות. תמצא את הקול שלך.',tags:['כתיבה','ביטוי','יצירה'],link:'hahazdamnut.html#contact',img:'',icon:'✍️'}
+    ]
+  },
+  {
+    id:'health', label:'בריאות וכושר', icon:'💪',
+    cards:[
+      {title:'כללית מושלם',badge:'בריאות',desc:'כללית מושלם — הטבות בריאות וכושר לחברי כללית. הנחות במכוני כושר, תזונה, בריאות הנפש ועוד.',tags:['בריאות','כושר','הנחות'],link:'https://mushlam.clalit.co.il/he/content_worlds/active/Pages/default.aspx',img:'assets/uploads/2025/04/clalit-mushlam.svg',logo:true,icon:'🏥'},
+      {title:'UPapp — מכבי',badge:'הנחות',desc:'אפליקציית UPapp של מכבי — הנחות בריאות וכושר לחברי מכבי. קלינאים, חדרי כושר, תזונה ועוד.',tags:['בריאות','כושר','הנחות'],link:'https://maccabiupapp.co.il/',img:'assets/uploads/2025/04/upapp.svg',logo:true,icon:'💊'},
+      {title:'Life in Balance',badge:'ולנס',desc:'Life in Balance — קהילת ולנס ואנשים. מרחב של איזון, בריאות ואנשים שמחפשים חיים מלאים יותר.',tags:['קהילה','ולנס','בריאות'],link:'https://www.instagram.com/life_in_balance/',img:'assets/uploads/2025/04/balance.svg',logo:true,icon:'⚖️'},
+      {title:'Run for Startups',badge:'ריצה',desc:'Run for Startups — קהילת ריצה ויזמות. Meet. Run. Connect — רצים, מתחברים ובונים ביחד.',tags:['ריצה','יזמות','כושר'],link:'https://www.instagram.com/runforstartups/',img:'assets/uploads/2025/04/run-for-startups.svg',logo:true,icon:'🏃'},
+      {title:'כושר גופני',badge:'כושר',desc:'תוכניות כושר מותאמות אישית, אימוני כוח, קרוספיט ועוד — בנה את הגוף שאתה רוצה בצורה נכונה.',tags:['כושר','אימון','גוף'],link:'hahazdamnut.html#contact',img:'',icon:'🏋️'},
+      {title:'ריצה ומרתון',badge:'ריצה',desc:'תוכניות אימון לריצה — ממתחילים ועד מרתון. צטרף לקהילת הרצים וחווה את הסיפוק של חציית קו הסיום.',tags:['ריצה','מרתון','כושר'],link:'hahazdamnut.html#contact',img:'',icon:'🏃'},
+      {title:'יוגה ומיינדפולנס',badge:'יוגה',desc:'שיעורי יוגה, מדיטציה ומיינדפולנס — שלב גוף ונפש ותמצא שקט פנימי ואיזון בחיי היומיום.',tags:['יוגה','מדיטציה','שקט'],link:'hahazdamnut.html#contact',img:'',icon:'🧘'},
+      {title:'תזונה בריאה',badge:'תזונה',desc:'ייעוץ תזונה, דיאטה מאוזנת ואורח חיים בריא — תלמד לאכול נכון, להרגיש טוב ולהכיל אנרגיה.',tags:['תזונה','בריאות','אנרגיה'],link:'hahazdamnut.html#contact',img:'',icon:'🥗'},
+      {title:'בריאות נפשית',badge:'נפש',desc:'טיפול פסיכולוגי, קבוצות תמיכה וכלים לבריאות הנפש — כי לטפל בנפש חשוב לא פחות מהגוף.',tags:['נפש','טיפול','בריאות'],link:'hahazdamnut.html#contact',img:'',icon:'🌸'}
+    ]
   }
 ];
 
 function buildCard(card, delay) {
-  var a = document.createElement('a');
-  a.href = card.link;
-  a.target = card.link.startsWith('http') ? '_blank' : '_self';
-  a.rel = card.link.startsWith('http') ? 'noopener noreferrer' : '';
-  a.className = 'card fade-up';
+  var hasLink = card.link && card.link !== 'hahazdamnut.html#contact';
+  var a = document.createElement(hasLink ? 'a' : 'div');
+  if (hasLink) {
+    a.href = card.link;
+    a.target = card.link.startsWith('http') ? '_blank' : '_self';
+    a.rel = card.link.startsWith('http') ? 'noopener noreferrer' : '';
+  }
+  a.className = 'card fade-up' + (hasLink ? '' : ' card-no-link');
   a.style.animationDelay = delay + 's';
   a.style.opacity = '0';
 
   var imgHtml;
   if (card.img) {
     var imgSrc = encodeURI(decodeURI(card.img));
-    imgHtml = '<img class="card-img" src="' + imgSrc + '" alt="' + card.title + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=card-no-img>' + card.icon + '</div>\'">';
+    var imgStyle = card.logo ? ' style="object-fit:contain;padding:10px;background:#fff"' : '';
+    imgHtml = '<img class="card-img" src="' + imgSrc + '" alt="' + card.title + '" loading="lazy"' + imgStyle + ' onerror="this.parentElement.innerHTML=\'<div class=card-no-img>' + card.icon + '</div>\'">';
   } else {
     imgHtml = '<div class="card-no-img">' + card.icon + '</div>';
   }
@@ -413,7 +464,7 @@ function buildCard(card, delay) {
       '<div class="card-title">' + card.title + '</div>' +
       '<div class="card-desc">' + card.desc + '</div>' +
       '<div class="card-tags">' + card.tags.map(function(t){ return '<span class="card-tag">' + t + '</span>'; }).join('') + '</div>' +
-      '<span class="card-link">למידע נוסף ←</span>' +
+      (hasLink ? '<span class="card-link">למידע נוסף ←</span>' : '') +
     '</div>';
   return a;
 }

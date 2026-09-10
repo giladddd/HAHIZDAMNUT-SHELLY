@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="200" height="180">
+  <rect width="200" height="180" fill="#f5e8dc"/>
+  <!-- Dancer silhouette (simple) -->
+  <ellipse cx="118" cy="38" rx="14" ry="14" fill="#c8a882"/>
+  <!-- Body -->
+  <path d="M118 52 Q108 80 100 110 Q112 105 124 110 Q118 80 118 52Z" fill="#c8a882"/>
+  <!-- Skirt -->
+  <path d="M100 110 Q88 140 82 160 Q100 150 118 160 Q112 140 100 110Z" fill="#c8a882"/>
+  <path d="M124 110 Q136 140 142 160 Q124 150 118 160 Q120 140 124 110Z" fill="#c8a882"/>
+  <!-- Arms -->
+  <path d="M108 70 Q90 60 80 50" stroke="#c8a882" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M124 65 Q138 55 148 48" stroke="#c8a882" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Text -->
+  <text x="72" y="42" font-family="'Georgia','Times New Roman',serif" font-size="38" font-style="italic" font-weight="700" fill="#333333">Baila</text>
+</svg>

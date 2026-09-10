@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="24" fill="#1a8a50"/>
+  <!-- Bamboo stalks -->
+  <rect x="82" y="30" width="10" height="90" rx="5" fill="#ffffff" opacity="0.9"/>
+  <rect x="108" y="45" width="10" height="75" rx="5" fill="#ffffff" opacity="0.9"/>
+  <!-- Bamboo segments -->
+  <rect x="82" y="55" width="10" height="4" rx="2" fill="#1a8a50"/>
+  <rect x="82" y="85" width="10" height="4" rx="2" fill="#1a8a50"/>
+  <rect x="108" y="70" width="10" height="4" rx="2" fill="#1a8a50"/>
+  <rect x="108" y="95" width="10" height="4" rx="2" fill="#1a8a50"/>
+  <!-- Leaves -->
+  <ellipse cx="72" cy="48" rx="16" ry="7" fill="#ffffff" opacity="0.9" transform="rotate(-30 72 48)"/>
+  <ellipse cx="128" cy="60" rx="14" ry="6" fill="#ffffff" opacity="0.85" transform="rotate(25 128 60)"/>
+  <ellipse cx="75" cy="78" rx="12" ry="5" fill="#ffffff" opacity="0.75" transform="rotate(-20 75 78)"/>
+  <!-- Text -->
+  <text x="100" y="150" font-family="'Arial',sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">BAMBOO</text>
+  <text x="100" y="174" font-family="'Arial',sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">CLUB</text>
+</svg>

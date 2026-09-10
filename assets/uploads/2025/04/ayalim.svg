@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 110" width="260" height="110">
+  <rect width="260" height="110" fill="#1a1a1a"/>
+  <!-- Deer silhouette (simple) -->
+  <g transform="translate(18,8)">
+    <!-- Body -->
+    <ellipse cx="38" cy="68" rx="18" ry="12" fill="#ffffff"/>
+    <!-- Neck -->
+    <rect x="38" y="48" width="9" height="22" rx="4" fill="#ffffff"/>
+    <!-- Head -->
+    <ellipse cx="44" cy="44" rx="9" ry="8" fill="#ffffff"/>
+    <!-- Antlers left -->
+    <line x1="38" y1="38" x2="30" y2="20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="30" y1="20" x2="24" y2="12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="30" y1="20" x2="22" y2="22" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Antlers right -->
+    <line x1="46" y1="37" x2="52" y2="18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="52" y1="18" x2="58" y2="10" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="52" y1="18" x2="60" y2="22" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Legs -->
+    <rect x="24" y="78" width="6" height="20" rx="3" fill="#ffffff"/>
+    <rect x="34" y="78" width="6" height="20" rx="3" fill="#ffffff"/>
+    <rect x="44" y="78" width="6" height="20" rx="3" fill="#ffffff"/>
+    <rect x="54" y="78" width="6" height="20" rx="3" fill="#ffffff"/>
+  </g>
+  <!-- איילים text -->
+  <text x="195" y="52" font-family="'Arial','Helvetica',sans-serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle" direction="rtl">איילים</text>
+  <!-- subtitle -->
+  <text x="195" y="76" font-family="'Arial','Helvetica',sans-serif" font-size="12" fill="#cccccc" text-anchor="middle" letter-spacing="1">חולמים • יוזמים • מגשימים</text>
+</svg>

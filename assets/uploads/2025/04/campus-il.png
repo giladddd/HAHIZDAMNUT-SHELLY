@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <title>קמפוס IL</title>
+<meta name='description' content='הקורסים הטובים ביותר - לכולם, בחינם. קידום מקצועי או השכלה אקדמית? העשרה כללית או קורס פסיכומטרי? בקמפוס IL תיהנו מחווית למידה חדשנית - בזמן, במקום, ובקצב שלכם. המיזם הלאומי ללמידה דיגיטלית מובל בשותפות על ידי מטה ישראל דיגיטלית במשרד לשוויון חברתי והמועצה להשכלה גבוהה. המגוון העצום של התכנים האיכותיים מוגש לכם על ידי האוניברסיטאות והמכללות המובילות בישראל, משרד החינוך ומשרדי ממשלה נוספים.'>
+<meta name='keywords' content='קורסים דיגיטאליים,למידה מרחוק,למידה אונליין, קורסים אונליין'>
+<meta property='og:title' content='קמפוס IL'>
+<meta property='og:description' content='הקורסים הטובים ביותר - לכולם, בחינם. קידום מקצועי או השכלה אקדמית? העשרה כללית או קורס פסיכומטרי? בקמפוס IL תיהנו מחווית למידה חדשנית - בזמן, במקום, ובקצב שלכם. המיזם הלאומי ללמידה דיגיטלית מובל בשותפות על ידי מטה ישראל דיגיטלית במשרד לשוויון חברתי והמועצה להשכלה גבוהה. המגוון העצום של התכנים האיכותיים מוגש לכם על ידי האוניברסיטאות והמכללות המובילות בישראל, משרד החינוך ומשרדי ממשלה נוספים.'>
+<meta property='og:image' content='https://campus.gov.il/wp-content/themes/campusnew/images/campusil-open-graph.jpg'>
+<meta property='og:url' content='https://campus.gov.il/wp-content/themes/campus/images/logo.png'>
+<meta property='og:type' content='website'>
+<meta name='twitter:card' content='summary_large_image'>
+<meta name='twitter:title' content='קמפוס IL'>
+<meta name='twitter:description' content='הקורסים הטובים ביותר - לכולם, בחינם. קידום מקצועי או השכלה אקדמית? העשרה כללית או קורס פסיכומטרי? בקמפוס IL תיהנו מחווית למידה חדשנית - בזמן, במקום, ובקצב שלכם. המיזם הלאומי ללמידה דיגיטלית מובל בשותפות על ידי מטה ישראל דיגיטלית במשרד לשוויון חברתי והמועצה להשכלה גבוהה. המגוון העצום של התכנים האיכותיים מוגש לכם על ידי האוניברסיטאות והמכללות המובילות בישראל, משרד החינוך ומשרדי ממשלה נוספים.'>
+<meta name='twitter:image' content='https://campus.gov.il/wp-content/themes/campusnew/images/campusil-open-graph.jpg'>
+<link rel='canonical' href='https://campus.gov.il/wp-content/themes/campus/images/logo.png'>
+    
+    <meta charset="UTF-8"/>
+    <meta name="author" content="CampusIL"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+        <link rel="icon" type="image/x-icon" href="https://campus.gov.il/wp-content/themes/campusnew/images/favicon-light.ico?var=1787740083" media="(prefers-color-scheme:no-preference)">
+    <link rel="icon" type="image/x-icon" href="https://campus.gov.il/wp-content/themes/campusnew/images/favicon-light.ico?var=1787740083" media="(prefers-color-scheme:light)">
+    <link rel="icon" type="image/x-icon" href="https://campus.gov.il/wp-content/themes/campusnew/images/favicon-dark.ico?var=1787740083"  media="(prefers-color-scheme:dark)">
+
+    <!-- START COMMITED SCRIPT -->
+
+    <script>
+          const CURRENTLANG = "he";
+      const HOMEURL = "https:\/\/campus.gov.il\/";
+      const THEURLOFCAMPUSIL = "https:\/\/campus.gov.il\/";
+      const THEURLOFEDXCONECT = "https:\/\/courses.campus.gov.il\/";
+      const TEMPLATEDIRURL = "https:\/\/campus.gov.il\/wp-content\/themes\/campusnew";
+      const THEUSERNAME = "";
+      const ERRORTEXTmessagesent = "\u05d4\u05e4\u05e0\u05d9\u05d9\u05d4 \u05e0\u05e9\u05dc\u05d7\u05d4 \u05d1\u05d4\u05e6\u05dc\u05d7\u05d4";
+      const ERRORTEXTmessageerror = "\u05d4\u05ea\u05e8\u05d7\u05e9\u05d4 \u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05e9\u05dc\u05d9\u05d7\u05d4";
+      const ERRORTEXTrequired = "\u05e2\u05dc\u05d9\u05da \u05dc\u05d4\u05d6\u05d9\u05df \u05dc\u05e4\u05d7\u05d5\u05ea \u05ea\u05d5 \u05d0\u05d7\u05d3";
+      const ERRORTEXTremote = "\u05dc\u05ea\u05e7\u05df";
+      const ERRORTEXTemail = "\u05d0\u05d9\u05de\u05d9\u05d9\u05dc";
+      const ERRORTEXTurl = "\u05db\u05ea\u05d5\u05d1\u05ea \u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8";
+      const ERRORTEXTdate = "\u05ea\u05d0\u05e8\u05d9\u05da";
+      const ERRORTEXTdateISO = "\u05ea\u05d0\u05e8\u05d9\u05da ISO";
+      const ERRORTEXTnumber = "\u05de\u05e1\u05e4\u05e8";
+      const ERRORTEXTdigits = "\u05e8\u05e7 \u05de\u05e1\u05e4\u05e8\u05d9\u05dd";
+      const ERRORTEXTcreditcard = "\u05d0\u05e9\u05e8\u05d0\u05d9";
+      const ERRORTEXTequalTo = "\u05d0\u05d5\u05ea\u05d5 \u05e2\u05e8\u05da \u05e9\u05d5\u05d1";
+      const ERRORTEXTextension = "\u05e1\u05d9\u05d5\u05de\u05ea \u05d7\u05d5\u05e7\u05d9\u05ea";
+      const ERRORTEXTmaxlength = "\u05de\u05e7\u05e1\u05d9\u05de\u05d5\u05dd \u05d0\u05d5\u05ea\u05d9\u05d5\u05ea";
+      const ERRORTEXTminlength = "\u05de\u05d9\u05e0\u05d9\u05de\u05d5\u05dd \u05d0\u05d5\u05ea\u05d9\u05d5\u05ea";
+      const ERRORTEXTrangelength = "\u05d1\u05d9\u05df \u05dc\u05d1\u05d9\u05df \u05de\u05e1\u05e4\u05e8\u05d9\u05dd";
+      const ERRORTEXTrange = "\u05e2\u05e8\u05da \u05d1\u05d9\u05df \u05dc\u05d1\u05d9\u05df \u05de\u05e1\u05e4\u05e8\u05d9\u05dd";
+      const ERRORTEXTmax = "\u05e7\u05d8\u05df \u05de";
+      const ERRORTEXTmin = "\u05d2\u05d3\u05d5\u05dc \u05de";
+      const TXTSEECOURSE = "\u05de\u05e2\u05d1\u05e8 \u05dc\u05e7\u05d5\u05e8\u05e1";
+      const TXTSEEPROGRAM = "\u05de\u05e2\u05d1\u05e8 \u05dc\u05ea\u05db\u05e0\u05d9\u05ea \u05d4\u05dc\u05d9\u05de\u05d5\u05d3";
+      const TXTMOREDETAILS = "\u05dc\u05e4\u05e8\u05d8\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd";
+      const TXTOPENSINPOPUP = "\u05e0\u05e4\u05ea\u05d7 \u05d1\u05e4\u05d5\u05e4\u05d0\u05e4";
+      const TXTLINKEXTWEBSITE = "\u05e7\u05d9\u05e9\u05d5\u05e8 \u05dc\u05d0\u05ea\u05e8 \u05d7\u05d9\u05e6\u05d5\u05e0\u05d9";
+      const TXTCOPYCLIPBOARD = "\u05d4\u05e2\u05ea\u05e7 \u05e7\u05d9\u05e9\u05d5\u05e8";
+      const TXTSHAREFACEBOOK = "\u05e9\u05d9\u05ea\u05d5\u05e3 \u05d1\u05e4\u05d9\u05d9\u05e1\u05d1\u05d5\u05e7";
+      const TXTSHARELINKEDIN = "\u05e9\u05d9\u05ea\u05d5\u05e3 \u05d1\u05dc\u05d9\u05e0\u05e7\u05d3\u05d0\u05d9\u05df";
+      const TXTSHAREWHATSAPP = "\u05e9\u05d9\u05ea\u05d5\u05e3 \u05d1\u05d5\u05d5\u05d0\u05d8\u05e1\u05d0\u05e4";
+    </script>
+
+    <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/jquery.min.js?var=155"></script>
+    <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/jquery.validate.min.v1.21.0.js?var=155"></script>
+    <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/common.js?var=158"></script>
+        <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/accordion.js?var=1"></script>
+        <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/catalog-filter-groups.js?var=170"></script>
+        <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/inc/design-system/select.js?var=7"></script>
+        <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/contact-form.js?var=190"></script>
+    <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/css/slick-accessible.css?var=155"/>
+    <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/slick-min-accessible.js?var=155"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/css/jquery-ui.min.css?var=1787740083"/>
+    <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/jquery-ui.min.js?var=1787740083"></script>
+        <script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/search-autocomplete.js?var=1"></script>
+    <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/css/styles-rtl.css?var=1787740083"/>
+        <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/css/faq-accordion.css?var=1"/>
+        <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/inc/design-system/palette.css?var=1"/>
+        <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/inc/design-system/select.css?var=4"/>
+        <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/css/contact-form.css?var=2"/>
+        <link rel="stylesheet" type="text/css" href="https://campus.gov.il/wp-content/themes/campusnew/css/contact-modal.css?var=1"/>
+    
+    <!-- END COMMITED SCRIPT -->
+    <meta name='robots' content='max-image-preview:large' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-rtl-css' href='https://campus.gov.il/wp-includes/css/dist/block-library/style-rtl.min.css?ver=6.9' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css' href='https://campus.gov.il/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='ep_general_styles-css' href='https://campus.gov.il/wp-content/plugins/elasticpress/dist/css/general-styles.css?ver=66295efe92a630617c00' type='text/css' media='all' />
+<link rel='stylesheet' id='custostyle-css' href='https://campus.gov.il/wp-content/themes/campusnew/style.css?ver=6aa24d07c5f23' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-design-palette-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/design-system/palette.css?ver=1.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-back-to-top-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/back-to-top/assets/back-to-top.css?ver=1.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-site-header-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/header-component/assets/site-header.css?ver=1.98.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-header-menus-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/header-component/assets/header-menus.css?ver=1.98.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-mobile-header-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/header-component/assets/mobile-header.css?ver=1.98.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-mobile-catalogue-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/header-component/assets/mobile-catalogue.css?ver=1.98.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-footer-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/footer-component/assets/footer.css?ver=1.12.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cil-language-switcher-css' href='https://campus.gov.il/wp-content/themes/campusnew/inc/language-switcher/assets/switcher.css?ver=1.0.0' type='text/css' media='all' />
+<script type="text/javascript" id="wpml-cookie-js-extra">
+/* <![CDATA[ */
+var wpml_cookies = {"wp-wpml_current_language":{"value":"he","expires":1,"path":"/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"he","expires":1,"path":"/"}};
+//# sourceURL=wpml-cookie-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=486900" id="wpml-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/analytics.js?ver=1787740083" id="campusil-analytics-js" defer="defer" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://campus.gov.il/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://campus.gov.il/xmlrpc.php?rsd" />
+<style>
+  .stripeCourses .courseCardNew.videoCard { display:grid !important; grid-template-rows:50% 50% !important; aspect-ratio:1 / 1.1 !important; overflow:hidden; height:auto; }
+  .stripeCourses .courseCardNew.videoCard.noText { grid-template-rows:100% !important; }
+  .stripeCourses .courseCardNew.videoCard > .image { aspect-ratio:auto !important; position:relative; height:100%; width:100%; overflow:hidden; min-height:0; }
+  .stripeCourses .courseCardNew.videoCard > .text { min-height:0; overflow:hidden; }
+  .stripeCourses .courseCardNew.videoCard { text-decoration:none; color:inherit; }
+  .stripeCourses .courseCardNew.videoCard .videoEmbed { position:absolute; inset:0; overflow:hidden; background:#000; }
+  .stripeCourses .courseCardNew.videoCard .videoEmbed img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+  .stripeCourses .courseCardNew.videoCard .videoEmbed .playBtn { position:absolute; top:50%; left:50%; width:56px; height:56px; transform:translate(-50%,-50%); border-radius:50%; background:rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center; transition:background .15s; z-index:2; }
+  .stripeCourses .courseCardNew.videoCard .videoEmbed a:hover .playBtn { background:rgba(0,0,0,.8); }
+  .stripeCourses .courseCardNew.videoCard .videoEmbed .playBtn::before { content:""; display:block; width:0; height:0; border-style:solid; border-width:10px 0 10px 16px; border-color:transparent transparent transparent #fff; margin-left:3px; }
+  .stripeCourses .courseCardNew.videoCard .text { padding:20px 16px; overflow:hidden; min-width:0; }
+  .stripeCourses .courseCardNew.videoCard .text .content { width:100%; }
+  .stripeCourses .courseCardNew.videoCard .text .content h3 { font-size:18px; line-height:22px; color:#000; margin:0 0 6px 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; word-break:break-word; }
+  .stripeCourses .courseCardNew.videoCard .text .content p { font-size:14px; line-height:20px; margin:0; color:#323333; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; word-break:break-word; }
+  /* Hide slick arrows when no scroll is available in that direction (videos stripe) */
+  [id^="videosCarusel"] .slick-arrow.slick-disabled { opacity:0 !important; pointer-events:none !important; visibility:hidden !important; }
+</style>
+
+    		<!-- Campus IL: Consent Mode v2 default — granted (non-EU/UK; no banner). -->
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){ dataLayer.push(arguments); }
+		gtag('consent', 'default', {
+			'ad_storage': 'granted',
+			'ad_user_data': 'granted',
+			'ad_personalization': 'granted',
+			'analytics_storage': 'granted',
+			'functionality_storage': 'granted',
+			'personalization_storage': 'granted',
+			'security_storage': 'granted'
+		});
+		</script>
+		<!-- Campus IL: page-context push + server-derived view events -->
+		<script>
+		window.dataLayer.push({"event":"page_context","page_type":"404","language":"he"});
+				window.dataLayer.push({"event":"view_404","page_type":"404","language":"he"});
+				window.campusAnalyticsSchema = {"page_context":{"required":["page_type","language"],"optional":{"1":"item_id","2":"item_name","3":"item_type","4":"list_id","5":"course_subjects","6":"course_language","7":"course_certificate","8":"course_duration","9":"academic_credit","10":"course_pacing","11":"institution_name","12":"lecturer_name","14":"municipality_id","15":"municipality_name"}},"view_item":{"required":["item_type"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","referrer_list_id","referrer_municipality_id","referrer_municipality_name"]},"view_item_list_catalog":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","item_count"]},"view_item_list_home_strip":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","item_count","stripe_title"]},"view_item_list_related":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","item_count"]},"view_item_list_search_results":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","item_count","results_count","search_term"]},"view_item_list_featured":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","item_count","list_id"]},"view_item_list_municipality":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","item_count","list_id","list_name"]},"select_item":{"required":["item_id"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","referrer_list_id","referrer_municipality_id","referrer_municipality_name","position"]},"select_subject":{"required":["subject_name"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"select_lecturer":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","lecturer_name"]},"select_institution":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","institution_name"]},"click_continue_to_course":{"required":["item_id"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","referrer_list_id","referrer_municipality_id","referrer_municipality_name","cta_location"]},"search_submit_header":{"required":["search_term"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"search_submit_mobile":{"required":["search_term"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"search_submit_homepage":{"required":["search_term"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"search_submit_catalog":{"required":["search_term"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"search_autocomplete_select":{"required":["search_term"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","suggestion"]},"catalog_filter_change_subject":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_filter_change_language":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_filter_change_certificate":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_filter_change_duration":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_filter_change_credit":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_filter_change_pacing":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_filter_change_type":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","filter_value","results_count"]},"catalog_sort_change_relevance":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"catalog_sort_change_newest":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"catalog_sort_change_oldest":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"catalog_sort_change_az":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"catalog_sort_change_za":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"catalog_pagination":{"required":["page_number"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"share_copy_link":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","content_type"]},"share_facebook":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","content_type"]},"share_linkedin":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","content_type"]},"outbound_click":{"required":["link_url"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","link_domain"]},"contact_form_submit_success":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","contact_form_subject"]},"contact_form_submit_failure":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","contact_form_subject"]},"contact_phone_click":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"contact_email_click":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"contact_social_click_facebook":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"contact_social_click_linkedin":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"contact_social_click_telegram":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"contact_social_click_twitter":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"contact_social_click_instagram":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"footer_menu_click":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name","link_text","link_url"]},"footer_social_click_facebook":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"footer_social_click_linkedin":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"footer_social_click_twitter":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"footer_social_click_instagram":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"footer_social_click_telegram":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"footer_social_click_youtube":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"mobile_menu_open":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"mobile_menu_close":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"language_change_to_he":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"language_change_to_en":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"language_change_to_ar":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"language_change_to_ru":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"event_card_click_upcoming":{"required":["event_id"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"event_card_click_past":{"required":["event_id"],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]},"view_404":{"required":[],"optional":["page_type","item_id","item_name","item_type","list_id","course_subjects","course_language","course_certificate","course_duration","academic_credit","course_pacing","institution_name","lecturer_name","language","municipality_id","municipality_name"]}};
+		</script>
+		
+                  <script>window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'ga4_measurement_id': 'G-0FY1KYQPX4'});</script>
+              <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M3F4ZK8');</script>
+      <!-- End Google Tag Manager -->
+    
+        <!-- GlassBox -->
+    <script type="text/javascript" id="_cls_detector" src="https://cdn.gbqofs.com/govi/generic/detector-dom.min.js" async="true" data-clsconfig="reportURI=https://report.govi.gbqofs.io/reporting/9e307e66-2739-8b99-0e8a-b65426391782/cls_report;valueMaskingMode=blacklist;enabledByChance=1;"></script>
+        
+  </head>
+  <body class="lang-to-css-rtl">
+
+          <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3F4ZK8"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="popup" class="popupWindow" role="dialog" aria-labelledby="popupContent" aria-describedby="popupContent" aria-modal="true">
+      <div class="popupContent">
+        <div class="popupClose"><a href="javascript:closePopup();" aria-label="סגירת פופאפ" role="button" id="popupCloseLink"><img src="https://campus.gov.il/wp-content/themes/campusnew/images/icon-close.svg" alt=""></a></div>
+        <div id="popupInner"></div>
+      </div>
+    </div>
+
+    <div id="coursePopup" class="coursePopupWindow" role="dialog" aria-labelledby="coursePopupContent" aria-describedby="coursePopupContent" aria-modal="true">
+      <div class="coursePopupContent">
+        <div class="coursePopupClose"><a href="javascript:closeCourseCardPopup();" aria-label="סגירת פופאפ" role="button" id="coursePopupCloseLink"><img src="https://campus.gov.il/wp-content/themes/campusnew/images/icon-close.svg" alt=""></a></div>
+        <div id="coursePopupInner"></div>
+      </div>
+    </div>
+
+    <div id="coursePopup2" role="dialog" aria-labelledby="coursePopupContent2" aria-describedby="coursePopupContent2" aria-modal="true">
+      <div class="coursePopupContent2">
+        <div class="coursePopupClose2"><a href="javascript:closeCourseCardPopup2();" aria-label="סגירת פופאפ" role="button" id="coursePopupCloseLink2"><img src="https://campus.gov.il/wp-content/themes/campusnew/images/icon-close.svg" alt=""></a></div>
+        <div id="coursePopupInner2"></div>
+      </div>
+    </div>
+
+
+  
+
+<header id="header" class="cil-hdr">
+<div class="cil-hdr__bar">
+
+    <div class="cil-hdr__lead">
+        <div class="cil-hdr__brand">
+        <a class="cil-hdr__logo header_click" href="https://campus.gov.il/"
+           data-event-location="header" data-event-details="logo"
+           aria-label="לוגו קמפוס IL - קישור לדף הבית">
+            <img src="https://campus.gov.il/wp-content/themes/campusnew/images/header/header-campus-il.svg" alt="" width="110" height="22">
+        </a>
+                <span class="cil-hdr__partners" aria-hidden="false">
+            <img class="cil-hdr__partner" src="https://campus.gov.il/wp-content/themes/campusnew/images/header/header-logo-digital.svg"
+                 alt="לוגו מערך הדיגיטל הלאומי" width="97" height="24">
+            <img class="cil-hdr__partner" src="https://campus.gov.il/wp-content/themes/campusnew/images/header/header-logo-malag.png"
+                 alt="לוגו המועצה להשכלה גבוהה" width="93" height="26">
+        </span>
+    </div>
+
+            <nav class="cil-hdr__nav" aria-label="דף הבית">
+                            <div class="cil-hdr__catalogueWrap">
+                                                                                <button type="button" class="cil-hdr__catalogue" id="cilCatalogueButton"
+                            aria-controls="cilCatalogueMenu" aria-expanded="false"
+                            style="--cil-hdr-cat-fill:#70C6D1;
+                                   --cil-hdr-cat-ink:#232523;">
+                        <span class="cil-hdr__btnLabel">הקטלוג</span>
+                                                <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                        <span class="cil-hdr__caret" aria-hidden="true">
+                            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+                        </span>
+                    </button>
+                                        <div class="cil-cat2" id="cilCatalogueMenu" hidden>
+    <div class="cil-cat2__scrim" data-cil-cat2-close></div>
+
+    <div class="cil-cat2__panel" role="dialog" aria-modal="false"
+         aria-label="הקטלוג">
+        <div class="cil-cat2__columns">
+
+                                        <section class="cil-cat2__col cil-cat2__col--paths" aria-labelledby="cilCat2-paths">
+                    <p class="cil-cat2__heading" id="cilCat2-paths">מסלול לימוד</p>
+                                            <a class="cil-cat2__row" href="https://campus.gov.il/catalog/">לכל הנושאים</a>
+                                            <a class="cil-cat2__row" href="https://campus.gov.il/catalog-search/">קורסים עם תעודה</a>
+                                            <a class="cil-cat2__row" href="https://campus.gov.il/catalog-search/">קורסים עם קרדיט אקדמי</a>
+                                    </section>
+                <span class="cil-cat2__rule" aria-hidden="true"></span>
+            
+                            <section class="cil-cat2__col cil-cat2__col--subjects" aria-labelledby="cilCat2-subjects">
+                    <p class="cil-cat2__heading" id="cilCat2-subjects">תחומי לימוד</p>
+                                                <button type="button" class="cil-cat2__row cil-cat2__subject is-current"
+                                    data-cil-cat2-subject="1446"
+                                    aria-pressed="true">
+                                <span>חינוך והוראה</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                                    <button type="button" class="cil-cat2__row cil-cat2__subject"
+                                    data-cil-cat2-subject="1178"
+                                    aria-pressed="false">
+                                <span>טכנולוגיה ומחשבים</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                                    <button type="button" class="cil-cat2__row cil-cat2__subject"
+                                    data-cil-cat2-subject="1334"
+                                    aria-pressed="false">
+                                <span>מדעי החברה</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                                    <button type="button" class="cil-cat2__row cil-cat2__subject"
+                                    data-cil-cat2-subject="1254"
+                                    aria-pressed="false">
+                                <span>מדעי החיים</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                                    <button type="button" class="cil-cat2__row cil-cat2__subject"
+                                    data-cil-cat2-subject="1286"
+                                    aria-pressed="false">
+                                <span>מדעי הרוח</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                                    <button type="button" class="cil-cat2__row cil-cat2__subject"
+                                    data-cil-cat2-subject="1222"
+                                    aria-pressed="false">
+                                <span>מדעים מדויקים</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                                    <button type="button" class="cil-cat2__row cil-cat2__subject"
+                                    data-cil-cat2-subject="1378"
+                                    aria-pressed="false">
+                                <span>פיתוח אישי ומיומנויות</span>
+                                <span class="cil-cat2__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                            </button>
+                                        </section>
+                <span class="cil-cat2__rule" aria-hidden="true"></span>
+
+                                <section class="cil-cat2__col cil-cat2__col--children"
+                         aria-label="תחומי לימוד">
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1446"
+                             >
+                            <p class="cil-cat2__heading">חינוך והוראה</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-matriculation/">בגרות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-biology-matriculation/">בגרות בביולוגיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-chemistry-matriculation/">בגרות בכימיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-computer-science-matriculation/">בגרות במדעי המחשב</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-mathematics-matriculation/">בגרות במתמטיקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-physics-matriculation/">בגרות בפיזיקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-classroom-management-tools/">כלים לניהול כיתה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-teaching-studies/">לימודי הוראה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-distance-learning/">למידה מרחוק</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-self-directed-learning/">למידה עצמית</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-school-management/">ניהול בית ספר</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/education-management-and-professional-development-for-education-professionals/">ניהול ופיתוח מקצועי לאנשי חינוך</a>
+                                                    </div>
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1178"
+                             hidden>
+                            <p class="cil-cat2__heading">טכנולוגיה ומחשבים</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-artificial-intelligence/">בינה מלאכותית</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-computer-science/">מדעי המחשב</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-data-science/">מדעי הנתונים</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-computers/">מחשבים</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-cybersecurity/">סייבר</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-python/">פייתון</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-software-development/">פיתוח תוכנה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-robotics/">רובוטיקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-various-software/">תוכנות שונות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/tac-programming/">תכנות</a>
+                                                    </div>
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1334"
+                             hidden>
+                            <p class="cil-cat2__heading">מדעי החברה</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-social-entrepreneurship/">יזמות חברתית</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-economics/">כלכלה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-gender-studies/">מגדר</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-political-science-governance/">מדעי המדינה וממשל</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-management/">ניהול</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-project-management/">ניהול פרויקטים</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-feminism/">פמיניזם</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-psychology/">פסיכולוגיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-zionism/">ציונות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ss-communication-media/">תקשורת ומדיה</a>
+                                                    </div>
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1254"
+                             hidden>
+                            <p class="cil-cat2__heading">מדעי החיים</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-biology/">ביולוגיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-health/">בריאות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-environmental-studies/">לימודי סביבה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-neuroscience/">מדעי המוח</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-nursing/">סיעוד</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-first-aid/">עזרה ראשונה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/ls-medicine/">רפואה</a>
+                                                    </div>
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1286"
+                             hidden>
+                            <p class="cil-cat2__heading">מדעי הרוח</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-arts/">אמנות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-archaeology/">ארכיאולוגיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-ethics/">אתיקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-history/">היסטוריה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-television/">טלוויזיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-islamic-studies/">לימודי אסלאם</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-jewish-thought/">מחשבת ישראל</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-product-management/">ניהול מוצר</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-design/">עיצוב</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-philosophy/">פילוסופיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/humanities-culture/">תרבות</a>
+                                                    </div>
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1222"
+                             hidden>
+                            <p class="cil-cat2__heading">מדעים מדויקים</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-engineering/">הנדסה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-chemistry/">כימיה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-logic/">לוגיקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-research/">מחקר</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-mechanics/">מכניקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-mathematics/">מתמטיקה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/es-physics/">פיזיקה</a>
+                                                    </div>
+                                            <div class="cil-cat2__childSet" data-cil-cat2-set="1378"
+                             hidden>
+                            <p class="cil-cat2__heading">פיתוח אישי ומיומנויות</p>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-excel/">אקסל</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-safety/">בטיחות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-parenting-family/">הורות ומשפחה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-enrichment/">העשרה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-innovation/">חדשנות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-job-search/">חיפוש עבודה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-work-skills/">כישורי עבודה</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-english-studies/">לימודי אנגלית</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-arabic-studies/">לימודי ערבית</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-digital-skills/">מיומנויות דיגיטליות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-mindfulness/">מיינדפולנס</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-social-media/">רשתות חברתיות</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-internet-marketing/">שיווק באינטרנט</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-using-internet-tools/">שימוש בכלים באינטרנט</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-self-improvement/">שיפור עצמי</a>
+                                                            <a class="cil-cat2__row" href="https://campus.gov.il/course_subjects/pds-languages/">שפות</a>
+                                                    </div>
+                                    </section>
+                    </div>
+
+                <div class="cil-cat2__footer">
+                        <a class="cil-cat2__all" href="https://campus.gov.il/catalog-search/"
+               style="--cil-cat2-fill:#70C6D1;">
+                <span class="cil-cat2__allLabel">לכל התוצאות</span>
+                <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                <span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </a>
+            <p class="cil-cat2__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+        </div>
+    </div>
+</div>
+                </div>
+            
+                            <a class="cil-hdr__link header_click" href="https://campus.gov.il/catalog-search/?ctype%5B%5D=program"
+                   data-event-location="header" data-event-details="תוכניות לימוד">תוכניות לימוד</a>
+                            <a class="cil-hdr__link header_click" href="https://campus.gov.il/event/"
+                   data-event-location="header" data-event-details="אירועים">אירועים</a>
+                            <a class="cil-hdr__link header_click" href="https://campus.gov.il/contact-us/"
+                   data-event-location="header" data-event-details="יצירת קשר">יצירת קשר</a>
+                    </nav>
+      </div>
+
+
+        <div class="cil-hdr__search">
+        <form class="cil-hdr__searchForm" id="headerSearchForm" name="headerSearchForm"
+              action="https://campus.gov.il/catalog-search/" role="search">
+            <input type="text" id="headerSearchInput" name="srch" required
+                   placeholder="חיפוש קורסים או תגיות"
+                   aria-label="חיפוש קורסים או תגיות">
+                        <button type="submit" class="cil-hdr__searchIcon" id="searchSubmit"
+                    aria-label="חיפוש">
+                <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
+            </button>
+        </form>
+    </div>
+
+        <div class="cil-hdr__account">
+                            <div class="cil-hdr__auth">
+                                <a class="cil-hdr__btn cil-hdr__btn--solid header_click" href="#"
+                   id="userLogin" data-event-location="header" data-event-details="התחברות"
+                   style="--cil-hdr-login-anim:#91C653;">
+                    <span class="cil-hdr__btnLabel">התחברות</span>
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </a>
+                                <a class="cil-hdr__btn cil-hdr__btn--ghost campus-open-the-register-popup header_click" href="#"
+                   id="userRegister" data-event-location="header" data-event-details="הרשמה">הרשמה</a>
+            </div>
+        
+        <span class="cil-hdr__divider" aria-hidden="true"></span>
+
+        <div class="cil-hdr__languages" id="languages">
+            <button type="button" class="cil-hdr__language" id="languagesButton"
+                    aria-controls="languagesMenu" aria-expanded="false"
+                    aria-label="שפות האתר">
+                <span class="cil-hdr__globe" aria-hidden="true">
+                    <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/></svg>
+                </span>
+                עב                                <span class="cil-hdr__caret cil-hdr__caret--sm" aria-hidden="true">
+                    <svg viewBox="0 0 256 256" width="14" height="14" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+                </span>
+            </button>
+            <div id="languagesMenu" class="cil-hdr__langMenu">
+    <ul class="cil-hdr__langList">
+                    <li class="cil-hdr__langItem">
+                                                        <span class="cil-hdr__lang is-current" lang="he"
+                          aria-current="true">
+                        <span class="cil-hdr__langName" dir="rtl">עברית</span>
+                        <span class="cil-hdr__langMark" aria-hidden="true">
+                            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>
+                        </span>
+                    </span>
+                            </li>
+                    <li class="cil-hdr__langItem">
+                                    <a class="cil-hdr__lang"
+                       href="https://campus.gov.il/en/wp-content/themes/campus/images/logo.png"
+                       lang="en"
+                       title="מעבר ל־English" aria-label="מעבר ל־English">
+                                                <span class="cil-hdr__langName" dir="ltr">English</span>
+                                                <span class="cil-hdr__langMark" aria-hidden="true"></span>
+                    </a>
+                            </li>
+                    <li class="cil-hdr__langItem">
+                                    <a class="cil-hdr__lang"
+                       href="https://campus.gov.il/ar/wp-content/themes/campus/images/logo.png"
+                       lang="ar"
+                       title="מעבר ל־العربية" aria-label="מעבר ל־العربية">
+                                                <span class="cil-hdr__langName" dir="rtl">العربية</span>
+                                                <span class="cil-hdr__langMark" aria-hidden="true"></span>
+                    </a>
+                            </li>
+                    <li class="cil-hdr__langItem">
+                                    <a class="cil-hdr__lang"
+                       href="https://campus.gov.il/ru/wp-content/themes/campus/images/logo.png"
+                       lang="ru"
+                       title="מעבר ל־Русский" aria-label="מעבר ל־Русский">
+                                                <span class="cil-hdr__langName" dir="ltr">Русский</span>
+                                                <span class="cil-hdr__langMark" aria-hidden="true"></span>
+                    </a>
+                            </li>
+            </ul>
+</div>
+        </div>
+    </div>
+</div>
+<div class="cil-mhdr">
+    <div class="cil-mhdr__bar">
+        <div class="cil-mhdr__cluster">
+                        <button type="button" class="cil-mhdr__icon" id="cilMobileMenuToggle"
+                    aria-label="תפריט">
+                <svg viewBox="0 0 256 256" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>            </button>
+            <button type="button" class="cil-mhdr__icon" id="cilMobileLanguages"
+                    aria-controls="cilMobileLanguageSheet" aria-expanded="false"
+                    aria-label="שפות האתר">
+                <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/></svg>            </button>
+        </div>
+
+        <a class="cil-mhdr__logo" href="https://campus.gov.il/"
+           aria-label="לוגו קמפוס IL - קישור לדף הבית">
+                        <img src="https://campus.gov.il/wp-content/themes/campusnew/images/header/mobile-campus-il.png" alt="">
+        </a>
+
+
+                <form class="cil-mhdr__search" id="cilMobileSearchForm" role="search"
+              action="https://campus.gov.il/catalog-search/">
+            <input type="text" name="srch" required
+                   placeholder="חיפוש קורסים או תגיות"
+                   aria-label="חיפוש קורסים או תגיות">
+                        <button type="submit" class="cil-mhdr__searchSubmit"
+                    aria-label="חיפוש">
+                <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>            </button>
+        </form>
+
+                <button type="button" class="cil-mhdr__icon cil-mhdr__searchToggle" id="cilMobileSearchToggle"
+                aria-controls="cilMobileSearchForm" aria-expanded="false"
+                aria-label="חיפוש">
+            <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>        </button>
+
+
+
+    </div>
+</div>
+
+<div class="cil-sheet" id="cilMobileLanguageSheet" hidden>
+    <div class="cil-sheet__scrim" data-cil-sheet-close></div>
+
+    <div class="cil-sheet__panel" role="dialog" aria-modal="true"
+         aria-labelledby="cilMobileLanguageTitle">
+                <button type="button" class="cil-sheet__handleRow" data-cil-sheet-close
+                aria-label="סגירת בחירת שפה">
+            <span class="cil-sheet__handle" aria-hidden="true"></span>
+        </button>
+
+        <p class="cil-sheet__title" id="cilMobileLanguageTitle">בחירת שפה</p>
+
+        <ul class="cil-sheet__list">
+                            <li>
+                                            <span class="cil-sheet__row is-current" lang="he" aria-current="true">
+                            <span dir="rtl">עברית</span>
+                            <span class="cil-sheet__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg></span>
+                        </span>
+                                    </li>
+                            <li>
+                                            <a class="cil-sheet__row"
+                           href="https://campus.gov.il/en/wp-content/themes/campus/images/logo.png"
+                           lang="en"
+                           title="מעבר ל־English" aria-label="מעבר ל־English">
+                            <span dir="ltr">English</span>
+                            <span class="cil-sheet__mark" aria-hidden="true"></span>
+                        </a>
+                                    </li>
+                            <li>
+                                            <a class="cil-sheet__row"
+                           href="https://campus.gov.il/ar/wp-content/themes/campus/images/logo.png"
+                           lang="ar"
+                           title="מעבר ל־العربية" aria-label="מעבר ל־العربية">
+                            <span dir="rtl">العربية</span>
+                            <span class="cil-sheet__mark" aria-hidden="true"></span>
+                        </a>
+                                    </li>
+                            <li>
+                                            <a class="cil-sheet__row"
+                           href="https://campus.gov.il/ru/wp-content/themes/campus/images/logo.png"
+                           lang="ru"
+                           title="מעבר ל־Русский" aria-label="מעבר ל־Русский">
+                            <span dir="ltr">Русский</span>
+                            <span class="cil-sheet__mark" aria-hidden="true"></span>
+                        </a>
+                                    </li>
+                    </ul>
+    </div>
+</div>
+<div class="cil-drawer" id="cilMobileDrawer" hidden>
+    <div class="cil-drawer__scrim" data-cil-drawer-close></div>
+
+    <div class="cil-drawer__panel" role="dialog" aria-modal="true"
+         aria-label="תפריט">
+
+                <div class="cil-drawer__head">
+            <a class="cil-drawer__logo" href="https://campus.gov.il/"
+               aria-label="לוגו קמפוס IL - קישור לדף הבית">
+                <img src="https://campus.gov.il/wp-content/themes/campusnew/images/header/mobile-campus-il.png" alt="">
+            </a>
+            <button type="button" class="cil-drawer__close" data-cil-drawer-close
+                    aria-label="סגירת התפריט">
+                <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>            </button>
+        </div>
+
+                    <div class="cil-drawer__auth">
+                <a class="cil-drawer__btn cil-drawer__btn--solid" href="#" id="userLoginMobile">התחברות</a>
+                <a class="cil-drawer__btn cil-drawer__btn--ghost campus-open-the-register-popup" href="#"
+                   id="userRegisterMobile">הרשמה</a>
+            </div>
+        
+                    <p class="cil-drawer__group">ניווט באתר</p>
+            <button type="button" class="cil-drawer__row" data-cil-drawer-catalogue aria-controls="cilMobileCatalogue"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V96H40V56ZM40,112H96v88H40Zm176,88H112V112H216v88Z"/></svg><span>הקטלוג</span></button><a class="cil-drawer__row" href="https://campus.gov.il/catalog-search/?ctype%5B%5D=program"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></svg><span>תוכניות לימוד</span></a><a class="cil-drawer__row" href="https://campus.gov.il/event/"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg><span>אירועים</span></a><a class="cil-drawer__row" href="https://campus.gov.il/contact-us/"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><span>יצירת קשר</span></a>        
+        
+                <button type="button" class="cil-drawer__language" id="cilDrawerLanguages"
+                aria-controls="cilMobileLanguageSheet" aria-expanded="false">
+            <span class="cil-drawer__languageCurrent">
+                <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/></svg>                <span>עברית</span>
+            </span>
+            <span class="cil-drawer__languageCaret" aria-hidden="true">
+                <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>            </span>
+        </button>
+        <div class="cil-cat" id="cilMobileCatalogue" hidden>
+
+        <section class="cil-cat__level is-current" data-cil-cat-level="root">
+        <button type="button" class="cil-cat__head" data-cil-cat-back="drawer">
+                        <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+            <span class="cil-cat__title">הקטלוג</span>
+        </button>
+
+                    <p class="cil-cat__group">מסלול לימוד</p>
+                            <a class="cil-cat__row" href="https://campus.gov.il/catalog/">
+                    <span>לכל הנושאים</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/catalog-search/">
+                    <span>קורסים עם תעודה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/catalog-search/">
+                    <span>קורסים עם קרדיט אקדמי</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                    
+                    <p class="cil-cat__group">תחומי לימוד</p>
+                                <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1446">
+                        <span>חינוך והוראה</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                                    <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1178">
+                        <span>טכנולוגיה ומחשבים</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                                    <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1334">
+                        <span>מדעי החברה</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                                    <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1254">
+                        <span>מדעי החיים</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                                    <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1286">
+                        <span>מדעי הרוח</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                                    <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1222">
+                        <span>מדעים מדויקים</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                                    <button type="button" class="cil-cat__row"
+                            data-cil-cat-open="1378">
+                        <span>פיתוח אישי ומיומנויות</span>
+                        <span class="cil-cat__mark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span>
+                    </button>
+                        
+            <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+        </section>
+
+                <section class="cil-cat__level" data-cil-cat-level="1446" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">חינוך והוראה</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-matriculation/">
+                    <span>בגרות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-biology-matriculation/">
+                    <span>בגרות בביולוגיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-chemistry-matriculation/">
+                    <span>בגרות בכימיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-computer-science-matriculation/">
+                    <span>בגרות במדעי המחשב</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-mathematics-matriculation/">
+                    <span>בגרות במתמטיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-physics-matriculation/">
+                    <span>בגרות בפיזיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-classroom-management-tools/">
+                    <span>כלים לניהול כיתה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-teaching-studies/">
+                    <span>לימודי הוראה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-distance-learning/">
+                    <span>למידה מרחוק</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-self-directed-learning/">
+                    <span>למידה עצמית</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-school-management/">
+                    <span>ניהול בית ספר</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/education-management-and-professional-development-for-education-professionals/">
+                    <span>ניהול ופיתוח מקצועי לאנשי חינוך</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+            <section class="cil-cat__level" data-cil-cat-level="1178" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">טכנולוגיה ומחשבים</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-artificial-intelligence/">
+                    <span>בינה מלאכותית</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-computer-science/">
+                    <span>מדעי המחשב</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-data-science/">
+                    <span>מדעי הנתונים</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-computers/">
+                    <span>מחשבים</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-cybersecurity/">
+                    <span>סייבר</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-python/">
+                    <span>פייתון</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-software-development/">
+                    <span>פיתוח תוכנה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-robotics/">
+                    <span>רובוטיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-various-software/">
+                    <span>תוכנות שונות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/tac-programming/">
+                    <span>תכנות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+            <section class="cil-cat__level" data-cil-cat-level="1334" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">מדעי החברה</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-social-entrepreneurship/">
+                    <span>יזמות חברתית</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-economics/">
+                    <span>כלכלה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-gender-studies/">
+                    <span>מגדר</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-political-science-governance/">
+                    <span>מדעי המדינה וממשל</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-management/">
+                    <span>ניהול</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-project-management/">
+                    <span>ניהול פרויקטים</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-feminism/">
+                    <span>פמיניזם</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-psychology/">
+                    <span>פסיכולוגיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-zionism/">
+                    <span>ציונות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ss-communication-media/">
+                    <span>תקשורת ומדיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+            <section class="cil-cat__level" data-cil-cat-level="1254" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">מדעי החיים</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-biology/">
+                    <span>ביולוגיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-health/">
+                    <span>בריאות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-environmental-studies/">
+                    <span>לימודי סביבה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-neuroscience/">
+                    <span>מדעי המוח</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-nursing/">
+                    <span>סיעוד</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-first-aid/">
+                    <span>עזרה ראשונה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/ls-medicine/">
+                    <span>רפואה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+            <section class="cil-cat__level" data-cil-cat-level="1286" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">מדעי הרוח</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-arts/">
+                    <span>אמנות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-archaeology/">
+                    <span>ארכיאולוגיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-ethics/">
+                    <span>אתיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-history/">
+                    <span>היסטוריה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-television/">
+                    <span>טלוויזיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-islamic-studies/">
+                    <span>לימודי אסלאם</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-jewish-thought/">
+                    <span>מחשבת ישראל</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-product-management/">
+                    <span>ניהול מוצר</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-design/">
+                    <span>עיצוב</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-philosophy/">
+                    <span>פילוסופיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/humanities-culture/">
+                    <span>תרבות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+            <section class="cil-cat__level" data-cil-cat-level="1222" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">מדעים מדויקים</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-engineering/">
+                    <span>הנדסה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-chemistry/">
+                    <span>כימיה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-logic/">
+                    <span>לוגיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-research/">
+                    <span>מחקר</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-mechanics/">
+                    <span>מכניקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-mathematics/">
+                    <span>מתמטיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/es-physics/">
+                    <span>פיזיקה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+            <section class="cil-cat__level" data-cil-cat-level="1378" hidden>
+            <button type="button" class="cil-cat__head" data-cil-cat-back="root">
+                <span class="cil-cat__backMark" aria-hidden="true"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></span>
+                <span class="cil-cat__title">פיתוח אישי ומיומנויות</span>
+            </button>
+
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-excel/">
+                    <span>אקסל</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-safety/">
+                    <span>בטיחות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-parenting-family/">
+                    <span>הורות ומשפחה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-enrichment/">
+                    <span>העשרה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-innovation/">
+                    <span>חדשנות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-job-search/">
+                    <span>חיפוש עבודה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-work-skills/">
+                    <span>כישורי עבודה</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-english-studies/">
+                    <span>לימודי אנגלית</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-arabic-studies/">
+                    <span>לימודי ערבית</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-digital-skills/">
+                    <span>מיומנויות דיגיטליות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-mindfulness/">
+                    <span>מיינדפולנס</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-social-media/">
+                    <span>רשתות חברתיות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-internet-marketing/">
+                    <span>שיווק באינטרנט</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-using-internet-tools/">
+                    <span>שימוש בכלים באינטרנט</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-self-improvement/">
+                    <span>שיפור עצמי</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+                            <a class="cil-cat__row" href="https://campus.gov.il/course_subjects/pds-languages/">
+                    <span>שפות</span>
+                    <span class="cil-cat__mark" aria-hidden="true"></span>
+                </a>
+            
+                <div class="cil-cat__footer">
+                <a class="cil-cat__all" href="https://campus.gov.il/catalog-search/"
+           style="--cil-cat-fill:#70C6D1;
+                  --cil-cat-ink:#232523;">לכל התוצאות</a>
+        <p class="cil-cat__hint">כל הקורסים והתוכניות הקיימים בקמפוס IL</p>
+    </div>
+            </section>
+    </div>
+    </div>
+</div>
+</header>
+
+<div class="p404">
+  <div class="image">
+    <div>404</div>
+  </div>
+  <div class="text">
+    <div class="content">
+
+      <nav class="breadcrumbs" aria-label="מיקומך בדפי האתר">
+        <ol>
+          <li><a href="https://campus.gov.il/">ראשי</a></li>
+          <li aria-current="page">404</li>
+        </ol>
+      </nav>
+
+      <h1>הדף לא קיים!</h1>
+      <p>לא ניתן היה למצוא את הדף שאליו הגעת, אולי הוא פשוט לא קיים או שהוא פשוט החליט להגשים את חלומו.</p>
+      <div class="items">
+        <div class="link"><a href="https://campus.gov.il/">לדף הבית</a></div>
+        <div class="searchBar">
+          <form name="homepageSearchForm" id="homepageSearchForm" action="https://campus.gov.il/catalog-search/">
+              <div class="searchField"><fieldset>
+                <label for="notFoundSearchInput"></label>
+                <input type="text" id="notFoundSearchInput" name="srch" placeholder="בינתיים, את יכולה לחפש קורס אחר." aria-label="בינתיים, את יכולה לחפש קורס אחר." required="required"/>
+              </fieldset></div>
+              <div><fieldset><button type="submit" id="homepageSearchSubmit" arial-label="חיפוש"></button></fieldset></div>
+          </form>
+           <script>
+            $(document).ready(function() {
+                homepageSearchForm = "#homepageSearchForm";
+                $(homepageSearchForm).validate({
+                  rules: {
+                    srch: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 255
+                    }
+                  }
+                });
+            });
+            </script>
+        </div>  
+      </div>  
+    </div>  
+  </div>    
+
+</div>
+<div class="clearfix"></div>
+
+    <footer id="footer" class="cil-footer" role="contentinfo">
+            <div class="cil-footer__decoration" aria-hidden="true">
+                    <span class="cil-footer__shape cil-footer__shape--ring-start"></span>
+                    <span class="cil-footer__shape cil-footer__shape--ring-end"></span>
+                    <span class="cil-footer__shape cil-footer__shape--dot-start-a"></span>
+                    <span class="cil-footer__shape cil-footer__shape--dot-start-b"></span>
+                    <span class="cil-footer__shape cil-footer__shape--dot-end-a"></span>
+                    <span class="cil-footer__shape cil-footer__shape--dot-end-b"></span>
+            </div>
+            <div class="cil-footer__inner">
+            
+                <div class="cil-footer__sitemap">
+        <div class="cil-footer__brand">
+            <a class="cil-footer__brand-link" href="https://campus.gov.il/">
+                                <img class="cil-footer__brand-logo" loading="lazy" decoding="async"
+                     src="https://campus.gov.il/wp-content/themes/campusnew/images/footer/footer-logo.svg"
+                     style="--cil-footer-logo-w: 270px;"
+                     alt="קמפוס IL">
+            </a>
+                                        <p class="cil-footer__brand-text">מיזם הלמידה הלאומי של ישראל. קורסים אקדמיים ומקצועיים באיכות גבוהה, פתוחים לכל אחת ואחד, ללא עלות.</p>
+                    </div>
+
+        <nav class="cil-footer__columns" aria-label="קישורי הפוטר">
+                            <div class="cil-footer__column" style="--cil-footer-accent: var(--cil-yellow);">
+                    <h2 class="cil-footer__column-head" id="cil-footer-col-0">
+                        <span class="cil-footer__accent" aria-hidden="true"></span>
+                        <span>למידה</span>
+                    </h2>
+                    <ul class="cil-footer__links" aria-labelledby="cil-footer-col-0">
+                                                    <li>
+                                <a href="https://campus.gov.il/catalog-search/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="קטלוג הקורסים" data-event-location="footer" >קטלוג הקורסים</a>
+                            </li>
+                                                    <li>
+                                <a href="https://campus.gov.il/catalog-programs/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="תוכניות לימוד" data-event-location="footer" >תוכניות לימוד</a>
+                            </li>
+                                                    <li>
+                                <a href="https://campus.gov.il/catalog/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="קטגוריות" data-event-location="footer" >קטגוריות</a>
+                            </li>
+                                                    <li>
+                                <a href="https://campus.gov.il/catalog-institutions/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="מוסדות שותפים" data-event-location="footer" >מוסדות שותפים</a>
+                            </li>
+                                                    <li>
+                                <a href="https://campus.gov.il/catalog-lecturers/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="סגל הוראה" data-event-location="footer" >סגל הוראה</a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div class="cil-footer__column" style="--cil-footer-accent: var(--cil-blue);">
+                    <h2 class="cil-footer__column-head" id="cil-footer-col-1">
+                        <span class="cil-footer__accent" aria-hidden="true"></span>
+                        <span>המיזם</span>
+                    </h2>
+                    <ul class="cil-footer__links" aria-labelledby="cil-footer-col-1">
+                                                    <li>
+                                <a href="https://campus.gov.il/about-us/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="אודות" data-event-location="footer" >אודות</a>
+                            </li>
+                                                    <li>
+                                <a href="https://campus.gov.il/event/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="אירועים" data-event-location="footer" >אירועים</a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div class="cil-footer__column" style="--cil-footer-accent: var(--cil-green);">
+                    <h2 class="cil-footer__column-head" id="cil-footer-col-2">
+                        <span class="cil-footer__accent" aria-hidden="true"></span>
+                        <span>תמיכה</span>
+                    </h2>
+                    <ul class="cil-footer__links" aria-labelledby="cil-footer-col-2">
+                                                    <li>
+                                <a href="https://campus.gov.il/contact-us/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="יצירת קשר" data-event-location="footer" >יצירת קשר</a>
+                            </li>
+                                                    <li>
+                                <a href="https://govextra.gov.il/national-digital-agency/campus-il/home/" class="cil-footer__link campus-seo-strip-click"
+                                   target="_blank" rel="noopener noreferrer" aria-describedby="cil-footer-newtab"                                   data-event-details="menu platforms" data-event-selection="פורטל הידע" data-event-location="footer" >פורטל הידע</a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div class="cil-footer__column" style="--cil-footer-accent: var(--cil-red);">
+                    <h2 class="cil-footer__column-head" id="cil-footer-col-3">
+                        <span class="cil-footer__accent" aria-hidden="true"></span>
+                        <span>מידע ותקנון</span>
+                    </h2>
+                    <ul class="cil-footer__links" aria-labelledby="cil-footer-col-3">
+                                                    <li>
+                                <a href="https://campus.gov.il/terms-of-service/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="תנאי שימוש" data-event-location="footer" >תנאי שימוש</a>
+                            </li>
+                                                    <li>
+                                <a href="https://campus.gov.il/accessibility-statement/" class="cil-footer__link campus-seo-strip-click"
+                                                                      data-event-details="menu platforms" data-event-selection="הצהרת נגישות" data-event-location="footer" >הצהרת נגישות</a>
+                            </li>
+                                            </ul>
+                </div>
+                    </nav>
+
+    </div>
+                <div class="cil-footer__rule" role="presentation"></div>
+                <div class="cil-footer__partners">
+                    <div class="cil-footer__partner">
+                                    <div class="cil-footer__partner-logo-row">
+                        <img class="cil-footer__partner-logo" loading="lazy" decoding="async"
+                             src="https://campus.gov.il/wp-content/themes/campusnew/images/footer/footer-logo-malag.svg"
+                             style="--cil-footer-logo-w: 86px;"
+                             alt="המועצה להשכלה גבוהה (מל”ג) מתווה את מדיניות מערכת ההשכלה הגבוהה והוועדה לתכנון ותקצוב (ות”ת) אחראית על תכנונה ותקצובה">
+                    </div>
+                                                    <p class="cil-footer__partner-text">המועצה להשכלה גבוהה (מל”ג) מתווה את מדיניות מערכת ההשכלה הגבוהה והוועדה לתכנון ותקצוב (ות”ת) אחראית על תכנונה ותקצובה. הן שוקדות על פיתוח המחקר וההוראה, קידום איכות ומצוינות והנגשת המערכת לכלל האוכלוסייה.</p>
+                            </div>
+                    <div class="cil-footer__partner">
+                                    <div class="cil-footer__partner-logo-row">
+                        <img class="cil-footer__partner-logo" loading="lazy" decoding="async"
+                             src="https://campus.gov.il/wp-content/themes/campusnew/images/footer/footer-logo-digital.svg"
+                             style="--cil-footer-logo-w: 167px;"
+                             alt="מערך הדיגיטל הלאומי הוא הגוף האמון על קידום מהפכת הדיגיטל במגזר הציבורי">
+                    </div>
+                                                    <p class="cil-footer__partner-text">מערך הדיגיטל הלאומי הוא הגוף האמון על קידום מהפכת הדיגיטל במגזר הציבורי. המערך כפוף לשר הכלכלה והתעשייה, משמש כגוף המטה הטכנולוגי של משרדי הממשלה והגופים הציבוריים.</p>
+                            </div>
+            </div>
+                <div class="cil-footer__rule" role="presentation"></div>
+                <div class="cil-footer__legal">
+                <span id="cil-footer-newtab" class="screen-reader-text">נפתח בלשונית חדשה</span>
+            <ul class="cil-footer__social" aria-label="קמפוס IL ברשתות החברתיות">
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://twitter.com/campus__il"
+                   data-platform="twitter"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="X (Twitter)"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://twitter.com/campus__il" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"/></svg>                </a>
+            </li>
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://www.youtube.com/@campus_IL"
+                   data-platform="youtube"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://www.youtube.com/@campus_IL" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg>                </a>
+            </li>
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://www.linkedin.com/company/campus-il/"
+                   data-platform="linkedin"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://www.linkedin.com/company/campus-il/" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg>                </a>
+            </li>
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://t.me/learning_how_to_learn_IL"
+                   data-platform="telegram"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Telegram"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://t.me/learning_how_to_learn_IL" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg>                </a>
+            </li>
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://instagram.com/campus_il"
+                   data-platform="instagram"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://instagram.com/campus_il" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>                </a>
+            </li>
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://www.facebook.com/campus.gov.il"
+                   data-platform="facebook"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Facebook"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://www.facebook.com/campus.gov.il" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg>                </a>
+            </li>
+                    <li>
+                <a class="cil-footer__social-link campus-seo-strip-click"
+                   href="https://www.tiktok.com/@campus_il"
+                   data-platform="tiktok"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="TikTok"
+                                      aria-describedby="cil-footer-newtab"
+                   data-event-details="social platforms" data-event-selection="https://www.tiktok.com/@campus_il" data-event-location="footer" >
+                    <svg class="cil-footer__social-glyph" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"/></svg>                </a>
+            </li>
+            </ul>
+            <div class="cil-footer__legal-text">
+                    <ul class="cil-footer__languages" aria-label="בחירת שפה">
+                    <li>
+                <a class="cil-footer__language is-current"
+                                      href="https://campus.gov.il/wp-content/themes/campus/images/logo.png"
+                   lang="he"
+                   dir="rtl"
+                   aria-current="true">עברית</a>
+            </li>
+                    <li>
+                <a class="cil-footer__language"
+                   data-hover-slot="1"                   href="https://campus.gov.il/en/wp-content/themes/campus/images/logo.png"
+                   lang="en"
+                   dir="ltr"
+                   >English</a>
+            </li>
+                    <li>
+                <a class="cil-footer__language"
+                   data-hover-slot="2"                   href="https://campus.gov.il/ar/wp-content/themes/campus/images/logo.png"
+                   lang="ar"
+                   dir="rtl"
+                   >العربية</a>
+            </li>
+                    <li>
+                <a class="cil-footer__language"
+                   data-hover-slot="3"                   href="https://campus.gov.il/ru/wp-content/themes/campus/images/logo.png"
+                   lang="ru"
+                   dir="ltr"
+                   >Русский</a>
+            </li>
+            </ul>
+                <p class="cil-footer__copyright">© 2026 קמפוס IL · כל הזכויות שמורות</p>
+        </div>
+    </div>
+            </div>
+    </footer>
+    
+
+    <button type="button" class="cil-btt" id="cilBackToTop" hidden
+            aria-label="חזרה לראש העמוד"
+            style="--cil-btt-base:#70C6D1;
+                   --cil-btt-fill:#FDCC09;
+                   --cil-btt-base-ink:#232523;
+                   --cil-btt-fill-ink:#232523;
+                   left:var(--cil-btt-inset);">
+                <span class="cil-btt__marks" aria-hidden="true">
+            <svg class="cil-btt__arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false">
+                <path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"/>
+            </svg>
+            <svg class="cil-btt__caret" viewBox="0 0 256 256" fill="currentColor" focusable="false">
+                <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"/>
+            </svg>
+        </span>
+    </button>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/campusnew/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/js/analytics-handlers.js?ver=1787740083" id="campusil-analytics-handlers-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/script.js?ver=6aa24d07c5f37" id="custojs-js"></script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/inc/back-to-top/assets/back-to-top.js?ver=1.9.0" id="cil-back-to-top-js"></script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/inc/header-component/assets/mobile-header.js?ver=1.98.0" id="cil-mobile-header-js"></script>
+<script type="text/javascript" src="https://campus.gov.il/wp-content/themes/campusnew/inc/header-component/assets/site-header.js?ver=1.98.0" id="cil-site-header-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://campus.gov.il/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://campus.gov.il/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<div id="videoModal" class="videoModalOverlay" hidden>
+  <div class="videoModalInner" role="dialog" aria-modal="true" aria-label="Video">
+    <button type="button" class="videoModalClose" aria-label="Close">&times;</button>
+    <div class="videoModalFrame"></div>
+  </div>
+</div>
+<style>
+  .videoModalOverlay { position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:99999; display:flex; align-items:center; justify-content:center; padding:24px; }
+  .videoModalOverlay[hidden] { display:none; }
+  .videoModalInner { position:relative; width:100%; max-width:960px; aspect-ratio:16/9; background:#000; box-shadow:0 8px 40px rgba(0,0,0,.5); }
+  .videoModalFrame { position:absolute; inset:0; }
+  .videoModalFrame iframe { width:100%; height:100%; border:0; display:block; }
+  .videoModalClose { position:absolute; top:-44px; right:0; background:transparent; border:0; color:#fff; font-size:36px; line-height:1; cursor:pointer; padding:4px 10px; }
+  .videoModalClose:hover, .videoModalClose:focus { color:#91c653; outline:none; }
+</style>
+<script>
+(function(){
+  var modal = document.getElementById('videoModal');
+  if (!modal) return;
+  var frame = modal.querySelector('.videoModalFrame');
+  var closeBtn = modal.querySelector('.videoModalClose');
+
+  function open(src){
+    frame.innerHTML = '<iframe src="' + src + '" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    modal.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+  }
+  function close(){
+    frame.innerHTML = '';
+    modal.hidden = true;
+    document.documentElement.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('.videoCard[data-embed]');
+    if (!a) return;
+    var src = a.getAttribute('data-embed');
+    if (!src) return;
+    e.preventDefault();
+    open(src);
+  });
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') close(); });
+})();
+</script>
+
+</body>
+</html>
