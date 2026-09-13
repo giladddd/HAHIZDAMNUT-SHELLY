@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f5f0eb"/>
+  <!-- Yoga pose silhouette -->
+  <!-- Head -->
+  <circle cx="100" cy="52" r="16" fill="#c8a882"/>
+  <!-- Body sitting -->
+  <ellipse cx="100" cy="110" rx="28" ry="32" fill="#c8a882"/>
+  <!-- Legs crossed -->
+  <ellipse cx="72" cy="148" rx="28" ry="10" fill="#c8a882" transform="rotate(-15 72 148)"/>
+  <ellipse cx="128" cy="148" rx="28" ry="10" fill="#c8a882" transform="rotate(15 128 148)"/>
+  <!-- Arms in prayer position -->
+  <path d="M82 95 Q72 82 68 72" stroke="#c8a882" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M118 95 Q128 82 132 72" stroke="#c8a882" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <!-- Hands together -->
+  <ellipse cx="100" cy="88" rx="12" ry="9" fill="#c8a882"/>
+  <!-- Hair -->
+  <ellipse cx="100" cy="42" rx="17" ry="12" fill="#8b6340"/>
+  <path d="M87 46 Q80 60 82 75" stroke="#8b6340" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M113 46 Q120 60 118 75" stroke="#8b6340" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Text -->
+  <text x="100" y="186" font-family="'Arial','Helvetica',sans-serif" font-size="20" font-weight="900" fill="#7a5c3a" text-anchor="middle">לאה יוגה 🧘</text>
+</svg>
