@@ -646,12 +646,15 @@ var activeTab = 0;
 var filterCat = 'כל הקטגוריות';
 
 function isUnlocked() {
+  return true; // TEMP: open access — restore auth later
+  /* SAVED AUTH:
   try {
     var raw = localStorage.getItem('hahizd_emp_unlocked');
     if (!raw) return false;
     var d = JSON.parse(raw);
     return d && (Date.now() - d.ts < 30 * 24 * 60 * 60 * 1000);
   } catch(e) { return false; }
+  */
 }
 
 (function(){

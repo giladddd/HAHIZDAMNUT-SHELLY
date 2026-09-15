@@ -1220,7 +1220,7 @@ Hahizd.initRegModal({
   }
 });
 (function(){
-  function isUnlocked(){try{var r=localStorage.getItem('hahizd_emp_unlocked');if(!r)return false;var d=JSON.parse(r);return d&&(Date.now()-d.ts<30*24*60*60*1000);}catch(e){return false;}}
+  function isUnlocked(){return true;/* TEMP: open access — restore later: try{var r=localStorage.getItem('hahizd_emp_unlocked');if(!r)return false;var d=JSON.parse(r);return d&&(Date.now()-d.ts<30*24*60*60*1000);}catch(e){return false;} */}
   if (!isUnlocked()) {
     document.body.classList.add('content-locked');
     document.addEventListener('click', function(e) {
