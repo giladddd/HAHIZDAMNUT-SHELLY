@@ -984,7 +984,7 @@ window.submitJobForm = function(e, jobTitle) {
   data.append('_captcha', 'false');
   data.append('_template', 'table');
 
-  fetch('https://formsubmit.co/ajax/giladunna@gmail.com', {
+  fetch('https://formsubmit.co/ajax/hahizdamnutshelly@gmail.com', {
     method: 'POST',
     body: data,
     headers: { 'Accept': 'application/json' }
@@ -993,7 +993,7 @@ window.submitJobForm = function(e, jobTitle) {
     if (res.success === 'true' || res.success === true) {
       form.innerHTML = '<div class="jf-success">✅ המועמדות נשלחה בהצלחה! נחזור אליך בהקדם.</div>';
     } else if (res.message && res.message.indexOf('Activation') !== -1) {
-      form.innerHTML = '<div class="jf-success" style="background:#FEF9C3;color:#854D0E">⚠️ בדוק את המייל giladunna@gmail.com ולחץ Activate Form — פעולה חד פעמית בלבד.</div>';
+      form.innerHTML = '<div class="jf-success" style="background:#FEF9C3;color:#854D0E">⚠️ בדוק את המייל hahizdamnutshelly@gmail.com ולחץ Activate Form — פעולה חד פעמית בלבד.</div>';
     } else {
       btn.disabled = false;
       btn.textContent = 'שלח מועמדות ✉️';
