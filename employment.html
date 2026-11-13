@@ -971,33 +971,15 @@ window.submitJobForm = function(e, jobTitle) {
   var applicantName  = form.querySelector('[name=שם]').value;
   var applicantPhone = form.querySelector('[name=טלפון]').value;
 
-  var data = new FormData();
-  data.append('שם',     applicantName);
-  data.append('טלפון',  applicantPhone);
-  data.append('אימייל', applicantEmail);
-  data.append('משרה',   jobTitle);
-  data.append('_subject',  'הגשת קורות חיים — ' + jobTitle + ' | ' + applicantName);
-  data.append('_replyto',  applicantEmail);
-  data.append('_next',     'https://hahizdamnut-shelly.onrender.com/employment.html');
-
-  data.append('_subject', 'הגשת מועמדות — ' + jobTitle + ' | ' + applicantName);
-  data.append('_captcha', 'false');
-  data.append('_template', 'table');
-
-  fetch('https://formsubmit.co/ajax/hahizdamnutshelly@gmail.com', {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(function(r) { return r.json(); })
-  .then(function(res) {
-    if (res.success === 'true' || res.success === true) {
-      form.innerHTML = '<div class="jf-success">✅ המועמדות נשלחה בהצלחה! נחזור אליך בהקדם.</div>';
-    } else if (res.message && res.message.indexOf('Activation') !== -1) {
-      form.innerHTML = '<div class="jf-success" style="background:#FEF9C3;color:#854D0E">⚠️ בדוק את המייל hahizdamnutshelly@gmail.com ולחץ Activate Form — פעולה חד פעמית בלבד.</div>';
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'שלח מועמדות ✉️';
-    }
+  Hahizd.submit({
+    name:      applicantName,
+    phone:     applicantPhone,
+    email:     applicantEmail,
+    notes:     'משרה: ' + jobTitle,
+    timestamp: new Date().toLocaleString('he-IL'),
+    form_type: 'job_application',
+  }).then(function() {
+    form.innerHTML = '<div class="jf-success">✅ המועמדות נשלחה בהצלחה! נחזור אליך בהקדם.</div>';
   }).catch(function() {
     btn.disabled = false;
     btn.textContent = 'שלח מועמדות ✉️';
