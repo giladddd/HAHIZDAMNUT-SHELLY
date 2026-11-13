@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE5D7Y3LFM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZE5D7Y3LFM');</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>טיפים למשוחררים — ההזדמנות שלי</title>
+<meta name="description" content="טיפים מעשיים למשוחררים מהצבא — תעסוקה, כלכלה, פיתוח אישי וכל מה שצריך לדעת ביום הראשון שאחרי."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2235%22 cy=%2240%22 r=%2230%22 fill=%22%231A56A0%22 opacity=%220.85%22/><circle cx=%2265%22 cy=%2240%22 r=%2230%22 fill=%22%230F3873%22 opacity=%220.85%22/><circle cx=%2250%22 cy=%2265%22 r=%2230%22 fill=%22%234DAEF5%22 opacity=%220.85%22/></svg>">
+<style>
+:root{
+  --primary:#1A56A0;--primary-dk:#0F3873;--accent:#4DAEF5;
+  --bg:#fff;--bg-soft:#F2F7FD;--text:#0F172A;--muted:#64748B;
+  --border:rgba(15,23,42,.08);--border-md:rgba(15,23,42,.13);
+  --r-sm:10px;--r-md:16px;--r-lg:24px;
+  --sh-md:0 6px 24px rgba(15,23,42,.09);--sh-lg:0 16px 48px rgba(15,23,42,.13);
+  --nav-h:68px;--tr:.22s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;color:var(--text);background:#F8FAFF;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:900px;margin-inline:auto;padding-inline:24px}
+
+/* NAV */
+#navbar{position:fixed;top:0;right:0;left:0;z-index:1000;height:var(--nav-h);background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow var(--tr)}
+#navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{font-size:1.3rem;font-weight:900;color:#1A56A0;flex-shrink:0;display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;list-style:none}
+.nav-links a,.nav-links button.nav-link-btn{padding:8px 11px;border-radius:var(--r-sm);font-size:.92rem;font-weight:500;color:var(--muted);transition:color var(--tr),background var(--tr);display:flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;font-family:inherit}
+.nav-links a:hover,.nav-links a.active{color:#1A56A0;background:var(--bg-soft)}
+.nav-has-drop{position:relative}
+.nav-drop{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--sh-md);min-width:160px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity var(--tr),transform var(--tr),visibility var(--tr);z-index:200}
+.nav-has-drop:hover .nav-drop,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-drop-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--r-sm);font-size:.95rem;font-weight:600;color:var(--text);transition:background var(--tr),color var(--tr);white-space:nowrap}
+.nav-drop-item:hover{background:var(--bg-soft);color:#1A56A0}
+.nav-cta{flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:50px;font-family:inherit;font-weight:700;cursor:pointer;transition:all var(--tr);text-decoration:none}
+.btn-outline{background:transparent;border:2px solid #1A56A0;color:#1A56A0}
+.btn-outline:hover{background:#1A56A0;color:#fff}
+.btn-sm{padding:8px 20px;font-size:.88rem}
+.btn-primary{background:#1A56A0;color:#fff}
+.btn-primary:hover{background:var(--primary-dk)}
+.nav-hamburger{order:-1;display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;border-radius:var(--r-sm)}
+.nav-hamburger span{display:block;height:2px;background:var(--text);border-radius:2px;transition:transform .25s ease,opacity .2s ease;transform-origin:center}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:998}
+.nav-overlay.open{display:block}
+.nav-drawer{position:fixed;top:var(--nav-h);right:0;bottom:0;width:300px;background:#fff;border-right:1px solid var(--border);z-index:999;box-shadow:-4px 0 32px rgba(0,0,0,.1);transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:none;flex-direction:column}
+.nav-drawer.open{transform:translateX(0)}
+.drawer-top{padding:16px 16px 8px;display:flex;flex-direction:column;gap:2px}
+.drawer-link{display:block;padding:11px 14px;border-radius:var(--r-sm);font-size:1rem;font-weight:600;color:var(--text);transition:background var(--tr),color var(--tr)}
+.drawer-link:hover,.drawer-link.active{background:var(--bg-soft);color:#1A56A0}
+.drawer-bottom{padding:16px;margin-top:auto}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex}.nav-drawer{display:flex}}
+
+/* HERO */
+.tips-hero{padding:calc(var(--nav-h) + 56px) 0 56px;background:linear-gradient(135deg,#0A1628 0%,#1A3A6E 60%,#1A56A0 100%);position:relative;overflow:hidden}
+.tips-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(77,174,245,.12),transparent 60%);pointer-events:none}
+.tips-hero .container{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:.82rem;font-weight:700;padding:6px 16px;border-radius:50px;margin-bottom:18px}
+.tips-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;margin-bottom:14px;line-height:1.2}
+.tips-hero h1 em{font-style:normal;color:var(--accent)}
+.tips-hero p{font-size:1.05rem;color:rgba(255,255,255,.72);max-width:580px;line-height:1.75;margin-bottom:32px}
+.hero-cats{display:flex;flex-wrap:wrap;gap:10px}
+.hero-cat{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:50px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);font-size:.85rem;font-weight:700;cursor:pointer;transition:all .2s}
+.hero-cat:hover,.hero-cat.active{background:var(--primary);border-color:var(--primary);color:#fff}
+
+/* FILTERS */
+.filters-wrap{background:#fff;border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:var(--nav-h);z-index:100}
+.filters-inner{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.filters-inner::-webkit-scrollbar{display:none}
+.filter-pill{flex-shrink:0;padding:7px 18px;border-radius:50px;border:1.5px solid var(--border-md);background:#fff;font-size:.85rem;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s}
+.filter-pill.active,.filter-pill:hover{background:var(--primary);border-color:var(--primary);color:#fff}
+
+/* TIPS GRID */
+.tips-main{padding:48px 0 80px}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.tip-card{background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:transform .2s,box-shadow .2s;cursor:pointer;display:flex;flex-direction:column}
+.tip-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.tip-card-top{padding:28px 24px 20px;flex:1}
+.tip-cat-label{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.tip-card h2{font-size:1.1rem;font-weight:900;color:var(--text);margin-bottom:10px;line-height:1.35}
+.tip-card p{font-size:.88rem;color:var(--muted);line-height:1.75}
+.tip-card-footer{padding:16px 24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.tip-read-btn{font-size:.82rem;font-weight:700;color:var(--primary);display:flex;align-items:center;gap:4px}
+.tip-read-time{font-size:.75rem;color:var(--muted)}
+
+/* CAT COLORS */
+.cat-employ{color:#1A56A0}.tip-card.cat-employ .tip-card-top{border-top:3px solid #1A56A0}
+.cat-finance{color:#059669}.tip-card.cat-finance .tip-card-top{border-top:3px solid #059669}
+.cat-personal{color:#7C3AED}.tip-card.cat-personal .tip-card-top{border-top:3px solid #7C3AED}
+.cat-life{color:#D97706}.tip-card.cat-life .tip-card-top{border-top:3px solid #D97706}
+
+/* ARTICLE MODAL */
+#tipModal{position:fixed;inset:0;z-index:9000;background:rgba(10,22,40,.75);backdrop-filter:blur(6px);display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}
+#tipModal.open{display:flex}
+.tip-article{background:#fff;border-radius:24px;max-width:720px;width:100%;margin:auto;padding:0 0 40px;box-shadow:0 32px 80px rgba(0,0,0,.3);position:relative;animation:slideUp .3s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.article-close{position:absolute;top:16px;left:16px;width:36px;height:36px;border-radius:50%;background:#F1F5F9;font-size:1.1rem;color:#64748B;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;z-index:1}
+.article-close:hover{background:#E2E8F0}
+.article-hero-bar{height:5px;border-radius:24px 24px 0 0}
+.article-inner{padding:36px 40px 0}
+@media(max-width:600px){.article-inner{padding:28px 24px 0}}
+.article-cat{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.article-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:900;color:var(--text);margin-bottom:12px;line-height:1.25}
+.article-meta{font-size:.82rem;color:var(--muted);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.article-body h3{font-size:1.1rem;font-weight:900;color:var(--text);margin:24px 0 10px}
+.article-body p{font-size:.95rem;color:#334155;line-height:1.85;margin-bottom:14px}
+.article-body ul{padding-right:18px;margin-bottom:14px;display:flex;flex-direction:column;gap:6px}
+.article-body ul li{font-size:.93rem;color:#334155;line-height:1.75}
+.article-body .tip-box{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:16px 20px;margin:18px 0;font-size:.88rem;color:#1E40AF;line-height:1.7}
+.article-body .tip-box strong{font-weight:800}
+.article-cta{background:linear-gradient(135deg,#0A1628,#1A56A0);border-radius:16px;padding:28px 32px;text-align:center;margin:28px 0 0}
+.article-cta h3{color:#fff;font-size:1.2rem;font-weight:900;margin-bottom:8px}
+.article-cta p{color:rgba(255,255,255,.72);font-size:.88rem;margin-bottom:18px}
+.article-cta a{display:inline-flex;align-items:center;gap:6px;padding:12px 28px;background:#fff;color:#1A56A0;border-radius:50px;font-weight:800;font-size:.95rem;transition:transform .2s}
+.article-cta a:hover{transform:translateY(-2px)}
+
+/* CTA SECTION */
+.tips-cta-sec{background:linear-gradient(135deg,#0A1628 0%,#1A3A6E 100%);padding:72px 0;text-align:center}
+.tips-cta-sec h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;color:#fff;margin-bottom:12px}
+.tips-cta-sec p{font-size:1rem;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto 28px;line-height:1.75}
+.tips-cta-sec a{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;background:#1A56A0;color:#fff;border-radius:50px;font-weight:800;font-size:1rem;transition:all .2s}
+.tips-cta-sec a:hover{background:#2066C0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,86,160,.4)}
+
+/* EMPTY */
+.tips-empty{text-align:center;padding:64px 24px;color:var(--muted)}
+.tips-empty svg{margin-bottom:16px;opacity:.3}
+
+footer{background:#0F172A;color:rgba(255,255,255,.5);text-align:center;padding:28px 24px;font-size:.85rem}
+footer a{color:rgba(255,255,255,.75);font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+<div class="nav-inner">
+  <a class="nav-logo" href="hahazdamnut.html">ההזדמנות שלי<svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="65" cy="60" r="30" fill="#1A56A0" opacity="0.85"/><circle cx="35" cy="60" r="30" fill="#0F3873" opacity="0.85"/><circle cx="50" cy="35" r="30" fill="#4DAEF5" opacity="0.85"/></svg></a>
+  <ul class="nav-links">
+    <li><a href="hahazdamnut.html">בית</a></li>
+    <li><a href="about.html">אודות</a></li>
+    <li class="nav-has-drop">
+      <button class="nav-link-btn">הזדמנויות <span>▾</span></button>
+      <div class="nav-drop">
+        <a href="employment.html" class="nav-drop-item"><span>💼</span>תעסוקתי</a>
+        <a href="finance.html" class="nav-drop-item"><span>💰</span>כלכלי</a>
+        <a href="personal.html" class="nav-drop-item"><span>🌱</span>אישי</a>
+      </div>
+    </li>
+    <li><a href="hahazdamnut.html#programs">הליווי שלנו</a></li>
+    <li><a href="tips.html" class="active">טיפים</a></li>
+    <li><a href="discharge-guide.html">מדריך למשוחרר 🎁</a></li>
+    <li><a href="partners.html">שיתופי פעולה</a></li>
+  </ul>
+  <button onclick="openRegModal()" class="btn btn-outline btn-sm nav-cta">קבע פגישה</button>
+  <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="drawer-top">
+    <a href="hahazdamnut.html" class="drawer-link">🏠 בית</a>
+    <a href="discharge-guide.html" class="drawer-link">🎁 מדריך למשוחרר</a>
+    <a href="employment.html" class="drawer-link">🌟 הזדמנויות שלי</a>
+    <a href="hahazdamnut.html#programs" class="drawer-link">📋 הליווי שלנו</a>
+    <a href="tips.html" class="drawer-link active">💡 טיפים למשוחררים</a>
+    <a href="partners.html" class="drawer-link">🤝 שיתופי פעולה</a>
+    <a href="about.html" class="drawer-link">👋 אודות</a>
+    <a href="hahazdamnut.html#contact" class="drawer-link">✉️ צור קשר</a>
+  </div>
+  <div class="drawer-bottom">
+    <button onclick="openRegModal()" class="btn btn-primary" style="width:100%;padding:14px;border-radius:50px;font-size:1rem">קבע פגישה עכשיו</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="tips-hero">
+  <div class="container">
+    <div class="hero-badge">💡 טיפים מעשיים</div>
+    <h1>כל מה שצריך לדעת<br><em>אחרי הצבא</em></h1>
+    <p>טיפים אמיתיים ממשוחררים שכבר עברו את זה — בתעסוקה, כלכלה, פיתוח אישי וחיים בגדול.</p>
+    <div class="hero-cats">
+      <span class="hero-cat active" data-filter="all">הכל</span>
+      <span class="hero-cat" data-filter="employ">💼 תעסוקה</span>
+      <span class="hero-cat" data-filter="finance">💰 כלכלה</span>
+      <span class="hero-cat" data-filter="personal">🌱 פיתוח אישי</span>
+      <span class="hero-cat" data-filter="life">🏠 חיי יום יום</span>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filters-wrap">
+  <div class="container">
+    <div class="filters-inner" id="filtersBar">
+      <button class="filter-pill active" data-filter="all">הכל</button>
+      <button class="filter-pill" data-filter="employ">💼 תעסוקה</button>
+      <button class="filter-pill" data-filter="finance">💰 כלכלה</button>
+      <button class="filter-pill" data-filter="personal">🌱 פיתוח אישי</button>
+      <button class="filter-pill" data-filter="life">🏠 חיי יום יום</button>
+    </div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<section class="tips-main">
+  <div class="container">
+    <div class="tips-grid" id="tipsGrid"></div>
+    <div class="tips-empty" id="tipsEmpty" style="display:none">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <p>לא נמצאו טיפים בקטגוריה זו</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="tips-cta-sec">
+  <div class="container">
+    <h2>רוצה ליווי אישי?</h2>
+    <p>במקום לנסות לבד — בוא נעבור על המצב שלך יחד ונבנה תוכנית מותאמת.</p>
+    <a href="hahazdamnut.html#contact">קבע שיחת היכרות ←</a>
+  </div>
+</section>
+
+<footer>
+  <a href="hahazdamnut.html">ההזדמנות שלי</a> — מלווה משוחררים וצעירים לבניית החיים שתמיד רצו
+</footer>
+
+<!-- TIP MODAL -->
+<div id="tipModal">
+  <div class="tip-article" id="tipArticle"></div>
+</div>
+
+<script>
+var TIPS = [
+  {
+    id:1, cat:'employ', catLabel:'תעסוקה', catColor:'#1A56A0',
+    title:'איך לכתוב קורות חיים אחרי הצבא שפותחים דלתות',
+    summary:'רוב המשוחררים מוחקים את הצבאי ומתחילים מאפס. זו טעות. הנה איך להפוך את השירות לנכס.',
+    readTime:'4 דק׳ קריאה',
+    body:`
+      <h3>הצבא זה ניסיון — לא חור בקורות חיים</h3>
+      <p>המחשבה הראשונה של רוב המשוחררים היא "מה אני שם בקורות חיים? לא עבדתי בחיים". זו טעות קלאסית. שלוש שנות שירות צבאי הן ניסיון ניהולי, מנהיגותי ומקצועי — צריך רק לתרגם אותו נכון.</p>
+      <div class="tip-box"><strong>הכלל הזהב:</strong> תרגם כל תפקיד צבאי לשפה אזרחית. "מ"כ" = ניהול צוות של 10 אנשים. "קב"ם" = ניהול לוגיסטיקה ומשאבים. "קצין" = ניהול פרויקטים מורכבים תחת לחץ.</div>
+      <h3>מבנה קורות חיים למשוחרר</h3>
+      <ul>
+        <li><strong>סיכום אישי</strong> — 3 שורות שמסבירות מה אתה מחפש ומה אתה מביא</li>
+        <li><strong>ניסיון צבאי</strong> — תפקיד, יחידה, תיאור הישגים מדידים</li>
+        <li><strong>השכלה</strong> — תעודות, קורסים, הכשרות</li>
+        <li><strong>כישורים</strong> — טכנולוגיה, שפות, יכולות רלוונטיות</li>
+      </ul>
+      <h3>מה לא לכתוב</h3>
+      <p>אל תכתוב "שירתתי בצבא" סתם. תן מספרים: כמה אנשים ניהלת? מה הצלחת? מה שיפרת? מספרים עובדים.</p>
+      <div class="tip-box"><strong>טיפ בונוס:</strong> LinkedIn הוא חובה. פרופיל מלא מגדיל את הסיכוי ב-40% לקבל פנייה מגייסים. שים תמונה מקצועית, כתוב את אותו סיכום אישי, וחבר עם אנשים מהתחום שאתה רוצה להיכנס אליו.</div>
+    `
+  },
+  {
+    id:2, cat:'finance', catLabel:'כלכלה', catColor:'#059669',
+    title:'5 הטעויות הכלכליות שכל משוחרר עושה בחודש הראשון',
+    summary:'יש לך קצת כסף מהצבא וחירות מוחלטת. זו המתכון המושלם לטעויות שעולות ביוקר.',
+    readTime:'5 דק׳ קריאה',
+    body:`
+      <h3>טעות #1 — לא פותחים חשבון נפרד לחסכונות</h3>
+      <p>הכסף שמסתובב בחשבון עובר ושב — יתבזבז. פתח חשבון חסכונות נפרד ביום הראשון, העבר לשם לפחות 20% מכל הכנסה. עין לא רואה, לב לא כואב.</p>
+      <h3>טעות #2 — לא מנצלים את המענקים</h3>
+      <p>יש מענק שחרור, מענק לימודים, מענקי עמותות. הרבה מהם לא מחפשים אתכם — אתם צריכים לחפש אותם. בדקו בלשכת הסעד, במשרד הביטחון, ובאתרי העמותות.</p>
+      <div class="tip-box"><strong>חשוב לדעת:</strong> מענק השחרור אינו חייב במס אם לא עובדת במהלך השירות. שמור את האישורים.</div>
+      <h3>טעות #3 — מנוי בגדול על הכל</h3>
+      <p>נטפליקס, ספוטיפיי, חדר כושר, מנויים לאפליקציות — בלי לשים לב זה 400-600 ש"ח בחודש. עשה רשימה של כל המנויים ובטל את מה שלא משתמשים בו יותר מפעם בשבוע.</p>
+      <h3>טעות #4 — לא פותחים קרן פנסיה מיד</h3>
+      <p>אתה בן 21, למה לחשוב על פנסיה? כי הריבית דריבית עובדת לטובתך עכשיו. 200 ש"ח בחודש בגיל 21 שווים הרבה יותר מ-500 ש"ח בגיל 35.</p>
+      <h3>טעות #5 — ריבית יתר על הלוואות</h3>
+      <p>הרבה משוחררים לוקחים הלוואות מהבנק בלי להשוות. בנק ישראל מאפשר לראות את כל ההצעות — תמיד קבל לפחות 3 הצעות לפני שחותמים.</p>
+    `
+  },
+  {
+    id:3, cat:'personal', catLabel:'פיתוח אישי', catColor:'#7C3AED',
+    title:'מה לעשות כשאתה לא יודע מה לעשות — המדריך לחוסר כיוון אחרי הצבא',
+    summary:'שלושה חודשים אחרי השחרור ועדיין מרגיש ריק? אתה לא לבד — ויש לכך פתרון.',
+    readTime:'6 דק׳ קריאה',
+    body:`
+      <h3>זה נורמלי לחלוטין</h3>
+      <p>הצבא נתן לך שגרה, מטרה, שייכות ומשמעות — ביום אחד הכל נעלם. המח שלך לא יודע מה לעשות עם הפתאומיות הזו. חוסר כיוון אחרי הצבא הוא נורמלי כמו געגוע לאנשים מהיחידה.</p>
+      <div class="tip-box"><strong>עובדה:</strong> 68% מהמשוחררים מדווחים על תחושת אבדן כיוון בחצי השנה הראשונה. זה לא חולשה — זה מעבר.</div>
+      <h3>שלב 1 — רגיעה מכוונת (שבוע-שבועיים)</h3>
+      <p>תן לעצמך לנשום. לא כל שבוע ראשון חייב להיות פרודוקטיבי. טייל, ישן, בלה עם אנשים שפספסת. זה לא עצלות — זה דחאינה מחיצוניות לפנימיות.</p>
+      <h3>שלב 2 — שאל את עצמך שאלות אחרות</h3>
+      <p>לא "מה אני רוצה לעשות כל החיים" — זאת שאלה עם יותר מדי לחץ. במקום זה שאל: מה גרם לי לקום בבוקר בתחושה טובה? באיזה יחידות/תפקידים הצבאיים נהניתי? מה אנשים כל הזמן מבקשים ממני עזרה?</p>
+      <h3>שלב 3 — ניסוי קצר ומהיר</h3>
+      <p>אל תתחייב שנה ללימודים לפני שניסית. עשה קורס קצר, התנדב, קח עבודה חלקית בתחום מעניין — ניסיון של חודש עדיף על שנה של מחשבה.</p>
+      <div class="tip-box"><strong>המלצה:</strong> שיחה אחת עם מישהו שחי את החיים שאתה רוצה שווה עשרה סרטוני יוטיוב על "איך למצוא את הייעוד שלך".</div>
+    `
+  },
+  {
+    id:4, cat:'employ', catLabel:'תעסוקה', catColor:'#1A56A0',
+    title:'ראיון עבודה ראשון אחרי הצבא — איך לא להיכשל',
+    summary:'המראיין לא רואה את השנות הצבאיות — הוא רואה אותך. הנה איך להפוך את הצבא לנשק הכי חזק שלך.',
+    readTime:'5 דק׳ קריאה',
+    body:`
+      <h3>הטעות הכי נפוצה</h3>
+      <p>להגיד "כי אני חייל טוב, אני מחויב ואני לומד מהר" — זה מה שאומרים כולם. המראיין שמע את זה 50 פעם היום. הוא צריך דוגמאות, לא תארים.</p>
+      <h3>שיטת ה-STAR להצלחה</h3>
+      <p>לכל שאלה התנהגותית ("ספר על מצב שבו...") — ענה עם: <strong>S</strong>ituation (המצב), <strong>T</strong>ask (המשימה), <strong>A</strong>ction (מה עשית), <strong>R</strong>esult (התוצאה).</p>
+      <div class="tip-box"><strong>דוגמה:</strong> "פעם ניהלתי מצב חירום בתרגיל — הצוות שלי היה בלחץ, חיברתי את כולם, חילקתי משימות ובסוף הצלחנו לסיים 20% מהר יותר מהצפוי."</div>
+      <h3>5 שאלות שחובה להכין עליהן תשובה</h3>
+      <ul>
+        <li>ספר לי על עצמך (תשובה של 90 שניות — לא פחות ולא יותר)</li>
+        <li>מה החוזקות שלך? (3 — עם דוגמאות)</li>
+        <li>מה החולשה שלך? (חולשה אמיתית עם תיקון)</li>
+        <li>למה אתה רוצה לעבוד אצלנו? (חקור את החברה לפני)</li>
+        <li>איפה אתה רואה את עצמך בעוד 5 שנים?</li>
+      </ul>
+      <h3>בסוף הראיון — תשאל שאלות</h3>
+      <p>מראיין שלא שואל שאלות נראה כמו מישהו שלא ממש רוצה את העבודה. תשאל על הצוות, על הקשיים בתפקיד, על ההצלחה — זה מראה עניין אמיתי.</p>
+    `
+  },
+  {
+    id:5, cat:'finance', catLabel:'כלכלה', catColor:'#059669',
+    title:'מדריך זכויות כלכליות — כסף שמגיע לך ואתה לא יודע עליו',
+    summary:'עשרות אלפי שקלים בזכויות שרוב המשוחררים מפספסים. זה הכסף שלך — לך לקחת אותו.',
+    readTime:'7 דק׳ קריאה',
+    body:`
+      <h3>מה מגיע לך מהמדינה</h3>
+      <ul>
+        <li><strong>מענק שחרור</strong> — לפי מסלול השירות. בדוק באתר משרד הביטחון את הסכום המדויק</li>
+        <li><strong>מלגת לימודים</strong> — משרד הביטחון מממן עד 80% מהלימודים. חייב לבקש תוך 3 שנים</li>
+        <li><strong>הטבות מס</strong> — 36 נקודות זיכוי מס עד גיל 21 — ודא שהמעסיק מכיר</li>
+        <li><strong>הנחות בתחבורה ציבורית</strong> — עד שנה אחרי השחרור</li>
+      </ul>
+      <div class="tip-box"><strong>חשוב מאוד:</strong> הרבה מהזכויות האלה יפוגו אם לא תממש אותן בזמן. תייצר לעצמך תזכורת ליומן.</div>
+      <h3>עמותות שמחלקות כסף</h3>
+      <p>עמותת ידיד נפש, קרן רש"י, עמותת צהל"ב ועוד עשרות ארגונים נותנים מלגות למשוחררים — גם לאלה שלא שירתו ביחידות מיוחדות. פשוט תגיש.</p>
+      <h3>הטבות דיור</h3>
+      <p>משרד הבינוי נותן עדיפות למשוחררים בהגרלות דירות "מחיר למשתכן". כמו כן, יש מסלולי משכנתא בריבית מופחתת למשוחררים דרך בנק מזרחי ולאומי.</p>
+    `
+  },
+  {
+    id:6, cat:'life', catLabel:'חיי יום יום', catColor:'#D97706',
+    title:'שגרה חדשה מאפס — איך לבנות ימים שמרגישים טובים',
+    summary:'הצבא נתן לך שגרה. עכשיו אתה צריך לבנות אחת לבד. זה קשה יותר ממה שנראה.',
+    readTime:'4 דק׳ קריאה',
+    body:`
+      <h3>למה שגרה היא לא בושה</h3>
+      <p>אחרי הצבא הנטייה היא "סוף סוף חירות — בלי שגרה!". אבל מחקרים מראים שאנשים ללא שגרה סובלים מחרדה גבוהה יותר, פרודוקטיביות נמוכה ותחושת חוסר כיוון. שגרה היא כלי — לא כלא.</p>
+      <div class="tip-box"><strong>עקרון:</strong> בנה "עוגנים" ביום שלך — לא שגרה מלאה. בוקר עם ספורט, שעות קבועות ללימוד/עבודה, ערב עם אנשים. הכל ביניהם — חופשי.</div>
+      <h3>5 הרגלים שמשנים הכל</h3>
+      <ul>
+        <li><strong>קום בשעה קבועה</strong> — גם בשבת. הגוף שלך יגמול לך בשינה טובה יותר</li>
+        <li><strong>20 דקות ספורט ביום</strong> — לא שעה. 20 דקות. ממש בכל יום</li>
+        <li><strong>קרא 10 דקות</strong> — לא יוטיוב. ספר, מאמר — משהו שמאתגר אותך לחשוב</li>
+        <li><strong>כתוב 3 דברים טובים</strong> — כל ערב. זה נשמע קיטשי עד שמנסים</li>
+        <li><strong>מסך אחד בלי טלפון</strong> — עצור דקה אחת ביום לחשוב בלי גירויים</li>
+      </ul>
+      <h3>מה לגבי חברים?</h3>
+      <p>אחד הדברים הכי קשים אחרי הצבא הוא שהחברה מתפזרת. כל אחד לכיוון אחר. חשוב לשמר קשרים באופן פעיל — לא לחכות שיתקשרו אליך. יזום, שלח הודעה, הצע להיפגש.</p>
+    `
+  },
+  {
+    id:7, cat:'employ', catLabel:'תעסוקה', catColor:'#1A56A0',
+    title:'לימודים או עבודה? איך להחליט נכון',
+    summary:'כולם אומרים "תלמד". אבל האם זה בהכרח הנכון בשבילך? המדריך לקבלת ההחלטה הזו.',
+    readTime:'5 דק׳ קריאה',
+    body:`
+      <h3>אין תשובה אחת נכונה</h3>
+      <p>יש מקצועות שחובה ללמוד לתואר (רפואה, משפטים, הנדסה). יש תחומים שניסיון שווה יותר מתואר (הייטק, שיווק, מכירות, יזמות). לפני שמחליטים — צריך להבין לאן רוצים להגיע.</p>
+      <div class="tip-box"><strong>שאל את עצמך:</strong> האם המשרות שאני רוצה דורשות תואר? חפש 10 מודעות דרושים בתחום — רוב דורשות תואר? לך ללמוד. רוב דורשות ניסיון? התחל לצבור ניסיון.</div>
+      <h3>האפשרות השלישית</h3>
+      <p>עבוד ולמד במקביל. זה קשה, אבל זה נותן לך ניסיון + תואר + כסף + ביטחון עצמי. הרבה מאוד חברות ב-2024 מממנות לימודים לעובדים.</p>
+      <h3>מה לגבי קורסים?</h3>
+      <p>בהייטק, שיווק ועיצוב — בוטקמפ של 4-6 חודשים יכול לשים אותך בשוק העבודה מהר יותר מתואר. בדוק את שיעורי התעסוקה של הבוגרים לפני שמשקיעים.</p>
+      <h3>הגיל שלך הוא יתרון</h3>
+      <p>אתה בן 21-23. אתה יכול לנסות ולטעות ועדיין להתאושש. הפחד הכי גדול הוא לא לבחור — ולא לבחור גם היא בחירה.</p>
+    `
+  },
+  {
+    id:8, cat:'personal', catLabel:'פיתוח אישי', catColor:'#7C3AED',
+    title:'בריאות נפשית אחרי הצבא — מה שאף אחד לא מדבר עליו',
+    summary:'עייפות, ריקנות, חוסר מוטיבציה — אלה לא חולשה. זה מה שקורה כשיוצאים ממערכת שמחזיקה אותך.',
+    readTime:'5 דק׳ קריאה',
+    body:`
+      <h3>מה שחושים אחרי הצבא הוא נורמלי</h3>
+      <p>הצבא הוא מערכת שנותנת לך מטרה, שייכות, מבנה ותחושת חשיבות. יום אחד הכל נעלם. התסמינים שהרבה חווים — ריקנות, עצב קל, חוסר מוטיבציה, קושי להתרגש — נקראים לפעמים "אבל מעבר". זה לא דיכאון חלינאי, זה הסתגלות.</p>
+      <div class="tip-box"><strong>חשוב:</strong> אם התסמינים נמשכים מעל 3 חודשים או מפריעים לתפקוד — דבר עם איש מקצוע. זה סימן חוזק, לא חולשה.</div>
+      <h3>מה עוזר</h3>
+      <ul>
+        <li>חיבורים חברתיים — לא מדיה חברתית. פגישות אמיתיות</li>
+        <li>תנועה גופנית — ספורט פרק אנדורפינים שהגוף היה רגיל אליהם</li>
+        <li>מטרה קטנה וברת השגה — לא "לשנות את העולם", לסיים קורס קצר</li>
+        <li>להגיד את זה בקול — לחבר, למשפחה, למישהו שסומכים עליו</li>
+      </ul>
+      <h3>עמותות ותמיכה חינמית</h3>
+      <p>עמותת רוח טובה, ער"ן, ומרכזי בריאות הנפש הציבוריים — כולם נגישים וחלקם ללא עלות למשוחררים. אתה לא צריך להיות "מספיק חולה" כדי לדבר עם מישהו.</p>
+    `
+  }
+];
+
+var activeFilter = 'all';
+
+function renderGrid(){
+  var grid = document.getElementById('tipsGrid');
+  var empty = document.getElementById('tipsEmpty');
+  var filtered = activeFilter === 'all' ? TIPS : TIPS.filter(function(t){return t.cat === activeFilter;});
+  if(!filtered.length){grid.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  grid.innerHTML = filtered.map(function(tip){
+    return '<div class="tip-card cat-'+tip.cat+'" onclick="openTip('+tip.id+')">'+
+      '<div class="tip-card-top">'+
+        '<div class="tip-cat-label cat-'+tip.cat+'">'+tip.catLabel+'</div>'+
+        '<h2>'+tip.title+'</h2>'+
+        '<p>'+tip.summary+'</p>'+
+      '</div>'+
+      '<div class="tip-card-footer">'+
+        '<span class="tip-read-btn">קרא עוד ←</span>'+
+        '<span class="tip-read-time">'+tip.readTime+'</span>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+function openTip(id){
+  var tip = TIPS.find(function(t){return t.id===id;});
+  if(!tip)return;
+  var art = document.getElementById('tipArticle');
+  art.innerHTML =
+    '<div class="article-hero-bar" style="background:'+tip.catColor+'"></div>'+
+    '<button class="article-close" onclick="closeTip()">✕</button>'+
+    '<div class="article-inner">'+
+      '<div class="article-cat cat-'+tip.cat+'" style="color:'+tip.catColor+'">'+tip.catLabel+'</div>'+
+      '<h1 class="article-title">'+tip.title+'</h1>'+
+      '<div class="article-meta"><span>⏱ '+tip.readTime+'</span></div>'+
+      '<div class="article-body">'+tip.body+'</div>'+
+      '<div class="article-cta">'+
+        '<h3>רוצה ליווי אישי?</h3>'+
+        '<p>נעבור על המצב שלך יחד ונבנה תוכנית מותאמת — בחינם.</p>'+
+        '<a href="hahazdamnut.html#contact">קבע שיחת היכרות ←</a>'+
+      '</div>'+
+    '</div>';
+  document.getElementById('tipModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeTip(){
+  document.getElementById('tipModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.getElementById('tipModal').addEventListener('click',function(e){
+  if(e.target===this)closeTip();
+});
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTip();});
+
+// Filters
+document.querySelectorAll('[data-filter]').forEach(function(el){
+  el.addEventListener('click',function(){
+    activeFilter = this.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(function(x){x.classList.remove('active');});
+    document.querySelectorAll('[data-filter="'+activeFilter+'"]').forEach(function(x){x.classList.add('active');});
+    renderGrid();
+  });
+});
+
+renderGrid();
+
+// Navbar scroll
+window.addEventListener('scroll',function(){
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
+});
+
+// Hamburger
+var hamburger=document.getElementById('navHamburger');
+var drawer=document.getElementById('navDrawer');
+var overlay=document.getElementById('navOverlay');
+function openDrawer(){hamburger.classList.add('open');drawer.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden';}
+function closeDrawer(){hamburger.classList.remove('open');drawer.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';}
+hamburger.addEventListener('click',function(){drawer.classList.contains('open')?closeDrawer():openDrawer();});
+overlay.addEventListener('click',closeDrawer);
+
+// Mock openRegModal
+function openRegModal(){}
+</script>
+</body>
+</html>
