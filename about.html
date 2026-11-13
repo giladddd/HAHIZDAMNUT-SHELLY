@@ -74,7 +74,7 @@ section{padding-block:88px}
 .nav-drop-item span{font-size:1.1rem}
 
 .nav-cta{flex-shrink:0}
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;border-radius:var(--r-sm)}
+.nav-hamburger{order:-1;display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;border-radius:var(--r-sm)}
 .nav-hamburger:hover{background:var(--bg-soft)}
 .nav-hamburger span{display:block;height:2px;background:var(--text);border-radius:2px;transition:transform .25s ease,opacity .2s ease;transform-origin:center}
 .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -270,12 +270,12 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 <!-- NAVBAR -->
 <nav id="navbar">
 <div class="container nav-inner">
-  <a class="nav-logo" href="hahazdamnut.html">ההזדמנות שלי</a>
+  <a class="nav-logo" href="hahazdamnut.html" style="display:flex;align-items:center;gap:8px">ההזדמנות שלי<svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;transform:rotate(180deg)"><circle cx="35" cy="40" r="30" fill="#1A56A0" opacity="0.85"/><circle cx="65" cy="40" r="30" fill="#0F3873" opacity="0.85"/><circle cx="50" cy="65" r="30" fill="#4DAEF5" opacity="0.85"/></svg></a>
   <ul class="nav-links">
     <li><a href="hahazdamnut.html#hero">בית</a></li>
     <li><a href="about.html" class="active">אודות</a></li>
     <li class="nav-has-drop">
-      <button class="nav-link-btn">תחומים <span class="nav-arrow">▾</span></button>
+      <button class="nav-link-btn">הזדמנויות <span class="nav-arrow">▾</span></button>
       <div class="nav-drop">
         <a href="employment.html" class="nav-drop-item"><span>💼</span>תעסוקתי</a>
         <a href="finance.html" class="nav-drop-item"><span>💰</span>כלכלי</a>
@@ -284,7 +284,6 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
     </li>
     <li><a href="hahazdamnut.html#programs">מסלולים</a></li>
     <li><a href="discharge-guide.html">מדריך למשוחרר 🎁</a></li>
-    <li><a href="app.html">אפליקציה</a></li>
     <li><a href="partners.html">שיתופי פעולה</a></li>
     <li><a href="hahazdamnut.html#contact">צור קשר</a></li>
   </ul>
@@ -302,7 +301,6 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
     <a href="discharge-guide.html" class="drawer-link">🎁 מדריך למשוחרר</a>
     <a href="employment.html" class="drawer-link">🌟 הזדמנויות שלי</a>
     <a href="hahazdamnut.html#programs" class="drawer-link">📋 מסלולים</a>
-    <a href="app.html" class="drawer-link">📱 אפליקציה</a>
     <a href="partners.html" class="drawer-link">🤝 שיתופי פעולה</a>
     <a href="about.html" class="drawer-link active">👋 אודות</a>
     <a href="hahazdamnut.html#contact" class="drawer-link">✉️ צור קשר</a>
@@ -549,9 +547,8 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
       <ul class="footer-links">
         <li><a href="hahazdamnut.html#hero">בית</a></li>
         <li><a href="about.html">אודות</a></li>
-        <li><a href="employment.html">תחומים</a></li>
+        <li><a href="employment.html">הזדמנויות</a></li>
         <li><a href="hahazdamnut.html#programs">מסלולים</a></li>
-        <li><a href="app.html">אפליקציה</a></li>
         <li><a href="partners.html">שיתופי פעולה</a></li>
         <li><a href="hahazdamnut.html#contact">צור קשר</a></li>
       </ul>
