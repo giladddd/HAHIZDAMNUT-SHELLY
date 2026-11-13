@@ -6,7 +6,7 @@
   'use strict';
 
   var HAHIZD_SHEETS_URL =
-    'https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec';
+    'https://script.google.com/macros/s/AKfycbzhzSzIkDHxwPihOMws8XZZbBQWGN11ZYICmf5MpCAoPA1Li6I99cYZdL163ZIt4s5rOw/exec';
 
   var SESSION_KEY = 'hahizd_session';
   var RATE_KEY = 'hahizd_rl';
