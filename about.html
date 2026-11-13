@@ -270,7 +270,7 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 <!-- NAVBAR -->
 <nav id="navbar">
 <div class="container nav-inner">
-  <a class="nav-logo" href="hahazdamnut.html" style="display:flex;align-items:center;gap:8px">ההזדמנות שלי<svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;transform:rotate(180deg)"><circle cx="35" cy="40" r="30" fill="#1A56A0" opacity="0.85"/><circle cx="65" cy="40" r="30" fill="#0F3873" opacity="0.85"/><circle cx="50" cy="65" r="30" fill="#4DAEF5" opacity="0.85"/></svg></a>
+  <a class="nav-logo" href="hahazdamnut.html" style="display:flex;align-items:center;gap:8px">ההזדמנות שלי<svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block"><circle cx="65" cy="60" r="30" fill="#1A56A0" opacity="0.85"/><circle cx="35" cy="60" r="30" fill="#0F3873" opacity="0.85"/><circle cx="50" cy="35" r="30" fill="#4DAEF5" opacity="0.85"/></svg></a>
   <ul class="nav-links">
     <li><a href="hahazdamnut.html#hero">בית</a></li>
     <li><a href="about.html" class="active">אודות</a></li>
@@ -520,18 +520,48 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
 </section>
 
 <!-- CTA SECTION -->
-<section id="about-cta">
-<div class="container">
-  <div class="cta-wrap">
-    <h2 class="sec-title" style="text-align:center">מוכן להתחיל?</h2>
-    <p class="sec-sub" style="text-align:center">קבע פגישת ליווי ראשונה — ובוא נבנה יחד את התוכנית שלך</p>
-    <div class="cta-actions">
-      <a href="hahazdamnut.html#contact" class="btn btn-primary btn-lg">קבע פגישת ליווי עכשיו</a>
-      <a href="hahazdamnut.html#programs" class="btn btn-outline btn-lg">גלה את ההזדמנויות</a>
+<section id="about-cta" style="background:#0A3578;padding-block:56px">
+<div class="container" style="max-width:480px;text-align:center">
+  <h2 class="sec-title" style="color:#fff;margin-bottom:6px">מוכן להתחיל?</h2>
+  <p style="color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:24px">השאירו פרטים ונחזור אליכם</p>
+  <div id="aboutFormWrap">
+    <div id="aboutForm" style="display:flex;flex-direction:column;gap:12px">
+      <input id="aboutName" type="text" placeholder="שם מלא" autocomplete="name" style="padding:13px 16px;border-radius:50px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:1rem;font-family:inherit;outline:none;text-align:right" oninput="this.style.borderColor='rgba(255,255,255,.3)'">
+      <input id="aboutPhone" type="tel" placeholder="טלפון" autocomplete="tel" style="padding:13px 16px;border-radius:50px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:1rem;font-family:inherit;outline:none;text-align:right" oninput="this.style.borderColor='rgba(255,255,255,.3)'">
+      <textarea id="aboutNotes" placeholder="הערות / דרך מי הגעתם? (לא חובה)" rows="2" style="padding:13px 16px;border-radius:16px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:1rem;font-family:inherit;outline:none;text-align:right;resize:none" oninput="this.style.borderColor='rgba(255,255,255,.3)'"></textarea>
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:.83rem;color:rgba(255,255,255,.75);line-height:1.5;text-align:right">
+        <input type="checkbox" id="aboutTerms" style="margin-top:2px;width:16px;height:16px;accent-color:#fff;flex-shrink:0;cursor:pointer"/>
+        <span>קראתי ואני מסכים/ה ל<a href="terms.html" target="_blank" style="color:#fff;text-decoration:underline">תנאי השימוש ומדיניות הפרטיות</a></span>
+      </label>
+      <button id="aboutBtn" onclick="submitAboutForm()" style="width:100%;padding:16px;border-radius:50px;background:#fff;color:#0A3578;font-size:1rem;font-weight:800;font-family:inherit;border:none;cursor:pointer;white-space:normal;line-height:1.4">אני רוצה לשמוע על בניית מפת דרכים חכמה לשחרור</button>
     </div>
+    <div id="aboutSuccess" style="display:none;background:#16a34a;border-radius:16px;padding:20px;text-align:center;color:#fff;font-weight:700;font-size:1.1rem;margin-top:16px;border:2px solid #4ade80">✅ הפרטים נשלחו בהצלחה!<br><span style="font-size:.9rem;font-weight:400;opacity:.9">נחזור אליך בהקדם 🙏</span></div>
   </div>
 </div>
 </section>
+<script>
+window.submitAboutForm = function() {
+  var nameEl = document.getElementById('aboutName');
+  var phoneEl = document.getElementById('aboutPhone');
+  var notesEl = document.getElementById('aboutNotes');
+  var termsEl = document.getElementById('aboutTerms');
+  var name = nameEl.value.trim();
+  var phone = phoneEl.value.trim();
+  var notes = notesEl ? notesEl.value.trim() : '';
+  var ok = true;
+  if (name.length < 2) { nameEl.style.borderColor='#EF4444'; ok=false; } else { nameEl.style.borderColor=''; }
+  if (phone.replace(/\D/g,'').length < 7) { phoneEl.style.borderColor='#EF4444'; ok=false; } else { phoneEl.style.borderColor=''; }
+  if (!termsEl.checked) { termsEl.style.outline='2px solid #EF4444'; ok=false; } else { termsEl.style.outline=''; }
+  if (!ok) return;
+  var btn = document.getElementById('aboutBtn');
+  btn.disabled = true; btn.textContent = 'שולח...';
+  var qs = 'name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone) + '&notes=' + encodeURIComponent(notes) + '&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL')) + '&form_type=lead&_hp=';
+  try { fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, { method: 'GET' }); } catch(e) {}
+  btn.disabled = false;
+  document.getElementById('aboutForm').style.display = 'none';
+  document.getElementById('aboutSuccess').style.display = 'block';
+};
+</script>
 
 <!-- FOOTER -->
 <footer>
