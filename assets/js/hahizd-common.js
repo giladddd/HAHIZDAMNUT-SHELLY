@@ -708,8 +708,10 @@
       var phone = phoneEl ? phoneEl.value.trim() : '';
       var notes = notesEl ? notesEl.value.trim().slice(0, 500) : '';
 
+      var termsEl = document.getElementById(options.termsId || 'fTerms');
       var nameOk = name.length >= 2;
       var phoneOk = isValidPhone(phone);
+      var termsOk = !termsEl || termsEl.checked;
 
       if (nameEl) nameEl.classList.toggle('error', !nameOk);
       var errName = document.getElementById(options.errNameId || 'errName');
@@ -719,7 +721,10 @@
       var errPhone = document.getElementById(options.errPhoneId || 'errPhone');
       if (errPhone) errPhone.classList.toggle('show', !phoneOk);
 
-      if (!nameOk || !phoneOk) return;
+      var errTerms = document.getElementById(options.errTermsId || 'errTerms');
+      if (errTerms) errTerms.style.display = termsOk ? 'none' : 'block';
+
+      if (!nameOk || !phoneOk || !termsOk) return;
 
       var btn = document.getElementById(options.btnId || 'cfBtn');
       var btnText = document.getElementById(options.btnTextId || 'cfBtnText');
