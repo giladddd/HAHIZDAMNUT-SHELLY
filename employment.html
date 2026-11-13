@@ -627,7 +627,7 @@ function buildCard(card, delay, isJobTab) {
       (isJobTab
         ? '<div class="card-expand" style="display:none">' +
             '<div class="card-desc-full" style="font-size:.875rem;color:#374151;line-height:1.7;margin-bottom:10px">' + card.desc + '</div>' +
-            '<form class="job-apply-form" onsubmit="submitJobForm(event,' + JSON.stringify(card.title) + ')">' +
+            '<form class="job-apply-form" data-job="' + card.title.replace(/"/g,'&quot;') + '" onsubmit="submitJobForm(event,this.dataset.job)">' +
               '<input type="text" name="שם" class="jf-input" placeholder="שם מלא *" required autocomplete="name"/>' +
               '<input type="tel" name="טלפון" class="jf-input" placeholder="טלפון *" required autocomplete="tel"/>' +
               '<input type="email" name="אימייל" class="jf-input" placeholder="אימייל *" required autocomplete="email"/>' +
@@ -967,17 +967,30 @@ window.submitJobForm = function(e, jobTitle) {
   btn.disabled = true;
   btn.textContent = 'שולח...';
 
-  var data = new FormData(form);
-  data.append('משרה', jobTitle);
-  data.append('_subject', 'הגשת מועמדות: ' + jobTitle);
-  data.append('_replyto', form.querySelector('[name=אימייל]').value);
+  var applicantEmail = form.querySelector('[name=אימייל]').value;
+  var applicantName  = form.querySelector('[name=שם]').value;
+  var applicantPhone = form.querySelector('[name=טלפון]').value;
 
-  fetch('https://formspree.io/f/xvgalzbd', {
+  var data = new FormData();
+  data.append('שם',     applicantName);
+  data.append('טלפון',  applicantPhone);
+  data.append('אימייל', applicantEmail);
+  data.append('משרה',   jobTitle);
+  data.append('_subject',  'הגשת קורות חיים — ' + jobTitle + ' | ' + applicantName);
+  data.append('_replyto',  applicantEmail);
+  data.append('_next',     'https://hahizdamnut-shelly.onrender.com/employment.html');
+
+  data.append('_subject', 'הגשת מועמדות — ' + jobTitle + ' | ' + applicantName);
+  data.append('_captcha', 'false');
+  data.append('_template', 'table');
+
+  fetch('https://formsubmit.co/ajax/giladunna@gmail.com', {
     method: 'POST',
     body: data,
     headers: { 'Accept': 'application/json' }
-  }).then(function(r) {
-    if (r.ok) {
+  }).then(function(r) { return r.json(); })
+  .then(function(res) {
+    if (res.success === 'true' || res.success === true) {
       form.innerHTML = '<div class="jf-success">✅ המועמדות נשלחה בהצלחה! נחזור אליך בהקדם.</div>';
     } else {
       btn.disabled = false;
