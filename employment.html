@@ -211,9 +211,39 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   display:inline-block;padding:10px 22px;
   background:linear-gradient(135deg,#22C55E,#16A34A);
   color:#fff;border-radius:50px;font-weight:700;font-size:.875rem;
-  text-decoration:none;transition:opacity .2s;
+  text-decoration:none;transition:opacity .2s;cursor:pointer;border:none;font-family:'Heebo',sans-serif;
 }
 .btn-apply:hover{opacity:.88}
+
+/* ── APPLY MODAL ── */
+#applyModal{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:16px}
+#applyModal.open{display:flex}
+#applyModal-backdrop{position:absolute;inset:0;background:rgba(15,23,42,.55);backdrop-filter:blur(4px)}
+#applyModal-box{position:relative;background:#fff;border-radius:20px;padding:32px 28px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.2);direction:rtl}
+#applyModal-box h2{font-size:1.3rem;font-weight:900;color:#0F172A;margin:0 0 4px}
+#applyModal-box .modal-job-title{font-size:.95rem;color:#1A56A0;font-weight:700;margin-bottom:20px}
+.modal-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.modal-field label{font-size:.88rem;font-weight:700;color:#374151}
+.modal-field label .req{color:#e53e3e}
+.modal-field input,.modal-field select{padding:11px 14px;border:1.5px solid #E2E8F0;border-radius:10px;font-size:.95rem;font-family:'Heebo',sans-serif;color:#0F172A;outline:none;transition:border-color .2s}
+.modal-field input:focus,.modal-field select:focus{border-color:#1A56A0}
+.modal-cv-label{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1.5px dashed #CBD5E1;border-radius:10px;cursor:pointer;transition:border-color .2s;background:#F8FAFC}
+.modal-cv-label:hover{border-color:#1A56A0}
+.modal-cv-label input{display:none}
+.modal-cv-text{font-size:.9rem;color:#64748B;font-weight:600}
+.modal-cv-text.selected{color:#1A56A0}
+.modal-terms{display:flex;align-items:flex-start;gap:10px;margin:18px 0 20px;font-size:.85rem;color:#374151;line-height:1.5}
+.modal-terms input[type=checkbox]{width:18px;height:18px;accent-color:#1A56A0;flex-shrink:0;margin-top:2px;cursor:pointer}
+.modal-terms a{color:#1A56A0;font-weight:700}
+.btn-modal-submit{width:100%;padding:14px;background:linear-gradient(135deg,#22C55E,#16A34A);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:800;font-family:'Heebo',sans-serif;cursor:pointer;transition:opacity .2s}
+.btn-modal-submit:disabled{opacity:.5;cursor:not-allowed}
+.btn-modal-submit:not(:disabled):hover{opacity:.88}
+.modal-close{position:absolute;top:16px;left:16px;background:none;border:none;font-size:1.4rem;color:#94A3B8;cursor:pointer;line-height:1;padding:4px}
+.modal-close:hover{color:#0F172A}
+.modal-success{text-align:center;padding:20px 0}
+.modal-success .success-icon{font-size:3rem;margin-bottom:12px}
+.modal-success h3{font-size:1.2rem;font-weight:900;color:#0F172A;margin:0 0 8px}
+.modal-success p{font-size:.9rem;color:#64748B}
 .btn-sublink{display:block;margin-top:8px;padding:9px 16px;background:#F0F7FF;border:1.5px solid rgba(26,86,160,.2);color:#1A56A0;border-radius:10px;font-weight:600;font-size:.85rem;text-decoration:none;transition:background .2s,border-color .2s}
 .btn-sublink:hover{background:#DBEAFE;border-color:#1A56A0}
 
@@ -392,7 +422,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
     </li>
     <li><a href="hahazdamnut.html#programs">מסלולים</a></li>
     <li><a href="discharge-guide.html">מדריך למשוחרר 🎁</a></li>
-    <li><a href="app.html">אפליקציה</a></li>
+    <!-- <li><a href="app.html">אפליקציה</a></li> -->
     <li><a href="partners.html">שיתופי פעולה</a></li>
     <li><a href="hahazdamnut.html#contact">צור קשר</a></li>
   </ul>
@@ -409,7 +439,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
     <a href="discharge-guide.html" class="drawer-link">🎁 מדריך למשוחרר</a>
     <a href="employment.html" class="drawer-link">🌟 הזדמנויות שלי</a>
     <a href="hahazdamnut.html#programs" class="drawer-link">📋 מסלולים</a>
-    <a href="app.html" class="drawer-link">📱 אפליקציה</a>
+    <!-- <a href="app.html" class="drawer-link">📱 אפליקציה</a> -->
     <a href="partners.html" class="drawer-link">🤝 שיתופי פעולה</a>
     <a href="about.html" class="drawer-link">👋 אודות</a>
     <a href="hahazdamnut.html#contact" class="drawer-link">✉️ צור קשר</a>
@@ -482,7 +512,9 @@ var DATA = [
       {title:'אבטחת ספינות',badge:'אבטחה',desc:'עבודה כאיש אבטחה על אוניות וספינות — ניסיון צבאי לגיטימי, שכר גבוה, עבודה בינלאומית.',tags:['אבטחה','ים','בינלאומי'],cats:['אבטחה','בחול'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-131453.png',icon:'⚓'},
       {title:'אבטחת אסדות',badge:'אבטחה',desc:'תפקידי אבטחה על אסדות קידוח ופלטפורמות ימיות — שכר גבוה, תנאים ייחודיים.',tags:['אבטחה','ים','גמישות'],cats:['אבטחה'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-131110.png',icon:'🛡️'},
       {title:'אבטחת מטוסים',badge:'אבטחה',desc:'עבודה בתחום אבטחה אווירית — ניסיון צבאי הכרחי, שכר מצוין, עבודה מגוונת ומאתגרת.',tags:['אבטחה','תעופה','ביטחון'],cats:['אבטחה','בחול'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-130946.png',icon:'✈️'},
-      {title:'אבטחת צבאות בחול',badge:'אבטחה',desc:'עבודת אבטחה עבור צבאות ומשלחות בחו"ל — ניסיון קרבי דרישה, שכר גבוה במיוחד, עבודה בינלאומית.',tags:['אבטחה','חו"ל','קרבי'],cats:['אבטחה','בחול'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-131425.png',icon:'🎖️'},
+      {title:'אבטחת צבאות באפריקה',badge:'אבטחה',desc:'עבודת אבטחה עבור צבאות ומשלחות באפריקה — ניסיון קרבי דרישה, שכר גבוה במיוחד, עבודה בינלאומית.',tags:['אבטחה','אפריקה','קרבי'],cats:['אבטחה','בחול'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-131425.png',icon:'🎖️'},
+      {title:'אבטחת קהילות יהודיות באירופה',badge:'אבטחה',desc:'אבטחת קהילות יהודיות וגופים יהודיים באירופה — ניסיון ביטחוני, שכר מצוין ותרומה לקהילה.',tags:['אבטחה','אירופה','קהילה יהודית'],cats:['אבטחה','בחול'],link:'hahazdamnut.html#contact',img:'',icon:'✡️'},
+      {title:'אבטחה בארצות הברית',badge:'אבטחה',desc:'עבודת אבטחה בארה"ב — מתקנים, אירועים וגופים שונים. ניסיון ביטחוני, ויזת עבודה ותמיכה בתהליך.',tags:['אבטחה','ארהב','חו"ל'],cats:['אבטחה','בחול'],link:'hahazdamnut.html#contact',img:'',icon:'🗽'},
       {title:'אבטחה ברכבת',badge:'אבטחה',desc:'עבודה בתחום אבטחת תחבורה ציבורית ברכבת ישראל — משמרות גמישות, שכר מצוין, יציבות תעסוקתית.',tags:['אבטחה','תחבורה','ישראל'],cats:['אבטחה','סטודנטים'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-130441.png',icon:'🚆'},
       {title:'אבטחת טיולים',badge:'אבטחה',desc:'ליווי אבטחה לקבוצות טיולים ומשלחות — עבודה מגוונת ומאתגרת הכוללת נסיעות וחוויות ייחודיות.',tags:['אבטחה','טיולים','גמישות'],cats:['אבטחה'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-131043.png',icon:'🧭'},
       {title:'אבטחת מוסדות',badge:'אבטחה',desc:'שמירה ואבטחה במוסדות ציבוריים, חינוכיים ועסקיים — עבודה יציבה עם שעות גמישות.',tags:['אבטחה','מוסדות','שמירה'],cats:['אבטחה','סטודנטים'],link:'hahazdamnut.html#contact',img:'assets/uploads/2026/03/צילום-מסך-2026-03-31-131550.png',icon:'🏛️'},
@@ -599,16 +631,6 @@ function buildCard(card, delay, isJobTab) {
     return '<span class="card-tag">' + t + '</span>';
   }).join('');
 
-  var actionLink, actionLabel;
-  if (isJobTab) {
-    var waText = encodeURIComponent('היי, אני מעוניין/ת בתפקיד: ' + card.title);
-    actionLink = 'https://wa.me/972523960215?text=' + waText;
-    actionLabel = '📲 שלח מועמדות';
-  } else {
-    actionLink = card.link;
-    actionLabel = 'למידע נוסף ←';
-  }
-
   var el = document.createElement('div');
   el.className = 'card fade-up';
   el.style.animationDelay = delay + 's';
@@ -620,12 +642,8 @@ function buildCard(card, delay, isJobTab) {
       '<div class="card-title">' + card.title + '</div>' +
       '<div class="card-desc">' + card.desc + '</div>' +
       (isJobTab
-        ? '<div class="card-expand" style="display:none">' +
-            '<div class="card-desc-full">' + card.desc + '</div>' +
-            '<a class="btn-apply" href="' + actionLink + '" target="_blank" rel="noopener noreferrer">' + actionLabel + '</a>' +
-          '</div>' +
-          '<div class="card-tags">' + tagsHtml + '</div>' +
-          '<button class="card-link" onclick="toggleExpand(this)">למידע נוסף ←</button>'
+        ? '<div class="card-tags">' + tagsHtml + '</div>' +
+          '<button class="btn-apply" onclick="openApplyModal(' + JSON.stringify(card.title) + ')">📋 שלח מועמדות</button>'
         : card.sublinks
           ? '<div class="card-expand" style="display:none">' +
               card.sublinks.map(function(sl){ return '<a class="btn-sublink" href="' + sl.url + '" target="_blank" rel="noopener noreferrer">↗ ' + sl.label + '</a>'; }).join('') +
@@ -942,6 +960,127 @@ Hahizd.initRegModal({
     render();
     window.closeRegModal();
   }
+});
+</script>
+
+<!-- APPLY MODAL -->
+<div id="applyModal" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+  <div id="applyModal-backdrop" onclick="closeApplyModal()"></div>
+  <div id="applyModal-box">
+    <button class="modal-close" onclick="closeApplyModal()" aria-label="סגור">✕</button>
+    <div id="applyModal-form-wrap">
+      <h2 id="applyModalTitle">📋 הגשת מועמדות</h2>
+      <div class="modal-job-title" id="applyModalJobTitle"></div>
+      <form id="applyModalForm" onsubmit="submitApplyForm(event)">
+        <div class="modal-field">
+          <label>שם מלא <span class="req">*</span></label>
+          <input type="text" id="af-name" required placeholder="ישראל ישראלי" autocomplete="name"/>
+        </div>
+        <div class="modal-field">
+          <label>טלפון <span class="req">*</span></label>
+          <input type="tel" id="af-phone" required placeholder="050-0000000" autocomplete="tel"/>
+        </div>
+        <div class="modal-field">
+          <label>אימייל <span class="req">*</span></label>
+          <input type="email" id="af-email" required placeholder="israel@example.com" autocomplete="email"/>
+        </div>
+        <div class="modal-field">
+          <label>שנת שחרור <span class="req">*</span></label>
+          <select id="af-year" required>
+            <option value="">בחר שנה</option>
+            <option>2020</option><option>2021</option><option>2022</option><option>2023</option>
+            <option>2024</option><option>2025</option><option>2026</option><option>2027</option>
+          </select>
+        </div>
+        <div class="modal-field">
+          <label>עיר מגורים <span class="req">*</span></label>
+          <input type="text" id="af-city" required placeholder="תל אביב" autocomplete="address-level2"/>
+        </div>
+        <div class="modal-field">
+          <label>קורות חיים <span style="color:#94A3B8;font-weight:400">(לא חובה)</span></label>
+          <label class="modal-cv-label" for="af-cv">
+            <span style="font-size:1.3rem">📎</span>
+            <span class="modal-cv-text" id="af-cv-text">לחץ לצירוף קובץ (PDF / Word)</span>
+            <input type="file" id="af-cv" accept=".pdf,.doc,.docx" onchange="updateCvLabel(this)"/>
+          </label>
+        </div>
+        <div class="modal-terms">
+          <input type="checkbox" id="af-terms" required/>
+          <label for="af-terms">קראתי ואני מאשר/ת את <a href="terms.html" target="_blank">תנאי השימוש</a> ו<a href="accessibility.html" target="_blank">מדיניות הפרטיות</a></label>
+        </div>
+        <button type="submit" class="btn-modal-submit" id="af-submit">שלח מועמדות ✉️</button>
+      </form>
+    </div>
+    <div id="applyModal-success" class="modal-success" style="display:none">
+      <div class="success-icon">🎉</div>
+      <h3>המועמדות נשלחה בהצלחה!</h3>
+      <p>תודה! נחזור אליך בהקדם.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+var _applyJobTitle = '';
+
+window.openApplyModal = function(jobTitle) {
+  _applyJobTitle = jobTitle;
+  document.getElementById('applyModalJobTitle').textContent = jobTitle;
+  document.getElementById('applyModal-form-wrap').style.display = '';
+  document.getElementById('applyModal-success').style.display = 'none';
+  document.getElementById('applyModalForm').reset();
+  document.getElementById('af-cv-text').textContent = 'לחץ לצירוף קובץ (PDF / Word)';
+  document.getElementById('af-cv-text').classList.remove('selected');
+  document.getElementById('applyModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeApplyModal = function() {
+  document.getElementById('applyModal').classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+window.updateCvLabel = function(input) {
+  var el = document.getElementById('af-cv-text');
+  if (input.files && input.files[0]) {
+    el.textContent = input.files[0].name;
+    el.classList.add('selected');
+  } else {
+    el.textContent = 'לחץ לצירוף קובץ (PDF / Word)';
+    el.classList.remove('selected');
+  }
+};
+
+window.submitApplyForm = function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('af-submit');
+  btn.disabled = true;
+  btn.textContent = 'שולח...';
+
+  var name    = document.getElementById('af-name').value.trim();
+  var phone   = document.getElementById('af-phone').value.trim();
+  var email   = document.getElementById('af-email').value.trim();
+  var year    = document.getElementById('af-year').value;
+  var city    = document.getElementById('af-city').value.trim();
+  var cvFile  = document.getElementById('af-cv').files[0];
+
+  var body = 'הגשת קורות חיים\n\nמשרה: ' + _applyJobTitle +
+    '\nשם: ' + name +
+    '\nטלפון: ' + phone +
+    '\nאימייל: ' + email +
+    '\nשנת שחרור: ' + year +
+    '\nעיר: ' + city +
+    (cvFile ? '\nקורות חיים: ' + cvFile.name : '\nקורות חיים: לא צורפו');
+
+  var waText = encodeURIComponent(body);
+  window.open('https://wa.me/972523960215?text=' + waText, '_blank');
+
+  document.getElementById('applyModal-form-wrap').style.display = 'none';
+  document.getElementById('applyModal-success').style.display = 'block';
+  setTimeout(closeApplyModal, 3500);
+};
+
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') closeApplyModal();
 });
 </script>
 
