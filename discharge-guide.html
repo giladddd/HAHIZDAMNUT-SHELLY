@@ -169,7 +169,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
       <li><a href="partners.html">שיתופי פעולה</a></li>
       <li><a href="hahazdamnut.html#contact">צור קשר</a></li>
     </ul>
-    <button onclick="openRegModal()" class="btn btn-outline btn-sm nav-cta">קבע פגישה</button>
+    <button onclick="document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})||window.location.assign('hahazdamnut.html#contact')" class="btn btn-outline btn-sm nav-cta">קבע פגישה</button>
     <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
 </div>
 </nav>
@@ -186,7 +186,7 @@ footer a{color:rgba(255,255,255,.75);font-weight:600}
     <a href="hahazdamnut.html#contact" class="drawer-link">✉️ צור קשר</a>
   </div>
   <div class="drawer-bottom">
-    <button onclick="openRegModal()" class="btn btn-primary" style="width:100%;padding:14px;border-radius:50px;font-size:1rem">קבע פגישה עכשיו</button>
+    <button onclick="document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})||window.location.assign('hahazdamnut.html#contact')" class="btn btn-primary" style="width:100%;padding:14px;border-radius:50px;font-size:1rem">קבע פגישה עכשיו</button>
   </div>
 </div>
 
@@ -560,7 +560,7 @@ function renderSteps() {
           '<div class="cta-feature">מפתחות ביד: מערכת Self Mentor לניהול עצמי</div>' +
         '</div>' +
         '<div class="cta-price">מחיר: <strong>₪297</strong></div>' +
-        '<button class="cta-btn" onclick="openRegModal()">🚀 קבע פגישת ליווי 1:1 עכשיו</button>' +
+        '<button class="cta-btn" href="#contact">🚀 קבע פגישת ליווי 1:1 עכשיו</button>' +
       '</div>';
     list.appendChild(cta);
   }
