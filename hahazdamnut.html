@@ -417,7 +417,7 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
     <li><a href="partners.html">שיתופי פעולה</a></li>
     <li><a href="#contact" data-section="contact">צור קשר</a></li>
   </ul>
-  <button onclick="document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})||window.location.assign('hahazdamnut.html#contact')" class="btn btn-outline btn-sm nav-cta">קבע פגישה</button>
+  <button onclick="openQuickModal()" class="btn btn-outline btn-sm nav-cta">קבע פגישה</button>
   <button class="nav-hamburger" id="navHamburger" aria-label="פתח תפריט" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -437,7 +437,7 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
     <a href="#contact" class="drawer-link">✉️ צור קשר</a>
   </div>
   <div class="drawer-bottom">
-    <button onclick="document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})||window.location.assign('hahazdamnut.html#contact')" class="btn btn-primary">קבע פגישה עכשיו</button>
+    <button onclick="openQuickModal()" class="btn btn-primary">קבע פגישה עכשיו</button>
         <div class="drawer-social">
           <a href="https://api.whatsapp.com/send?phone=972523960215&text=%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%94%D7%96%D7%93%D7%9E%D7%A0%D7%95%D7%99%D7%95%D7%AA%20%D7%A9%D7%9C%D7%99%20%D7%95%D7%A4%D7%92%D7%99%D7%A9%D7%94%201%3A1" target="_blank" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.855L.057 23.882l6.198-1.625A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.359-.213-3.722.976.993-3.625-.234-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
@@ -570,7 +570,7 @@ footer{background:#060E1C;color:rgba(255,255,255,.75)}
         </li>
         <li class="plan-feat" style="flex-direction:column;align-items:flex-start"><span class="plan-feat-ic" style="align-self:flex-start;margin-top:2px">✓</span><span style="flex:1"><span style="display:flex;align-items:center;gap:4px">מפגש דיוק אחת לארבעה חודשים — עד שמספיק לך <button id="diyukBtn" onclick="var e=document.getElementById('diyukExp');var open=e.style.display==='block';e.style.display=open?'none':'block';this.textContent=open?'‹':'›'" style="background:none;border:none;color:var(--primary);font-size:1rem;cursor:pointer;padding:0;line-height:1;font-family:inherit">‹</button></span><span id="diyukExp" style="display:none;margin-top:6px;font-size:.85rem;color:var(--muted);line-height:1.6;font-weight:400">מההרשמה לתוכנית תהיה לך האופציה למפגש דיוק כל 4 חודשים — כמה זמן שתרצה. אנחנו כאן לטווח הארוך, לא עוד ליווי קצר או סדנה. אנחנו רצים ביחד.</span></span></li>
       </ul>
-      <button onclick="document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})||window.location.assign('hahazdamnut.html#contact')" class="btn btn-primary plan-cta">התחל את המסע</button>
+      <button onclick="openQuickModal()" class="btn btn-primary plan-cta">התחל את המסע</button>
       <div style="text-align:center;margin-top:10px;font-size:.78rem;color:#EF4444;font-weight:700">🔴 מוגבל ל־15 מקומות בחודש</div>
     </div>
   </div>
@@ -1472,7 +1472,71 @@ window.submitHeroForm = function() {
   btn.style.borderColor = '#16a34a';
   btn.textContent = '✅ הפרטים נשלחו — נחזור אליך בהקדם!';
 };
+
+window.openQuickModal = function() {
+  document.getElementById('quickModal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  document.getElementById('qmName').focus();
+};
+window.closeQuickModal = function() {
+  document.getElementById('quickModal').style.display = 'none';
+  document.body.style.overflow = '';
+  document.getElementById('qmForm').style.display = 'block';
+  document.getElementById('qmSuccess').style.display = 'none';
+  ['qmName','qmPhone','qmSource'].forEach(function(id){ var el=document.getElementById(id); if(el){el.value='';el.style.borderColor='';} });
+  var cb=document.getElementById('qmTerms'); if(cb){cb.checked=false;cb.style.outline='';}
+};
+window.submitQuickModal = function() {
+  var name = document.getElementById('qmName').value.trim();
+  var phone = document.getElementById('qmPhone').value.trim();
+  var source = document.getElementById('qmSource').value.trim();
+  var terms = document.getElementById('qmTerms').checked;
+  var ok = true;
+  if (name.length < 2) { document.getElementById('qmName').style.borderColor='#EF4444'; ok=false; } else { document.getElementById('qmName').style.borderColor=''; }
+  if (phone.replace(/\D/g,'').length < 7) { document.getElementById('qmPhone').style.borderColor='#EF4444'; ok=false; } else { document.getElementById('qmPhone').style.borderColor=''; }
+  if (!terms) { document.getElementById('qmTerms').style.outline='2px solid #EF4444'; ok=false; } else { document.getElementById('qmTerms').style.outline=''; }
+  if (!ok) return;
+  var btn = document.getElementById('qmBtn');
+  btn.disabled = true; btn.textContent = 'שולח...';
+  var qs = 'name=' + encodeURIComponent(name) +
+            '&phone=' + encodeURIComponent(phone) +
+            '&notes=' + encodeURIComponent('דרך מי הגעת: ' + source) +
+            '&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL')) +
+            '&form_type=quick_lead&_hp=';
+  try { fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, { method: 'GET' }); } catch(e) {}
+  document.getElementById('qmForm').style.display = 'none';
+  document.getElementById('qmSuccess').style.display = 'block';
+  btn.disabled = false;
+};
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeQuickModal(); });
 </script>
+
+<!-- QUICK LEAD MODAL -->
+<div id="quickModal" onclick="closeQuickModal()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.55);align-items:center;justify-content:center;padding:16px">
+  <div style="background:#fff;border-radius:20px;width:100%;max-width:420px;padding:32px 28px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.18)" onclick="event.stopPropagation()">
+    <button onclick="closeQuickModal()" style="position:absolute;top:14px;left:14px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#9CA3AF;line-height:1" aria-label="סגור">×</button>
+    <div id="qmForm">
+      <h2 style="margin:0 0 6px;font-size:1.35rem;font-weight:800;color:#0F172A;text-align:center">קבע שיחת היכרות</h2>
+      <p style="margin:0 0 22px;font-size:.88rem;color:#6B7280;text-align:center">ללא עלות וללא התחייבות</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <input id="qmName" type="text" placeholder="שם מלא *" style="border:1.5px solid #D1D5DB;border-radius:10px;padding:12px 14px;font-family:inherit;font-size:.95rem;width:100%;box-sizing:border-box;outline:none;direction:rtl">
+        <input id="qmPhone" type="tel" placeholder="טלפון *" style="border:1.5px solid #D1D5DB;border-radius:10px;padding:12px 14px;font-family:inherit;font-size:.95rem;width:100%;box-sizing:border-box;outline:none;direction:rtl">
+        <input id="qmSource" type="text" placeholder="דרך מי הגעת? (אופציונלי)" style="border:1.5px solid #D1D5DB;border-radius:10px;padding:12px 14px;font-family:inherit;font-size:.95rem;width:100%;box-sizing:border-box;outline:none;direction:rtl">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:.85rem;color:#374151;line-height:1.5">
+          <input id="qmTerms" type="checkbox" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#1A56A0">
+          <span>קראתי ואני מסכים/ה ל<a href="terms.html" target="_blank" style="color:#1A56A0;text-decoration:underline">תנאי השימוש ומדיניות הפרטיות</a></span>
+        </label>
+        <button id="qmBtn" onclick="submitQuickModal()" style="background:#1A56A0;color:#fff;border:none;border-radius:50px;padding:14px;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;width:100%;transition:background .2s">שליחה ←</button>
+      </div>
+    </div>
+    <div id="qmSuccess" style="display:none;text-align:center;padding:20px 0">
+      <div style="font-size:2.5rem;margin-bottom:12px">🎉</div>
+      <h3 style="margin:0 0 8px;color:#0F172A;font-size:1.2rem">תודה! נחזור אליך בהקדם</h3>
+      <p style="color:#6B7280;font-size:.9rem;margin:0 0 20px">הפרטים נקלטו — נשמח לדבר איתך</p>
+      <button onclick="closeQuickModal()" style="background:#F3F4F6;color:#374151;border:none;border-radius:50px;padding:10px 24px;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer">סגור</button>
+    </div>
+  </div>
+</div>
 
 <!-- COOKIE BANNER -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;right:0;left:0;z-index:9999;background:#0F172A;color:#fff;padding:16px 24px;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -4px 24px rgba(0,0,0,.3)">
@@ -1493,6 +1557,7 @@ function declineCookies(){localStorage.setItem('cookies_consent','declined');doc
 </script>
 </body>
 </html>
+
 
 
 
