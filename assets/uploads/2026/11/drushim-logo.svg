@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#fff" rx="8"/>
+  <text x="100" y="38" text-anchor="middle" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#E8380D">Drushim</text>
+  <text x="100" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#666">By Yad2</text>
+</svg>
