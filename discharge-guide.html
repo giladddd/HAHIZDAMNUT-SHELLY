@@ -249,7 +249,7 @@ function submitGate(){
   if(!/^05\d{8}$/.test(phone)){phoneEl.classList.add('err');errEl.textContent='טלפון חייב להתחיל ב-05 ולהכיל 10 ספרות';errEl.style.display='block';ok=false;}
   if(!ok)return;
   btn.disabled=true; btn.textContent='שולח...';
-  var qs='name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&notes=מדריך+למשוחרר&timestamp='+encodeURIComponent(new Date().toLocaleString('he-IL'))+'&form_type=מדריך&_hp=';
+  var qs='name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&notes='+encodeURIComponent('מדריך למשוחרר')+'&timestamp='+encodeURIComponent(new Date().toLocaleString('he-IL'))+'&form_type='+encodeURIComponent('מדריך')+'&_hp=';
   try{fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?'+qs,{method:'GET'});}catch(e){}
   localStorage.setItem('guide_unlocked','1');
   document.getElementById('guideGate').classList.add('hidden');
