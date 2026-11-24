@@ -507,8 +507,15 @@ function renderSteps() {
           '<div class="cta-feature">ביסוס פיננסי: תוכנית השקעה בטוחה ומותאמת אישית</div>' +
           '<div class="cta-feature">מפתחות ביד: מערכת Self Mentor לניהול עצמי</div>' +
         '</div>' +
-        '' +
-        '<button class="cta-btn" href="#contact">🚀 קבע פגישת ליווי 1:1 עכשיו</button>' +
+        '<div id="guideFormWrap" style="margin-top:18px">' +
+          '<div id="guideForm" style="display:flex;flex-direction:column;gap:10px">' +
+            '<input id="guideName" type="text" placeholder="שם מלא" autocomplete="name" style="padding:12px 16px;border-radius:50px;border:2px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:.95rem;font-family:inherit;outline:none;text-align:right" oninput="this.style.borderColor=\'rgba(255,255,255,.35)\'" />' +
+            '<input id="guidePhone" type="tel" placeholder="טלפון" autocomplete="tel" style="padding:12px 16px;border-radius:50px;border:2px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:.95rem;font-family:inherit;outline:none;text-align:right" oninput="this.style.borderColor=\'rgba(255,255,255,.35)\'" />' +
+            '<textarea id="guideNotes" placeholder="הערות (לא חובה)" rows="2" style="padding:12px 16px;border-radius:16px;border:2px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:.95rem;font-family:inherit;outline:none;text-align:right;resize:none" oninput="this.style.borderColor=\'rgba(255,255,255,.35)\'"></textarea>' +
+            '<button class="cta-btn" onclick="submitGuideForm(this)">🚀 קבע פגישת ליווי 1:1 עכשיו</button>' +
+          '</div>' +
+          '<div id="guideSuccess" style="display:none;background:#16a34a;border-radius:16px;padding:16px;text-align:center;color:#fff;font-weight:700;font-size:1rem;border:2px solid #4ade80">✅ הפרטים נשלחו!<br><span style="font-size:.85rem;font-weight:400;opacity:.9">נחזור אליך בהקדם 🙏</span></div>' +
+        '</div>' +
       '</div>';
     list.appendChild(cta);
   }
@@ -595,6 +602,33 @@ updateProgress();
 <script>
 Hahizd.initNav();
 Hahizd.initRegModal();
+
+window.submitGuideForm = function(btn) {
+  var name  = (document.getElementById('guideName').value  || '').trim();
+  var phone = (document.getElementById('guidePhone').value || '').trim();
+  var notes = (document.getElementById('guideNotes').value || '').trim();
+  if (!name || !phone) {
+    if (!name)  document.getElementById('guideName').style.borderColor  = '#f87171';
+    if (!phone) document.getElementById('guidePhone').style.borderColor = '#f87171';
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = 'שולח...';
+  var GAS = 'https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec';
+  var qs = 'name=' + encodeURIComponent(name)
+         + '&phone=' + encodeURIComponent(phone)
+         + '&notes=' + encodeURIComponent(notes || 'מדריך למשוחרר')
+         + '&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL'));
+  fetch(GAS + '?' + qs, {method:'GET'})
+    .then(function() {
+      document.getElementById('guideForm').style.display = 'none';
+      document.getElementById('guideSuccess').style.display = 'block';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = '🚀 קבע פגישת ליווי 1:1 עכשיו';
+    });
+};
 </script>
 
 </body>
