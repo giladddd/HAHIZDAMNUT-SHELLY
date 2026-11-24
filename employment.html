@@ -974,19 +974,19 @@ window.submitJobForm = function(e, jobTitle) {
   var applicantName  = form.querySelector('[name=שם]').value;
   var applicantPhone = form.querySelector('[name=טלפון]').value;
 
-  Hahizd.submit({
-    name:      applicantName,
-    phone:     applicantPhone,
-    email:     applicantEmail,
-    notes:     'משרה: ' + jobTitle,
-    timestamp: new Date().toLocaleString('he-IL'),
-    form_type: 'job_application',
-  }).then(function() {
-    form.innerHTML = '<div class="jf-success">✅ המועמדות נשלחה בהצלחה! נחזור אליך בהקדם.</div>';
-  }).catch(function() {
-    btn.disabled = false;
-    btn.textContent = 'שלח מועמדות ✉️';
-  });
+  var qs = 'name=' + encodeURIComponent(applicantName)
+         + '&phone=' + encodeURIComponent(applicantPhone)
+         + '&email=' + encodeURIComponent(applicantEmail)
+         + '&notes=' + encodeURIComponent('משרה: ' + jobTitle)
+         + '&timestamp=' + encodeURIComponent(new Date().toLocaleString('he-IL'))
+         + '&form_type=job_application&_hp=';
+  fetch('https://script.google.com/macros/s/AKfycbwjc_eLPFBQsXtbHNV4Th6YqDs2nlTeUUS6_D0BDtL9ck7qsXn42fPgWS_xKmrvdvEy/exec?' + qs, {method:'GET'})
+    .then(function() {
+      form.innerHTML = '<div class="jf-success">✅ המועמדות נשלחה בהצלחה! נחזור אליך בהקדם.</div>';
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'שלח מועמדות ✉️';
+    });
 };
 </script>
 
